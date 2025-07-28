@@ -1,13 +1,18 @@
 \begin{thebibliography}{1}
 
-\bibitem{texbook}
-Donald~E. Knuth.
-\newblock {\em The {\TeX} Book}.
-\newblock Addison-Wesley Professional, 1986.
+\bibitem{agrotendencia1}
+{Ing. Agr. Miguel Silva}.
+\newblock Cultivo de tomate: Cómo se realiza, plagas e importancia -
+  agrotendencia tv.
+\newblock
+  \url{https://agrotendencia.tv/agricultura/cultivos/hortalizas/el-cultivo-de-tomate/#Historia_del_tomate_o_jitomate},
+  2025.
+\newblock Accessed: 28 July 2025.
 
-\bibitem{latex2e}
-Leslie Lamport.
-\newblock {\em {\LaTeX}: a Document Preparation System}.
-\newblock Addison Wesley, Massachusetts, 2 edition, 1994.
+\bibitem{wikipedia1}
+{Wikipedia contributors}.
+\newblock Solanum lycopersicum -- wikipedia, the free encyclopedia.
+\newblock \url{https://es.wikipedia.org/wiki/Solanum_lycopersicum}, 2025.
+\newblock Accessed: 28 July 2025.
 
 \end{thebibliography}
