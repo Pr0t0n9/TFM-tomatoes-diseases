@@ -145,6 +145,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 \chapter{Introducción}\label{cap:cap1}
 
+\section{Motivación}\label{sec:sec1.1}
+
 Tomate o tomatera (\textit{Solanum lycopersicum}) es una planta herbácea de la familia Solanaceae cultivada en todo el mundo para el cultivo de su fruto, el tomate o jitomate, uno de los ingredientes más universales de ensaladas y salsas en el mundo entero. \cite{wikipedia1} 
 
 Según los últimos estudios filogenéticos, la planta silvestre de la cual surge el tomate doméstico actual tiene origen en la zona andina del norte de Perú y sur de Ecuador. Su domesticación y diversificación posterior se originó en México.
@@ -163,7 +165,7 @@ Los pueblos aztecas y mayas lo usaban en su cocina y fue exportado al resto del 
 
 El tomate es la hortaliza más extendida mundialmente y la de mayor valor económico. Su demanda aumenta continuamente y con ella su producción y comercio. 
 
-La producción mundial de tomate ascendió a más de 186 millones de toneladas en 2022 según los datos de la Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO). Según esta misma organización esta es la evolución de los 20 países que más han producido hasta 2022:
+La producción mundial de tomate ascendió a más de 186 millones de toneladas en 2022 según los datos de la Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO). Según esta misma organización esta es la evolución de los 20 países que más han producido hasta 2022: \cite{wikipedia2}
 
 \begin{table}[ht] 
 \centering
@@ -185,19 +187,50 @@ Entre las enfermedades más comunes se encuentran:
 
 \begin{itemize}[label=$\bullet$]
 \item Tizón tardío (\textit{Phytophthora infestans}): Puede destruir por completo una plantación si no se controla a tiempo, especialmente en condiciones húmedas y templadas.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.4]{./Images/Tizon_tardio_tomate.jpg}
+\caption{\headlinecolor{\underline{Tizón tardío en una planta de tomate}}}
+\label{fig:fig2}
+\end{center}
+\end{figure}
+
 \item Tizón temprano (\textit{Alternaria solani}): Produce defoliación progresiva, debilitando la planta y reduciendo el número y calidad de los frutos.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.2]{./Images/Tizon_temprano_tomate.jpg}
+\caption{\headlinecolor{\underline{Tizón temprano en una planta de tomate}}}
+\label{fig:fig3}
+\end{center}
+\end{figure}
+
+
 \item Fusariosis vascular (\textit{Fusarium oxysporum}): Ataca el sistema vascular, provocando marchitez y muerte de plantas.
 \item Virus como TYLCV y TSWV: Pueden causar deformaciones severas y reducciones completas en la producción, especialmente cuando se transmiten por vectores como la mosca blanca.
 \end{itemize}
 
-La manifestación simultánea o sucesiva de estas enfermedades es una de las principales causas en la disminución en la productividad del cultivo a escala global. Además, muchas de estas enfermedades no solo viven en la planta sino que persisten en el suelo, semillas o herramientas que hayan inteactuado con la planta, lo que dificulta su erradicación y aumenta los costos del tratamiento.
+La manifestación simultánea o sucesiva de estas enfermedades es una de las principales causas en la disminución en la productividad del cultivo a escala global. Además, muchas de estas enfermedades no solo viven en la planta sino que persisten en el suelo, semillas o herramientas que hayan inteactuado con la planta, lo que dificulta su erradicación y aumenta los costos del tratamiento. \cite{agrotendencia2}
 
 Dada la magnitud del impacto de estas enfermedades, la detección temprana y precisa de las mismas es crucial. Permite una correcta intervención que minimiza las pérdidas, permitiendo la reducción del uso innecesario de los agroquímicos y mejorando la sostenibilidad. En este contexto, las tecnologías basadas en visión por computadora, sensores remotos e inteligencia artificial ofrecen soluciones eficaces para mejorar el seguimiento y el control sanitario de este cultivo clave.
+
+\section{Estructura del resto del documento}\label{sec:sec1.2}
+
+La documentación de este proyecto se ha desarrollado dividiendo el contenidoen distintos caítulos con el objetivo de facilitar la comprensión por parte del lector. A continuación se enuncia la información presente en cada capítulo del resto del documento:
+
+\begin{itemize}[label=$\bullet$]
+\item Capítulo 2. Objetivos: se describe el objetivo principal del proyecto junto con los objetivos intermedios necesarios para conseguirlo.
+\item Capítulo 3. Estado del Arte: 
+\item Capítulo 4. Implementación y desarrollo: se explica el preprocesamientode los datos y las técnicas ML aplicadas a los mismos.
+\item Capítulo 5. Evaluación y resultados: se presentan los resultados obtenidos al aplicar las técnicas ML.
+\item Capítulo 6. Conclusiones
+\end{itemize}
 
 
 \chapter{Objetivos}\label{cap:cap2}
 
-El objetivo general de este proyecto consiste en conseguir un clasificador que a partir de imágenes de hojas de plantas de tomate distinga entre estado saludable y 10 enfermedades.
+El objetivo general de este proyecto consiste en conseguir un clasificador que a partir de imágenes de hojas de plantas de tomate distinga entre estado saludable y 10 enfermedades distintas.
 
 \section{Objetivos específicos}\label{sec:sec2.1}
 
@@ -223,9 +256,9 @@ Con la llegada de las redes neuronales convolucionales (CNN), se ha producido un
 
 Completar con proyectos:
 
-Maeda Gutiérrez (2019) realizó una comparativa entre varias arquitecturas CNN
+Maeda Gutiérrez (2019) realizó una comparativa entre varias arquitecturas CNN \cite{estudio1}
 
-Huerta Mora et al. (2024) emplearon la arquitectura VGG16 con técnicas de fine-tuning
+Huerta Mora et al. (2024) emplearon la arquitectura VGG16 con técnicas de fine-tuning \cite{estudio3}
 
 propuesta colombiana presentada por DICYT (2023), donde se desarrolló un sistema de clasificación de enfermedades en tomate basado en MobileNet, capaz de ejecutarse en microcontroladores
 
