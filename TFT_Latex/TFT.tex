@@ -254,13 +254,12 @@ Inicialmente, los métodos empleados para esta tarea incluían algoritmos de apr
 
 Con la llegada de las redes neuronales convolucionales (CNN), se ha producido un cambio significativo en la forma de abordar este problema. Las CNN son capaces de aprender representaciones directamente a partir de los datos de imagen, eliminando la necesidad de ingeniería manual de características. Diversos estudios han demostrado su eficacia para la clasificación de enfermedades en hojas de tomate.
 
-Completar con proyectos:
+Por ejemplo, una revisión publicada en la Revista de Investigación e Innovación de las Ciencias de la Universidad Tecnológica de Bolívar \cite{estudio1}, las técnicas tradicionales de aprendizaje supervisado como SVM, KNN y lógica difusa muestran limitaciones significativas en tareas de detección de enfermedades en imágenes de frutas debido a su dependencia de extracción manual de características y segmentación previa. En contraste, las redes neuronales convolucionales han demostrado una precisión superior, mayor robustez frente a la variabilidad y mayor capacidad de generalización. Esta revisión respalda la elección de CNNs como enfoque principal en este trabajo.
 
-Maeda Gutiérrez (2019) realizó una comparativa entre varias arquitecturas CNN \cite{estudio1}
+Por otra parte, Valeria Maeda Gutiérrez (2019) \cite{estudio2} realizó una comparativa entre varias arquitecturas CNN, incluyendo AlexNet, GoogleNet, InceptionV3, ResNet 18 y ResNet 50 aplicadas al conjunto de datos PlantVillage. Todas las arquitecturas consiguieron más del 98\% de precisión y sensibilidad, lo que confirma la ideonidad de las mismas para la tarea que se pretende hacer. Concretamente con GoogleNet consiguió una precisión del 99,3\% y una sensibilidad del 99,1\%
 
-Huerta Mora et al. (2024) emplearon la arquitectura VGG16 con técnicas de fine-tuning \cite{estudio3}
+En otra línea, Eduardo A.Huerta-Mora, Víctor González-Huitrón, Héctor Rodríguez-Rangel y Leonel Ernesto Amabilis-Sosa (2024) \cite{estudio3} emplearon la arquitectura VGG16 con técnicas de fine-tuning para el mismo conjunto de datos PlantVillage, obteniendo alrededor del 90\% de sensibilidad y precisión. Este hecho confirma que esta arquitectura también puede ser interesante para el estudia a realizar.
 
-propuesta colombiana presentada por DICYT (2023), donde se desarrolló un sistema de clasificación de enfermedades en tomate basado en MobileNet, capaz de ejecutarse en microcontroladores
 
 
 \chapter{Implementación y desarrollo}\label{cap:cap4}

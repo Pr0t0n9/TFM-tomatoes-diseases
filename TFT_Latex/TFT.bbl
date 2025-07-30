@@ -1,8 +1,8 @@
 \begin{thebibliography}{1}
 
 \bibitem{estudio3}
-{Eduardo A.Huerta-Mora, Víctor González-Huitrón,Héctor
-  Rodríguez-Rangel,Leonel Ernesto Amabilis-Sosa}.
+{Eduardo A.Huerta-Mora, Víctor González-Huitrón, Héctor Rodríguez-Rangel y
+  Leonel Ernesto Amabilis-Sosa}.
 \newblock Detección de enfermedades foliares conarquitecturas de redes
   neuronales convolucionales.
 \newblock \url{https://rinderesu.com/index.php/rinderesu/article/view/46/50},
@@ -28,6 +28,16 @@
 \newblock Accessed: 28 July 2025.
 
 \bibitem{estudio1}
+{Maday Ynfante Martínez, Minelkis Machado Molina, Neili Machado García y
+  Efraín Velasteguí López}.
+\newblock Técnicas de aprendizaje supervisado para la detección y
+  clasificación de enfermedades y defectos en imágenes de frutas: revisións.
+\newblock
+  \url{https://revistas.utb.edu.ec/index.php/magazine/article/view/2330/1983},
+  2024.
+\newblock Accessed: 30 July 2025.
+
+\bibitem{estudio2}
 {Valeria Maeda Gutiérrez}.
 \newblock Comparación de arquitecturas de redes neuronales convolucionales
   para la clasificación de enfermedades en tomate.
