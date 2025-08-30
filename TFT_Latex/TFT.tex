@@ -264,6 +264,48 @@ En otra línea, Eduardo A.Huerta-Mora, Víctor González-Huitrón, Héctor Rodr�
 
 \chapter{Implementación y desarrollo}\label{cap:cap4}
 
+En este capítulo se presenta tanto el \textit{hardware} como el \textit{software} usados en este proyecto. Además se explica la procedencia y estructura del conjunto de datos que serán usados para el estudio. Finalmente, se desarrolla el preprocesmiento que se realiza a este conjunto de datos junto con los modelos entrenados para conseguir un clasificador.
+
+\section{Herramientas usadas}\label{sec:sec4.1}
+
+Para llevar a cabo este proyecto, se ha usado Google Colab (abreviatura de Google Colaboratory) que se accedía desde el ordenador portátil del autor del documento. Este ordenador es un ASUS TUF Gaming FX505GT que cuenta con las siguientes características:
+
+\begin{itemize}[label=$\bullet$]
+\item 16 GB de RAM con formato DDR4.
+\item Almacenamiento compuesto por un disco duro con tecnología SSD de 512GB.
+\item Procesador Intel Core i7-9750H CPU a 2.60 GHz, con 6 procesadores principales y 6 procesadores lógicos.
+\item Tarjeta gráfica NVIDIA GeForce GTX 1650 con 4GB de RAM.
+\end{itemize}
+
+Google Colab es un servicio gratuito de Google que permite escribir y ejecutar código en la nube sin necesidad de instalar nada en tu equipo. Los recursos que ofrece de forma gratuita varían con el tiempo, pero las características que suele ofrecer son las siguientes:
+
+\begin{itemize}[label=$\bullet$]
+\item GPU NVIDIA Tesla T4 con 16 GB de VRAM ó CPU Intel Xeon con alrededor de 13 GB de RAM.
+\item Almacenamiento temporal se corresponde con unos 100 GB de espacio en disco.
+\item La duración de la sesión puede ser de hasta 12 horas, aunque en la práctica podrían terminarse antes según uso y carga del sistema.
+\end{itemize}
+
+Por otra parte el lenguaje de programación usado ha sido Python, un lenguaje que es ampliamente utilizado por científicos de datos. En las últimas décadas Python se ha enriquecido con numerosas librerías relacionadas con técnicas de ML que facilitan el uso de las mismas. En concreto para este proyecto se ha utilizado la versión 3.10 de Python.
+
+En cuanto a las librerías de Python usadas para la implementación, se presentan a continuación:
+
+\begin{itemize}[label=$\bullet$]
+\item NumPy: es una librería que ofrece la posibilidad de crear matrices y vectores multidimensionales y provee además un gran número de operaciones matemáticas de alto nivel.
+\item Pandas: es una librería que ofrece la estructura de datos llamada DataFrame que facilita la manipulación y el análisis de datos. Es una extensión de la librería NumPy. Ha sido usada para tratar y transformar los datos.
+\item Matplotlib:
+\item Plantcv:
+\item Tensorflow:
+\item Seaborn:
+\end{itemize}
+
+***Referencias a pie de página con enlaces a descarga de las librerías
+
+\section{Procedencia y descripción de los datos}\label{sec:sec4.2}
+
+Los datos provienen de la plataforma online de ciencia de datos de Google, Kaggle, que funciona como una mezcla de red social, repositorio de datasets y espacio de competición. En concreto, el conjunto de datos usuado es el llamado "Tomato Leaves Dataset" (***Enlace)
+
+\section{Preprocesado de los datos}\label{sec:sec4.3}
+
 
 \chapter{Evaluación y resultados}\label{cap:cap5}
 
