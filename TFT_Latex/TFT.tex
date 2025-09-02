@@ -24,6 +24,9 @@
 \usepackage[table]{xcolor}
 \definecolor{naranja}{HTML}{E65113}
 \usepackage[shortlabels]{enumitem}
+% Definición de una lista personalizada llamada "bulletlist"
+\newlist{bulletlist}{itemize}{1}
+\setlist[bulletlist]{label=\LARGE\textbullet, left=1.5em}
 \definecolor{slcolor}{HTML}{E65113}
 \newcommand{\headlinecolor}{\color{slcolor}}
 \usepackage{titlesec}
@@ -170,7 +173,7 @@ La producción mundial de tomate ascendió a más de 186 millones de toneladas e
 \begin{table}[ht] 
 \centering
 \caption{\headlinecolor{\underline{Top 20 países productores de tomates 2022}}}
-\label{tab:my_label}
+\label{tab:producción_mundial_tomate}
 \begin{tabular}{|c|c|c|c|c|} \hline
 \rowcolor{naranja}
 \multicolumn{5}{|c|}{\textbf{Titulo}} \\ \hline
@@ -185,7 +188,7 @@ Como ya se ha mencionado, el cultivo de tomate es uno de los cultivos hortícola
 
 Entre las enfermedades más comunes se encuentran:
 
-\begin{itemize}[label=$\bullet$]
+\begin{itemize}[label=\textbullet]
 \item Tizón tardío (\textit{Phytophthora infestans}): Puede destruir por completo una plantación si no se controla a tiempo, especialmente en condiciones húmedas y templadas.
 
 \begin{figure}[ht]
@@ -219,13 +222,13 @@ Dada la magnitud del impacto de estas enfermedades, la detección temprana y pre
 
 La documentación de este proyecto se ha desarrollado dividiendo el contenidoen distintos caítulos con el objetivo de facilitar la comprensión por parte del lector. A continuación se enuncia la información presente en cada capítulo del resto del documento:
 
-\begin{itemize}[label=$\bullet$]
+\begin{bulletlist}
 \item Capítulo 2. Objetivos: se describe el objetivo principal del proyecto junto con los objetivos intermedios necesarios para conseguirlo.
 \item Capítulo 3. Estado del Arte: 
 \item Capítulo 4. Implementación y desarrollo: se explica el preprocesamientode los datos y las técnicas ML aplicadas a los mismos.
 \item Capítulo 5. Evaluación y resultados: se presentan los resultados obtenidos al aplicar las técnicas ML.
 \item Capítulo 6. Conclusiones
-\end{itemize}
+\end{bulletlist}
 
 
 \chapter{Objetivos}\label{cap:cap2}
@@ -270,39 +273,64 @@ En este capítulo se presenta tanto el \textit{hardware} como el \textit{softwar
 
 Para llevar a cabo este proyecto, se ha usado Google Colab (abreviatura de Google Colaboratory) que se accedía desde el ordenador portátil del autor del documento. Este ordenador es un ASUS TUF Gaming FX505GT que cuenta con las siguientes características:
 
-\begin{itemize}[label=$\bullet$]
+\begin{bulletlist}
 \item 16 GB de RAM con formato DDR4.
 \item Almacenamiento compuesto por un disco duro con tecnología SSD de 512GB.
 \item Procesador Intel Core i7-9750H CPU a 2.60 GHz, con 6 procesadores principales y 6 procesadores lógicos.
 \item Tarjeta gráfica NVIDIA GeForce GTX 1650 con 4GB de RAM.
-\end{itemize}
+\end{bulletlist}
 
 Google Colab es un servicio gratuito de Google que permite escribir y ejecutar código en la nube sin necesidad de instalar nada en tu equipo. Los recursos que ofrece de forma gratuita varían con el tiempo, pero las características que suele ofrecer son las siguientes:
 
-\begin{itemize}[label=$\bullet$]
+\begin{bulletlist}
 \item GPU NVIDIA Tesla T4 con 16 GB de VRAM ó CPU Intel Xeon con alrededor de 13 GB de RAM.
 \item Almacenamiento temporal se corresponde con unos 100 GB de espacio en disco.
 \item La duración de la sesión puede ser de hasta 12 horas, aunque en la práctica podrían terminarse antes según uso y carga del sistema.
-\end{itemize}
+\end{bulletlist}
 
 Por otra parte el lenguaje de programación usado ha sido Python, un lenguaje que es ampliamente utilizado por científicos de datos. En las últimas décadas Python se ha enriquecido con numerosas librerías relacionadas con técnicas de ML que facilitan el uso de las mismas. En concreto para este proyecto se ha utilizado la versión 3.10 de Python.
 
 En cuanto a las librerías de Python usadas para la implementación, se presentan a continuación:
 
-\begin{itemize}[label=$\bullet$]
+\begin{bulletlist}
 \item NumPy: es una librería que ofrece la posibilidad de crear matrices y vectores multidimensionales y provee además un gran número de operaciones matemáticas de alto nivel.
 \item Pandas: es una librería que ofrece la estructura de datos llamada DataFrame que facilita la manipulación y el análisis de datos. Es una extensión de la librería NumPy. Ha sido usada para tratar y transformar los datos.
-\item Matplotlib:
-\item Plantcv:
-\item Tensorflow:
-\item Seaborn:
-\end{itemize}
+\item Plantcv: es una librería de Python de código abierto diseñada específicamente para el análisis de imágenes de plantas. Se ha usado para lectura de las imágenes.
+\item Tensorflow: es una librería de software de código abierto creada por Google para desarrollar y entrenar modelos de machine learning (ML) y deep learning (DL). Recibe este nombre porque trabaja con tensores, estructuras de datos multidimensionales, como matrices o vectores que fluyen a través de un grafo computacional de operaciones. Se ha usado para crear y entrenar los modelos descritos en este proyecto.
+\item Seaborn: esta librería permite la visualización de los datos a través de distintos tipos de gráficas. Ha sido usada para realizar los distintos gráficos como las matrices de confusión para evaluar los modelos.
+\end{bulletlist}
 
 ***Referencias a pie de página con enlaces a descarga de las librerías
 
 \section{Procedencia y descripción de los datos}\label{sec:sec4.2}
 
-Los datos provienen de la plataforma online de ciencia de datos de Google, Kaggle, que funciona como una mezcla de red social, repositorio de datasets y espacio de competición. En concreto, el conjunto de datos usuado es el llamado "Tomato Leaves Dataset" (***Enlace)
+Los datos provienen de la plataforma online de ciencia de datos de Google, Kaggle, que funciona como una mezcla de red social, repositorio de datasets y espacio de competición. En concreto, el conjunto de datos usuado es el llamado "Tomato Leaves Dataset" (***Enlace). Según su descripción en la misma plataforma se trata de un conjunto de datos de más de 20.000 imágenes de hojas de tomate con 11 clases, 10 enfermedades y una clase sana. Estas imágenes se han recopilado tanto en entornos de laboratorio como en entornos naturales.
+
+En concreto se pueden extraer dos directorios que servirán como conjunto de datos para el entrenamiento y conjunto de datos para validación, ambos cuentan con 11 directorios con imágenes dentro. Cada uno de estos subdirectorios representa una de las clases que serán brevemente expuestas a continuación:
+
+\begin{table}[ht] 
+\centering
+\caption{\headlinecolor{\underline{Clases del conjunto de datos}}}
+\label{tab:clases_datos}
+\begin{tabular}{|c|c|} \hline
+\rowcolor{naranja}
+\multicolumn{2}{|c|}{\textbf{Conjunto de datos}} \\ \hline
+\rowcolor{naranja!30}
+Clase & Traducción Clase \\ \hline 
+\texttt{Healthy} & Saludable \\ \hline 
+\texttt{Bacterial\_spot} & Manchas bacterianas \\ \hline 
+\texttt{Early\_blight} & Tizón precoz \\ \hline 
+\texttt{Late\_blight} & Tizón tardío \\ \hline 
+\texttt{Leaf\_Mold} & Hojas con moho \\ \hline 
+\texttt{Powdery\_mildew} & Moho polvoriento \\ \hline 
+\texttt{Septoria\_leaf\_spot} & Hojas manchadas de septoriosis \\ \hline 
+\texttt{Spidermite\_Two-spotted\_spider\_mite} & Picadura de araña roja de dos manchas \\ \hline 
+\texttt{Target\_Spot} & Punto blanco \\ \hline 
+\texttt{Tomato\_mosaic\_virus} & Virus mosaico \\ \hline 
+\texttt{Tomato\_Yellow\_Leaf\_Curl\_Virus} & Virus de la hoja amarilla \\ \hline
+\end{tabular}
+\end{table}
+
 
 \section{Preprocesado de los datos}\label{sec:sec4.3}
 
