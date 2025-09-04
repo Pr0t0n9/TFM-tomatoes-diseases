@@ -288,7 +288,7 @@ Google Colab es un servicio gratuito de Google que permite escribir y ejecutar c
 \item La duración de la sesión puede ser de hasta 12 horas, aunque en la práctica podrían terminarse antes según uso y carga del sistema.
 \end{bulletlist}
 
-Por otra parte el lenguaje de programación usado ha sido Python, un lenguaje que es ampliamente utilizado por científicos de datos. En las últimas décadas Python se ha enriquecido con numerosas librerías relacionadas con técnicas de ML que facilitan el uso de las mismas. En concreto para este proyecto se ha utilizado la versión 3.10 de Python.
+Por otra parte el lenguaje de programación usado ha sido Python, un lenguaje que es ampliamente utilizado por científicos de datos. En las últimas décadas Python se ha enriquecido con numerosas librerías relacionadas con técnicas de ML que facilitan el uso de las mismas. En concreto para este proyecto se ha utilizado la versión 3.12.11 de Python.
 
 En cuanto a las librerías de Python usadas para la implementación, se presentan a continuación:
 
@@ -333,6 +333,29 @@ Clase & Traducción Clase \\ \hline
 
 
 \section{Preprocesado de los datos}\label{sec:sec4.3}
+
+Al realizar la carga de datos se tiene un directorio con dos subdirectorios, cada uno de ellos representará un conjunto de datos, un conjunto de datos de entrenamiento (train) y otro de validación (valid). Cada uno de estos directorios contienen a su vez 11 directorios, representando cada una de las clases. Una vez puestos en situación, se llevan a cabo las primera tareas de exploración de las imágenes.
+En primer lugar, seleccionando el directorio que contiene los datos de entrenamiento se realiza una función para obtener el número de imágenes existentes por cada tipo de tamaño. Gracias a esta función se sabe que se cuentan como imágenes de variables tamaños, concretamente existen 760 tipos de tamaños distintos. En la siguiente tabla se exponen los 5 tipos de tamaño que más se repiten:
+
+TABLA
+(256, 256) → 18942 imágenes
+(227, 227) → 4120 imágenes
+(640, 640) → 1207 imágenes
+(533, 800) → 151 imágenes
+(800, 600) → 10 imágenes
+De cara a construir un modelo todas las imágenes tienen que tener el mismo tamaño y debida a esta primera toma de contacto se toma la decisión de transformar todas lasa imágenes a tamaño de 256x256 píxeles.
+
+En segundo lugar, se realiza una muestra aleatoria de una imagen por clase, para visualizar el tipo de imágenes que se vana tratar.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.4]{./Images/Imagen_aleatoria_por_clase.png}
+\caption{\headlinecolor{\underline{Imagen aleatoria por clase}}}
+\label{fig:fig4}
+\end{center}
+\end{figure}
+
+**Se observa la variedad de imágenes que existen. Unas más oscuras, otras con más brillo. Algunas con fundo blanco, otras con fondo de color o incluso con más elementos de fondo no solo un fondo plano. Incluso algunas están giradas.
 
 
 \chapter{Evaluación y resultados}\label{cap:cap5}
