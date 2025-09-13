@@ -327,19 +327,30 @@ Clase & Traducción Clase \\ \hline
 
 \section{Preprocesado de los datos}\label{sec:sec4.3}
 
-Al realizar la carga de datos se tiene un directorio con dos subdirectorios, cada uno de ellos representará un conjunto de datos, un conjunto de datos de entrenamiento (train) y otro de validación (valid). Cada uno de estos directorios contienen a su vez 11 directorios, representando cada una de las clases. Una vez puestos en situación, se llevan a cabo las primera tareas de exploración de las imágenes.
-En primer lugar, seleccionando el directorio que contiene los datos de entrenamiento se realiza una función para obtener el número de imágenes existentes por cada tipo de tamaño. Gracias a esta función se sabe que se cuentan como imágenes de variables tamaños, concretamente existen 760 tipos de tamaños distintos. En la siguiente tabla se exponen los 5 tipos de tamaño que más se repiten:
+Al realizar la carga de datos se tiene un directorio con dos subdirectorios, cada uno de ellos representará un conjunto de datos, uno de datos de entrenamiento (train) y otro de validación (valid). Cada uno de estos directorios contienen a su vez 11 directorios, representando cada una de las clases. Llegados a este punto, se llevan a cabo las primera tareas de exploración de las imágenes.
+En primer lugar, seleccionando el directorio que contiene los datos de entrenamiento se realiza una función para obtener el número de imágenes existentes por cada tipo de tamaño. Gracias a esta función se sabe que se cuentan con imágenes de variables tamaños, concretamente existen 760 tipos de tamaños distintos. En la siguiente tabla se exponen los 5 tipos de tamaño que más se repiten:
 
 
-TABLA
-(256, 256) - 18942 imágenes
-(227, 227) - 4120 imágenes
-(640, 640) - 1207 imágenes
-(533, 800) - 151 imágenes
-(800, 600) - 10 imágenes
+\begin{table}[ht] 
+\centering
+\caption{\headlinecolor{\underline{Los 5 tamaños de imágenes más comunes}}}
+\label{tab:tamanos_imagenes}
+\begin{tabular}{|c|c|} \hline
+\rowcolor{naranja}
+\multicolumn{2}{|c|}{\textbf{Top 5 tamaños de imágenes}} \\ \hline
+\rowcolor{naranja!30}
+Tamaño (píxeles) & N\textsuperscript{o} imágenes \\ \hline 
+256x256 & 18942 \\ \hline 
+227x227 & 4120 \\ \hline 
+640x640 & 1207 \\ \hline 
+533x800 & 151 \\ \hline 
+800x600 & 10 \\ \hline
+\end{tabular}
+\end{table}
+
 De cara a construir un modelo todas las imágenes tienen que tener el mismo tamaño y debida a esta primera toma de contacto se toma la decisión de transformar todas lasa imágenes a tamaño de 256x256 píxeles.
 
-En segundo lugar, se realiza una muestra aleatoria de una imagen por clase, para visualizar el tipo de imágenes que se vana tratar. AAAa
+En segundo lugar, se realiza una muestra aleatoria de una imagen por clase, para visualizar el tipo de imágenes que se vana tratar.
 
 \begin{figure}[ht]
 \begin{center}
