@@ -1,6 +1,6 @@
-\documentclass[12pt,a4paper]{report}
-%\usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
+\documentclass[12pt,a4paper]{scrreprt}
+
+% Gráficos y geometría
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -8,28 +8,26 @@
 \usepackage[left=2.75cm,right=2.6cm,top=3.5cm,bottom=3.5cm]{geometry}
 
 
-
+% Índices y listas
 \usepackage{titletoc}
-% Keywords command
-
-\providecommand{\keywords}[1]
-{
-  \small	
-  \textbf{\textit{Palabras clave:\hspace{0.3cm}}} #1
-}
+\usepackage[shortlabels]{enumitem}
+\newlist{bulletlist}{itemize}{1} % Definición de una lista personalizada llamada "bulletlist"
+\setlist[bulletlist]{label=\LARGE\textbullet, left=1.5em}
 
 
-
-
+% Colores
 \usepackage[table]{xcolor}
 \definecolor{naranja}{HTML}{E65113}
-\usepackage[shortlabels]{enumitem}
 \definecolor{slcolor}{HTML}{E65113}
 \newcommand{\headlinecolor}{\color{slcolor}}
-\usepackage{titlesec}
-
 \definecolor{gray75}{gray}{0.75}
+
+
 \newcommand{\hsp}{\hspace{-10pt}}
+
+% URLs e hipervínculos
+\usepackage{url}
+\usepackage{hyperref}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %------------------COMANDOS PARA EL TIPO DE LETRA---------------------------%
@@ -38,12 +36,14 @@
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 
-\titleformat{\chapter}[hang]{\vspace{-3cm}\headlinecolor\Huge\bfseries}{\thechapter.\hsp}{20pt}{\Huge\bfseries}
+% Estilo de capítulos y secciones con KOMA-Script
+\usepackage{xcolor}
+\setkomafont{chapter}{\Huge\bfseries\headlinecolor}
+\setkomafont{section}{\Large\bfseries}
+\setkomafont{subsection}{\normalsize\bfseries}
+\setkomafont{sectioning}{\bfseries}
 
-%\titleformat{\section}[hang]{\Large\bfseries}{}{20pt}{\Large\bfseries}
 
-\titleformat{\subsection}[hang]{\normalsize\bfseries}{}{20pt}{\large\bfseries}
-\titleformat{\appendix}[hang]{\vspace{-3cm}\headlinecolor\Huge\bfseries}{\thechapter.\hsp}{20pt}{\Huge\bfseries}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -55,7 +55,6 @@
 %-----------------COMANDOS PARA CABECERAS Y PIE DE PAGINA -----------------%
 \usepackage{lastpage}
 \usepackage{fancyhdr}
-\usepackage{titlesec}
 
 \fancypagestyle{plain}{%
   \renewcommand{\headrulewidth}{0pt}
@@ -69,15 +68,19 @@
 \pagestyle{plain}
 
 
+% Palabras clave
+\providecommand{\keywords}[1]
+{
+  \small	
+  \textbf{\textit{Palabras clave:\hspace{0.3cm}}} #1
+}
 
-
-
-
-
-
-
-
-
+% Bibliografía APA
+%\usepackage[utf8]{inputenc} % no hace falta con xelatex
+\usepackage[spanish]{babel} 
+\usepackage{csquotes}
+\usepackage[backend=biber, style=apa]{biblatex}
+\addbibresource{Bibliografia_TFT.bib}
 
 
 
@@ -95,11 +98,16 @@
 \tikz[remember picture,overlay] \node[opacity=1,inner sep=0pt] at (73.6mm, -124.25mm){\includegraphics{./Images/Picture_TitlePage.jpg}};
 
 {\fontfamily{phv}\selectfont
-\fontsize{25}{10.4}\fontseries{b}\selectfont
-\vspace{14cm}
-\textbf{Título del TFT}
+%\fontsize{25}{10.4}\fontseries{b}\selectfont
+\fontsize{25}{25}\fontseries{b}\selectfont
+%\vspace{14cm}
+\vspace{13cm}
+\textbf{Desarrollo de un sistema de\\
+diagnóstico de enfermedades\\
+en hojas de tomate mediante\\ 
+modelos de aprendizaje profundo}
 
-\bigskip
+\vfill
 
 \fontsize{12}{12}\selectfont
 \fontseries{m}\selectfont
@@ -109,12 +117,12 @@
   || >{\raggedright}X 
   || >{\centering}X 
   || >{\raggedleft\arraybackslash}X || }
- Titulación:\\XXXX\\ 
- & Alumno/a: Apellido Apellido, Nombre\\DNI: XXXX 
+ Titulación:\\Máster en Big Data y Ciencia de Datos\\ 
+ & Alumno/a: Marín Lucas, Rubén\\DNI: 07272889-J 
  & Convocatoria: \\
- Curso Académico\\ 20XX-20XX 
-  & Director/a del TFT: XXXX   
-  & PRIMERA O SEGUNDA  \\
+ Curso Académico\\ 2024-2025 
+  & Director/a del TFT: Ricardo Lebrón Aguilar   
+  & SEGUNDA  \\
 \end{tabularx}
  }
 \end{titlepage}
@@ -126,7 +134,7 @@
 \listoftables
 
 \begin{abstract}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Lorem ipsum (RESUMEN)
 \vspace{0.5cm}
 
 \keywords{primero, segundo, tercero}
@@ -137,66 +145,223 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 	
 
-\chapter{Capítulo primero}\label{cap:cap1}
+\chapter{Introducción}\label{cap:cap1}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\section{Motivación}\label{sec:sec1.1}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Tomate o tomatera (\textit{Solanum lycopersicum}) es una planta herbácea de la familia Solanaceae cultivada en todo el mundo para el cultivo de su fruto, el tomate o jitomate, uno de los ingredientes más universales de ensaladas y salsas en el mundo entero. \parencite{wikipedia1} 
 
+Según los últimos estudios filogenéticos, la planta silvestre de la cual surge el tomate doméstico actual tiene origen en la zona andina del norte de Perú y sur de Ecuador. Su domesticación y diversificación posterior se originó en México.
 
-\section{Apartado}\label{sec:apartado}
-
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-\begin{center}
-{\textbf{\headlinecolor{Destacado duis aute irure dolor\\ 
-in reprehenderit in voluptate velit esse\\ 
-cillum dolore eu fugiat}}}
-\end{center}
-
-labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Los pueblos aztecas y mayas lo usaban en su cocina y fue exportado al resto del mundo a partir de la llegada de los españoles que lo distribuyeron a lo largo de sus colonias en el Caribe y la península ibérica a partir de lo cual pudo llegar al resto de eruopa. También lo llevaron a Filipinas y de allí pudo entrar al continente asiático. \parencite{agrotendencia1} 
 
 \begin{figure}[ht]
 \begin{center}
-\includegraphics[scale=0.5]{./Images/image5.png}
-\caption{\headlinecolor{\underline{Nombre de la gráfica 1}}}
+\includegraphics[scale=0.2]{./Images/Distribucion_tomate.jpg}
+\caption{\headlinecolor{\underline{Origen del tomate}}}
 
 \label{fig:fig1}
 
 \end{center}
 \end{figure}
 
-\begin{figure}[ht]
-\begin{center}
-\includegraphics[scale=0.5]{./Images/image6.png}
-\caption{\headlinecolor{\underline{Nombre de la gráfica 2}}}
-
-\label{fig:fig2}
-
-\end{center}
-\end{figure}
+La producción mundial de tomate ascendió a más de 186 millones de toneladas en 2022 según los datos de la Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO). Según esta misma organización esta es la evolución de los 20 países que más han producido hasta 2022: \parencite{wikipedia2}
 
 \begin{table}[ht] 
 \centering
-\caption{\headlinecolor{\underline{Nombre del Cuadro}}}
-\label{tab:my_label}
-\begin{tabular}{|c|c|c|} \hline
+\caption{\headlinecolor{\underline{Top 20 países productores de tomates 2022}}}
+\label{tab:producción_mundial_tomate}
+\begin{tabular}{|c|c|c|c|c|} \hline
 \rowcolor{naranja}
-\multicolumn{3}{|c|}{\textbf{}} \\ \hline
-Lorem ipsum & Lorem ipsum & Lorem ipsum \\ \hline
-Lorem ipsum & Lorem ipsum & Lorem ipsum \\ \hline
-Lorem ipsum & Lorem ipsum & Lorem ipsum \\ \hline
-Lorem ipsum & Lorem ipsum & Lorem ipsum \\ \hline
-Lorem ipsum & Lorem ipsum & Lorem ipsum \\ \hline
-Lorem ipsum & Lorem ipsum & Lorem ipsum \\ \hline
+\multicolumn{5}{|c|}{\textbf{Titulo}} \\ \hline
+\rowcolor{naranja!30}
+País & 2000 & 2010 & 2020 & 2022 \\ \hline
+China & 22 200 & 46 760 & 64 680 & 68 242 \\ \hline
+... & ... & ... & ... & ... \\ \hline
 \end{tabular}
 \end{table}
 
-\chapter{Prueba capítulo}\label{cap:cap2}
+Como ya se ha mencionado, el cultivo de tomate es uno de los cultivos hortícolas más importantes a nivel mundial. Sin embargo, su producción se ve amenazada por una amplia variedad de enfermedades causadas por hongos, bacterias, virus y nematodos. Estas enfermedades pueden provocar una bajada de rendimiento que van desde reducciones parciales hasta la pérdida completa de la cosecha.
 
-\section{Prueba sección}\label{sec:sec2.1}
+Entre las enfermedades más comunes se encuentran:
 
+\begin{itemize}[label=\textbullet]
+\item Tizón tardío (\textit{Phytophthora infestans}): Puede destruir por completo una plantación si no se controla a tiempo, especialmente en condiciones húmedas y templadas.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.4]{./Images/Tizon_tardio_tomate.jpg}
+\caption{\headlinecolor{\underline{Tizón tardío en una planta de tomate}}}
+\label{fig:fig2}
+\end{center}
+\end{figure}
+
+\item Tizón temprano (\textit{Alternaria solani}): Produce defoliación progresiva, debilitando la planta y reduciendo el número y calidad de los frutos.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.2]{./Images/Tizon_temprano_tomate.jpg}
+\caption{\headlinecolor{\underline{Tizón temprano en una planta de tomate}}}
+\label{fig:fig3}
+\end{center}
+\end{figure}
+
+\item Fusariosis vascular (\textit{Fusarium oxysporum}): Ataca el sistema vascular, provocando marchitez y muerte de plantas.
+\item Virus como TYLCV y TSWV: Pueden causar deformaciones severas y reducciones completas en la producción, especialmente cuando se transmiten por vectores como la mosca blanca.
+\end{itemize}
+
+La manifestación simultánea o sucesiva de estas enfermedades es una de las principales causas en la disminución en la productividad del cultivo a escala global. Además, muchas de estas enfermedades no solo viven en la planta sino que persisten en el suelo, semillas o herramientas que hayan inteactuado con la planta, lo que dificulta su erradicación y aumenta los costos del tratamiento. \parencite{agrotendencia2}
+
+Dada la magnitud del impacto de estas enfermedades, la detección temprana y precisa de las mismas es crucial. Permite una correcta intervención que minimiza las pérdidas, permitiendo la reducción del uso innecesario de los agroquímicos y mejorando la sostenibilidad. En este contexto, las tecnologías basadas en visión por computadora, sensores remotos e inteligencia artificial ofrecen soluciones eficaces para mejorar el seguimiento y el control sanitario de este cultivo clave.
+
+
+\section{Estructura del resto del documento}\label{sec:sec1.2}
+
+La documentación de este proyecto se ha desarrollado dividiendo el contenidoen distintos caítulos con el objetivo de facilitar la comprensión por parte del lector. A continuación se enuncia la información presente en cada capítulo del resto del documento:
+
+\begin{bulletlist}
+\item Capítulo 2. Objetivos: se describe el objetivo principal del proyecto junto con los objetivos intermedios necesarios para conseguirlo.
+\item Capítulo 3. Estado del Arte: 
+\item Capítulo 4. Implementación y desarrollo: se explica el preprocesamientode los datos y las técnicas ML aplicadas a los mismos.
+\item Capítulo 5. Evaluación y resultados: se presentan los resultados obtenidos al aplicar las técnicas ML.
+\item Capítulo 6. Conclusiones
+\end{bulletlist}
+
+
+
+\chapter{Objetivos}\label{cap:cap2}
+
+El objetivo general de este proyecto consiste en conseguir un clasificador que a partir de imágenes de hojas de plantas de tomate distinga entre estado saludable y 10 enfermedades distintas.
+
+\section{Objetivos específicos}\label{sec:sec2.1}
+
+\begin{enumerate}[label=\bfseries\headlinecolor\arabic*.]
+\item Analizar dataset de hojas de tomate.
+\item Implementar y entrenar modelos CNN para la clasificación.
+\item Evaluar la precisión de los modelos y comparar resultados.
+
+\end{enumerate}
+
+
+\chapter{Estado del arte}\label{cap:cap3}
+
+En los últimos años la aplicación de técnicas de inteligencia artificial en la agricultura ha cobrado un papel relevante, especialmente en tareas de diagnóstico temprano de enfermedades en cultivos.  El uso de aprendizaje profundo permite automatizar la detección de patrones en imágenes, lo cual puede ayudar a los agricultores a tomar decisiones más rápidas y eficientes.
+
+Inicialmente, los métodos empleados para esta tarea incluían algoritmos de aprendizaje supervisado como máquinas de vectores de soporte (SVM), k\-vecinos más cercanos (KNN) y redes bayesianas. Sin embargo, estos enfoques dependían en gran medida de una segmentación previa precisa y de la extracción manual de características, lo que limitaba su capacidad de generalización y precisión en entornos reales.
+
+Con la llegada de las redes neuronales convolucionales (CNN), se ha producido un cambio significativo en la forma de abordar este problema. Las CNN son capaces de aprender representaciones directamente a partir de los datos de imagen, eliminando la necesidad de ingeniería manual de características. Diversos estudios han demostrado su eficacia para la clasificación de enfermedades en hojas de tomate.
+
+Por ejemplo, una revisión publicada en la Revista de Investigación e Innovación de las Ciencias de la Universidad Tecnológica de Bolívar \parencite{estudio1}, las técnicas tradicionales de aprendizaje supervisado como SVM, KNN y lógica difusa muestran limitaciones significativas en tareas de detección de enfermedades en imágenes de frutas debido a su dependencia de extracción manual de características y segmentación previa. En contraste, las redes neuronales convolucionales han demostrado una precisión superior, mayor robustez frente a la variabilidad y mayor capacidad de generalización. Esta revisión respalda la elección de CNNs como enfoque principal en este trabajo.
+
+Por otra parte, Valeria Maeda Gutiérrez (2019) \parencite{estudio2} realizó una comparativa entre varias arquitecturas CNN, incluyendo AlexNet, GoogleNet, InceptionV3, ResNet 18 y ResNet 50 aplicadas al conjunto de datos PlantVillage. Todas las arquitecturas consiguieron más del 98\% de precisión y sensibilidad, lo que confirma la ideonidad de las mismas para la tarea que se pretende hacer. Concretamente con GoogleNet consiguió una precisión del 99,3\% y una sensibilidad del 99,1\%
+
+En otra línea, Eduardo A.Huerta-Mora, Víctor González-Huitrón, Héctor Rodríguez-Rangel y Leonel Ernesto Amabilis-Sosa (2024) \parencite{estudio3} emplearon la arquitectura VGG16 con técnicas de fine-tuning para el mismo conjunto de datos PlantVillage, obteniendo alrededor del 90\% de sensibilidad y precisión. Este hecho confirma que esta arquitectura también puede ser interesante para el estudia a realizar.
+
+
+
+\chapter{Implementación y desarrollo}\label{cap:cap4}
+
+En este capítulo se presenta tanto el \textit{hardware} como el \textit{software} usados en este proyecto. Además se explica la procedencia y estructura del conjunto de datos que serán usados para el estudio. Finalmente, se desarrolla el preprocesmiento que se realiza a este conjunto de datos junto con los modelos entrenados para conseguir un clasificador.
+
+\section{Herramientas usadas}\label{sec:sec4.1}
+
+Para llevar a cabo este proyecto, se ha usado Google Colab (abreviatura de Google Colaboratory) que se accedía desde el ordenador portátil del autor del documento. Este ordenador es un ASUS TUF Gaming FX505GT que cuenta con las siguientes características:
+
+\begin{bulletlist}
+\item 16 GB de RAM con formato DDR4.
+\item Almacenamiento compuesto por un disco duro con tecnología SSD de 512GB.
+\item Procesador Intel Core i7-9750H CPU a 2.60 GHz, con 6 procesadores principales y 6 procesadores lógicos.
+\item Tarjeta gráfica NVIDIA GeForce GTX 1650 con 4GB de RAM.
+\end{bulletlist}
+
+Google Colab es un servicio gratuito de Google que permite escribir y ejecutar código en la nube sin necesidad de instalar nada en tu equipo. Los recursos que ofrece de forma gratuita varían con el tiempo, pero las características que suele ofrecer son las siguientes:
+
+\begin{bulletlist}
+\item GPU NVIDIA Tesla T4 con 16 GB de VRAM ó CPU Intel Xeon con alrededor de 13 GB de RAM.
+\item Almacenamiento temporal se corresponde con unos 100 GB de espacio en disco.
+\item La duración de la sesión puede ser de hasta 12 horas, aunque en la práctica podrían terminarse antes según uso y carga del sistema.
+\end{bulletlist}
+
+Por otra parte el lenguaje de programación usado ha sido Python, un lenguaje que es ampliamente utilizado por científicos de datos. En las últimas décadas Python se ha enriquecido con numerosas librerías relacionadas con técnicas de ML que facilitan el uso de las mismas. En concreto para este proyecto se ha utilizado la versión 3.12.11 de Python.
+
+En cuanto a las librerías de Python usadas para la implementación, se presentan a continuación:
+
+\begin{bulletlist}
+\item NumPy: es una librería que ofrece la posibilidad de crear matrices y vectores multidimensionales y provee además un gran número de operaciones matemáticas de alto nivel.
+\item Pandas: es una librería que ofrece la estructura de datos llamada DataFrame que facilita la manipulación y el análisis de datos. Es una extensión de la librería NumPy. Ha sido usada para tratar y transformar los datos.
+\item Plantcv: es una librería de Python de código abierto diseñada específicamente para el análisis de imágenes de plantas. Se ha usado para lectura de las imágenes.
+\item Tensorflow: es una librería de software de código abierto creada por Google para desarrollar y entrenar modelos de machine learning (ML) y deep learning (DL). Recibe este nombre porque trabaja con tensores, estructuras de datos multidimensionales, como matrices o vectores que fluyen a través de un grafo computacional de operaciones. Se ha usado para crear y entrenar los modelos descritos en este proyecto.
+\item Seaborn: esta librería permite la visualización de los datos a través de distintos tipos de gráficas. Ha sido usada para realizar los distintos gráficos como las matrices de confusión para evaluar los modelos.
+\end{bulletlist}
+
+
+\section{Procedencia y descripción de los datos}\label{sec:sec4.2}
+
+Los datos provienen de la plataforma online de ciencia de datos de Google, Kaggle, que funciona como una mezcla de red social, repositorio de datasets y espacio de competición. En concreto, el conjunto de datos usuado es el llamado "Tomato Leaves Dataset" (***Enlace). Según su descripción en la misma plataforma se trata de un conjunto de datos de más de 20.000 imágenes de hojas de tomate con 11 clases, 10 enfermedades y una clase sana. Estas imágenes se han recopilado tanto en entornos de laboratorio como en entornos naturales.
+
+En concreto se pueden extraer dos directorios que servirán como conjunto de datos para el entrenamiento y conjunto de datos para validación, ambos cuentan con 11 directorios con imágenes dentro. Cada uno de estos subdirectorios representa una de las clases que serán brevemente expuestas a continuación:
+
+\begin{table}[ht] 
+\centering
+\caption{\headlinecolor{\underline{Clases del conjunto de datos}}}
+\label{tab:clases_datos}
+\begin{tabular}{|c|c|} \hline
+\rowcolor{naranja}
+\multicolumn{2}{|c|}{\textbf{Conjunto de datos}} \\ \hline
+\rowcolor{naranja!30}
+Clase & Traducción Clase \\ \hline 
+\texttt{Healthy} & Saludable \\ \hline 
+\texttt{Bacterial\_spot} & Manchas bacterianas \\ \hline 
+\texttt{Early\_blight} & Tizón precoz \\ \hline 
+\texttt{Late\_blight} & Tizón tardío \\ \hline 
+\texttt{Leaf\_Mold} & Hojas con moho \\ \hline 
+\texttt{Powdery\_mildew} & Moho polvoriento \\ \hline 
+\texttt{Septoria\_leaf\_spot} & Hojas manchadas de septoriosis \\ \hline 
+\texttt{Spidermite\_Two-spotted\_spider\_mite} & Picadura de araña roja de dos manchas \\ \hline 
+\texttt{Target\_Spot} & Punto blanco \\ \hline 
+\texttt{Tomato\_mosaic\_virus} & Virus mosaico \\ \hline 
+\texttt{Tomato\_Yellow\_Leaf\_Curl\_Virus} & Virus de la hoja amarilla \\ \hline
+\end{tabular}
+\end{table}
+
+
+\section{Preprocesado de los datos}\label{sec:sec4.3}
+
+Al realizar la carga de datos se tiene un directorio con dos subdirectorios, cada uno de ellos representará un conjunto de datos, un conjunto de datos de entrenamiento (train) y otro de validación (valid). Cada uno de estos directorios contienen a su vez 11 directorios, representando cada una de las clases. Una vez puestos en situación, se llevan a cabo las primera tareas de exploración de las imágenes.
+En primer lugar, seleccionando el directorio que contiene los datos de entrenamiento se realiza una función para obtener el número de imágenes existentes por cada tipo de tamaño. Gracias a esta función se sabe que se cuentan como imágenes de variables tamaños, concretamente existen 760 tipos de tamaños distintos. En la siguiente tabla se exponen los 5 tipos de tamaño que más se repiten:
+
+
+TABLA
+(256, 256) - 18942 imágenes
+(227, 227) - 4120 imágenes
+(640, 640) - 1207 imágenes
+(533, 800) - 151 imágenes
+(800, 600) - 10 imágenes
+De cara a construir un modelo todas las imágenes tienen que tener el mismo tamaño y debida a esta primera toma de contacto se toma la decisión de transformar todas lasa imágenes a tamaño de 256x256 píxeles.
+
+En segundo lugar, se realiza una muestra aleatoria de una imagen por clase, para visualizar el tipo de imágenes que se vana tratar. AAAa
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.4]{./Images/Imagen_aleatoria_por_clase.png}
+\caption{\headlinecolor{\underline{Imagen aleatoria por clase}}}
+\label{fig:fig4}
+\end{center}
+\end{figure}
+
+**Se observa la variedad de imágenes que existen. Unas más oscuras, otras con más brillo. Algunas con fundo blanco, otras con fondo de color o incluso con más elementos de fondo no solo un fondo plano. Incluso algunas están giradas.
+
+
+\chapter{Evaluación y resultados}\label{cap:cap5}
+
+
+\chapter{Conclusiones}\label{cap:cap6}
+
+
+
+\appendix
+\chapter{Anexo I: Ejemplo de anexo}\label{cap:anexo1}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 \begin{enumerate}[label=\bfseries\headlinecolor\arabic*.]
 \item Primer elemento.
@@ -214,28 +379,12 @@ Lorem ipsum & Lorem ipsum & Lorem ipsum \\ \hline
 
 \end{enumerate}
 
-%\includegraphics[scale=0.2]{./Images/image3.png}
-
-\chapter{Capítulo tercero}\label{cap:cap3}
-
-
-
-\LaTeX{} \cite{latex2e} is a set of macros built atop \TeX{} \cite{texbook}.
-
-\appendix
-\chapter{Anexo I: Ejemplo de anexo}\label{cap:anexo1}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 \chapter{Anexo II: Otro ejemplo de anexo}\label{cap:anexo2}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-\bibliographystyle{plain}
-%\bibliographystyle{alpha}
-\bibliography{Bibliografia_TFT.bib}
 
-
+\printbibliography
 
 \end{document}

@@ -1,13 +1,623 @@
-\begin{thebibliography}{1}
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
 
-\bibitem{texbook}
-Donald~E. Knuth.
-\newblock {\em The {\TeX} Book}.
-\newblock Addison-Wesley Professional, 1986.
 
-\bibitem{latex2e}
-Leslie Lamport.
-\newblock {\em {\LaTeX}: a Document Preparation System}.
-\newblock Addison Wesley, Massachusetts, 2 edition, 1994.
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{estudio3}{misc}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=d896b21a105b2a4d2a0b5e43f24be419}{%
+           family={A.Huerta-Mora},
+           familyi={A\bibinithyphendelim M\bibinitperiod},
+           given={Eduardo},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d92b9ae2efe5ee53cc2989bfd16bc3a9}{%
+           family={González-Huitrón},
+           familyi={G\bibinithyphendelim H\bibinitperiod},
+           given={Víctor},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fb29c04b7ad90904b0318df6db3f7727}{%
+           family={Rodríguez-Rangel},
+           familyi={R\bibinithyphendelim R\bibinitperiod},
+           given={Héctor},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=041af9f8050eed8f76883a7fdd4c17e1}{%
+           family={Amabilis-Sosa},
+           familyi={A\bibinithyphendelim S\bibinitperiod},
+           given={Leonel\bibnamedelima Ernesto},
+           giveni={L\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6cfbad8dd0f65a39f97252d4a3f09156}
+      \strng{fullhash}{24c5602a13244bb8b9c20de258437358}
+      \strng{fullhashraw}{24c5602a13244bb8b9c20de258437358}
+      \strng{bibnamehash}{24c5602a13244bb8b9c20de258437358}
+      \strng{authorbibnamehash}{24c5602a13244bb8b9c20de258437358}
+      \strng{authornamehash}{6cfbad8dd0f65a39f97252d4a3f09156}
+      \strng{authorfullhash}{24c5602a13244bb8b9c20de258437358}
+      \strng{authorfullhashraw}{24c5602a13244bb8b9c20de258437358}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Consultado el 30 de julio de 2025}
+      \field{title}{Detección de enfermedades foliares conarquitecturas de redes neuronales convolucionales}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://rinderesu.com/index.php/rinderesu/article/view/46/50
+      \endverb
+      \verb{url}
+      \verb https://rinderesu.com/index.php/rinderesu/article/view/46/50
+      \endverb
+    \endentry
+    \entry{estudio2}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e9bf29d151c1fcf990767a8c5aacbe56}{%
+           family={Gutiérrez},
+           familyi={G\bibinitperiod},
+           given={Valeria\bibnamedelima Maeda},
+           giveni={V\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e9bf29d151c1fcf990767a8c5aacbe56}
+      \strng{fullhash}{e9bf29d151c1fcf990767a8c5aacbe56}
+      \strng{fullhashraw}{e9bf29d151c1fcf990767a8c5aacbe56}
+      \strng{bibnamehash}{e9bf29d151c1fcf990767a8c5aacbe56}
+      \strng{authorbibnamehash}{e9bf29d151c1fcf990767a8c5aacbe56}
+      \strng{authornamehash}{e9bf29d151c1fcf990767a8c5aacbe56}
+      \strng{authorfullhash}{e9bf29d151c1fcf990767a8c5aacbe56}
+      \strng{authorfullhashraw}{e9bf29d151c1fcf990767a8c5aacbe56}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Consultado el 30 de julio de 2025}
+      \field{title}{Comparación de arquitecturas de redes neuronales convolucionales para la clasificación de enfermedades en tomate}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://sedici.unlp.edu.ar/handle/10915/139770
+      \endverb
+      \verb{url}
+      \verb https://sedici.unlp.edu.ar/handle/10915/139770
+      \endverb
+    \endentry
+    \entry{agrotendencia1}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=81264ddae791f329adec82263b96497b}{%
+           family={{Ing. Agr. Miguel Silva}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Agrotendencia TV}%
+      }
+      \strng{namehash}{81264ddae791f329adec82263b96497b}
+      \strng{fullhash}{81264ddae791f329adec82263b96497b}
+      \strng{fullhashraw}{81264ddae791f329adec82263b96497b}
+      \strng{bibnamehash}{81264ddae791f329adec82263b96497b}
+      \strng{authorbibnamehash}{81264ddae791f329adec82263b96497b}
+      \strng{authornamehash}{81264ddae791f329adec82263b96497b}
+      \strng{authorfullhash}{81264ddae791f329adec82263b96497b}
+      \strng{authorfullhashraw}{81264ddae791f329adec82263b96497b}
+      \field{extraname}{1}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{7}
+      \field{title}{Cultivo de tomate: Cómo se realiza, plagas e importancia}
+      \field{urlday}{28}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://agrotendencia.tv/agricultura/cultivos/hortalizas/el-cultivo-de-tomate/#Historia_del_tomate_o_jitomate
+      \endverb
+      \verb{url}
+      \verb https://agrotendencia.tv/agricultura/cultivos/hortalizas/el-cultivo-de-tomate/#Historia_del_tomate_o_jitomate
+      \endverb
+    \endentry
+    \entry{agrotendencia2}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=81264ddae791f329adec82263b96497b}{%
+           family={{Ing. Agr. Miguel Silva}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Agrotendencia TV}%
+      }
+      \strng{namehash}{81264ddae791f329adec82263b96497b}
+      \strng{fullhash}{81264ddae791f329adec82263b96497b}
+      \strng{fullhashraw}{81264ddae791f329adec82263b96497b}
+      \strng{bibnamehash}{81264ddae791f329adec82263b96497b}
+      \strng{authorbibnamehash}{81264ddae791f329adec82263b96497b}
+      \strng{authornamehash}{81264ddae791f329adec82263b96497b}
+      \strng{authorfullhash}{81264ddae791f329adec82263b96497b}
+      \strng{authorfullhashraw}{81264ddae791f329adec82263b96497b}
+      \field{extraname}{2}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{7}
+      \field{title}{Cultivo de tomate: Cómo se realiza, plagas e importancia}
+      \field{urlday}{28}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://agrotendencia.tv/agricultura/cultivos/hortalizas/el-cultivo-de-tomate/#Historia_del_tomate_o_jitomate
+      \endverb
+      \verb{url}
+      \verb https://agrotendencia.tv/agricultura/cultivos/hortalizas/el-cultivo-de-tomate/#Historia_del_tomate_o_jitomate
+      \endverb
+    \endentry
+    \entry{estudio1}{online}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=675b7c0e6eea583b419083f97568d7ce}{%
+           family={Martínez},
+           familyi={M\bibinitperiod},
+           given={Maday\bibnamedelima Ynfante},
+           giveni={M\bibinitperiod\bibinitdelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3220fad317ef94f53baa6760b9b80283}{%
+           family={Molina},
+           familyi={M\bibinitperiod},
+           given={Minelkis\bibnamedelima Machado},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=247b937115ba137df5976c2bafc53a4c}{%
+           family={García},
+           familyi={G\bibinitperiod},
+           given={Neili\bibnamedelima Machado},
+           giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=99cb908317ca5f500cf66c801c377600}{%
+           family={López},
+           familyi={L\bibinitperiod},
+           given={Efraín\bibnamedelima Velasteguí},
+           giveni={E\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{54751f34522d112c9dfd717704b8c2f5}
+      \strng{fullhash}{0d845ba4bf4751d498f48bff2f7f365a}
+      \strng{fullhashraw}{0d845ba4bf4751d498f48bff2f7f365a}
+      \strng{bibnamehash}{0d845ba4bf4751d498f48bff2f7f365a}
+      \strng{authorbibnamehash}{0d845ba4bf4751d498f48bff2f7f365a}
+      \strng{authornamehash}{54751f34522d112c9dfd717704b8c2f5}
+      \strng{authorfullhash}{0d845ba4bf4751d498f48bff2f7f365a}
+      \strng{authorfullhashraw}{0d845ba4bf4751d498f48bff2f7f365a}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Consultado el 30 de julio de 2025}
+      \field{title}{Técnicas de aprendizaje supervisado para la detección y clasificación de enfermedades y defectos en imágenes de frutas: revisión}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://revistas.utb.edu.ec/index.php/magazine/article/view/2330/1983
+      \endverb
+      \verb{url}
+      \verb https://revistas.utb.edu.ec/index.php/magazine/article/view/2330/1983
+      \endverb
+    \endentry
+    \entry{wikipedia2}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b6aea1a416c89509a7df1cbb69249cb6}{%
+           family={{Wikipedia contributors}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Wikipedia}%
+      }
+      \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{bibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
+      \field{extraname}{1}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{7}
+      \field{title}{Producción mundial del tomate}
+      \field{urlday}{28}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://es.wikipedia.org/wiki/Solanum_lycopersicum
+      \endverb
+      \verb{url}
+      \verb https://es.wikipedia.org/wiki/Solanum_lycopersicum
+      \endverb
+    \endentry
+    \entry{wikipedia1}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b6aea1a416c89509a7df1cbb69249cb6}{%
+           family={{Wikipedia contributors}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Wikipedia}%
+      }
+      \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{bibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
+      \field{extraname}{2}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{7}
+      \field{title}{Solanum lycopersicum}
+      \field{urlday}{28}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://es.wikipedia.org/wiki/Solanum_lycopersicum
+      \endverb
+      \verb{url}
+      \verb https://es.wikipedia.org/wiki/Solanum_lycopersicum
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global/global}
+    \entry{estudio3}{misc}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=d896b21a105b2a4d2a0b5e43f24be419}{%
+           family={A.Huerta-Mora},
+           familyi={A\bibinithyphendelim M\bibinitperiod},
+           given={Eduardo},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d92b9ae2efe5ee53cc2989bfd16bc3a9}{%
+           family={González-Huitrón},
+           familyi={G\bibinithyphendelim H\bibinitperiod},
+           given={Víctor},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fb29c04b7ad90904b0318df6db3f7727}{%
+           family={Rodríguez-Rangel},
+           familyi={R\bibinithyphendelim R\bibinitperiod},
+           given={Héctor},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=041af9f8050eed8f76883a7fdd4c17e1}{%
+           family={Amabilis-Sosa},
+           familyi={A\bibinithyphendelim S\bibinitperiod},
+           given={Leonel\bibnamedelima Ernesto},
+           giveni={L\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6cfbad8dd0f65a39f97252d4a3f09156}
+      \strng{fullhash}{24c5602a13244bb8b9c20de258437358}
+      \strng{fullhashraw}{24c5602a13244bb8b9c20de258437358}
+      \strng{bibnamehash}{24c5602a13244bb8b9c20de258437358}
+      \strng{authorbibnamehash}{24c5602a13244bb8b9c20de258437358}
+      \strng{authornamehash}{6cfbad8dd0f65a39f97252d4a3f09156}
+      \strng{authorfullhash}{24c5602a13244bb8b9c20de258437358}
+      \strng{authorfullhashraw}{24c5602a13244bb8b9c20de258437358}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Consultado el 30 de julio de 2025}
+      \field{title}{Detección de enfermedades foliares conarquitecturas de redes neuronales convolucionales}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://rinderesu.com/index.php/rinderesu/article/view/46/50
+      \endverb
+      \verb{url}
+      \verb https://rinderesu.com/index.php/rinderesu/article/view/46/50
+      \endverb
+    \endentry
+    \entry{estudio2}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e9bf29d151c1fcf990767a8c5aacbe56}{%
+           family={Gutiérrez},
+           familyi={G\bibinitperiod},
+           given={Valeria\bibnamedelima Maeda},
+           giveni={V\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e9bf29d151c1fcf990767a8c5aacbe56}
+      \strng{fullhash}{e9bf29d151c1fcf990767a8c5aacbe56}
+      \strng{fullhashraw}{e9bf29d151c1fcf990767a8c5aacbe56}
+      \strng{bibnamehash}{e9bf29d151c1fcf990767a8c5aacbe56}
+      \strng{authorbibnamehash}{e9bf29d151c1fcf990767a8c5aacbe56}
+      \strng{authornamehash}{e9bf29d151c1fcf990767a8c5aacbe56}
+      \strng{authorfullhash}{e9bf29d151c1fcf990767a8c5aacbe56}
+      \strng{authorfullhashraw}{e9bf29d151c1fcf990767a8c5aacbe56}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Consultado el 30 de julio de 2025}
+      \field{title}{Comparación de arquitecturas de redes neuronales convolucionales para la clasificación de enfermedades en tomate}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://sedici.unlp.edu.ar/handle/10915/139770
+      \endverb
+      \verb{url}
+      \verb https://sedici.unlp.edu.ar/handle/10915/139770
+      \endverb
+    \endentry
+    \entry{agrotendencia1}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=81264ddae791f329adec82263b96497b}{%
+           family={{Ing. Agr. Miguel Silva}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Agrotendencia TV}%
+      }
+      \strng{namehash}{81264ddae791f329adec82263b96497b}
+      \strng{fullhash}{81264ddae791f329adec82263b96497b}
+      \strng{fullhashraw}{81264ddae791f329adec82263b96497b}
+      \strng{bibnamehash}{81264ddae791f329adec82263b96497b}
+      \strng{authorbibnamehash}{81264ddae791f329adec82263b96497b}
+      \strng{authornamehash}{81264ddae791f329adec82263b96497b}
+      \strng{authorfullhash}{81264ddae791f329adec82263b96497b}
+      \strng{authorfullhashraw}{81264ddae791f329adec82263b96497b}
+      \field{extraname}{1}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{7}
+      \field{title}{Cultivo de tomate: Cómo se realiza, plagas e importancia}
+      \field{urlday}{28}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://agrotendencia.tv/agricultura/cultivos/hortalizas/el-cultivo-de-tomate/#Historia_del_tomate_o_jitomate
+      \endverb
+      \verb{url}
+      \verb https://agrotendencia.tv/agricultura/cultivos/hortalizas/el-cultivo-de-tomate/#Historia_del_tomate_o_jitomate
+      \endverb
+    \endentry
+    \entry{agrotendencia2}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=81264ddae791f329adec82263b96497b}{%
+           family={{Ing. Agr. Miguel Silva}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Agrotendencia TV}%
+      }
+      \strng{namehash}{81264ddae791f329adec82263b96497b}
+      \strng{fullhash}{81264ddae791f329adec82263b96497b}
+      \strng{fullhashraw}{81264ddae791f329adec82263b96497b}
+      \strng{bibnamehash}{81264ddae791f329adec82263b96497b}
+      \strng{authorbibnamehash}{81264ddae791f329adec82263b96497b}
+      \strng{authornamehash}{81264ddae791f329adec82263b96497b}
+      \strng{authorfullhash}{81264ddae791f329adec82263b96497b}
+      \strng{authorfullhashraw}{81264ddae791f329adec82263b96497b}
+      \field{extraname}{2}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{7}
+      \field{title}{Cultivo de tomate: Cómo se realiza, plagas e importancia}
+      \field{urlday}{28}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://agrotendencia.tv/agricultura/cultivos/hortalizas/el-cultivo-de-tomate/#Historia_del_tomate_o_jitomate
+      \endverb
+      \verb{url}
+      \verb https://agrotendencia.tv/agricultura/cultivos/hortalizas/el-cultivo-de-tomate/#Historia_del_tomate_o_jitomate
+      \endverb
+    \endentry
+    \entry{estudio1}{online}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=675b7c0e6eea583b419083f97568d7ce}{%
+           family={Martínez},
+           familyi={M\bibinitperiod},
+           given={Maday\bibnamedelima Ynfante},
+           giveni={M\bibinitperiod\bibinitdelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3220fad317ef94f53baa6760b9b80283}{%
+           family={Molina},
+           familyi={M\bibinitperiod},
+           given={Minelkis\bibnamedelima Machado},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=247b937115ba137df5976c2bafc53a4c}{%
+           family={García},
+           familyi={G\bibinitperiod},
+           given={Neili\bibnamedelima Machado},
+           giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=99cb908317ca5f500cf66c801c377600}{%
+           family={López},
+           familyi={L\bibinitperiod},
+           given={Efraín\bibnamedelima Velasteguí},
+           giveni={E\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{54751f34522d112c9dfd717704b8c2f5}
+      \strng{fullhash}{0d845ba4bf4751d498f48bff2f7f365a}
+      \strng{fullhashraw}{0d845ba4bf4751d498f48bff2f7f365a}
+      \strng{bibnamehash}{0d845ba4bf4751d498f48bff2f7f365a}
+      \strng{authorbibnamehash}{0d845ba4bf4751d498f48bff2f7f365a}
+      \strng{authornamehash}{54751f34522d112c9dfd717704b8c2f5}
+      \strng{authorfullhash}{0d845ba4bf4751d498f48bff2f7f365a}
+      \strng{authorfullhashraw}{0d845ba4bf4751d498f48bff2f7f365a}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Consultado el 30 de julio de 2025}
+      \field{title}{Técnicas de aprendizaje supervisado para la detección y clasificación de enfermedades y defectos en imágenes de frutas: revisión}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://revistas.utb.edu.ec/index.php/magazine/article/view/2330/1983
+      \endverb
+      \verb{url}
+      \verb https://revistas.utb.edu.ec/index.php/magazine/article/view/2330/1983
+      \endverb
+    \endentry
+    \entry{wikipedia2}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b6aea1a416c89509a7df1cbb69249cb6}{%
+           family={{Wikipedia contributors}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Wikipedia}%
+      }
+      \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{bibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
+      \field{extraname}{1}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{7}
+      \field{title}{Producción mundial del tomate}
+      \field{urlday}{28}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://es.wikipedia.org/wiki/Solanum_lycopersicum
+      \endverb
+      \verb{url}
+      \verb https://es.wikipedia.org/wiki/Solanum_lycopersicum
+      \endverb
+    \endentry
+    \entry{wikipedia1}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b6aea1a416c89509a7df1cbb69249cb6}{%
+           family={{Wikipedia contributors}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Wikipedia}%
+      }
+      \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{bibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
+      \field{extraname}{2}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{7}
+      \field{title}{Solanum lycopersicum}
+      \field{urlday}{28}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://es.wikipedia.org/wiki/Solanum_lycopersicum
+      \endverb
+      \verb{url}
+      \verb https://es.wikipedia.org/wiki/Solanum_lycopersicum
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
 
-\end{thebibliography}

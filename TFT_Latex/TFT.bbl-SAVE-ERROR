@@ -1,0 +1,269 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{agrotendencia1}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=81264ddae791f329adec82263b96497b}{%
+           family={{Ing. Agr. Miguel Silva}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{81264ddae791f329adec82263b96497b}
+      \strng{fullhash}{81264ddae791f329adec82263b96497b}
+      \strng{fullhashraw}{81264ddae791f329adec82263b96497b}
+      \strng{bibnamehash}{81264ddae791f329adec82263b96497b}
+      \strng{authorbibnamehash}{81264ddae791f329adec82263b96497b}
+      \strng{authornamehash}{81264ddae791f329adec82263b96497b}
+      \strng{authorfullhash}{81264ddae791f329adec82263b96497b}
+      \strng{authorfullhashraw}{81264ddae791f329adec82263b96497b}
+      \field{extraname}{1}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://agrotendencia.tv/agricultura/cultivos/hortalizas/el-cultivo-de-tomate/#Historia_del_tomate_o_jitomate}}
+      \field{note}{Accessed: 28 July 2025}
+      \field{title}{Cultivo de tomate: Cómo se realiza, plagas e importancia - Agrotendencia TV}
+      \field{year}{2025}
+    \endentry
+    \entry{agrotendencia2}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=81264ddae791f329adec82263b96497b}{%
+           family={{Ing. Agr. Miguel Silva}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{81264ddae791f329adec82263b96497b}
+      \strng{fullhash}{81264ddae791f329adec82263b96497b}
+      \strng{fullhashraw}{81264ddae791f329adec82263b96497b}
+      \strng{bibnamehash}{81264ddae791f329adec82263b96497b}
+      \strng{authorbibnamehash}{81264ddae791f329adec82263b96497b}
+      \strng{authornamehash}{81264ddae791f329adec82263b96497b}
+      \strng{authorfullhash}{81264ddae791f329adec82263b96497b}
+      \strng{authorfullhashraw}{81264ddae791f329adec82263b96497b}
+      \field{extraname}{2}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://agrotendencia.tv/agricultura/cultivos/hortalizas/el-cultivo-de-tomate/#Control_de_plagas_y_enfermedades_del_tomate}}
+      \field{note}{Accessed: 28 July 2025}
+      \field{title}{Cultivo de tomate: Cómo se realiza, plagas e importancia - Agrotendencia TV}
+      \field{year}{2025}
+    \endentry
+    \entry{wikipedia2}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b6aea1a416c89509a7df1cbb69249cb6}{%
+           family={{Wikipedia contributors}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{bibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
+      \field{extraname}{1}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://es.wikipedia.org/wiki/Anexo:Producci%C3%B3n_mundial_de_tomate}}
+      \field{note}{Accessed: 28 July 2025}
+      \field{title}{Producción mundial del tomate -- Wikipedia, The Free Encyclopedia}
+      \field{year}{2025}
+    \endentry
+    \entry{wikipedia1}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b6aea1a416c89509a7df1cbb69249cb6}{%
+           family={{Wikipedia contributors}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Wikipedia}%
+      }
+      \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{bibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
+      \field{extraname}{2}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{7}
+      \field{note}{Accessed: 28 July 2025}
+      \field{title}{Solanum lycopersicum}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://es.wikipedia.org/wiki/Solanum_lycopersicum
+      \endverb
+      \verb{url}
+      \verb https://es.wikipedia.org/wiki/Solanum_lycopersicum
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global/global}
+    \entry{agrotendencia1}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=81264ddae791f329adec82263b96497b}{%
+           family={{Ing. Agr. Miguel Silva}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{81264ddae791f329adec82263b96497b}
+      \strng{fullhash}{81264ddae791f329adec82263b96497b}
+      \strng{fullhashraw}{81264ddae791f329adec82263b96497b}
+      \strng{bibnamehash}{81264ddae791f329adec82263b96497b}
+      \strng{authorbibnamehash}{81264ddae791f329adec82263b96497b}
+      \strng{authornamehash}{81264ddae791f329adec82263b96497b}
+      \strng{authorfullhash}{81264ddae791f329adec82263b96497b}
+      \strng{authorfullhashraw}{81264ddae791f329adec82263b96497b}
+      \field{extraname}{1}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://agrotendencia.tv/agricultura/cultivos/hortalizas/el-cultivo-de-tomate/#Historia_del_tomate_o_jitomate}}
+      \field{note}{Accessed: 28 July 2025}
+      \field{title}{Cultivo de tomate: Cómo se realiza, plagas e importancia - Agrotendencia TV}
+      \field{year}{2025}
+    \endentry
+    \entry{agrotendencia2}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=81264ddae791f329adec82263b96497b}{%
+           family={{Ing. Agr. Miguel Silva}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{81264ddae791f329adec82263b96497b}
+      \strng{fullhash}{81264ddae791f329adec82263b96497b}
+      \strng{fullhashraw}{81264ddae791f329adec82263b96497b}
+      \strng{bibnamehash}{81264ddae791f329adec82263b96497b}
+      \strng{authorbibnamehash}{81264ddae791f329adec82263b96497b}
+      \strng{authornamehash}{81264ddae791f329adec82263b96497b}
+      \strng{authorfullhash}{81264ddae791f329adec82263b96497b}
+      \strng{authorfullhashraw}{81264ddae791f329adec82263b96497b}
+      \field{extraname}{2}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://agrotendencia.tv/agricultura/cultivos/hortalizas/el-cultivo-de-tomate/#Control_de_plagas_y_enfermedades_del_tomate}}
+      \field{note}{Accessed: 28 July 2025}
+      \field{title}{Cultivo de tomate: Cómo se realiza, plagas e importancia - Agrotendencia TV}
+      \field{year}{2025}
+    \endentry
+    \entry{wikipedia2}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b6aea1a416c89509a7df1cbb69249cb6}{%
+           family={{Wikipedia contributors}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{bibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
+      \field{extraname}{1}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://es.wikipedia.org/wiki/Anexo:Producci%C3%B3n_mundial_de_tomate}}
+      \field{note}{Accessed: 28 July 2025}
+      \field{title}{Producción mundial del tomate -- Wikipedia, The Free Encyclopedia}
+      \field{year}{2025}
+    \endentry
+    \entry{wikipedia1}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b6aea1a416c89509a7df1cbb69249cb6}{%
+           family={{Wikipedia contributors}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Wikipedia}%
+      }
+      \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{bibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
+      \field{extraname}{2}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{7}
+      \field{note}{Accessed: 28 July 2025}
+      \field{title}{Solanum lycopersicum}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://es.wikipedia.org/wiki/Solanum_lycopersicum
+      \endverb
+      \verb{url}
+      \verb https://es.wikipedia.org/wiki/Solanum_lycopersicum
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
