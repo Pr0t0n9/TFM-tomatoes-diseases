@@ -1,6 +1,6 @@
-\documentclass[12pt,a4paper]{report}
-%\usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
+\documentclass[12pt,a4paper]{scrreprt}
+
+% Gráficos y geometría
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -8,32 +8,24 @@
 \usepackage[left=2.75cm,right=2.6cm,top=3.5cm,bottom=3.5cm]{geometry}
 
 
-
+% Índices y listas
 \usepackage{titletoc}
-% Keywords command
-
-\providecommand{\keywords}[1]
-{
-  \small	
-  \textbf{\textit{Palabras clave:\hspace{0.3cm}}} #1
-}
+\usepackage[shortlabels]{enumitem}
+\newlist{bulletlist}{itemize}{1} % Definición de una lista personalizada llamada "bulletlist"
+\setlist[bulletlist]{label=\LARGE\textbullet, left=1.5em}
 
 
-
-
+% Colores
 \usepackage[table]{xcolor}
 \definecolor{naranja}{HTML}{E65113}
-\usepackage[shortlabels]{enumitem}
-% Definición de una lista personalizada llamada "bulletlist"
-\newlist{bulletlist}{itemize}{1}
-\setlist[bulletlist]{label=\LARGE\textbullet, left=1.5em}
 \definecolor{slcolor}{HTML}{E65113}
 \newcommand{\headlinecolor}{\color{slcolor}}
-\usepackage{titlesec}
-
 \definecolor{gray75}{gray}{0.75}
+
+
 \newcommand{\hsp}{\hspace{-10pt}}
 
+% URLs e hipervínculos
 \usepackage{url}
 \usepackage{hyperref}
 
@@ -44,12 +36,14 @@
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 
-\titleformat{\chapter}[hang]{\vspace{-3cm}\headlinecolor\Huge\bfseries}{\thechapter.\hsp}{20pt}{\Huge\bfseries}
+% Estilo de capítulos y secciones con KOMA-Script
+\usepackage{xcolor}
+\setkomafont{chapter}{\Huge\bfseries\headlinecolor}
+\setkomafont{section}{\Large\bfseries}
+\setkomafont{subsection}{\normalsize\bfseries}
+\setkomafont{sectioning}{\bfseries}
 
-%\titleformat{\section}[hang]{\Large\bfseries}{}{20pt}{\Large\bfseries}
 
-\titleformat{\subsection}[hang]{\normalsize\bfseries}{}{20pt}{\large\bfseries}
-\titleformat{\appendix}[hang]{\vspace{-3cm}\headlinecolor\Huge\bfseries}{\thechapter.\hsp}{20pt}{\Huge\bfseries}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -61,7 +55,6 @@
 %-----------------COMANDOS PARA CABECERAS Y PIE DE PAGINA -----------------%
 \usepackage{lastpage}
 \usepackage{fancyhdr}
-\usepackage{titlesec}
 
 \fancypagestyle{plain}{%
   \renewcommand{\headrulewidth}{0pt}
@@ -75,15 +68,19 @@
 \pagestyle{plain}
 
 
+% Palabras clave
+\providecommand{\keywords}[1]
+{
+  \small	
+  \textbf{\textit{Palabras clave:\hspace{0.3cm}}} #1
+}
 
-
-
-
-
-
-
-
-
+% Bibliografía APA
+%\usepackage[utf8]{inputenc} % no hace falta con xelatex
+\usepackage[spanish]{babel} 
+\usepackage{csquotes}
+\usepackage[backend=biber, style=apa]{biblatex}
+\addbibresource{Bibliografia_TFT.bib}
 
 
 
@@ -101,14 +98,16 @@
 \tikz[remember picture,overlay] \node[opacity=1,inner sep=0pt] at (73.6mm, -124.25mm){\includegraphics{./Images/Picture_TitlePage.jpg}};
 
 {\fontfamily{phv}\selectfont
-\fontsize{25}{10.4}\fontseries{b}\selectfont
-\vspace{14cm}
+%\fontsize{25}{10.4}\fontseries{b}\selectfont
+\fontsize{25}{25}\fontseries{b}\selectfont
+%\vspace{14cm}
+\vspace{13cm}
 \textbf{Desarrollo de un sistema de\\
 diagnóstico de enfermedades\\
 en hojas de tomate mediante\\ 
 modelos de aprendizaje profundo}
 
-\bigskip
+\vfill
 
 \fontsize{12}{12}\selectfont
 \fontseries{m}\selectfont
@@ -150,11 +149,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 \section{Motivación}\label{sec:sec1.1}
 
-Tomate o tomatera (\textit{Solanum lycopersicum}) es una planta herbácea de la familia Solanaceae cultivada en todo el mundo para el cultivo de su fruto, el tomate o jitomate, uno de los ingredientes más universales de ensaladas y salsas en el mundo entero. \cite{wikipedia1} 
+Tomate o tomatera (\textit{Solanum lycopersicum}) es una planta herbácea de la familia Solanaceae cultivada en todo el mundo para el cultivo de su fruto, el tomate o jitomate, uno de los ingredientes más universales de ensaladas y salsas en el mundo entero. \parencite{wikipedia1} 
 
 Según los últimos estudios filogenéticos, la planta silvestre de la cual surge el tomate doméstico actual tiene origen en la zona andina del norte de Perú y sur de Ecuador. Su domesticación y diversificación posterior se originó en México.
 
-Los pueblos aztecas y mayas lo usaban en su cocina y fue exportado al resto del mundo a partir de la llegada de los españoles que lo distribuyeron a lo largo de sus colonias en el Caribe y la península ibérica a partir de lo cual pudo llegar al resto de eruopa. También lo llevaron a Filipinas y de allí pudo entrar al continente asiático. \cite{agrotendencia1} 
+Los pueblos aztecas y mayas lo usaban en su cocina y fue exportado al resto del mundo a partir de la llegada de los españoles que lo distribuyeron a lo largo de sus colonias en el Caribe y la península ibérica a partir de lo cual pudo llegar al resto de eruopa. También lo llevaron a Filipinas y de allí pudo entrar al continente asiático. \parencite{agrotendencia1} 
 
 \begin{figure}[ht]
 \begin{center}
@@ -166,9 +165,7 @@ Los pueblos aztecas y mayas lo usaban en su cocina y fue exportado al resto del 
 \end{center}
 \end{figure}
 
-El tomate es la hortaliza más extendida mundialmente y la de mayor valor económico. Su demanda aumenta continuamente y con ella su producción y comercio. 
-
-La producción mundial de tomate ascendió a más de 186 millones de toneladas en 2022 según los datos de la Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO). Según esta misma organización esta es la evolución de los 20 países que más han producido hasta 2022: \cite{wikipedia2}
+La producción mundial de tomate ascendió a más de 186 millones de toneladas en 2022 según los datos de la Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO). Según esta misma organización esta es la evolución de los 20 países que más han producido hasta 2022: \parencite{wikipedia2}
 
 \begin{table}[ht] 
 \centering
@@ -209,14 +206,14 @@ Entre las enfermedades más comunes se encuentran:
 \end{center}
 \end{figure}
 
-
 \item Fusariosis vascular (\textit{Fusarium oxysporum}): Ataca el sistema vascular, provocando marchitez y muerte de plantas.
 \item Virus como TYLCV y TSWV: Pueden causar deformaciones severas y reducciones completas en la producción, especialmente cuando se transmiten por vectores como la mosca blanca.
 \end{itemize}
 
-La manifestación simultánea o sucesiva de estas enfermedades es una de las principales causas en la disminución en la productividad del cultivo a escala global. Además, muchas de estas enfermedades no solo viven en la planta sino que persisten en el suelo, semillas o herramientas que hayan inteactuado con la planta, lo que dificulta su erradicación y aumenta los costos del tratamiento. \cite{agrotendencia2}
+La manifestación simultánea o sucesiva de estas enfermedades es una de las principales causas en la disminución en la productividad del cultivo a escala global. Además, muchas de estas enfermedades no solo viven en la planta sino que persisten en el suelo, semillas o herramientas que hayan inteactuado con la planta, lo que dificulta su erradicación y aumenta los costos del tratamiento. \parencite{agrotendencia2}
 
 Dada la magnitud del impacto de estas enfermedades, la detección temprana y precisa de las mismas es crucial. Permite una correcta intervención que minimiza las pérdidas, permitiendo la reducción del uso innecesario de los agroquímicos y mejorando la sostenibilidad. En este contexto, las tecnologías basadas en visión por computadora, sensores remotos e inteligencia artificial ofrecen soluciones eficaces para mejorar el seguimiento y el control sanitario de este cultivo clave.
+
 
 \section{Estructura del resto del documento}\label{sec:sec1.2}
 
@@ -229,6 +226,7 @@ La documentación de este proyecto se ha desarrollado dividiendo el contenidoen 
 \item Capítulo 5. Evaluación y resultados: se presentan los resultados obtenidos al aplicar las técnicas ML.
 \item Capítulo 6. Conclusiones
 \end{bulletlist}
+
 
 
 \chapter{Objetivos}\label{cap:cap2}
@@ -245,10 +243,6 @@ El objetivo general de este proyecto consiste en conseguir un clasificador que a
 \end{enumerate}
 
 
-
-
-%\includegraphics[scale=0.2]{./Images/image3.png}
-
 \chapter{Estado del arte}\label{cap:cap3}
 
 En los últimos años la aplicación de técnicas de inteligencia artificial en la agricultura ha cobrado un papel relevante, especialmente en tareas de diagnóstico temprano de enfermedades en cultivos.  El uso de aprendizaje profundo permite automatizar la detección de patrones en imágenes, lo cual puede ayudar a los agricultores a tomar decisiones más rápidas y eficientes.
@@ -257,11 +251,11 @@ Inicialmente, los métodos empleados para esta tarea incluían algoritmos de apr
 
 Con la llegada de las redes neuronales convolucionales (CNN), se ha producido un cambio significativo en la forma de abordar este problema. Las CNN son capaces de aprender representaciones directamente a partir de los datos de imagen, eliminando la necesidad de ingeniería manual de características. Diversos estudios han demostrado su eficacia para la clasificación de enfermedades en hojas de tomate.
 
-Por ejemplo, una revisión publicada en la Revista de Investigación e Innovación de las Ciencias de la Universidad Tecnológica de Bolívar \cite{estudio1}, las técnicas tradicionales de aprendizaje supervisado como SVM, KNN y lógica difusa muestran limitaciones significativas en tareas de detección de enfermedades en imágenes de frutas debido a su dependencia de extracción manual de características y segmentación previa. En contraste, las redes neuronales convolucionales han demostrado una precisión superior, mayor robustez frente a la variabilidad y mayor capacidad de generalización. Esta revisión respalda la elección de CNNs como enfoque principal en este trabajo.
+Por ejemplo, una revisión publicada en la Revista de Investigación e Innovación de las Ciencias de la Universidad Tecnológica de Bolívar \parencite{estudio1}, las técnicas tradicionales de aprendizaje supervisado como SVM, KNN y lógica difusa muestran limitaciones significativas en tareas de detección de enfermedades en imágenes de frutas debido a su dependencia de extracción manual de características y segmentación previa. En contraste, las redes neuronales convolucionales han demostrado una precisión superior, mayor robustez frente a la variabilidad y mayor capacidad de generalización. Esta revisión respalda la elección de CNNs como enfoque principal en este trabajo.
 
-Por otra parte, Valeria Maeda Gutiérrez (2019) \cite{estudio2} realizó una comparativa entre varias arquitecturas CNN, incluyendo AlexNet, GoogleNet, InceptionV3, ResNet 18 y ResNet 50 aplicadas al conjunto de datos PlantVillage. Todas las arquitecturas consiguieron más del 98\% de precisión y sensibilidad, lo que confirma la ideonidad de las mismas para la tarea que se pretende hacer. Concretamente con GoogleNet consiguió una precisión del 99,3\% y una sensibilidad del 99,1\%
+Por otra parte, Valeria Maeda Gutiérrez (2019) \parencite{estudio2} realizó una comparativa entre varias arquitecturas CNN, incluyendo AlexNet, GoogleNet, InceptionV3, ResNet 18 y ResNet 50 aplicadas al conjunto de datos PlantVillage. Todas las arquitecturas consiguieron más del 98\% de precisión y sensibilidad, lo que confirma la ideonidad de las mismas para la tarea que se pretende hacer. Concretamente con GoogleNet consiguió una precisión del 99,3\% y una sensibilidad del 99,1\%
 
-En otra línea, Eduardo A.Huerta-Mora, Víctor González-Huitrón, Héctor Rodríguez-Rangel y Leonel Ernesto Amabilis-Sosa (2024) \cite{estudio3} emplearon la arquitectura VGG16 con técnicas de fine-tuning para el mismo conjunto de datos PlantVillage, obteniendo alrededor del 90\% de sensibilidad y precisión. Este hecho confirma que esta arquitectura también puede ser interesante para el estudia a realizar.
+En otra línea, Eduardo A.Huerta-Mora, Víctor González-Huitrón, Héctor Rodríguez-Rangel y Leonel Ernesto Amabilis-Sosa (2024) \parencite{estudio3} emplearon la arquitectura VGG16 con técnicas de fine-tuning para el mismo conjunto de datos PlantVillage, obteniendo alrededor del 90\% de sensibilidad y precisión. Este hecho confirma que esta arquitectura también puede ser interesante para el estudia a realizar.
 
 
 
@@ -300,7 +294,6 @@ En cuanto a las librerías de Python usadas para la implementación, se presenta
 \item Seaborn: esta librería permite la visualización de los datos a través de distintos tipos de gráficas. Ha sido usada para realizar los distintos gráficos como las matrices de confusión para evaluar los modelos.
 \end{bulletlist}
 
-***Referencias a pie de página con enlaces a descarga de las librerías
 
 \section{Procedencia y descripción de los datos}\label{sec:sec4.2}
 
@@ -337,15 +330,16 @@ Clase & Traducción Clase \\ \hline
 Al realizar la carga de datos se tiene un directorio con dos subdirectorios, cada uno de ellos representará un conjunto de datos, un conjunto de datos de entrenamiento (train) y otro de validación (valid). Cada uno de estos directorios contienen a su vez 11 directorios, representando cada una de las clases. Una vez puestos en situación, se llevan a cabo las primera tareas de exploración de las imágenes.
 En primer lugar, seleccionando el directorio que contiene los datos de entrenamiento se realiza una función para obtener el número de imágenes existentes por cada tipo de tamaño. Gracias a esta función se sabe que se cuentan como imágenes de variables tamaños, concretamente existen 760 tipos de tamaños distintos. En la siguiente tabla se exponen los 5 tipos de tamaño que más se repiten:
 
+
 TABLA
-(256, 256) → 18942 imágenes
-(227, 227) → 4120 imágenes
-(640, 640) → 1207 imágenes
-(533, 800) → 151 imágenes
-(800, 600) → 10 imágenes
+(256, 256) - 18942 imágenes
+(227, 227) - 4120 imágenes
+(640, 640) - 1207 imágenes
+(533, 800) - 151 imágenes
+(800, 600) - 10 imágenes
 De cara a construir un modelo todas las imágenes tienen que tener el mismo tamaño y debida a esta primera toma de contacto se toma la decisión de transformar todas lasa imágenes a tamaño de 256x256 píxeles.
 
-En segundo lugar, se realiza una muestra aleatoria de una imagen por clase, para visualizar el tipo de imágenes que se vana tratar.
+En segundo lugar, se realiza una muestra aleatoria de una imagen por clase, para visualizar el tipo de imágenes que se vana tratar. AAAa
 
 \begin{figure}[ht]
 \begin{center}
@@ -390,10 +384,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-\bibliographystyle{plain}
-%\bibliographystyle{alpha}
-\bibliography{Bibliografia_TFT.bib}
 
-
+\printbibliography
 
 \end{document}
