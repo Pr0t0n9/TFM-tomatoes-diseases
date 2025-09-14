@@ -360,14 +360,51 @@ En segundo lugar, se realiza una muestra aleatoria de una imagen por clase, para
 \end{center}
 \end{figure}
 
-**Se observa la variedad de imágenes que existen. Unas más oscuras, otras con más brillo. Algunas con fundo blanco, otras con fondo de color o incluso con más elementos de fondo no solo un fondo plano. Incluso algunas están giradas.
+Se puede observar la gran variedad de imágenes que existen, con distintos brillos, distintos fondos o incluso giradas:
+
+\begin{bulletlist}
+\item En cuanto al brillo se puede observar que la imagen de 'Target\_Spot' tiene mucho más brillo que la de 'Tomato\_Yellow\_Leaf\_Curl\_Virus
+\item Con respecto al fondo podemos vir distinciones entre la imagen 'Bacterial\_spot' con un fondo grisáceo plano, la imagen 'Late\_blight' con fondo completamente negro y la foto 'Early\_blight' en la que se ve el resto de la planta de tomate, no solo se ve una hoja.
+\item También se puede destacar la diferencia entre las posiciones de las hojas, algunas como 'Bacterial\_spot' tienen el tallo abajo, otras como 'Leaf\_Mold' tienen el tallo arriba y otras como 'Septoria\_leaf\_spot' tienen el tallo horizontal. 
+\item Además se tiene un ejemplo de imagen rotada concretamente la 'Septoria\_leaf\_spot'
+\end{bulletlist}
+
+Debido a esta gran variedad de imágenes y de enfermedades se llegó a la conclusión de que no tiene mucho sentido usar funciones especiales de la librería PlantCV, ya que esta está muy orientada al fenotipado clásico (área, forma, color, índices), y esas características a veces no capturan la complejidad de patrones de enfermedades, que suelen ser más sutiles y no lineales. La estrategia que se ha seguido es pasar a un pipeline de deep learning con imágenes preprocesadas de forma estándar. De esta manera el modelo aprenderá por si mismo las características discriminantes en lugar de imponer un conjunto de "features" manuales.
+
+Otra tarea importante en cuanto a la exploración de los datos es saber el número de imágenes por clases que se tiene en el conjunto de entrenamiento
+
+Clase 'Bacterial\_spot': 2826 imágenes
+Clase 'Tomato\_Yellow\_Leaf\_Curl\_Virus': 2039 imágenes
+Clase 'Target\_Spot': 1827 imágenes
+Clase 'Leaf\_Mold': 2754 imágenes
+Clase 'Early\_blight': 2455 imágenes
+Clase 'Late\_blight': 3113 imágenes
+Clase 'Spidermite\_Two-spotted\_spider\_mite': 1747 imágenes
+Clase 'powdery\_mildew': 1004 imágenes
+Clase 'healthy': 3051 imágenes
+Clase 'Tomato\_mosaic\_virus': 2153 imágenes
+Clase 'Septoria\_leaf\_spot': 2882 imágenes
+
+Eso nos llevará a usar class weights en el modelo
+
+Por otra parte para mayor robustez se usará data augmentation
+
+
+\section{Modelado}\label{sec:sec4.4}
+
+Explicación de la estructura común de modelado como los callbacks, earlystopping y demás. 
+Breve revisión de CNN en un párrafo
+Breve resumen de los distintos modelos, Inception, Resnet...
 
 
 \chapter{Evaluación y resultados}\label{cap:cap5}
 
+Secciones con cada modelo concreto y sus parámetros y los resultados mostrados con las métricas y una matriz de confusión
+
 
 \chapter{Conclusiones}\label{cap:cap6}
 
+Se selecciona el mejor modelo y se muestra una gráfica probando el modelo (desarrollar)
 
 
 \appendix
