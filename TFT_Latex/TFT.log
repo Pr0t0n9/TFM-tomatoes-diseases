@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.9.6)  14 SEP 2025 12:13
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.9.6)  15 SEP 2025 17:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1698,15 +1698,9 @@ File: ./Images/Imagen_aleatoria_por_clase.png Graphic file (type bmp)
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [14]
-Overfull \hbox (0.71298pt too wide) in paragraph at lines 367--368
+Overfull \hbox (5.62419pt too wide) in paragraph at lines 367--368
 []\T1/phv/m/n/12 Con res-pec-to al fon-do po-de-mos vir dis-tin-cio-nes en-tre 
-la ima-gen 'Bac-te-rial_spot'
- []
-
-
-Overfull \hbox (30.4483pt too wide) in paragraph at lines 369--370
-[]\T1/phv/m/n/12 Además se tie-ne un ejem-plo de ima-gen ro-ta-da con-cre-ta-me
-n-te la 'Sep-to-ria_leaf_spot' 
+la ima-gen \T1/lmtt/m/n/12 Bacterial_spot
  []
 
 
@@ -1777,6 +1771,6 @@ Here is how much of TeX's memory you used:
  65444 multiletter control sequences out of 15000+600000
  654409 words of font info for 78 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 108i,16n,107p,11285b,5189s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,17n,107p,11285b,5189s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on TFT.pdf (21 pages).

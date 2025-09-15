@@ -363,10 +363,10 @@ En segundo lugar, se realiza una muestra aleatoria de una imagen por clase, para
 Se puede observar la gran variedad de imágenes que existen, con distintos brillos, distintos fondos o incluso giradas:
 
 \begin{bulletlist}
-\item En cuanto al brillo se puede observar que la imagen de 'Target\_Spot' tiene mucho más brillo que la de 'Tomato\_Yellow\_Leaf\_Curl\_Virus
-\item Con respecto al fondo podemos vir distinciones entre la imagen 'Bacterial\_spot' con un fondo grisáceo plano, la imagen 'Late\_blight' con fondo completamente negro y la foto 'Early\_blight' en la que se ve el resto de la planta de tomate, no solo se ve una hoja.
-\item También se puede destacar la diferencia entre las posiciones de las hojas, algunas como 'Bacterial\_spot' tienen el tallo abajo, otras como 'Leaf\_Mold' tienen el tallo arriba y otras como 'Septoria\_leaf\_spot' tienen el tallo horizontal. 
-\item Además se tiene un ejemplo de imagen rotada concretamente la 'Septoria\_leaf\_spot'
+\item En cuanto al brillo se puede observar que la imagen de \texttt{Target\_Spot} tiene mucho más brillo que la de \texttt{Tomato\_Yellow\_Leaf\_Curl\_Virus}.
+\item Con respecto al fondo podemos vir distinciones entre la imagen \texttt{Bacterial\_spot} con un fondo grisáceo plano, la imagen \texttt{Late\_blight} con fondo completamente negro y la foto \texttt{Early\_blight} en la que se ve el resto de la planta de tomate, no solo se ve una hoja.
+\item También se puede destacar la diferencia entre las posiciones de las hojas, algunas como \texttt{Bacterial\_spot} tienen el tallo abajo, otras como \texttt{Leaf\_Mold} tienen el tallo arriba y otras como \texttt{Septoria\_leaf\_spot} tienen el tallo horizontal. 
+\item Además se tiene un ejemplo de imagen rotada, concretamente la \texttt{Septoria\-\_leaf\_spot}
 \end{bulletlist}
 
 Debido a esta gran variedad de imágenes y de enfermedades se llegó a la conclusión de que no tiene mucho sentido usar funciones especiales de la librería PlantCV, ya que esta está muy orientada al fenotipado clásico (área, forma, color, índices), y esas características a veces no capturan la complejidad de patrones de enfermedades, que suelen ser más sutiles y no lineales. La estrategia que se ha seguido es pasar a un pipeline de deep learning con imágenes preprocesadas de forma estándar. De esta manera el modelo aprenderá por si mismo las características discriminantes en lugar de imponer un conjunto de "features" manuales.
