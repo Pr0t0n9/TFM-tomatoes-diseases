@@ -1,17 +1,17 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'TFT.blg'
-[96] biber-MSWIN64:342> INFO - === 
-[136] Biber.pm:421> INFO - Reading 'TFT.bcf'
-[245] Biber.pm:1002> INFO - Found 7 citekeys in bib section 0
-[267] Biber.pm:4487> INFO - Processing section 0
-[276] Biber.pm:4678> INFO - Looking for bibtex file 'Bibliografia_TFT.bib' for section 0
-[337] bibtex.pm:1713> INFO - LaTeX decoding ...
-[348] bibtex.pm:1519> INFO - Found BibTeX data source 'Bibliografia_TFT.bib'
-[426] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[426] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[426] Biber.pm:4307> INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
-[442] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[443] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[443] Biber.pm:4307> INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
-[451] bbl.pm:676> INFO - Writing 'TFT.bbl' with encoding 'UTF-8'
-[459] bbl.pm:779> INFO - Output to TFT.bbl
+[190] biber-MSWIN64:342> INFO - === 
+[298] Biber.pm:421> INFO - Reading 'TFT.bcf'
+[464] Biber.pm:1002> INFO - Found 7 citekeys in bib section 0
+[495] Biber.pm:4487> INFO - Processing section 0
+[514] Biber.pm:4678> INFO - Looking for bibtex file 'Bibliografia_TFT.bib' for section 0
+[586] bibtex.pm:1713> INFO - LaTeX decoding ...
+[599] bibtex.pm:1519> INFO - Found BibTeX data source 'Bibliografia_TFT.bib'
+[704] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[704] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[704] Biber.pm:4307> INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[729] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[729] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[729] Biber.pm:4307> INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[759] bbl.pm:676> INFO - Writing 'TFT.bbl' with encoding 'UTF-8'
+[771] bbl.pm:779> INFO - Output to TFT.bbl

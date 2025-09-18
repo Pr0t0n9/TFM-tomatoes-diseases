@@ -348,7 +348,7 @@ Tamaño (píxeles) & N\textsuperscript{o} imágenes \\ \hline
 \end{tabular}
 \end{table}
 
-De cara a construir un modelo todas las imágenes tienen que tener el mismo tamaño y debida a esta primera toma de contacto se toma la decisión de transformar todas lasa imágenes a tamaño de 256x256 píxeles.
+De cara a construir un modelo todas las imágenes tienen que tener el mismo tamaño y debida a esta primera toma de contacto se toma la decisión de transformar todas las imágenes a tamaño de 256x256 píxeles.
 
 En segundo lugar, se realiza una muestra aleatoria de una imagen por clase, para visualizar el tipo de imágenes que se vana tratar.
 
@@ -371,7 +371,25 @@ Se puede observar la gran variedad de imágenes que existen, con distintos brill
 
 Debido a esta gran variedad de imágenes y de enfermedades se llegó a la conclusión de que no tiene mucho sentido usar funciones especiales de la librería PlantCV, ya que esta está muy orientada al fenotipado clásico (área, forma, color, índices), y esas características a veces no capturan la complejidad de patrones de enfermedades, que suelen ser más sutiles y no lineales. La estrategia que se ha seguido es pasar a un pipeline de deep learning con imágenes preprocesadas de forma estándar. De esta manera el modelo aprenderá por si mismo las características discriminantes en lugar de imponer un conjunto de "features" manuales.
 
-Otra tarea importante en cuanto a la exploración de los datos es saber el número de imágenes por clases que se tiene en el conjunto de entrenamiento
+A continuación se dispuso a formar los conjuntos de datos que usará el modelo. Hasta ahora se tienen datos para el entrenamiento del modelo y para la validación del mismo, sin embargo, no se tienen datos para realizar pruebas sobre el modelo resultante. Por lo tanto, se formará un nuevo conjunto de datos de pruebas a partir del cunjunto de entrenamiento, concretamente, seleccionando un 20\% de sus datos.
+
+Para realizar esta tarea se recorre el directorio de datos de entrenamiento y aleatoriamente se seleccionan imágenes de cada subdirectorio (clase) y se añaden a un nuevo directorio que será el de datos de prueba.
+
+Otra tarea importante en cuanto al procesado de los datos es normalizar los mismos. Para ello, se hace uso de ImageDataGenerator de tensorflow. Se usa esta función porque también sirve para aplicar la técnica de data augmentation en los datos de entrenamiento que ayuda a que el modelo resultante del entrenamiento generalice mejor.
+
+Normalizar en valid y train significa... 
+
+Train además se le aplica: 
+lista 
+
+De esta manera, quedan los siguientes conjuntos de datos:
+Entrenamiento: Hay 20.686 imágenes utilizadas para entrenar el modelo. Se trata de la mayor parte de los datos, ya que el modelo necesita muchos ejemplos para aprender patrones.
+Validación: Hay 6.683 imágenes para la validación. Estos datos se utilizan para evaluar el rendimiento del modelo durante el entrenamiento, sin afectar a los parámetros del modelo.
+Prueba: Hay 5.165 imágenes para la prueba final. Este conjunto de datos se utiliza una vez finalizado el entrenamiento para medir objetivamente el rendimiento del modelo con datos nuevos que nunca se han visto.
+
+Otros datos importantes del conjunto de entrenamiento...
+
+Número de imágenes por clases que se tiene en el conjunto de entrenamiento
 
 Clase 'Bacterial\_spot': 2826 imágenes
 Clase 'Tomato\_Yellow\_Leaf\_Curl\_Virus': 2039 imágenes
