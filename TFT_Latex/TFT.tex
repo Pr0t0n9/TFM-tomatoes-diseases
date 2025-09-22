@@ -436,32 +436,57 @@ La mayoría de clases tienen entre 2000 y 2400 imágenes, lo cual es aceptable. 
 Para evitar el posible problema de sesgo en el modelo se aplicará una técnica de balanceo al conjunto de entrenamiento. Específicamente se usará ponderación de clases con un diccionario \texttt{class\_weight} que se puede añadir al modelo en forma de parámetro. Esto dará más peso a los errores en clases minoritarias, para que el modelo no las ignore.
 
 Los pesos de las clases se han calculado usando la función \texttt{compute\_class\_weight} que hace que las clases con menor muestras tengan mayor peso y las que tengan más muestras tengan menor peso. Haciendo, en promedio, que todas las clases tengan la misma importancia. Los pesos aplicados son los que se muestran a continuación:
- 
-0: np.float64(0.8317317357565036), 
-1: np.float64(0.9575078689131642), 
-2: np.float64(0.7549359512426553), 
-3: np.float64(0.8532420392674476), 
-4: np.float64(0.815501064416936), 
-5: np.float64(1.3451684224216414), 
-6: np.float64(1.2862828006466858), 
-7: np.float64(1.152295008912656), 
-8: np.float64(1.0914367118661954), 
-9: np.float64(0.7703996126773677), 
-10: np.float64(2.338986883763003)
 
-
+\begin{table}[ht] 
+\centering
+\caption{\headlinecolor{\underline{Pesos asignados a cada clase en el entrenamiento del modelo}}}
+\label{tab:pesos_por_clase_entrenamiento}
+\begin{tabular}{|c|c|c|} \hline
+\rowcolor{naranja}
+\multicolumn{3}{|c|}{\textbf{Pesos por clases}} \\ \hline
+\rowcolor{naranja!30}
+Clase & N\textsuperscript{o} imágenes & Peso \\ \hline 
+\texttt{Bacterial\_spot} & 2261 & 0.8317 \\ \hline 
+\texttt{Early\_blight} & 1964 & 0.9575 \\ \hline 
+\texttt{Late\_blight} & 2491 & 0.7549 \\ \hline 
+\texttt{Leaf\_Mold} & 2204 & 0.8532 \\ \hline 
+\texttt{Septoria\_leaf\_spot} & 2306 & 0.8155 \\ \hline
+\texttt{Spidermite\_Two-spotted\_spider\_mite} & 1398 & 1.3451 \\ \hline
+\texttt{Target\_Spot} & 1462 & 1.2862 \\ \hline
+\texttt{Tomato\_Yellow\_Leaf\_Curl\_Virus} & 1632 & 1.1522 \\ \hline
+\texttt{Tomato\_mosaic\_virus} & 1723 & 1.0914 \\ \hline
+\texttt{healthy} & 2441 & 0.7703 \\ \hline
+\texttt{powdery\_mildew} & 804 & 2.3389 \\ \hline
+\end{tabular}
+\end{table}
 
 
 \section{Modelado}\label{sec:sec4.4}
 
-Explicación de la estructura común de modelado como los callbacks, earlystopping y demás. 
-Breve revisión de CNN en un párrafo
-Breve resumen de los distintos modelos, Inception, Resnet...
+En esta sección se describe la estrategia de modelado empleada, común a todos los experimentos realizados posteriormente. El enfoque adoptado se basa en el uso de redes neuronales convolucionales (CNN), dado que constituyen la arquitectura de referencia en tareas de clasificación de imágenes al ser capaces de extraer de manera automática y jerárquica características relevantes de los datos visuales.
+
+Considerando las limitaciones de recursos computacionales disponibles, se optó por la técnica de transfer learning. Esta metodología permite aprovechar modelos previamente entrenados sobre grandes bases de datos, de modo que las capas iniciales ya contienen representaciones generales de las imágenes. Posteriormente, dichas representaciones se ajustan mediante un proceso de fine-tuning a la tarea específica de clasificación de enfermedades en hojas de tomate.
+
+Debido a los recursos disponibles ha sido necesario el uso de callbacks para el entrenamiento que permitieran guardar información
+HistorySaver: Histórico métricas
+ModelCheckpoint: Punto de guardado cada cierto número de epoch
+
+En los modelos optimizados se han usado otros dos callbacks:
+EarlyStopping: evita seguir entrenando innecesariamente cuando el modelo ya no progresa, y asegura quedarte con la mejor versión del modelo.
+ReduceLROnPlateau: si el modelo llega a una especie de meseta, pueda seguir refinando con pasos más pequeños sin quedarse bloqueado.
 
 
 \chapter{Evaluación y resultados}\label{cap:cap5}
 
 Secciones con cada modelo concreto y sus parámetros y los resultados mostrados con las métricas y una matriz de confusión
+
+\section{Modelo MobileNetV2 base}\label{sec:sec5.1}
+
+\section{Modelo MobileNetV2 optimizado}\label{sec:sec5.2}
+
+\section{Modelo EfficientNetB0 base}\label{sec:sec5.3}
+
+\section{Modelo NASNetMobile base}\label{sec:sec5.4}
 
 
 \chapter{Conclusiones}\label{cap:cap6}
