@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.9.6)  22 SEP 2025 14:07
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.9.6)  30 SEP 2025 17:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1571,6 +1571,9 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 3.
 Package tocbasic Info: Using my definition of `\numberline' on input line 4.
 Package tocbasic Info: Using my definition of `\numberline' on input line 5.
 Package tocbasic Info: Using my definition of `\numberline' on input line 9.
+Package tocbasic Info: Using my definition of `\numberline' on input line 11.
+Package tocbasic Info: Using my definition of `\numberline' on input line 12.
+Package tocbasic Info: Using my definition of `\numberline' on input line 13.
 )
 \tf@lof=\write6
 \openout6 = `TFT.lof'.
@@ -1737,6 +1740,12 @@ File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [19]
 chapter 5.
+File: ./Images/historico_metricas_mobilenetv2_1.png Graphic file (type bmp)
+<./Images/historico_metricas_mobilenetv2_1.png>
+File: ./Images/resumen_metricas_mobilenetv2_1.png Graphic file (type bmp)
+<./Images/resumen_metricas_mobilenetv2_1.png>
+File: ./Images/matriz_confusion_mobilenetv2_1.png Graphic file (type bmp)
+<./Images/matriz_confusion_mobilenetv2_1.png>
 
 
 File: ./Images/image3.png Graphic file (type bmp)
@@ -1744,15 +1753,11 @@ File: ./Images/image3.png Graphic file (type bmp)
 [20
 
 ]
-chapter 6.
-
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[21
-
-]
-chapter A.
+[21]
+chapter 6.
 
 
 File: ./Images/image3.png Graphic file (type bmp)
@@ -1760,7 +1765,7 @@ File: ./Images/image3.png Graphic file (type bmp)
 [22
 
 ]
-chapter B.
+chapter A.
 
 
 File: ./Images/image3.png Graphic file (type bmp)
@@ -1768,10 +1773,18 @@ File: ./Images/image3.png Graphic file (type bmp)
 [23
 
 ]
+chapter B.
+
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [24
+
+]
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[25
 
 ] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
@@ -1789,12 +1802,12 @@ Package logreq Info: Writing requests to 'TFT.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37479 strings out of 403249
- 762076 string characters out of 5458377
- 1859759 words of memory out of 5000000
- 65460 multiletter control sequences out of 15000+600000
+ 37511 strings out of 403249
+ 763445 string characters out of 5458377
+ 1860052 words of memory out of 5000000
+ 65489 multiletter control sequences out of 15000+600000
  654409 words of font info for 78 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  108i,17n,107p,11285b,5189s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on TFT.pdf (24 pages).
+Output written on TFT.pdf (25 pages).

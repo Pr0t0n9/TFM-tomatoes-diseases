@@ -467,20 +467,53 @@ En esta sección se describe la estrategia de modelado empleada, común a todos 
 
 Considerando las limitaciones de recursos computacionales disponibles, se optó por la técnica de transfer learning. Esta metodología permite aprovechar modelos previamente entrenados sobre grandes bases de datos, de modo que las capas iniciales ya contienen representaciones generales de las imágenes. Posteriormente, dichas representaciones se ajustan mediante un proceso de fine-tuning a la tarea específica de clasificación de enfermedades en hojas de tomate.
 
-Debido a los recursos disponibles ha sido necesario el uso de callbacks para el entrenamiento que permitieran guardar información
-HistorySaver: Histórico métricas
-ModelCheckpoint: Punto de guardado cada cierto número de epoch
+Con el objetivo de gestionar mejor los recursos disponibles, se implementaron disitntos callbacks:
 
-En los modelos optimizados se han usado otros dos callbacks:
-EarlyStopping: evita seguir entrenando innecesariamente cuando el modelo ya no progresa, y asegura quedarte con la mejor versión del modelo.
-ReduceLROnPlateau: si el modelo llega a una especie de meseta, pueda seguir refinando con pasos más pequeños sin quedarse bloqueado.
+\begin{bulletlist}
+\item HistorySaver: permite guardar el historial de métricas en un archivo externo. Esto resulta especialmente útil en entornos con recursos limitados o sesiones interrumpibles (como Google Colab), ya que garantiza que la información del entrenamiento no se pierda.
+\item ModelCheckpoint: encargado de almacenar en disco el modelo con mejor desempeño en validación, según la métrica \texttt{val\_accuracy}. De este modo, se asegura la conservación de la mejor versión del modelo entrenado, evitando depender únicamente de los pesos finales.
+\end{bulletlist}
 
+Estos callbacks se han usado en todos los modelos. Sin embargo, en los llamados modelos optimizados se han usado otros dos callbacks:
+
+\begin{bulletlist}
+\item EarlyStopping: detiene el entrenamiento de forma anticipada si la pérdida de validación no mejora durante un número determinado de épocas consecutivas. Esto evita sobreentrenamiento y reduce el tiempo de cómputo innecesario.
+\item ReduceLROnPlateau: ajusta de manera dinámica la tasa de aprendizaje cuando la pérdida de validación alcanza una meseta. Gracias a esta reducción progresiva, el modelo puede seguir afinando sus parámetros con pasos cada vez más pequeños, lo que mejora la convergencia.
+\end{bulletlist}
+
+En conjunto, estos callbacks permitieron no solo optimizar el uso de los recursos computacionales disponibles, sino también obtener modelos más robustos y con mejor capacidad de generalización.
+
+Los modelos previamente entrenados que se han usado son MobileNetV2, EfficientNetB0, NASNetMobile..
 
 \chapter{Evaluación y resultados}\label{cap:cap5}
 
 Secciones con cada modelo concreto y sus parámetros y los resultados mostrados con las métricas y una matriz de confusión
 
 \section{Modelo MobileNetV2 base}\label{sec:sec5.1}
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.5]{./Images/historico_metricas_mobilenetv2_1.png}
+\caption{\headlinecolor{\underline{Histórico de métricas del modelo MobileNetV2 base}}}
+\label{fig:fig5}
+\end{center}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.7]{./Images/resumen_metricas_mobilenetv2_1.png}
+\caption{\headlinecolor{\underline{Resumen de las métricas del modelo MobileNetV2 base}}}
+\label{fig:fig6}
+\end{center}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.5]{./Images/matriz_confusion_mobilenetv2_1.png}
+\caption{\headlinecolor{\underline{Matriz de confusión del modelo MobileNetV2 base}}}
+\label{fig:fig7}
+\end{center}
+\end{figure}
 
 \section{Modelo MobileNetV2 optimizado}\label{sec:sec5.2}
 

@@ -8,6 +8,9 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces \color {slcolor}{\underline {Imagen aleatoria por clase}}}}{15}{figure.4.1}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces \color {slcolor}{\underline {Histórico de métricas del modelo MobileNetV2 base}}}}{20}{figure.5.1}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces \color {slcolor}{\underline {Resumen de las métricas del modelo MobileNetV2 base}}}}{21}{figure.5.2}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces \color {slcolor}{\underline {Matriz de confusión del modelo MobileNetV2 base}}}}{21}{figure.5.3}%
 \addvspace {10\p@ }
 \def \@chapapp {\appendixname }
 \addvspace {10\p@ }
