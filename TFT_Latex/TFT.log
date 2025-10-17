@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.9.6)  30 SEP 2025 17:24
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.9.6)  17 OCT 2025 20:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1293,6 +1293,10 @@ Package biblatex Info: ... and expl3
 x-case-expl3.sty
 Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
 ))
+(C:\Users\RUBEN MARIN LUCAS\AppData\Local\Programs\MiKTeX\tex/latex/setspace\se
+tspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+)
 Class scrreprt Info: loading recommended package `bookmark'.
 (scrreprt)           Using `bookmark' together with `hyperref' is recommended,
 (scrreprt)           because of handling of possible bookmark level gaps.
@@ -1300,9 +1304,9 @@ Class scrreprt Info: loading recommended package `bookmark'.
 (scrreprt)           `bookmarkpackage=false' before \begin{document} and
 (scrreprt)           you can avoid this message adding:
 (scrreprt)             \usepackage{bookmark}
-(scrreprt)           before \begin{document} on input line 89.
+(scrreprt)           before \begin{document} on input line 94.
 Class scrreprt Info: temporary deactivation of babel-spanish quoting  on input 
-line 89.
+line 94.
 
 (C:\Users\RUBEN MARIN LUCAS\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bo
 okmark.sty
@@ -1313,12 +1317,12 @@ m-dvipdfm.def
 File: bkm-dvipdfm.def 2023-12-10 v1.31 bookmark driver for dvipdfm (HO)
 \BKM@id=\count497
 ))
-Class scrreprt Info: reactivation of babel-spanish quoting  on input line 89.
+Class scrreprt Info: reactivation of babel-spanish quoting  on input line 94.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'spanish'.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 89
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 94
 .
 
 (C:\Users\RUBEN MARIN LUCAS\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ph
@@ -1332,26 +1336,26 @@ Package babel Info: 'spanish' activates 'spanish' shorthands.
 )
 \openout1 = `TFT.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1387,7 +1391,7 @@ LaTeX Font Info:    ... okay on input line 89.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 89.
+Package hyperref Info: Link coloring OFF on input line 94.
 
 Package fontspec Info: 
 (fontspec)             Adjusting the maths setup (use [no-math] to avoid
@@ -1395,58 +1399,58 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 89.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 89.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 89.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 89.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 89.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 89.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 89.
-LaTeX Font Info:    Redeclaring math accent \check on input line 89.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 89.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 89.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 89.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 89.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 89.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 89.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 89.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 89.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 89.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 89.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 89.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 89.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 89.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 89.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 89.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 89.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 94.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 94.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 94.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 94.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 94.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 94.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 94.
+LaTeX Font Info:    Redeclaring math accent \check on input line 94.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 94.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 94.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 94.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 94.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 89.
+(Font)              `operators' in the math version `normal' on input line 94.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 89.
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 94.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 89.
+(Font)              `operators' in the math version `bold' on input line 94.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 89.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 94.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 89.
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 94.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 89.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 94.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 89.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 94.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/phv/m/n on input line 89.
+(Font)                  OT1/cmss/m/n --> TU/phv/m/n on input line 94.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 89.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 94.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 89.
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 94.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 89.
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 94.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/phv/b/n on input line 89.
+(Font)                  OT1/cmss/bx/n --> TU/phv/b/n on input line 94.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 89.
-LaTeX Info: Redefining \. on input line 89.
-LaTeX Info: Redefining \% on input line 89.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 94.
+LaTeX Info: Redefining \. on input line 94.
+LaTeX Info: Redefining \% on input line 94.
 Package biblatex Info: Trying to load language 'spanish' -> 'spanish-apa'...
 Package biblatex Info: ... file 'spanish-apa.lbx' found.
 
@@ -1476,8 +1480,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'TFT.bbl' found.
  (TFT.bbl)
-Package biblatex Info: Reference section=0 on input line 89.
-Package biblatex Info: Reference segment=0 on input line 89.
+Package biblatex Info: Reference section=0 on input line 94.
+Package biblatex Info: Reference segment=0 on input line 94.
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: xetex
 * paper: a4paper
@@ -1517,7 +1521,7 @@ File: ./Images/Picture_TitlePage.jpg Graphic file (type bmp)
 sa.fd)
 (C:\Users\RUBEN MARIN LUCAS\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\um
 sb.fd)
-Underfull \hbox (badness 10000) in paragraph at lines 126--128
+Underfull \hbox (badness 10000) in paragraph at lines 131--133
 
  []
 
@@ -1528,7 +1532,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 126--128
 
 
 
-] (TFT.toc
+]
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[2] (TFT.toc
 LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
@@ -1546,13 +1554,19 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 12.
 Package tocbasic Info: Using my definition of `\numberline' on input line 13.
 Package tocbasic Info: Using my definition of `\numberline' on input line 14.
 Package tocbasic Info: Using my definition of `\numberline' on input line 15.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 15.
 Package tocbasic Info: Using my definition of `\numberline' on input line 16.
 Package tocbasic Info: Using my definition of `\numberline' on input line 17.
 Package tocbasic Info: Using my definition of `\numberline' on input line 18.
 Package tocbasic Info: Using my definition of `\numberline' on input line 19.
 Package tocbasic Info: Using my definition of `\numberline' on input line 20.
+Package tocbasic Info: Using my definition of `\numberline' on input line 21.
 Package tocbasic Info: Using my definition of `\numberline' on input line 22.
 Package tocbasic Info: Using my definition of `\numberline' on input line 23.
+Package tocbasic Info: Using my definition of `\numberline' on input line 24.
+Package tocbasic Info: Using my definition of `\numberline' on input line 26.
+Package tocbasic Info: Using my definition of `\numberline' on input line 27.
 )
 \tf@toc=\write5
 \openout5 = `TFT.toc'.
@@ -1561,9 +1575,13 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 23.
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[2
+[3
 
-] (TFT.lof
+]
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[4] (TFT.lof
 LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
@@ -1574,6 +1592,7 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 9.
 Package tocbasic Info: Using my definition of `\numberline' on input line 11.
 Package tocbasic Info: Using my definition of `\numberline' on input line 12.
 Package tocbasic Info: Using my definition of `\numberline' on input line 13.
+Package tocbasic Info: Using my definition of `\numberline' on input line 14.
 )
 \tf@lof=\write6
 \openout6 = `TFT.lof'.
@@ -1582,7 +1601,7 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 13.
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[3
+[5
 
 ] (TFT.lot
 LaTeX Info: Redefining \sptext on input line 1.
@@ -1601,35 +1620,33 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 10.
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[4
+[6
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 140.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 145.
 
 
-[5
+[7
 
 
 ]
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[6]
+[8]
 chapter 1.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 152.
 File: ./Images/Distribucion_tomate.jpg Graphic file (type bmp)
 <./Images/Distribucion_tomate.jpg>
 
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[7
+[9
 
 ]
 LaTeX Font Info:    Trying to load font information for TS1+phv on input line 1
-89.
+94.
 
 (C:\Users\RUBEN MARIN LUCAS\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1p
 hv.fd
@@ -1643,28 +1660,38 @@ File: ./Images/Tizon_temprano_tomate.jpg Graphic file (type bmp)
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[8]
+[10]
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[9]
+[11]
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[12]
 chapter 2.
 
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[10
+[13
 
 ]
 chapter 3.
 
-Overfull \hbox (4.6388pt too wide) in paragraph at lines 256--257
+Overfull \hbox (4.6388pt too wide) in paragraph at lines 261--262
 \T1/phv/m/n/12 pa-ra-ti-va en-tre va-rias ar-qui-tec-tu-ras CNN, in-clu-yen-do 
 Alex-Net, Goo-gle-Net, In-cep-tionV3,
  []
 
 
-Overfull \hbox (2.11948pt too wide) in paragraph at lines 258--259
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[14
+
+]
+Overfull \hbox (2.11948pt too wide) in paragraph at lines 263--264
 []\T1/phv/m/n/12 En otra lí-nea, Eduar-do A.Huerta-Mora, Víc-tor González-Huitr
 ón, Héc-tor Rodríguez-
  []
@@ -1673,25 +1700,27 @@ Overfull \hbox (2.11948pt too wide) in paragraph at lines 258--259
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[11
-
-]
+[15]
 chapter 4.
 
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[12
+[16
 
 ]
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[17]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
-14.
+19.
 
 (C:\Users\RUBEN MARIN LUCAS\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.f
 d
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Overfull \hbox (2.39397pt too wide) in paragraph at lines 309--326
+Overfull \hbox (2.39397pt too wide) in paragraph at lines 314--331
  [][] 
  []
 
@@ -1699,15 +1728,11 @@ Overfull \hbox (2.39397pt too wide) in paragraph at lines 309--326
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[13]
+[18]
 File: ./Images/Imagen_aleatoria_por_clase.png Graphic file (type bmp)
 <./Images/Imagen_aleatoria_por_clase.png>
 
-
-File: ./Images/image3.png Graphic file (type bmp)
-<./Images/image3.png>
-[14]
-Overfull \hbox (5.62419pt too wide) in paragraph at lines 370--371
+Overfull \hbox (3.22423pt too wide) in paragraph at lines 375--376
 []\T1/phv/m/n/12 Con res-pec-to al fon-do po-de-mos vir dis-tin-cio-nes en-tre 
 la ima-gen \T1/lmtt/m/n/12 Bacterial_spot
  []
@@ -1716,16 +1741,20 @@ la ima-gen \T1/lmtt/m/n/12 Bacterial_spot
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[15]
+[19]
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[16]
+[20]
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[17]
-Overfull \hbox (3.0038pt too wide) in paragraph at lines 438--439
+[21]
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[22]
+Overfull \hbox (3.0038pt too wide) in paragraph at lines 443--444
 []\T1/phv/m/n/12 Los pe-sos de las cla-ses se han cal-cu-la-do usan-do la fun-c
 ión \T1/lmtt/m/n/12 compute_class_weight
  []
@@ -1734,35 +1763,69 @@ ión \T1/lmtt/m/n/12 compute_class_weight
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[18]
+[23]
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[19]
+[24]
+Overfull \hbox (6.90501pt too wide) in paragraph at lines 496--497
+[]\T1/phv/m/n/12 Para la ini-cia-li-za-ción de los pe-sos en el mo-de-lo se usa
+ \T1/lmtt/m/n/12 tf.random.set_seed(42)\T1/phv/m/n/12 . 
+ []
+
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 502.
+
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[25]
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[26]
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[27]
 chapter 5.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <17.28> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 552.
 File: ./Images/historico_metricas_mobilenetv2_1.png Graphic file (type bmp)
 <./Images/historico_metricas_mobilenetv2_1.png>
-File: ./Images/resumen_metricas_mobilenetv2_1.png Graphic file (type bmp)
-<./Images/resumen_metricas_mobilenetv2_1.png>
-File: ./Images/matriz_confusion_mobilenetv2_1.png Graphic file (type bmp)
-<./Images/matriz_confusion_mobilenetv2_1.png>
 
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[20
+[28
 
 ]
+File: ./Images/historico_metricas_mobilenetv2_3.png Graphic file (type bmp)
+<./Images/historico_metricas_mobilenetv2_3.png>
+
+Overfull \hbox (20.59412pt too wide) in paragraph at lines 578--579
+ [] 
+ []
+
+File: ./Images/resumen_metricas_mobilenetv2_3.png Graphic file (type bmp)
+<./Images/resumen_metricas_mobilenetv2_3.png>
+File: ./Images/matriz_confusion_mobilenetv2_3.png Graphic file (type bmp)
+<./Images/matriz_confusion_mobilenetv2_3.png>
+
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[21]
+[29]
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[30]
 chapter 6.
 
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[22
+[31
 
 ]
 chapter A.
@@ -1770,7 +1833,7 @@ chapter A.
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[23
+[32
 
 ]
 chapter B.
@@ -1778,13 +1841,13 @@ chapter B.
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[24
+[33
 
 ]
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[25
+[34
 
 ] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
@@ -1802,12 +1865,12 @@ Package logreq Info: Writing requests to 'TFT.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37511 strings out of 403249
- 763445 string characters out of 5458377
- 1860052 words of memory out of 5000000
- 65489 multiletter control sequences out of 15000+600000
- 654409 words of font info for 78 fonts, out of 8000000 for 9000
+ 37609 strings out of 403249
+ 765774 string characters out of 5458377
+ 1861233 words of memory out of 5000000
+ 65583 multiletter control sequences out of 15000+600000
+ 657801 words of font info for 80 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  108i,17n,107p,11285b,5189s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on TFT.pdf (25 pages).
+Output written on TFT.pdf (34 pages).
