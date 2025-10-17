@@ -11,10 +11,15 @@
 \contentsline {section}{\numberline {4.1}Herramientas usadas}{12}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Procedencia y descripción de los datos}{13}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Preprocesado de los datos}{14}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Evaluación y resultados}{16}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusiones}{17}{chapter.6}%
+\contentsline {section}{\numberline {4.4}Modelado}{18}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Evaluación y resultados}{20}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Modelo MobileNetV2 base}{20}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Modelo MobileNetV2 optimizado}{20}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Modelo EfficientNetB0 base}{20}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Modelo NASNetMobile base}{20}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Conclusiones}{22}{chapter.6}%
 \def \@chapapp {\appendixname }
-\contentsline {chapter}{\numberline {A}Anexo I: Ejemplo de anexo}{18}{appendix.Alph1}%
-\contentsline {chapter}{\numberline {B}Anexo II: Otro ejemplo de anexo}{19}{appendix.Alph2}%
+\contentsline {chapter}{\numberline {A}Anexo I: Ejemplo de anexo}{23}{appendix.Alph1}%
+\contentsline {chapter}{\numberline {B}Anexo II: Otro ejemplo de anexo}{24}{appendix.Alph2}%
 \contentsfinish 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

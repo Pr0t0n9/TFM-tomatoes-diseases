@@ -292,6 +292,7 @@ En cuanto a las librerías de Python usadas para la implementación, se presenta
 \item Plantcv: es una librería de Python de código abierto diseñada específicamente para el análisis de imágenes de plantas. Se ha usado para lectura de las imágenes.
 \item Tensorflow: es una librería de software de código abierto creada por Google para desarrollar y entrenar modelos de machine learning (ML) y deep learning (DL). Recibe este nombre porque trabaja con tensores, estructuras de datos multidimensionales, como matrices o vectores que fluyen a través de un grafo computacional de operaciones. Se ha usado para crear y entrenar los modelos descritos en este proyecto.
 \item Seaborn: esta librería permite la visualización de los datos a través de distintos tipos de gráficas. Ha sido usada para realizar los distintos gráficos como las matrices de confusión para evaluar los modelos.
+\item Sklearn: .
 \end{bulletlist}
 
 
@@ -327,19 +328,32 @@ Clase & Traducción Clase \\ \hline
 
 \section{Preprocesado de los datos}\label{sec:sec4.3}
 
-Al realizar la carga de datos se tiene un directorio con dos subdirectorios, cada uno de ellos representará un conjunto de datos, un conjunto de datos de entrenamiento (train) y otro de validación (valid). Cada uno de estos directorios contienen a su vez 11 directorios, representando cada una de las clases. Una vez puestos en situación, se llevan a cabo las primera tareas de exploración de las imágenes.
-En primer lugar, seleccionando el directorio que contiene los datos de entrenamiento se realiza una función para obtener el número de imágenes existentes por cada tipo de tamaño. Gracias a esta función se sabe que se cuentan como imágenes de variables tamaños, concretamente existen 760 tipos de tamaños distintos. En la siguiente tabla se exponen los 5 tipos de tamaño que más se repiten:
+Al realizar la carga de datos se tiene un directorio con dos subdirectorios, cada uno de ellos representará un conjunto de datos, uno de datos de entrenamiento (train) y otro de validación (valid). Cada uno de estos directorios contienen a su vez 11 directorios, representando cada una de las clases. 
 
+Llegados a este punto, se llevan a cabo las primeras tareas de exploración de las imágenes.
 
-TABLA
-(256, 256) - 18942 imágenes
-(227, 227) - 4120 imágenes
-(640, 640) - 1207 imágenes
-(533, 800) - 151 imágenes
-(800, 600) - 10 imágenes
-De cara a construir un modelo todas las imágenes tienen que tener el mismo tamaño y debida a esta primera toma de contacto se toma la decisión de transformar todas lasa imágenes a tamaño de 256x256 píxeles.
+En primer lugar, seleccionando el directorio que contiene los datos de entrenamiento se realiza una función para obtener el número de imágenes existentes por cada tipo de tamaño. Gracias a esta función se sabe que se cuentan con imágenes de variables tamaños, concretamente existen 760 tipos de tamaños distintos. En la siguiente tabla se exponen los 5 tipos de tamaño que más se repiten:
 
-En segundo lugar, se realiza una muestra aleatoria de una imagen por clase, para visualizar el tipo de imágenes que se vana tratar. AAAa
+\begin{table}[ht] 
+\centering
+\caption{\headlinecolor{\underline{Los 5 tamaños de imágenes más comunes}}}
+\label{tab:tamanos_imagenes}
+\begin{tabular}{|c|c|} \hline
+\rowcolor{naranja}
+\multicolumn{2}{|c|}{\textbf{Top 5 tamaños de imágenes}} \\ \hline
+\rowcolor{naranja!30}
+Tamaño (píxeles) & N\textsuperscript{o} imágenes \\ \hline 
+256x256 & 18942 \\ \hline 
+227x227 & 4120 \\ \hline 
+640x640 & 1207 \\ \hline 
+533x800 & 151 \\ \hline 
+800x600 & 10 \\ \hline
+\end{tabular}
+\end{table}
+
+De cara a construir un modelo todas las imágenes tienen que tener el mismo tamaño y debida a esta primera toma de contacto se toma la decisión de transformar todas las imágenes a tamaño de 256x256 píxeles.
+
+En segundo lugar, se realiza una muestra aleatoria de una imagen por clase, para visualizar el tipo de imágenes que se vana tratar.
 
 \begin{figure}[ht]
 \begin{center}
@@ -349,14 +363,168 @@ En segundo lugar, se realiza una muestra aleatoria de una imagen por clase, para
 \end{center}
 \end{figure}
 
-**Se observa la variedad de imágenes que existen. Unas más oscuras, otras con más brillo. Algunas con fundo blanco, otras con fondo de color o incluso con más elementos de fondo no solo un fondo plano. Incluso algunas están giradas.
+Se puede observar la gran variedad de imágenes que existen, con distintos brillos, distintos fondos o incluso giradas:
 
+\begin{bulletlist}
+\item En cuanto al brillo se puede observar que la imagen de \texttt{Target\_Spot} tiene mucho más brillo que la de \texttt{Tomato\_Yellow\_Leaf\_Curl\_Virus}.
+\item Con respecto al fondo podemos vir distinciones entre la imagen \texttt{Bacterial\_spot} con un fondo grisáceo plano, la imagen \texttt{Late\_blight} con fondo completamente negro y la foto \texttt{Early\_blight} en la que se ve el resto de la planta de tomate, no solo se ve una hoja.
+\item También se puede destacar la diferencia entre las posiciones de las hojas, algunas como \texttt{Bacterial\_spot} tienen el tallo abajo, otras como \texttt{Leaf\_Mold} tienen el tallo arriba y otras como \texttt{Septoria\_leaf\_spot} tienen el tallo horizontal. 
+\item Además se tiene un ejemplo de imagen rotada, concretamente la \texttt{Septoria\-\_leaf\_spot}
+\end{bulletlist}
+
+Debido a esta gran variedad de imágenes y de enfermedades se llegó a la conclusión de que no tiene mucho sentido usar funciones especiales de la librería PlantCV, ya que esta está muy orientada al fenotipado clásico (área, forma, color, índices), y esas características a veces no capturan la complejidad de patrones de enfermedades, que suelen ser más sutiles y no lineales. La estrategia que se ha seguido es pasar a un pipeline de deep learning con imágenes preprocesadas de forma estándar. De esta manera el modelo aprenderá por si mismo las características discriminantes en lugar de imponer un conjunto de "features" manuales.
+
+A continuación se dispuso a formar los conjuntos de datos que usará el modelo. Hasta ahora se tienen datos para el entrenamiento del modelo y para la validación del mismo, sin embargo, no se tienen datos para realizar pruebas sobre el modelo resultante. Por lo tanto, se formará un nuevo conjunto de datos de pruebas a partir del cunjunto de entrenamiento, concretamente, seleccionando un 20\% de sus datos.
+
+Para realizar esta tarea se recorre el directorio de datos de entrenamiento y aleatoriamente se seleccionan imágenes de cada subdirectorio (clase) y se añaden a un nuevo directorio que será el de datos de prueba.
+
+Otra tarea importante en cuanto al procesado de los datos es normalizar los mismos. Para ello, se hace uso de ImageDataGenerator de Tensorflow. Se usa esta función porque también sirve para aplicar la técnica de data augmentation en los datos de entrenamiento. Esta técnica consiste en generar datos adicionales a partir de los ya existentes aplicando transformaciones que mantienen la esencia de la información original, pero la presentan de manera distinta. Su objetivo principal es enriquecer el conjunto de entrenamiento para mejorar la capacidad de generalización del modelo resultante.
+
+Es decir, a los tres conjuntos de datos se le apliza normalización que consiste en transformar los pixeles de cada imagen de valores que van de 0 a 255 (escala RGB) a valores entre 0 y 1. Además a las imágenes del conjunto de entrenamiento se le aplica la técnica de data augmentation que se ha mencionado anteriormente, concretamente se le aplican las siguientes transformaciones:
+
+\begin{bulletlist}
+\item Rota aleatoriamente la imagen hasta más menos 20 grados.
+\item Aplica un zoom aleatorio entre 80\% y 120\% del tamaño original.
+\item Desplaza la imagen horizontalmente hasta un 20\% de su ancho.
+\item Desplaza la imagen verticalmente hasta un 20\% de su alto.
+\item Aplica una transformación de cizallamiento (shear), como si se deformara la imagen en diagonal.
+\item Gira horizontalmente las imágenes aleatoriamente.
+\item Cambia el brillo aleatoriamente entre 80\% y 120\%.
+\item Cuando una transformación (como una rotación o desplazamiento) deja espacios vacíos en la imagen, estos se rellenan con el valor del píxel más cercano.
+\end{bulletlist}
+
+Estas transformaciones se aplicarán aleatoriamente cada vez que el generador entrega un lote al modelo durante el entrenamiento. De esta manera, el modelo el modelo nunca verá dos veces exactamente la misma versión de la imagen.
+
+Como ya se ha mencionado se ha usado ImageDataGenerator para formar los conjuntos de datos. Concretamente lo que permite es crear generadores, que no son más que objetos que producen datos de forma incremental, lote a lote, en lugar de cargar todo el dataset en memoria de golpe. El generador se conecta a un directorio con datos y los va leyendo en lotes de un tamaño determinado, en este caso se ha usado un tamaño de 32, es decir, va formando lotes de 32 imágnes y a estas se les aplica normalización y también las transformaciones de data augmentation mencionadas si son datos de entrenamiento.
+
+De esta manera, quedan los siguientes conjuntos de datos:
+
+\begin{bulletlist}
+\item Entrenamiento: Tiene 20.686 imágenes utilizadas para entrenar el modelo. Se trata de la mayor parte de los datos, ya que el modelo necesita muchos ejemplos para aprender patrones.
+\item Validación: Tiene 6.683 imágenes. Estos datos se utilizan para evaluar el rendimiento del modelo durante el entrenamiento, sin afectar a los parámetros del modelo.
+\item Prueba: Hay 5.165 imágenes para la prueba final. Este conjunto de datos se utiliza una vez finalizado el entrenamiento para medir objetivamente el rendimiento del modelo con datos nuevos que nunca se han visto.
+\end{bulletlist}
+
+Otro dato importante del conjunto de entrenamiento es el número de imágenes que se tiene por clase, ya que si hubiera muchas más imágenes de una clase que de otras, el modelo podría incluir un sesgo no deseado. El número de imágenes por clase del conjunto de entrenamiento es el siguiente:
+
+
+\begin{table}[ht] 
+\centering
+\caption{\headlinecolor{\underline{Número de imágenes por clases en el conjunto de entrenamiento}}}
+\label{tab:num_imagen_por_clase_entrenamiento}
+\begin{tabular}{|c|c|} \hline
+\rowcolor{naranja}
+\multicolumn{2}{|c|}{\textbf{Número de imágenes por clases}} \\ \hline
+\rowcolor{naranja!30}
+Clase & N\textsuperscript{o} imágenes \\ \hline 
+\texttt{Bacterial\_spot} & 2261 \\ \hline 
+\texttt{Early\_blight} & 1964 \\ \hline 
+\texttt{Late\_blight} & 2491 \\ \hline 
+\texttt{Leaf\_Mold} & 2204 \\ \hline 
+\texttt{Septoria\_leaf\_spot} & 2306 \\ \hline
+\texttt{Spidermite\_Two-spotted\_spider\_mite} & 1398 \\ \hline
+\texttt{Target\_Spot} & 1462 \\ \hline
+\texttt{Tomato\_Yellow\_Leaf\_Curl\_Virus} & 1632 \\ \hline
+\texttt{Tomato\_mosaic\_virus} & 1723 \\ \hline
+\texttt{healthy} & 2441 \\ \hline
+\texttt{powdery\_mildew} & 804 \\ \hline
+\end{tabular}
+\end{table}
+
+La mayoría de clases tienen entre 2000 y 2400 imágenes, lo cual es aceptable. Sin embargo, existen clases claramente minoritarias, como \texttt{Spidermite\_Two-spotted\-\_spider\_mite} y \texttt{Target\_Spot} con menos de 1500 imágenes, o  \texttt{powdery\_mildew} con menos de 1000 imágenes. Esto puede causar que el modelo aprenda mejor las clases con más ejemplos y tienda a confundirse en las minoritarias porque tiene menos exposición a ellas.
+
+Para evitar el posible problema de sesgo en el modelo se aplicará una técnica de balanceo al conjunto de entrenamiento. Específicamente se usará ponderación de clases con un diccionario \texttt{class\_weight} que se puede añadir al modelo en forma de parámetro. Esto dará más peso a los errores en clases minoritarias, para que el modelo no las ignore.
+
+Los pesos de las clases se han calculado usando la función \texttt{compute\_class\_weight} que hace que las clases con menor muestras tengan mayor peso y las que tengan más muestras tengan menor peso. Haciendo, en promedio, que todas las clases tengan la misma importancia. Los pesos aplicados son los que se muestran a continuación:
+
+\begin{table}[ht] 
+\centering
+\caption{\headlinecolor{\underline{Pesos asignados a cada clase en el entrenamiento del modelo}}}
+\label{tab:pesos_por_clase_entrenamiento}
+\begin{tabular}{|c|c|c|} \hline
+\rowcolor{naranja}
+\multicolumn{3}{|c|}{\textbf{Pesos por clases}} \\ \hline
+\rowcolor{naranja!30}
+Clase & N\textsuperscript{o} imágenes & Peso \\ \hline 
+\texttt{Bacterial\_spot} & 2261 & 0.8317 \\ \hline 
+\texttt{Early\_blight} & 1964 & 0.9575 \\ \hline 
+\texttt{Late\_blight} & 2491 & 0.7549 \\ \hline 
+\texttt{Leaf\_Mold} & 2204 & 0.8532 \\ \hline 
+\texttt{Septoria\_leaf\_spot} & 2306 & 0.8155 \\ \hline
+\texttt{Spidermite\_Two-spotted\_spider\_mite} & 1398 & 1.3451 \\ \hline
+\texttt{Target\_Spot} & 1462 & 1.2862 \\ \hline
+\texttt{Tomato\_Yellow\_Leaf\_Curl\_Virus} & 1632 & 1.1522 \\ \hline
+\texttt{Tomato\_mosaic\_virus} & 1723 & 1.0914 \\ \hline
+\texttt{healthy} & 2441 & 0.7703 \\ \hline
+\texttt{powdery\_mildew} & 804 & 2.3389 \\ \hline
+\end{tabular}
+\end{table}
+
+
+\section{Modelado}\label{sec:sec4.4}
+
+En esta sección se describe la estrategia de modelado empleada, común a todos los experimentos realizados posteriormente. El enfoque adoptado se basa en el uso de redes neuronales convolucionales (CNN), dado que constituyen la arquitectura de referencia en tareas de clasificación de imágenes al ser capaces de extraer de manera automática y jerárquica características relevantes de los datos visuales.
+
+Considerando las limitaciones de recursos computacionales disponibles, se optó por la técnica de transfer learning. Esta metodología permite aprovechar modelos previamente entrenados sobre grandes bases de datos, de modo que las capas iniciales ya contienen representaciones generales de las imágenes. Posteriormente, dichas representaciones se ajustan mediante un proceso de fine-tuning a la tarea específica de clasificación de enfermedades en hojas de tomate.
+
+Con el objetivo de gestionar mejor los recursos disponibles, se implementaron disitntos callbacks:
+
+\begin{bulletlist}
+\item HistorySaver: permite guardar el historial de métricas en un archivo externo. Esto resulta especialmente útil en entornos con recursos limitados o sesiones interrumpibles (como Google Colab), ya que garantiza que la información del entrenamiento no se pierda.
+\item ModelCheckpoint: encargado de almacenar en disco el modelo con mejor desempeño en validación, según la métrica \texttt{val\_accuracy}. De este modo, se asegura la conservación de la mejor versión del modelo entrenado, evitando depender únicamente de los pesos finales.
+\end{bulletlist}
+
+Estos callbacks se han usado en todos los modelos. Sin embargo, en los llamados modelos optimizados se han usado otros dos callbacks:
+
+\begin{bulletlist}
+\item EarlyStopping: detiene el entrenamiento de forma anticipada si la pérdida de validación no mejora durante un número determinado de épocas consecutivas. Esto evita sobreentrenamiento y reduce el tiempo de cómputo innecesario.
+\item ReduceLROnPlateau: ajusta de manera dinámica la tasa de aprendizaje cuando la pérdida de validación alcanza una meseta. Gracias a esta reducción progresiva, el modelo puede seguir afinando sus parámetros con pasos cada vez más pequeños, lo que mejora la convergencia.
+\end{bulletlist}
+
+En conjunto, estos callbacks permitieron no solo optimizar el uso de los recursos computacionales disponibles, sino también obtener modelos más robustos y con mejor capacidad de generalización.
+
+Los modelos previamente entrenados que se han usado son MobileNetV2, EfficientNetB0, NASNetMobile..
 
 \chapter{Evaluación y resultados}\label{cap:cap5}
+
+Secciones con cada modelo concreto y sus parámetros y los resultados mostrados con las métricas y una matriz de confusión
+
+\section{Modelo MobileNetV2 base}\label{sec:sec5.1}
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.5]{./Images/historico_metricas_mobilenetv2_1.png}
+\caption{\headlinecolor{\underline{Histórico de métricas del modelo MobileNetV2 base}}}
+\label{fig:fig5}
+\end{center}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.7]{./Images/resumen_metricas_mobilenetv2_1.png}
+\caption{\headlinecolor{\underline{Resumen de las métricas del modelo MobileNetV2 base}}}
+\label{fig:fig6}
+\end{center}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.5]{./Images/matriz_confusion_mobilenetv2_1.png}
+\caption{\headlinecolor{\underline{Matriz de confusión del modelo MobileNetV2 base}}}
+\label{fig:fig7}
+\end{center}
+\end{figure}
+
+\section{Modelo MobileNetV2 optimizado}\label{sec:sec5.2}
+
+\section{Modelo EfficientNetB0 base}\label{sec:sec5.3}
+
+\section{Modelo NASNetMobile base}\label{sec:sec5.4}
 
 
 \chapter{Conclusiones}\label{cap:cap6}
 
+Se selecciona el mejor modelo y se muestra una gráfica probando el modelo (desarrollar)
 
 
 \appendix

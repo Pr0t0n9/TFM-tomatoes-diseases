@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.9.6)  13 SEP 2025 16:57
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.9.6)  30 SEP 2025 17:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1546,8 +1546,13 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 12.
 Package tocbasic Info: Using my definition of `\numberline' on input line 13.
 Package tocbasic Info: Using my definition of `\numberline' on input line 14.
 Package tocbasic Info: Using my definition of `\numberline' on input line 15.
+Package tocbasic Info: Using my definition of `\numberline' on input line 16.
 Package tocbasic Info: Using my definition of `\numberline' on input line 17.
 Package tocbasic Info: Using my definition of `\numberline' on input line 18.
+Package tocbasic Info: Using my definition of `\numberline' on input line 19.
+Package tocbasic Info: Using my definition of `\numberline' on input line 20.
+Package tocbasic Info: Using my definition of `\numberline' on input line 22.
+Package tocbasic Info: Using my definition of `\numberline' on input line 23.
 )
 \tf@toc=\write5
 \openout5 = `TFT.toc'.
@@ -1566,6 +1571,9 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 3.
 Package tocbasic Info: Using my definition of `\numberline' on input line 4.
 Package tocbasic Info: Using my definition of `\numberline' on input line 5.
 Package tocbasic Info: Using my definition of `\numberline' on input line 9.
+Package tocbasic Info: Using my definition of `\numberline' on input line 11.
+Package tocbasic Info: Using my definition of `\numberline' on input line 12.
+Package tocbasic Info: Using my definition of `\numberline' on input line 13.
 )
 \tf@lof=\write6
 \openout6 = `TFT.lof'.
@@ -1582,6 +1590,9 @@ LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 Package tocbasic Info: Using my definition of `\numberline' on input line 3.
 Package tocbasic Info: Using my definition of `\numberline' on input line 7.
+Package tocbasic Info: Using my definition of `\numberline' on input line 8.
+Package tocbasic Info: Using my definition of `\numberline' on input line 9.
+Package tocbasic Info: Using my definition of `\numberline' on input line 10.
 )
 \tf@lot=\write7
 \openout7 = `TFT.lot'.
@@ -1674,13 +1685,13 @@ File: ./Images/image3.png Graphic file (type bmp)
 
 ]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
-13.
+14.
 
 (C:\Users\RUBEN MARIN LUCAS\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.f
 d
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Overfull \hbox (2.39397pt too wide) in paragraph at lines 308--325
+Overfull \hbox (2.39397pt too wide) in paragraph at lines 309--326
  [][] 
  []
 
@@ -1696,24 +1707,62 @@ File: ./Images/Imagen_aleatoria_por_clase.png Graphic file (type bmp)
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [14]
+Overfull \hbox (5.62419pt too wide) in paragraph at lines 370--371
+[]\T1/phv/m/n/12 Con res-pec-to al fon-do po-de-mos vir dis-tin-cio-nes en-tre 
+la ima-gen \T1/lmtt/m/n/12 Bacterial_spot
+ []
+
+
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [15]
-chapter 5.
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[16]
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[17]
+Overfull \hbox (3.0038pt too wide) in paragraph at lines 438--439
+[]\T1/phv/m/n/12 Los pe-sos de las cla-ses se han cal-cu-la-do usan-do la fun-c
+ión \T1/lmtt/m/n/12 compute_class_weight
+ []
+
 
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[16
+[18]
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[19]
+chapter 5.
+File: ./Images/historico_metricas_mobilenetv2_1.png Graphic file (type bmp)
+<./Images/historico_metricas_mobilenetv2_1.png>
+File: ./Images/resumen_metricas_mobilenetv2_1.png Graphic file (type bmp)
+<./Images/resumen_metricas_mobilenetv2_1.png>
+File: ./Images/matriz_confusion_mobilenetv2_1.png Graphic file (type bmp)
+<./Images/matriz_confusion_mobilenetv2_1.png>
+
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[20
 
 ]
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[21]
 chapter 6.
 
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[17
+[22
 
 ]
 chapter A.
@@ -1721,7 +1770,7 @@ chapter A.
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[18
+[23
 
 ]
 chapter B.
@@ -1729,13 +1778,13 @@ chapter B.
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[19
+[24
 
 ]
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[20
+[25
 
 ] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
@@ -1753,12 +1802,12 @@ Package logreq Info: Writing requests to 'TFT.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37456 strings out of 403249
- 761687 string characters out of 5458377
- 1859068 words of memory out of 5000000
- 65437 multiletter control sequences out of 15000+600000
+ 37511 strings out of 403249
+ 763445 string characters out of 5458377
+ 1860052 words of memory out of 5000000
+ 65489 multiletter control sequences out of 15000+600000
  654409 words of font info for 78 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 108i,16n,107p,11285b,5189s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,17n,107p,11285b,5189s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on TFT.pdf (20 pages).
+Output written on TFT.pdf (25 pages).
