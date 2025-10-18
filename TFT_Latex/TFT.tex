@@ -84,7 +84,7 @@
 
 % Interlineado y espaciado entre párrafos
 \usepackage{setspace}
-\setstretch{1.3} % interlineado 1.3
+\setstretch{1.2} % interlineado 1.3
 \setlength{\parskip}{0.8em} % espacio entre párrafos
 
 
@@ -499,71 +499,124 @@ Por último cabe destacar que para que los modelos puedan ser reconstruidos por 
 \end{bulletlist}
 
 
-\subsection{Modelo \textit{MobileNetV2} base 1}\label{sec:sec4.4.1}
+\subsection{Modelo \textit{MobileNetV2}}\label{sec:sec4.4.1}
 
-Este modelo usa de capa base \textit{MobileNetV2} preentrenada con los pesos de ImageNet. Posteriormente se congelan las capas del modelo base para evitar que los pesos se modifiquen durante el entrenamiento y se use correctamente la técnica de transfer learning. A continuación se añade una capa de GlobalAveragePooling y una capa densa con 11 neuronas y función de activación softmax, ya que nos enfrentamos a una clasificación de 11 clases.
-Finalmente par ala compilación se usa el optimizador Adam, la función de pérdida de entropía cruzada categórica y se escoge la métrica de precisión para evaluar el rendimiento.
+Este modelo usa de capa base \textit{MobileNetV2} preentrenada con los pesos de \textit{ImageNet}. Posteriormente se congelan las capas del modelo base para evitar que los pesos se modifiquen durante el entrenamiento y se use correctamente la técnica de \textit{transfer learning}. A continuación se añade una capa de \textit{GlobalAveragePooling} y una capa densa con 11 neuronas y función de activación \textit{softmax}, ya que nos enfrentamos a una clasificación de 11 clases.
+Esta información es la que se muestra en la Figura \ref{fig:fig5}.
 
-Imagen de summary
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.7]{./Images/summary_mobilnetv2_1.png}
+\caption{\headlinecolor{\underline{Resumen del modelo \textit{MobileNetV2} base 1}}}
+\label{fig:fig5}
+\end{center}
+\end{figure}
 
-En el entrenamiento de este modelo solo se están usando los callbacks HistorySaver y ModelCheckpoint.
+Finalmente para la compilación se usa el optimizador Adam, la función de pérdida de entropía cruzada categórica y se escoge la métrica de precisión para evaluar el rendimiento. 
+
+Se usa la función de pérdida de entropía cruzada categórica porque al crear los conjuntos de datos con ImageDatagenerator como se indica en la sessción \ref{sec:sec4.3} se usa el parámetro class mode con valor categorical que convierte las etiquetas a vectores one-hot encoded
 
 
-\subsection{Modelo \textit{MobileNetV2} base 2}\label{sec:sec4.4.2}
-
-Este modelo es igual que el anterior, pero añade una capa de Dropout para mejorar la generalización después de la capa de GlobalAveragePooling.
-
-Imagen de summary
-
-Igualmente en el entrenamiento de este modelo solo se están usando los callbacks HistorySaver y ModelCheckpoint.
-
-\subsection{Modelo \textit{MobileNetV2} optimizado}\label{sec:sec4.4.3}
-
-Este modelo es igual que el anterior. El cambio reside en el entrenamiento.
-
-Imagen de summary
-
-Este modelo además de los callbacks de HistorySaver y ModelCheckpoint también usa los callbacks EarlyStopping y ReduceLROnPlateau. El más relevante en este caso es ReduceLROnPlateau que permite dismunuir el learning rate a lo largo del entrenamiento con el objetivo de mejorar la generalización.
-
-\subsection{Modelo \textit{EfficientNetB0} base}\label{sec:sec4.4.4}
+\subsection{Modelo \textit{EfficientNetB0} base}\label{sec:sec4.4.2}
 
 Este modelo usa de capa base \textit{EfficientNetB0} preentrenada con los pesos de ImageNet. Posteriormente se congelan las capas del modelo base para evitar que los pesos se modifiquen durante el entrenamiento y se use correctamente la técnica de transfer learning. A continuación se añade una capa de GlobalAveragePooling y una capa densa con 11 neuronas y función de activación softmax, ya que nos enfrentamos a una clasificación de 11 clases.
 Finalmente par ala compilación se usa el optimizador Adam, la función de pérdida de entropía cruzada categórica y se escoge la métrica de precisión para evaluar el rendimiento.
 
 Imagen de summary
 
-En el entrenamiento de este modelo solo se están usando los callbacks HistorySaver y ModelCheckpoint.
 
-\subsection{Modelo \textit{NASNetMobile} base}\label{sec:sec4.4.5}
+\subsection{Modelo \textit{NASNetMobile} base}\label{sec:sec4.4.3}
 
 Este modelo usa de capa base \textit{NASNetMobile} preentrenada con los pesos de ImageNet. Posteriormente se congelan las capas del modelo base para evitar que los pesos se modifiquen durante el entrenamiento y se use correctamente la técnica de transfer learning. A continuación se añade una capa de GlobalAveragePooling y una capa densa con 11 neuronas y función de activación softmax, ya que nos enfrentamos a una clasificación de 11 clases.
 Finalmente par ala compilación se usa el optimizador Adam, la función de pérdida de entropía cruzada categórica y se escoge la métrica de precisión para evaluar el rendimiento.
 
 Imagen de summary
 
-En el entrenamiento de este modelo solo se están usando los callbacks HistorySaver y ModelCheckpoint.
-
 
 
 \chapter{Evaluación y resultados}\label{cap:cap5}
 
-Secciones con cada modelo concreto y sus parámetros y los resultados mostrados con las métricas y una matriz de confusión
+En este capítulo se presentan los resultados obtenidos al usar los datos preprocesados explicado en la sección \ref{sec:sec4.3} a los modelos descritos en la sección \ref{sec:sec4.4}.
 
-\section{Modelo \textit{MobileNetV2} base 1}\label{sec:sec5.1}
 
-En esta sección se van a mostrar los resultados del modelo descrito en el aprtado \ref{sec:sec4.4.1}. Para ello, en primer lugar se va a mostrar las métricas recogidas en el fichero generado por el callback HistorySaver en la Figura \ref{fig:fig5}.
+\section{Modelo \textit{MobileNetV2}}\label{sec:sec5.1}
+
+En esta sección se van a mostrar los resultados del entrenamiento del modelo descrito en la subsección \ref{sec:sec4.4.1}. A este modelo se han aplicado varios entrenamientos distintos explicados en las subsecciones 5.1.1, 5.1.2 y 5.1.3
+
+
+\subsection{Entrenamiento 1}\label{sec:sec5.1.1}
+
+Este entrenamiento se ha realizado usando los pesos de clases descritos en la tabla x. Solo se ha sometido a 10 épocas y se han usado los callbacks de ModelCheckpoint e HistorySaver, ya que el objetivo de este entrenamiento es observar la tendencia inicial y poderlo comparar con el entrenamiento de la sección 5.1.2 para poder determinar qué tanto puede influir los pesos en las clases.
+
+Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las métricas recogidas en el fichero generado por el callback \textit{HistorySaver} en la Figura \ref{fig:fig6}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.5]{./Images/historico_metricas_mobilenetv2_1.png}
+\caption{\headlinecolor{\underline{Histórico de métricas del entrenamiento 1 del modelo \textit{MobileNetV2}}}}
+\label{fig:fig6}
+\end{center}
+\end{figure}
+
+En la Figura \ref{fig:fig6} podemos observar el comportamiento de las métricas de precisión y pérdida de entrenamiento y validación a lo largo de las épocas a las que se ha sometido el modelo descrito en la subsección \ref{sec:sec4.4.1} en el entrenamiento. A continuación se describe lo que se puede interpretar:  
+
+\begin{bulletlist}
+\item Precisión de entrenamiento: Comienza alrededor de 0.6 y sube rápidamente a un valor cercano a 0.9, mostrando que el modelo aprende bien de los datos de entrenamiento.
+\item Pérdida de entrenamiento:
+\item Precisión de validación:
+\item Pérdida de validación:
+\end{bulletlist}
+
+\subsection{Entrenamiento 2}\label{sec:sec5.1.2}
+
+Este entrenamiento es igual que el anterior, pero sin tener en cuenta los pesos de las clases.
+
+Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las métricas recogidas en el fichero generado por el callback \textit{HistorySaver} en la Figura \ref{fig:fig6}.
 
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[scale=0.5]{./Images/historico_metricas_mobilenetv2_1.png}
 \caption{\headlinecolor{\underline{Histórico de métricas del modelo MobileNetV2 base 1}}}
-\label{fig:fig5}
+\label{fig:fig7}
 \end{center}
 \end{figure}
 
-Explicación de que existe overfitting
+En la Figura \ref{fig:fig7} podemos observar el comportamiento de las métricas de precisión y pérdida de entrenamiento y validación a lo largo de las épocas a las que se ha sometido el modelo descrito en la subsección \ref{sec:sec4.4.1} en el entrenamiento. A continuación se describe lo que se puede interpretar:  
 
-No es necesario mostrar más debido a overfitting
+\begin{bulletlist}
+\item Precisión de entrenamiento: 
+\item Pérdida de entrenamiento:
+\item Precisión de validación:
+\item Pérdida de validación:
+\end{bulletlist}
+
+
+Comparación con anterior modelo
+
+
+\subsection{Entrenamiento 3}\label{sec:sec5.1.3}
+
+Este entrenamiento es igual que el anterior, pero sin tener en cuenta los pesos de las clases.
+
+Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las métricas recogidas en el fichero generado por el callback \textit{HistorySaver} en la Figura \ref{fig:fig6}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.5]{./Images/historico_metricas_mobilenetv2_1.png}
+\caption{\headlinecolor{\underline{Histórico de métricas del modelo MobileNetV2 base 1}}}
+\label{fig:fig8}
+\end{center}
+\end{figure}
+
+En la Figura \ref{fig:fig7} podemos observar el comportamiento de las métricas de precisión y pérdida de entrenamiento y validación a lo largo de las épocas a las que se ha sometido el modelo descrito en la subsección \ref{sec:sec4.4.1} en el entrenamiento. A continuación se describe lo que se puede interpretar:  
+
+\begin{bulletlist}
+\item Precisión de entrenamiento: 
+\item Pérdida de entrenamiento:
+\item Precisión de validación:
+\item Pérdida de validación:
+\end{bulletlist}
+
 
 \section{Modelo \textit{MobileNetV2} base 2}\label{sec:sec5.2}
 
@@ -573,19 +626,12 @@ En esta sección se van a mostrar los resultados del modelo descrito en el aprta
 
 En esta sección se van a mostrar los resultados del modelo descrito en el aprtado \ref{sec:sec4.4.3}. Para ello, en primer lugar se va a mostrar las métricas recogidas en el fichero generado por el callback HistorySaver en la Figura \ref{fig:fig5}.
 
-\begin{figure}[ht]
-\begin{center}
-\includegraphics[scale=0.5]{./Images/historico_metricas_mobilenetv2_3.png}
-\caption{\headlinecolor{\underline{Histórico de métricas del modelo MobileNetV2 optimizado}}}
-\label{fig:fig6}
-\end{center}
-\end{figure}
 
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[scale=0.7]{./Images/resumen_metricas_mobilenetv2_3.png}
 \caption{\headlinecolor{\underline{Resumen de las métricas del modelo MobileNetV2 optimizado}}}
-\label{fig:fig7}
+\label{fig:fig9}
 \end{center}
 \end{figure}
 
@@ -593,7 +639,7 @@ En esta sección se van a mostrar los resultados del modelo descrito en el aprta
 \begin{center}
 \includegraphics[scale=0.5]{./Images/matriz_confusion_mobilenetv2_3.png}
 \caption{\headlinecolor{\underline{Matriz de confusión del modelo MobileNetV2 optimizado}}}
-\label{fig:fig8}
+\label{fig:fig10}
 \end{center}
 \end{figure}
 

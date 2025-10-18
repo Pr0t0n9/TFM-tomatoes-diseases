@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.9.6)  17 OCT 2025 20:36
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.9.6)  18 OCT 2025 12:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1565,8 +1565,9 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 21.
 Package tocbasic Info: Using my definition of `\numberline' on input line 22.
 Package tocbasic Info: Using my definition of `\numberline' on input line 23.
 Package tocbasic Info: Using my definition of `\numberline' on input line 24.
-Package tocbasic Info: Using my definition of `\numberline' on input line 26.
+Package tocbasic Info: Using my definition of `\numberline' on input line 25.
 Package tocbasic Info: Using my definition of `\numberline' on input line 27.
+Package tocbasic Info: Using my definition of `\numberline' on input line 28.
 )
 \tf@toc=\write5
 \openout5 = `TFT.toc'.
@@ -1577,11 +1578,7 @@ File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [3
 
-]
-
-File: ./Images/image3.png Graphic file (type bmp)
-<./Images/image3.png>
-[4] (TFT.lof
+] (TFT.lof
 LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
@@ -1589,10 +1586,12 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 3.
 Package tocbasic Info: Using my definition of `\numberline' on input line 4.
 Package tocbasic Info: Using my definition of `\numberline' on input line 5.
 Package tocbasic Info: Using my definition of `\numberline' on input line 9.
-Package tocbasic Info: Using my definition of `\numberline' on input line 11.
+Package tocbasic Info: Using my definition of `\numberline' on input line 10.
 Package tocbasic Info: Using my definition of `\numberline' on input line 12.
 Package tocbasic Info: Using my definition of `\numberline' on input line 13.
 Package tocbasic Info: Using my definition of `\numberline' on input line 14.
+Package tocbasic Info: Using my definition of `\numberline' on input line 15.
+Package tocbasic Info: Using my definition of `\numberline' on input line 16.
 )
 \tf@lof=\write6
 \openout6 = `TFT.lof'.
@@ -1601,7 +1600,7 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 14.
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[5
+[4
 
 ] (TFT.lot
 LaTeX Info: Redefining \sptext on input line 1.
@@ -1620,21 +1619,21 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 10.
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[6
+[5
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10.95> not available
 (Font)              Font shape `T1/phv/b/sl' tried instead on input line 145.
 
 
-[7
+[6
 
 
 ]
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[8]
+[7]
 chapter 1.
 File: ./Images/Distribucion_tomate.jpg Graphic file (type bmp)
 <./Images/Distribucion_tomate.jpg>
@@ -1642,7 +1641,7 @@ File: ./Images/Distribucion_tomate.jpg Graphic file (type bmp)
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[9
+[8
 
 ]
 LaTeX Font Info:    Trying to load font information for TS1+phv on input line 1
@@ -1660,21 +1659,21 @@ File: ./Images/Tizon_temprano_tomate.jpg Graphic file (type bmp)
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
+[9]
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
 [10]
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [11]
-
-File: ./Images/image3.png Graphic file (type bmp)
-<./Images/image3.png>
-[12]
 chapter 2.
 
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[13
+[12
 
 ]
 chapter 3.
@@ -1688,7 +1687,7 @@ Alex-Net, Goo-gle-Net, In-cep-tionV3,
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[14
+[13
 
 ]
 Overfull \hbox (2.11948pt too wide) in paragraph at lines 263--264
@@ -1700,19 +1699,19 @@ Overfull \hbox (2.11948pt too wide) in paragraph at lines 263--264
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[15]
+[14]
 chapter 4.
 
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[16
+[15
 
 ]
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[17]
+[16]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
 19.
 
@@ -1728,7 +1727,7 @@ Overfull \hbox (2.39397pt too wide) in paragraph at lines 314--331
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[18]
+[17]
 File: ./Images/Imagen_aleatoria_por_clase.png Graphic file (type bmp)
 <./Images/Imagen_aleatoria_por_clase.png>
 
@@ -1741,6 +1740,10 @@ la ima-gen \T1/lmtt/m/n/12 Bacterial_spot
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
+[18]
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
 [19]
 
 File: ./Images/image3.png Graphic file (type bmp)
@@ -1750,10 +1753,6 @@ File: ./Images/image3.png Graphic file (type bmp)
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [21]
-
-File: ./Images/image3.png Graphic file (type bmp)
-<./Images/image3.png>
-[22]
 Overfull \hbox (3.0038pt too wide) in paragraph at lines 443--444
 []\T1/phv/m/n/12 Los pe-sos de las cla-ses se han cal-cu-la-do usan-do la fun-c
 ión \T1/lmtt/m/n/12 compute_class_weight
@@ -1763,11 +1762,11 @@ ión \T1/lmtt/m/n/12 compute_class_weight
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[23]
+[22]
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[24]
+[23]
 Overfull \hbox (6.90501pt too wide) in paragraph at lines 496--497
 []\T1/phv/m/n/12 Para la ini-cia-li-za-ción de los pe-sos en el mo-de-lo se usa
  \T1/lmtt/m/n/12 tf.random.set_seed(42)\T1/phv/m/n/12 . 
@@ -1775,38 +1774,43 @@ Overfull \hbox (6.90501pt too wide) in paragraph at lines 496--497
 
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
 (Font)              Font shape `T1/phv/b/sl' tried instead on input line 502.
+File: ./Images/summary_mobilnetv2_1.png Graphic file (type bmp)
+<./Images/summary_mobilnetv2_1.png>
 
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[24]
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [25]
-
-File: ./Images/image3.png Graphic file (type bmp)
-<./Images/image3.png>
-[26]
-
-File: ./Images/image3.png Graphic file (type bmp)
-<./Images/image3.png>
-[27]
 chapter 5.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <17.28> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 552.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 542.
 File: ./Images/historico_metricas_mobilenetv2_1.png Graphic file (type bmp)
 <./Images/historico_metricas_mobilenetv2_1.png>
 
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[28
+[26
 
 ]
-File: ./Images/historico_metricas_mobilenetv2_3.png Graphic file (type bmp)
-<./Images/historico_metricas_mobilenetv2_3.png>
+File: ./Images/historico_metricas_mobilenetv2_1.png Graphic file (type bmp)
+<./Images/historico_metricas_mobilenetv2_1.png>
 
-Overfull \hbox (20.59412pt too wide) in paragraph at lines 578--579
- [] 
- []
 
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[27]
+File: ./Images/historico_metricas_mobilenetv2_1.png Graphic file (type bmp)
+<./Images/historico_metricas_mobilenetv2_1.png>
+
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[28]
 File: ./Images/resumen_metricas_mobilenetv2_3.png Graphic file (type bmp)
 <./Images/resumen_metricas_mobilenetv2_3.png>
 File: ./Images/matriz_confusion_mobilenetv2_3.png Graphic file (type bmp)
@@ -1865,10 +1869,10 @@ Package logreq Info: Writing requests to 'TFT.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37609 strings out of 403249
- 765774 string characters out of 5458377
- 1861233 words of memory out of 5000000
- 65583 multiletter control sequences out of 15000+600000
+ 37613 strings out of 403249
+ 765707 string characters out of 5458377
+ 1860406 words of memory out of 5000000
+ 65587 multiletter control sequences out of 15000+600000
  657801 words of font info for 80 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  108i,17n,107p,11285b,5189s stack positions out of 10000i,1000n,20000p,200000b,200000s
