@@ -62,7 +62,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Consultado el 30 de julio de 2025}
-      \field{title}{Detección de enfermedades foliares conarquitecturas de redes neuronales convolucionales}
+      \field{title}{Detección de enfermedades foliares con arquitecturas de redes neuronales convolucionales}
       \field{year}{2024}
       \verb{urlraw}
       \verb https://rinderesu.com/index.php/rinderesu/article/view/46/50
@@ -237,6 +237,53 @@
       \verb https://revistas.utb.edu.ec/index.php/magazine/article/view/2330/1983
       \endverb
     \endentry
+    \entry{kaggle}{misc}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=61fbf5b01ba5490aea523c13bf94635b}{%
+           family={Motwani},
+           familyi={M\bibinitperiod},
+           given={Ashish},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=db7ed0a5b893a714f2d5600b84ed6131}{%
+           family={Khan},
+           familyi={K\bibinitperiod},
+           given={Qasim},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Kaggle}%
+      }
+      \strng{namehash}{57a63050e2881115fed4455018d38253}
+      \strng{fullhash}{57a63050e2881115fed4455018d38253}
+      \strng{fullhashraw}{57a63050e2881115fed4455018d38253}
+      \strng{bibnamehash}{57a63050e2881115fed4455018d38253}
+      \strng{authorbibnamehash}{57a63050e2881115fed4455018d38253}
+      \strng{authornamehash}{57a63050e2881115fed4455018d38253}
+      \strng{authorfullhash}{57a63050e2881115fed4455018d38253}
+      \strng{authorfullhashraw}{57a63050e2881115fed4455018d38253}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{title}{Tomato Leaves Dataset}
+      \field{urlday}{4}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.kaggle.com/datasets/ashishmotwani/tomato/data
+      \endverb
+      \verb{url}
+      \verb https://www.kaggle.com/datasets/ashishmotwani/tomato/data
+      \endverb
+    \endentry
     \entry{wikipedia2}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=b6aea1a416c89509a7df1cbb69249cb6}{%
@@ -271,10 +318,10 @@
       \field{year}{2025}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://es.wikipedia.org/wiki/Solanum_lycopersicum
+      \verb https://es.wikipedia.org/wiki/Anexo:Producci%C3%B3n_mundial_de_tomate
       \endverb
       \verb{url}
-      \verb https://es.wikipedia.org/wiki/Solanum_lycopersicum
+      \verb https://es.wikipedia.org/wiki/Anexo:Producci%C3%B3n_mundial_de_tomate
       \endverb
     \endentry
     \entry{wikipedia1}{online}{}{}
@@ -362,7 +409,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Consultado el 30 de julio de 2025}
-      \field{title}{Detección de enfermedades foliares conarquitecturas de redes neuronales convolucionales}
+      \field{title}{Detección de enfermedades foliares con arquitecturas de redes neuronales convolucionales}
       \field{year}{2024}
       \verb{urlraw}
       \verb https://rinderesu.com/index.php/rinderesu/article/view/46/50
@@ -537,6 +584,53 @@
       \verb https://revistas.utb.edu.ec/index.php/magazine/article/view/2330/1983
       \endverb
     \endentry
+    \entry{kaggle}{misc}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=61fbf5b01ba5490aea523c13bf94635b}{%
+           family={Motwani},
+           familyi={M\bibinitperiod},
+           given={Ashish},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=db7ed0a5b893a714f2d5600b84ed6131}{%
+           family={Khan},
+           familyi={K\bibinitperiod},
+           given={Qasim},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Kaggle}%
+      }
+      \strng{namehash}{57a63050e2881115fed4455018d38253}
+      \strng{fullhash}{57a63050e2881115fed4455018d38253}
+      \strng{fullhashraw}{57a63050e2881115fed4455018d38253}
+      \strng{bibnamehash}{57a63050e2881115fed4455018d38253}
+      \strng{authorbibnamehash}{57a63050e2881115fed4455018d38253}
+      \strng{authornamehash}{57a63050e2881115fed4455018d38253}
+      \strng{authorfullhash}{57a63050e2881115fed4455018d38253}
+      \strng{authorfullhashraw}{57a63050e2881115fed4455018d38253}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{title}{Tomato Leaves Dataset}
+      \field{urlday}{4}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.kaggle.com/datasets/ashishmotwani/tomato/data
+      \endverb
+      \verb{url}
+      \verb https://www.kaggle.com/datasets/ashishmotwani/tomato/data
+      \endverb
+    \endentry
     \entry{wikipedia2}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=b6aea1a416c89509a7df1cbb69249cb6}{%
@@ -571,10 +665,10 @@
       \field{year}{2025}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://es.wikipedia.org/wiki/Solanum_lycopersicum
+      \verb https://es.wikipedia.org/wiki/Anexo:Producci%C3%B3n_mundial_de_tomate
       \endverb
       \verb{url}
-      \verb https://es.wikipedia.org/wiki/Solanum_lycopersicum
+      \verb https://es.wikipedia.org/wiki/Anexo:Producci%C3%B3n_mundial_de_tomate
       \endverb
     \endentry
     \entry{wikipedia1}{online}{}{}
