@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.9.6)  20 OCT 2025 17:15
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.9.6)  20 OCT 2025 17:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1759,15 +1759,16 @@ ión \T1/lmtt/m/n/12 compute_class_weight
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [20]
-
-File: ./Images/image3.png Graphic file (type bmp)
-<./Images/image3.png>
-[21]
 Overfull \hbox (6.90501pt too wide) in paragraph at lines 487--488
 []\T1/phv/m/n/12 Para la ini-cia-li-za-ción de los pe-sos en el mo-de-lo se usa
  \T1/lmtt/m/n/12 tf.random.set_seed(42)\T1/phv/m/n/12 . 
  []
 
+
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[21]
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
 (Font)              Font shape `T1/phv/b/sl' tried instead on input line 493.
 File: ./Images/summary_mobilnetv2_1.png Graphic file (type bmp)
@@ -1779,14 +1780,13 @@ File: ./Images/image3.png Graphic file (type bmp)
 [22]
 File: ./Images/summary_efficientnetb0_1.png Graphic file (type bmp)
 <./Images/summary_efficientnetb0_1.png>
+File: ./Images/summary_nasnetmobile_1.png Graphic file (type bmp)
+<./Images/summary_nasnetmobile_1.png>
 
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [23]
-File: ./Images/summary_nasnetmobile_1.png Graphic file (type bmp)
-<./Images/summary_nasnetmobile_1.png>
-
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
@@ -1803,12 +1803,13 @@ File: ./Images/image3.png Graphic file (type bmp)
 [25
 
 ]
+File: ./Images/resumen_metricas_mobilenetv2_1.png Graphic file (type bmp)
+<./Images/resumen_metricas_mobilenetv2_1.png>
+
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [26]
-File: ./Images/resumen_metricas_mobilenetv2_1.png Graphic file (type bmp)
-<./Images/resumen_metricas_mobilenetv2_1.png>
 File: ./Images/matriz_confusion_mobilenetv2_1.png Graphic file (type bmp)
 <./Images/matriz_confusion_mobilenetv2_1.png>
 
@@ -1922,7 +1923,7 @@ Package logreq Info: Writing requests to 'TFT.run.xml'.
 Here is how much of TeX's memory you used:
  37687 strings out of 403249
  768972 string characters out of 5458377
- 1861953 words of memory out of 5000000
+ 1861954 words of memory out of 5000000
  65654 multiletter control sequences out of 15000+600000
  657801 words of font info for 80 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
