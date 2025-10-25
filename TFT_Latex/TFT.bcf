@@ -3075,10 +3075,19 @@
     <bcf:citekey order="2" intorder="1">agrotendencia1</bcf:citekey>
     <bcf:citekey order="3" intorder="1">wikipedia2</bcf:citekey>
     <bcf:citekey order="4" intorder="1">agrotendencia2</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">estudio1</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">estudio2</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">estudio3</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">kaggle</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">research1</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">research2</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">research3</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">research4</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">research5</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">research6</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">research7</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">research8</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">research9</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">research10</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">research11</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">research12</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">kaggle</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">
