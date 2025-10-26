@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.9.6)  26 OCT 2025 11:49
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.9.6)  26 OCT 2025 20:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1579,18 +1579,21 @@ LaTeX Info: Redefining \% on input line 1.
 Package tocbasic Info: Using my definition of `\numberline' on input line 3.
 Package tocbasic Info: Using my definition of `\numberline' on input line 4.
 Package tocbasic Info: Using my definition of `\numberline' on input line 5.
-Package tocbasic Info: Using my definition of `\numberline' on input line 9.
-Package tocbasic Info: Using my definition of `\numberline' on input line 10.
-Package tocbasic Info: Using my definition of `\numberline' on input line 11.
+Package tocbasic Info: Using my definition of `\numberline' on input line 6.
+Package tocbasic Info: Using my definition of `\numberline' on input line 7.
+Package tocbasic Info: Using my definition of `\numberline' on input line 8.
 Package tocbasic Info: Using my definition of `\numberline' on input line 12.
+Package tocbasic Info: Using my definition of `\numberline' on input line 13.
 Package tocbasic Info: Using my definition of `\numberline' on input line 14.
 Package tocbasic Info: Using my definition of `\numberline' on input line 15.
-Package tocbasic Info: Using my definition of `\numberline' on input line 16.
 Package tocbasic Info: Using my definition of `\numberline' on input line 17.
 Package tocbasic Info: Using my definition of `\numberline' on input line 18.
 Package tocbasic Info: Using my definition of `\numberline' on input line 19.
 Package tocbasic Info: Using my definition of `\numberline' on input line 20.
 Package tocbasic Info: Using my definition of `\numberline' on input line 21.
+Package tocbasic Info: Using my definition of `\numberline' on input line 22.
+Package tocbasic Info: Using my definition of `\numberline' on input line 23.
+Package tocbasic Info: Using my definition of `\numberline' on input line 24.
 )
 \tf@lof=\write6
 \openout6 = `TFT.lof'.
@@ -1660,23 +1663,32 @@ File: ./Images/image3.png Graphic file (type bmp)
 File: ./Images/Intro/Early-blight-tomato.jpg Graphic file (type bmp)
 <./Images/Intro/Early-blight-tomato.jpg>
 
+Overfull \hbox (11.94772pt too wide) in paragraph at lines 218--219
+[]\T1/phv/m/n/12 Mancha bac-te-ria-na (\T1/phv/m/sl/12 Bac-te-rial spot\T1/phv/
+m/n/12 ): Es cau-sa-da por bac-te-rias del gé-ne-ro \T1/phv/m/sl/12 Xantho-
+ []
+
+File: ./Images/Intro/Bacterial-spot-tomato.jpg Graphic file (type bmp)
+<./Images/Intro/Bacterial-spot-tomato.jpg>
+
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [9]
+File: ./Images/Intro/Two-spotted-spider-mite.jpg Graphic file (type bmp)
+<./Images/Intro/Two-spotted-spider-mite.jpg>
+File: ./Images/Intro/Yellow-leaf-curl-virus-tomato.jpg Graphic file (type bmp)
+<./Images/Intro/Yellow-leaf-curl-virus-tomato.jpg>
+
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [10]
-chapter 2.
-
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[11
-
-]
-chapter 3.
+[11]
+chapter 2.
 
 
 File: ./Images/image3.png Graphic file (type bmp)
@@ -1684,30 +1696,38 @@ File: ./Images/image3.png Graphic file (type bmp)
 [12
 
 ]
-
-File: ./Images/image3.png Graphic file (type bmp)
-<./Images/image3.png>
-[13]
-chapter 4.
+chapter 3.
 
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[14
+[13
 
 ]
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[15]
+[14]
+chapter 4.
+
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[15
+
+]
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[16]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
-11.
+39.
 
 (C:\Users\RUBEN MARIN LUCAS\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.f
 d
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Overfull \hbox (2.39397pt too wide) in paragraph at lines 306--323
+Overfull \hbox (2.39397pt too wide) in paragraph at lines 334--351
  [][] 
  []
 
@@ -1715,20 +1735,16 @@ Overfull \hbox (2.39397pt too wide) in paragraph at lines 306--323
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[16]
+[17]
 File: ./Images/Imagen_aleatoria_por_clase.png Graphic file (type bmp)
 <./Images/Imagen_aleatoria_por_clase.png>
 
-Overfull \hbox (3.22423pt too wide) in paragraph at lines 367--368
+Overfull \hbox (3.22423pt too wide) in paragraph at lines 395--396
 []\T1/phv/m/n/12 Con res-pec-to al fon-do po-de-mos vir dis-tin-cio-nes en-tre 
 la ima-gen \T1/lmtt/m/n/12 Bacterial_spot
  []
 
 
-
-File: ./Images/image3.png Graphic file (type bmp)
-<./Images/image3.png>
-[17]
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
@@ -1741,7 +1757,11 @@ File: ./Images/image3.png Graphic file (type bmp)
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [20]
-Overfull \hbox (3.0038pt too wide) in paragraph at lines 435--436
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[21]
+Overfull \hbox (3.0038pt too wide) in paragraph at lines 463--464
 []\T1/phv/m/n/12 Los pe-sos de las cla-ses se han cal-cu-la-do usan-do la fun-c
 ión \T1/lmtt/m/n/12 compute_class_weight
  []
@@ -1750,8 +1770,8 @@ ión \T1/lmtt/m/n/12 compute_class_weight
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[21]
-Overfull \hbox (6.90501pt too wide) in paragraph at lines 488--489
+[22]
+Overfull \hbox (6.90501pt too wide) in paragraph at lines 516--517
 []\T1/phv/m/n/12 Para la ini-cia-li-za-ción de los pe-sos en el mo-de-lo se usa
  \T1/lmtt/m/n/12 tf.random.set_seed(42)\T1/phv/m/n/12 . 
  []
@@ -1760,16 +1780,16 @@ Overfull \hbox (6.90501pt too wide) in paragraph at lines 488--489
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[22]
+[23]
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 494.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 522.
 File: ./Images/summary_mobilnetv2_1.png Graphic file (type bmp)
 <./Images/summary_mobilnetv2_1.png>
 
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[23]
+[24]
 File: ./Images/summary_efficientnetb0_1.png Graphic file (type bmp)
 <./Images/summary_efficientnetb0_1.png>
 File: ./Images/summary_nasnetmobile_1.png Graphic file (type bmp)
@@ -1778,21 +1798,21 @@ File: ./Images/summary_nasnetmobile_1.png Graphic file (type bmp)
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[24]
+[25]
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[25]
+[26]
 chapter 5.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <17.28> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 549.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 577.
 File: ./Images/historico_metricas_mobilenetv2_1.png Graphic file (type bmp)
 <./Images/historico_metricas_mobilenetv2_1.png>
 
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[26
+[27
 
 ]
 File: ./Images/resumen_metricas_mobilenetv2_1.png Graphic file (type bmp)
@@ -1801,30 +1821,18 @@ File: ./Images/resumen_metricas_mobilenetv2_1.png Graphic file (type bmp)
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[27]
+[28]
 File: ./Images/matriz_confusion_mobilenetv2_1.png Graphic file (type bmp)
 <./Images/matriz_confusion_mobilenetv2_1.png>
 
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[28]
-Overfull \hbox (4.48766pt too wide) in paragraph at lines 616--617
+[29]
+Overfull \hbox (4.48766pt too wide) in paragraph at lines 644--645
 []\T1/phv/m/n/12 Las cla-ses \T1/lmtt/m/n/12 Target_Spot\T1/phv/m/n/12 , \T1/lm
 tt/m/n/12 powdery_mildew\T1/phv/m/n/12 , \T1/lmtt/m/n/12 Early_blight \T1/phv/m
 /n/12 y \T1/lmtt/m/n/12 Septoria_leaf_spot
- []
-
-
-
-File: ./Images/image3.png Graphic file (type bmp)
-<./Images/image3.png>
-[29]
-File: ./Images/historico_metricas_mobilenetv2_2.png Graphic file (type bmp)
-<./Images/historico_metricas_mobilenetv2_2.png>
-
-Overfull \hbox (3.72972pt too wide) in paragraph at lines 630--631
- [] 
  []
 
 
@@ -1832,18 +1840,30 @@ Overfull \hbox (3.72972pt too wide) in paragraph at lines 630--631
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [30]
+File: ./Images/historico_metricas_mobilenetv2_2.png Graphic file (type bmp)
+<./Images/historico_metricas_mobilenetv2_2.png>
+
+Overfull \hbox (3.72972pt too wide) in paragraph at lines 658--659
+ [] 
+ []
+
+
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[31]
 File: ./Images/resumen_metricas_mobilenetv2_2.png Graphic file (type bmp)
 <./Images/resumen_metricas_mobilenetv2_2.png>
 File: ./Images/matriz_confusion_mobilenetv2_2.png Graphic file (type bmp)
 <./Images/matriz_confusion_mobilenetv2_2.png>
 
-Overfull \hbox (5.8412pt too wide) in paragraph at lines 665--666
+Overfull \hbox (5.8412pt too wide) in paragraph at lines 693--694
 \T1/phv/m/n/12 dad en en cla-ses me-nos re-pre-sen-ta-das en el da-ta-set co-mo
  las cla-ses \T1/lmtt/m/n/12 powdery_mildew
  []
 
 
-Overfull \hbox (4.48766pt too wide) in paragraph at lines 671--672
+Overfull \hbox (4.48766pt too wide) in paragraph at lines 699--700
 []\T1/phv/m/n/12 Las cla-ses \T1/lmtt/m/n/12 Target_Spot\T1/phv/m/n/12 , \T1/lm
 tt/m/n/12 powdery_mildew\T1/phv/m/n/12 , \T1/lmtt/m/n/12 Early_blight \T1/phv/m
 /n/12 y \T1/lmtt/m/n/12 Septoria_leaf_spot
@@ -1853,38 +1873,30 @@ tt/m/n/12 powdery_mildew\T1/phv/m/n/12 , \T1/lmtt/m/n/12 Early_blight \T1/phv/m
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[31]
+[32]
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[32]
+[33]
 File: ./Images/historico_metricas_efficientnetb0_1.png Graphic file (type bmp)
 <./Images/historico_metricas_efficientnetb0_1.png>
 
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[33]
+[34]
 File: ./Images/historico_metricas_nasnetmobile_1.png Graphic file (type bmp)
 <./Images/historico_metricas_nasnetmobile_1.png>
 
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[34]
-
-File: ./Images/image3.png Graphic file (type bmp)
-<./Images/image3.png>
 [35]
-chapter 6.
-
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[36
-
-]
-chapter A.
+[36]
+chapter 6.
 
 
 File: ./Images/image3.png Graphic file (type bmp)
@@ -1892,11 +1904,7 @@ File: ./Images/image3.png Graphic file (type bmp)
 [37
 
 ]
-Overfull \hbox (5.24687pt too wide) in paragraph at lines 767--767
-[][]\T1/phv/m/n/12 Gevens, A., & Wil-bur, J. (2014). \T1/phv/m/sl/12 To-ma-to L
-a-te Blight\T1/phv/m/n/12 . Uni-ver-sity of Winsconsin-Madison.
- []
-
+chapter A.
 
 
 File: ./Images/image3.png Graphic file (type bmp)
@@ -1907,11 +1915,47 @@ File: ./Images/image3.png Graphic file (type bmp)
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[39]
+[39
+
+]
+Overfull \hbox (5.24687pt too wide) in paragraph at lines 795--795
+[][]\T1/phv/m/n/12 Gevens, A., & Wil-bur, J. (2014). \T1/phv/m/sl/12 To-ma-to L
+a-te Blight\T1/phv/m/n/12 . Uni-ver-sity of Winsconsin-Madison.
+ []
+
+
+Overfull \hbox (18.43239pt too wide) in paragraph at lines 795--795
+[][]\T1/phv/m/n/12 Hazzard, R. (2022, ju-lio). \T1/phv/m/sl/12 Two-spotted Spi-
+der Mi-te\T1/phv/m/n/12 . Uni-ver-sity of Mas-sa-chu-setts Amherst.
+ []
+
+
+Overfull \hbox (11.04686pt too wide) in paragraph at lines 795--795
+\T1/phv/m/n/12 Con-sul-ta-do el 23 de oc-tu-bre de 2025, des-de []$https : / / 
+www . umass . edu / agriculture -[]
+ []
+
+
+Overfull \hbox (9.6869pt too wide) in paragraph at lines 795--795
+[][]\T1/phv/m/n/12 Pacific North-west con-tri-bu-tors. (2025a). \T1/phv/m/sl/12
+ oma-to (So-la-num lycopersicum)-Bacterial Spot\T1/phv/m/n/12 .
+ []
+
+
+Overfull \hbox (1.56319pt too wide) in paragraph at lines 795--795
+[][]\T1/phv/m/n/12 Pacific North-west con-tri-bu-tors. (2025b). \T1/phv/m/sl/12
+ To-ma-to (So-la-num lycopersicum)-Early Blight\T1/phv/m/n/12 .
+ []
+
+
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[40] 
+[40]
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[41] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (TFT.aux
 LaTeX Info: Redefining \sptext on input line 13.
@@ -1927,12 +1971,12 @@ Package logreq Info: Writing requests to 'TFT.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37788 strings out of 403249
- 772413 string characters out of 5458377
- 1866022 words of memory out of 5000000
- 65754 multiletter control sequences out of 15000+600000
+ 37846 strings out of 403249
+ 774676 string characters out of 5458377
+ 1866599 words of memory out of 5000000
+ 65809 multiletter control sequences out of 15000+600000
  657801 words of font info for 80 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 108i,17n,107p,11285b,5565s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,17n,107p,11285b,5561s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on TFT.pdf (40 pages).
+Output written on TFT.pdf (41 pages).
