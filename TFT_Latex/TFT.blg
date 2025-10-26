@@ -1,19 +1,20 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'TFT.blg'
-[131] biber-MSWIN64:342> INFO - === 
-[200] Biber.pm:421> INFO - Reading 'TFT.bcf'
-[313] Biber.pm:1002> INFO - Found 17 citekeys in bib section 0
-[334] Biber.pm:4487> INFO - Processing section 0
-[350] Biber.pm:4678> INFO - Looking for bibtex file 'Bibliografia_TFT.bib' for section 0
-[419] bibtex.pm:1713> INFO - LaTeX decoding ...
-[438] bibtex.pm:1519> INFO - Found BibTeX data source 'Bibliografia_TFT.bib'
-[583] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[583] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[583] Biber.pm:4307> INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
-[623] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[623] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[623] Biber.pm:4307> INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
-[656] bbl.pm:676> INFO - Writing 'TFT.bbl' with encoding 'UTF-8'
-[683] bbl.pm:779> INFO - Output to TFT.bbl
-[684] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\RUBENM~1\AppData\Local\Temp\biber_tmp_pKQ0\8206387740ef05b2164408d64adcd101_1432.utf8, line 65, warning: 1 characters of junk seen at toplevel
-[684] Biber.pm:134> INFO - WARNINGS: 1
+[152] biber-MSWIN64:342> INFO - === 
+[218] Biber.pm:421> INFO - Reading 'TFT.bcf'
+[380] Biber.pm:1002> INFO - Found 22 citekeys in bib section 0
+[411] Biber.pm:4487> INFO - Processing section 0
+[427] Biber.pm:4678> INFO - Looking for bibtex file 'Bibliografia_TFT.bib' for section 0
+[501] bibtex.pm:1713> INFO - LaTeX decoding ...
+[532] bibtex.pm:1519> INFO - Found BibTeX data source 'Bibliografia_TFT.bib'
+[741] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[741] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[741] Biber.pm:4307> INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[800] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[800] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[800] Biber.pm:4307> INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[837] bbl.pm:676> INFO - Writing 'TFT.bbl' with encoding 'UTF-8'
+[881] bbl.pm:779> INFO - Output to TFT.bbl
+[882] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\RUBENM~1\AppData\Local\Temp\biber_tmp_x93N\8206387740ef05b2164408d64adcd101_19676.utf8, line 55, warning: undefined macro "sept"
+[882] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\RUBENM~1\AppData\Local\Temp\biber_tmp_x93N\8206387740ef05b2164408d64adcd101_19676.utf8, line 101, warning: 1 characters of junk seen at toplevel
+[882] Biber.pm:134> INFO - WARNINGS: 2
