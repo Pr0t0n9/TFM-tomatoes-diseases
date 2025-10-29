@@ -1,13 +1,16 @@
 \babel@toc {spanish}{}\relax 
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {1.1}{\ignorespaces \color {slcolor}{\underline {Top 10 países productores de tomates 2022}}}}{8}{table.1.1}%
+\contentsline {table}{\numberline {1.1}{\ignorespaces \color {slcolor}{\underline {Top 10 países productores de tomates 2022}}}}{9}{table.1.1}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces \color {slcolor}{\underline {Clases del conjunto de datos}}}}{17}{table.4.1}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces \color {slcolor}{\underline {Los 5 tamaños de imágenes más comunes}}}}{18}{table.4.2}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces \color {slcolor}{\underline {Número de imágenes por clases en el conjunto de entrenamiento}}}}{21}{table.4.3}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces \color {slcolor}{\underline {Pesos asignados a cada clase en el entrenamiento del modelo}}}}{22}{table.4.4}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces \color {slcolor}{\underline {Clases del conjunto de datos}}}}{18}{table.4.1}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces \color {slcolor}{\underline {Los 5 tamaños de imágenes más comunes}}}}{19}{table.4.2}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces \color {slcolor}{\underline {Número de imágenes por clases en el conjunto de entrenamiento}}}}{22}{table.4.3}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces \color {slcolor}{\underline {Pesos asignados a cada clase en el entrenamiento del modelo}}}}{23}{table.4.4}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces \color {slcolor}{\underline {División funcional de MobileNetV2}}}}{29}{table.4.5}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces \color {slcolor}{\underline {División funcional de EfficientNetB0}}}}{30}{table.4.6}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces \color {slcolor}{\underline {División funcional de NASNetMobile}}}}{31}{table.4.7}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \def \@chapapp {\appendixname }

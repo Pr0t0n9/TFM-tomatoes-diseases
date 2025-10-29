@@ -382,7 +382,7 @@ En segundo lugar, se realiza una muestra aleatoria de una imagen por clase, para
 
 \begin{figure}[ht]
 \begin{center}
-\includegraphics[scale=0.35]{./Images/Imagen_aleatoria_por_clase.png}
+\includegraphics[scale=0.4]{./Images/Imagen_aleatoria_por_clase.png}
 \caption{\headlinecolor{\underline{Imagen aleatoria por clase}}}
 \label{fig:fig7}
 \end{center}
@@ -392,27 +392,27 @@ En la Figura \ref{fig:fig7} se puede observar la gran variedad de imágenes que 
 
 \begin{bulletlist}
 \item En cuanto al brillo se puede observar que la imagen de \texttt{Target\_Spot} tiene mucho más brillo que la de \texttt{Tomato\_Yellow\_Leaf\_Curl\_Virus}.
-\item Con respecto al fondo podemos vir distinciones entre la imagen \texttt{Bacterial\_spot} con un fondo grisáceo plano, la imagen \texttt{Late\_blight} con fondo completamente negro y la foto \texttt{Early\_blight} en la que se ve el resto de la planta de tomate, no solo se ve una hoja.
+\item Con respecto al fondo podemos ver distinciones entre la imagen \texttt{Bacterial\_spot} con un fondo grisáceo plano, la imagen \texttt{Late\_blight} con fondo completamente negro y la foto \texttt{Early\_blight} en la que se ve el resto de la planta de tomate, no solo se ve una hoja.
 \item También se puede destacar la diferencia entre las posiciones de las hojas, algunas como \texttt{Bacterial\_spot} tienen el tallo abajo, otras como \texttt{Leaf\_Mold} tienen el tallo arriba y otras como \texttt{Septoria\_leaf\_spot} tienen el tallo horizontal. 
 \item Además se tiene un ejemplo de imagen rotada, concretamente la \texttt{Septoria\-\_leaf\_spot}
 \end{bulletlist}
 
-Debido a esta gran variedad de imágenes y de enfermedades se llegó a la conclusión de que no tiene mucho sentido usar funciones especiales de la librería PlantCV, ya que esta está muy orientada al fenotipado clásico (área, forma, color, índices), y esas características a veces no capturan la complejidad de patrones de enfermedades, que suelen ser más sutiles y no lineales. La estrategia que se ha seguido es pasar a un pipeline de deep learning con imágenes preprocesadas de forma estándar. De esta manera el modelo aprenderá por si mismo las características discriminantes en lugar de imponer un conjunto de \textit{features} manuales.
+Debido a esta gran variedad de imágenes y de enfermedades se llegó a la conclusión de que no tiene mucho sentido usar funciones especiales de la librería PlantCV, ya que esta está muy orientada al fenotipado clásico (área, forma, color, índices), y esas características a veces no capturan la complejidad de patrones de enfermedades, que suelen ser más sutiles y no lineales. La estrategia que se ha seguido es pasar a un pipeline de \textit{deep learning} con imágenes preprocesadas de forma estándar. De esta manera el modelo aprenderá por si mismo las características discriminantes en lugar de imponer un conjunto de \textit{features} manuales.
 
 A continuación se dispuso a formar los conjuntos de datos que usará el modelo. Hasta ahora se tienen datos para el entrenamiento del modelo y para la validación del mismo, sin embargo, no se tienen datos para realizar pruebas sobre el modelo resultante. Por lo tanto, se formará un nuevo conjunto de datos de pruebas a partir del cunjunto de entrenamiento, concretamente, seleccionando un 20\% de sus datos.
 
 Para realizar esta tarea se recorre el directorio de datos de entrenamiento y aleatoriamente se seleccionan imágenes de cada subdirectorio (clase) y se añaden a un nuevo directorio que será el de datos de prueba.
 
-Otra tarea importante en cuanto al procesado de los datos es normalizar los mismos. Para ello, se hace uso de \textit{ImageDatagenerator} de Tensorflow. Se usa esta función porque también sirve para aplicar la técnica de data augmentation en los datos de entrenamiento. Esta técnica consiste en generar datos adicionales a partir de los ya existentes aplicando transformaciones que mantienen la esencia de la información original, pero la presentan de manera distinta. Su objetivo principal es enriquecer el conjunto de entrenamiento para mejorar la capacidad de generalización del modelo resultante.
+Otra tarea importante en cuanto al procesado de los datos es normalizar los mismos. Para ello, se hace uso de \textit{ImageDatagenerator} de Tensorflow. Se usa esta función porque también sirve para aplicar la técnica de aumento de datos (\textit{data augmentation}) \parencite{research12} en los datos de entrenamiento. Esta técnica consiste en generar datos adicionales a partir de los ya existentes aplicando transformaciones que mantienen la esencia de la información original, pero la presentan de manera distinta. Su objetivo principal es enriquecer el conjunto de entrenamiento para mejorar la capacidad de generalización del modelo resultante.
 
-Es decir, a los tres conjuntos de datos se le apliza normalización que consiste en transformar los pixeles de cada imagen de valores que van de 0 a 255 (escala RGB) a valores entre 0 y 1. Además a las imágenes del conjunto de entrenamiento se le aplica la técnica de data augmentation que se ha mencionado anteriormente, concretamente se le aplican las siguientes transformaciones:
+Es decir, a los tres conjuntos de datos se le apliza normalización que consiste en transformar los pixeles de cada imagen de valores que van de 0 a 255 (escala RGB) a valores entre 0 y 1. Además a las imágenes del conjunto de entrenamiento se le aplica la técnica de \textit{data augmentation} que se ha mencionado anteriormente, concretamente se le aplican las siguientes transformaciones:
 
 \begin{bulletlist}
 \item Rota aleatoriamente la imagen hasta más menos 20 grados.
 \item Aplica un zoom aleatorio entre 80\% y 120\% del tamaño original.
 \item Desplaza la imagen horizontalmente hasta un 20\% de su ancho.
 \item Desplaza la imagen verticalmente hasta un 20\% de su alto.
-\item Aplica una transformación de cizallamiento (shear), como si se deformara la imagen en diagonal.
+\item Aplica una transformación de cizallamiento (\textit{shear}), como si se deformara la imagen en diagonal.
 \item Gira horizontalmente las imágenes aleatoriamente.
 \item Cambia el brillo aleatoriamente entre 80\% y 120\%.
 \item Cuando una transformación (como una rotación o desplazamiento) deja espacios vacíos en la imagen, estos se rellenan con el valor del píxel más cercano.
@@ -420,7 +420,7 @@ Es decir, a los tres conjuntos de datos se le apliza normalización que consiste
 
 Estas transformaciones se aplicarán aleatoriamente cada vez que el generador entrega un lote al modelo durante el entrenamiento. De esta manera, el modelo el modelo nunca verá dos veces exactamente la misma versión de la imagen.
 
-Como ya se ha mencionado se ha usado \textit{ImageDatagenerator} para formar los conjuntos de datos. Concretamente lo que permite es crear generadores, que no son más que objetos que producen datos de forma incremental, lote a lote, en lugar de cargar todo el dataset en memoria de golpe. El generador se conecta a un directorio con datos y los va leyendo en lotes de un tamaño determinado, en este caso se ha usado un tamaño de 32, es decir, va formando lotes de 32 imágnes y a estas se les aplica normalización y también las transformaciones de data augmentation mencionadas si son datos de entrenamiento.
+Como ya se ha mencionado se ha usado \textit{ImageDatagenerator} para formar los conjuntos de datos. Concretamente lo que permite es crear generadores, que no son más que objetos que producen datos de forma incremental, lote a lote, en lugar de cargar todo el \textit{dataset} en memoria de golpe. El generador se conecta a un directorio con datos y los va leyendo en lotes de un tamaño determinado, en este caso se ha usado un tamaño de 32, es decir, va formando lotes de 32 imágnes y a estas se les aplica normalización y también las transformaciones de \textit{data augmentation} mencionadas si son datos de entrenamiento.
 
 De esta manera, quedan los siguientes conjuntos de datos:
 
@@ -490,10 +490,13 @@ Clase & N\textsuperscript{o} imágenes & Peso \\ \hline
 
 En esta sección se describe la estrategia de modelado empleada, común a todos los experimentos realizados posteriormente. El enfoque adoptado se basa en el uso de redes neuronales convolucionales (CNN), dado que constituyen la arquitectura de referencia en tareas de clasificación de imágenes al ser capaces de extraer de manera automática y jerárquica características relevantes de los datos visuales.
 
-Considerando las limitaciones de recursos computacionales disponibles, se optó por la técnica de transfer learning. Esta metodología permite aprovechar modelos previamente entrenados sobre grandes bases de datos, de modo que las capas iniciales ya contienen representaciones generales de las imágenes. Posteriormente, dichas representaciones se ajustan a la tarea específica de clasificación de enfermedades en hojas de tomate.
+Considerando las limitaciones de recursos computacionales disponibles, se optó por la técnica de \textit{transfer learning}. Esta metodología permite aprovechar modelos previamente entrenados sobre grandes bases de datos, de modo que las capas iniciales ya contienen representaciones generales de las imágenes. Posteriormente, dichas representaciones se ajustan a la tarea específica de clasificación de enfermedades en hojas de tomate.
 
 Concretamente se han usado los modelos \textit{MobileNetV2}, \textit{NASNetMobile} y \textit{EfficientNetB0} preentrenados con el dataset de \textit{ImageNet}. De esta manera se aprovechan los pesos previamente aprendidos, que contienen representaciones visuales generales como bordes, texturas y formas, para inicializar la red. Posteriormente, esta red se adapta a la clasificación de enfermedades en hojas de tomate. 
 
+Además, cabe mencionar que para algunos modelos se ha usado la técnica de \textit{fine tuning} que va un poco más allá que \textit{transfer learning}, ya que tras entrenar un modelo con una gran base de datos se descongelan algunas de sus capas para que el modelo final se adapte más a la tarea específica que en este caso es la clasificación de enfermedades en hojas de tomate.
+
+Al haber usado la técnica de \textit{fine tuning} tiene sentido añadir las características principales de las arquitecturas de redes neuronales usadas. Esta tarea se lleva a cabo en la sección \ref{sec:sec4.5}.
 Con el objetivo de gestionar mejor los recursos disponibles, se implementaron disitntos callbacks:
 
 \begin{bulletlist}
@@ -519,7 +522,7 @@ Por último cabe destacar que para que los modelos puedan ser reconstruidos por 
 \end{bulletlist}
 
 
-\subsection{Modelo \textit{MobileNetV2}}\label{sec:sec4.4.1}
+\subsection{Modelo \textit{MobileNetV2} 1}\label{sec:sec4.4.1}
 
 Este modelo usa de capa base \textit{MobileNetV2} preentrenada con los pesos de \textit{ImageNet}. Posteriormente se congelan las capas del modelo base para evitar que los pesos se modifiquen durante el entrenamiento y se use correctamente la técnica de \textit{transfer learning}. A continuación se añade una capa de \textit{GlobalAveragePooling} y una capa densa con 11 neuronas y función de activación \textit{softmax}, ya que nos enfrentamos a una clasificación de 11 clases.
 Esta información es la que se muestra en la Figura \ref{fig:fig5}.
@@ -537,7 +540,11 @@ Finalmente para la compilación se usa el optimizador Adam, la función de pérd
 Se usa la función de pérdida de entropía cruzada categórica porque al crear los conjuntos de datos con ImageDatagenerator como se indica en la sessción \ref{sec:sec4.3} se usa el parámetro class mode con valor categorical que convierte las etiquetas a vectores one-hot encoded
 
 
-\subsection{Modelo \textit{EfficientNetB0}}\label{sec:sec4.4.2}
+\subsection{Modelo \textit{MobileNetV2} 2}\label{sec:sec4.4.2}
+
+\subsection{Modelo \textit{MobileNetV2} 3}\label{sec:sec4.4.3}
+
+\subsection{Modelo \textit{EfficientNetB0} 1}\label{sec:sec4.4.4}
 
 Este modelo usa de capa base \textit{EfficientNetB0} preentrenada con los pesos de \textit{ImageNet}. Posteriormente se congelan las capas del modelo base para evitar que los pesos se modifiquen durante el entrenamiento y se use correctamente la técnica de \textit{transfer learning}. A continuación se añade una capa de \textit{GlobalAveragePooling} y una capa densa con 11 neuronas y función de activación \textit{softmax}, ya que nos enfrentamos a una clasificación de 11 clases.
 Esta información es la que se muestra en la Figura \ref{fig:fig7}.
@@ -552,8 +559,9 @@ Esta información es la que se muestra en la Figura \ref{fig:fig7}.
 
 Finalmente para la compilación se usa el optimizador Adam, la función de pérdida de entropía cruzada categórica y se escoge la métrica de precisión para evaluar el rendimiento. 
 
+\subsection{Modelo \textit{EfficientNetB0} 2}\label{sec:sec4.4.5}
 
-\subsection{Modelo \textit{NASNetMobile}}\label{sec:sec4.4.3}
+\subsection{Modelo \textit{NASNetMobile} 1}\label{sec:sec4.4.6}
 
 Este modelo usa de capa base \textit{NASNetMobile} preentrenada con los pesos de ImageNet. Posteriormente se congelan las capas del modelo base para evitar que los pesos se modifiquen durante el entrenamiento y se use correctamente la técnica de \textit{transfer learning}. A continuación se añade una capa de \textit{GlobalAveragePooling} y una capa densa con 11 neuronas y función de activación \textit{softmax}, ya que nos enfrentamos a una clasificación de 11 clases.
 Esta información es la que se muestra en la Figura \ref{fig:fig8}.
@@ -567,6 +575,104 @@ Esta información es la que se muestra en la Figura \ref{fig:fig8}.
 \end{figure}
 
 Finalmente para la compilación se usa el optimizador Adam, la función de pérdida de entropía cruzada categórica y se escoge la métrica de precisión para evaluar el rendimiento. 
+
+
+\subsection{Modelo \textit{NASNetMobile} 2}\label{sec:sec4.4.7}
+
+
+
+\section{Arquitecturas}\label{sec:sec4.5}
+
+En esta sección se explicarán las principales características de las arquitecturas empleadas para construir los modelos de la sección \ref{sec:sec4.4}
+
+\section{\textit{MobileNetV2}}\label{sec:sec4.5.1}
+
+\textit{MobileNetV2} es una arquitectura de CNN muy efieciente diseñada para aplicaciones de visión integrada en móviles. Ha sido desarrollada por Google para mejorar a su antedecesor \textit{MobileNetV1} proporcionando una mejor precisión y reduciendo la capacidad de cómputo. Sus características claves son las siguientes \parencite{MobilenetV2Architecture}:
+
+\begin{enumerate}[label=\bfseries\headlinecolor\arabic*.]
+\item Bloques residuales invertidos (\textit{Inverted Residuals}): Primero se expande el número de canales mediante una convolución 1×1 (capa de expansión). Luego se aplica una convolución \textit{"depthwise"} (convolución separada por canal) para realizar el filtrado espacial. Finalmente, se reduce de nuevo el número de canales a la dimensión deseada mediante otra 1×1 (capa de proyección). Esta estructura permite conservar dimensiones de entrada/salida mientras se reduce el coste computacional.
+\item Convoluciones separables en profundidad (\textit{Depthwise Separable Convolutions}): Al igual que su antedecesor, utiliza convoluciones separables, es decir, se descompone una convolución estándar en dos operaciones; primero una convolución \textit{"depthwise"} por cada canal, luego una \textit{"pointwise”} 1×1 que mezcla los canales. Esto reduce considerablemente el número de parámetros y de cálculos, lo que mejora la eficiencia.
+\item Embotellamientos lineales (\textit{Linear Bottlenecks}): Entre capas se insertan \textit{bottlenecks} lineales, que ayudan a que la "variedad" (\textit{manifold}) de los datos de entrada no se comprima excesivamente. Esta práctica contribuye a conservar mayor información, lo cual mejora la precisión del modelo.
+\item Función de activación ReLU6: emplea la función de activación ReLU6, una versión modificada de la ReLU clásica que limita los valores de activación al rango [0, 6]. Esto favorece la cuantización (es decir, el uso eficiente de formatos de menor precisión) en dispositivos móviles manteniendo un buen equilibrio entre eficiencia y precisión.
+\end{enumerate}
+
+A continuación en el Cuadro \ref{tab:arquitectura_MobileNetV2} se expone una división funcional de la red para entender qué aprenden las capas:
+
+\begin{table}[ht] 
+\centering
+\caption{\headlinecolor{\underline{División funcional de MobileNetV2}}} %https://uk.mathworks.com/help/deeplearning/ref/mobilenetv2.html
+\label{tab:arquitectura_MobileNetV2}
+\begin{tabular}{|p{2.5cm}|p{4cm}|p{8cm}|}
+\rowcolor{naranja}
+\multicolumn{3}{|c|}{\textbf{División funcional de MobileNetV2}} \\ \hline
+\rowcolor{naranja!30}
+Zona & Capas & Aprendizaje \\ \hline
+Zona temprana & Primeros bloques (aproximadamente hasta la capa 20) & Características muy básicas: bordes, texturas simples, colores, orientación, gradientes, es decir, filtros universales que casi cualquier red visual aprende \\ \hline
+Zona intermedia & Bloques medios (aproximadamente de la capa 20 a la 80) & Características más complejas: combinaciones de formas, patrones locales, partes de objetos, texturas específicas de hojas/plantas, etc. Aquí ya se empiezan a adaptar a dominios más específicos. \\ \hline
+Zona tardía / cabeza del modelo & Últimos bloques (aproximadamente de la capa 80 hasta la final) & Características de muy alto nivel: semánticas del dominio, relaciones globales en la imagen y adaptación al problema concreto \\ \hline
+\end{tabular}
+\end{table}
+
+
+\section{\textit{EfficientNetB0}}\label{sec:sec4.5.2}
+
+\textit{EfficientNet} es una familia de redes neuronales convolucionales (CNN) cuyo objetivo es lograr un alto rendimiento con menos recursos computacionales en comparación con arquitecturas anteriores. Sus características claves son las siguientes \parencite{Efficientnet}:
+
+\begin{enumerate}[label=\bfseries\headlinecolor\arabic*.]
+\item Tallo (\textit{Stem}): Comienza con una etapa de stem que consiste en una convolución estándar seguida de normalización por lotes (\textit{Batch Normalization}) y activación ReLU6.
+\item Cuerpo (\textit{Body}): se compone de una serie de bloques MBConv con diferentes configuraciones (expansión de canales, tamaños de kernel, stride, mecanismo \textit{"squeeze-and-excitation"}).
+\item Head (\textit{Cabeza}): Incluye un bloque convolutional final para clasificación.
+\item Bloques internos: Al igual que \textit{MobileNetV2} usa convoluciones separables en profundidad (\textit{Depthwise Separable Convolutions}) y bloques residuales invertidos (\textit{Inverted Residuals}). Además añade bloques \textit{Squeeze-and-Excitation} para calibrar la importancia de los canales.
+\end{enumerate}
+
+A continuación en el Cuadro \ref{tab:arquitectura_EfficientNetB0} se expone una división funcional de la red para entender qué aprenden las capas:
+
+\begin{table}[ht] 
+\centering
+\caption{\headlinecolor{\underline{División funcional de EfficientNetB0}}} %https://uk.mathworks.com/help/deeplearning/ref/mobilenetv2.html
+\label{tab:arquitectura_EfficientNetB0}
+\begin{tabular}{|p{2.5cm}|p{4cm}|p{8cm}|}
+\rowcolor{naranja}
+\multicolumn{3}{|c|}{\textbf{División funcional de EfficientNetB0}} \\ \hline
+\rowcolor{naranja!30}
+Zona & Capas & Aprendizaje \\ \hline
+Zona temprana & Desde la entrada (\textit{stem}) hasta los primeros bloques \textit{MBConv} (aproximadamente hasta la capa 20) & Características muy básicas: bordes, texturas simples, colores, orientación, gradientes, es decir, filtros universales que casi cualquier red visual aprende \\ \hline
+Zona intermedia & Bloques medios de \textit{MBConv} con mayor expansión y mayor profundidad (aproximadamente de la capa 20 a la 80) & Características más complejas: combinaciones de formas, patrones locales, partes de objetos, texturas específicas de hojas/plantas, etc. Aquí ya se empiezan a adaptar a dominios más específicos. \\ \hline
+Zona tardía / cabeza del modelo & Últimos bloques (aproximadamente de la capa 80 hasta la final) & Características de muy alto nivel: semánticas del dominio, relaciones globales en la imagen y adaptación al problema concreto \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+
+\section{\textit{NASNetMobile}}\label{sec:sec4.5.3}
+
+\textit{NASNetMobile} es una arquitectura de CNN . Sus características claves son las siguientes \parencite{MobilenetV2Architecture}:
+
+\begin{enumerate}[label=\bfseries\headlinecolor\arabic*.]
+\item 
+\item 
+\item 
+\item 
+\end{enumerate}
+
+A continuación en el Cuadro \ref{tab:arquitectura_NASNetMobile} se expone una división funcional de la red para entender qué aprenden las capas:
+
+\begin{table}[ht] 
+\centering
+\caption{\headlinecolor{\underline{División funcional de NASNetMobile}}} %https://uk.mathworks.com/help/deeplearning/ref/mobilenetv2.html
+\label{tab:arquitectura_NASNetMobile}
+\begin{tabular}{|p{2.5cm}|p{4cm}|p{8cm}|}
+\rowcolor{naranja}
+\multicolumn{3}{|c|}{\textbf{División funcional de NASNetMobile}} \\ \hline
+\rowcolor{naranja!30}
+Zona & Capas & Aprendizaje \\ \hline
+Zona temprana & Primeros bloques (aproximadamente hasta la capa 20) & Características muy básicas: bordes, texturas simples, colores, orientación, gradientes, es decir, filtros universales que casi cualquier red visual aprende \\ \hline
+Zona intermedia & Bloques medios (aproximadamente de la capa 20 a la 80) & Características más complejas: combinaciones de formas, patrones locales, partes de objetos, texturas específicas de hojas/plantas, etc. Aquí ya se empiezan a adaptar a dominios más específicos. \\ \hline
+Zona tardía / cabeza del modelo & Últimos bloques (aproximadamente de la capa 80 hasta la final) & Características de muy alto nivel: semánticas del dominio, relaciones globales en la imagen y adaptación al problema concreto \\ \hline
+\end{tabular}
+\end{table}
+
 
 
 \chapter{Evaluación y resultados}\label{cap:cap5}
