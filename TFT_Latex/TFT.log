@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.9.6)  29 OCT 2025 20:16
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.9.6)  30 OCT 2025 08:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1599,14 +1599,16 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 12.
 Package tocbasic Info: Using my definition of `\numberline' on input line 13.
 Package tocbasic Info: Using my definition of `\numberline' on input line 14.
 Package tocbasic Info: Using my definition of `\numberline' on input line 15.
+Package tocbasic Info: Using my definition of `\numberline' on input line 16.
 Package tocbasic Info: Using my definition of `\numberline' on input line 17.
-Package tocbasic Info: Using my definition of `\numberline' on input line 18.
 Package tocbasic Info: Using my definition of `\numberline' on input line 19.
 Package tocbasic Info: Using my definition of `\numberline' on input line 20.
 Package tocbasic Info: Using my definition of `\numberline' on input line 21.
 Package tocbasic Info: Using my definition of `\numberline' on input line 22.
 Package tocbasic Info: Using my definition of `\numberline' on input line 23.
 Package tocbasic Info: Using my definition of `\numberline' on input line 24.
+Package tocbasic Info: Using my definition of `\numberline' on input line 25.
+Package tocbasic Info: Using my definition of `\numberline' on input line 26.
 )
 \tf@lof=\write6
 \openout6 = `TFT.lof'.
@@ -1653,8 +1655,8 @@ File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [7]
 chapter 1.
-File: ./Images/Distribucion_tomate.jpg Graphic file (type bmp)
-<./Images/Distribucion_tomate.jpg>
+File: ./Images/Intro/Distribucion_tomate.jpg Graphic file (type bmp)
+<./Images/Intro/Distribucion_tomate.jpg>
 
 
 File: ./Images/image3.png Graphic file (type bmp)
@@ -1663,7 +1665,7 @@ File: ./Images/image3.png Graphic file (type bmp)
 
 ]
 LaTeX Font Info:    Trying to load font information for TS1+phv on input line 1
-98.
+96.
 
 (C:\Users\RUBEN MARIN LUCAS\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1p
 hv.fd
@@ -1679,7 +1681,7 @@ File: ./Images/image3.png Graphic file (type bmp)
 File: ./Images/Intro/Early-blight-tomato.jpg Graphic file (type bmp)
 <./Images/Intro/Early-blight-tomato.jpg>
 
-Overfull \hbox (11.94772pt too wide) in paragraph at lines 218--219
+Overfull \hbox (11.94772pt too wide) in paragraph at lines 216--217
 []\T1/phv/m/n/12 Mancha bac-te-ria-na (\T1/phv/m/sl/12 Bac-te-rial spot\T1/phv/
 m/n/12 ): Es cau-sa-da por bac-te-rias del gé-ne-ro \T1/phv/m/sl/12 Xantho-
  []
@@ -1737,13 +1739,13 @@ File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [17]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
-39.
+37.
 
 (C:\Users\RUBEN MARIN LUCAS\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.f
 d
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Overfull \hbox (2.39397pt too wide) in paragraph at lines 334--351
+Overfull \hbox (2.39397pt too wide) in paragraph at lines 332--349
  [][] 
  []
 
@@ -1752,10 +1754,11 @@ Overfull \hbox (2.39397pt too wide) in paragraph at lines 334--351
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [18]
-File: ./Images/Imagen_aleatoria_por_clase.png Graphic file (type bmp)
-<./Images/Imagen_aleatoria_por_clase.png>
+File: ./Images/Preprocesado/Imagen_aleatoria_por_clase.png Graphic file (type b
+mp)
+<./Images/Preprocesado/Imagen_aleatoria_por_clase.png>
 
-Overfull \hbox (6.93219pt too wide) in paragraph at lines 395--396
+Overfull \hbox (6.93219pt too wide) in paragraph at lines 393--394
 []\T1/phv/m/n/12 Con res-pec-to al fon-do po-de-mos ver dis-tin-cio-nes en-tre 
 la ima-gen \T1/lmtt/m/n/12 Bacterial_spot
  []
@@ -1777,7 +1780,7 @@ File: ./Images/image3.png Graphic file (type bmp)
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [22]
-Overfull \hbox (3.0038pt too wide) in paragraph at lines 463--464
+Overfull \hbox (3.0038pt too wide) in paragraph at lines 461--462
 []\T1/phv/m/n/12 Los pe-sos de las cla-ses se han cal-cu-la-do usan-do la fun-c
 ión \T1/lmtt/m/n/12 compute_class_weight
  []
@@ -1791,115 +1794,65 @@ File: ./Images/image3.png Graphic file (type bmp)
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [24]
-Overfull \hbox (6.90501pt too wide) in paragraph at lines 519--520
+Overfull \hbox (6.90501pt too wide) in paragraph at lines 517--518
 []\T1/phv/m/n/12 Para la ini-cia-li-za-ción de los pe-sos en el mo-de-lo se usa
  \T1/lmtt/m/n/12 tf.random.set_seed(42)\T1/phv/m/n/12 . 
  []
 
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 525.
-File: ./Images/summary_mobilnetv2_1.png Graphic file (type bmp)
-<./Images/summary_mobilnetv2_1.png>
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 523.
+File: ./Images/Modelos/summary_mobilnetv2_1.png Graphic file (type bmp)
+<./Images/Modelos/summary_mobilnetv2_1.png>
 
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [25]
-File: ./Images/summary_efficientnetb0_1.png Graphic file (type bmp)
-<./Images/summary_efficientnetb0_1.png>
+File: ./Images/Modelos/summary_mobilnetv2_2.png Graphic file (type bmp)
+<./Images/Modelos/summary_mobilnetv2_2.png>
 
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [26]
-File: ./Images/summary_nasnetmobile_1.png Graphic file (type bmp)
-<./Images/summary_nasnetmobile_1.png>
-LaTeX Font Info:    Font shape `T1/phv/b/it' in size <17.28> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 588.
+File: ./Images/Modelos/summary_mobilnetv2_2.png Graphic file (type bmp)
+<./Images/Modelos/summary_mobilnetv2_2.png>
+File: ./Images/Modelos/summary_efficientnetb0_1.png Graphic file (type bmp)
+<./Images/Modelos/summary_efficientnetb0_1.png>
 
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [27]
+File: ./Images/Modelos/summary_nasnetmobile_1.png Graphic file (type bmp)
+<./Images/Modelos/summary_nasnetmobile_1.png>
+
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[28]
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <17.28> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 617.
+
 Missing character: There is no ” in font phvro8t!
 
-Overfull \hbox (4.0262pt too wide) in paragraph at lines 594--595
+Overfull \hbox (4.0262pt too wide) in paragraph at lines 623--624
 []\T1/phv/m/n/12 Convoluciones se-pa-ra-bles en pro-fun-di-dad (\T1/phv/m/sl/12
  Depth-wi-se Se-pa-ra-ble Con-vo-lu-tions\T1/phv/m/n/12 ):
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 610--610
-[]|\T1/phv/m/n/12 Primeros blo-ques
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 610--610
-\T1/phv/m/n/12 (apro-xi-ma-da-men-te
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 611--611
-[]|\T1/phv/m/n/12 Zona in-ter-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 611--611
-[]|\T1/phv/m/n/12 Bloques me-dios
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 611--611
-\T1/phv/m/n/12 (apro-xi-ma-da-men-te
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 612--612
-[]|\T1/phv/m/n/12 Zona tar-día
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 612--612
-[]|\T1/phv/m/n/12 Últimos blo-ques
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 612--612
-\T1/phv/m/n/12 (apro-xi-ma-da-men-te
- []
-
-
-Overfull \hbox (4.87944pt too wide) in paragraph at lines 605--614
- [][] 
  []
 
 
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[28]
+[29]
 Underfull \hbox (badness 10000) in paragraph at lines 639--639
-[]|\T1/phv/m/n/12 Desde la en-tra-da
+[]|\T1/phv/m/n/12 Primeros blo-ques
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 639--639
-\T1/phv/m/n/12 (\T1/phv/m/sl/12 stem\T1/phv/m/n/12 ) has-ta los
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 639--639
-\T1/phv/m/n/12 pri-me-ros blo-ques
- []
-
-
-Underfull \hbox (badness 3460) in paragraph at lines 639--639
-\T1/phv/m/sl/12 MB-Conv \T1/phv/m/n/12 (apro-xi-ma-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 639--639
-\T1/phv/m/n/12 da-men-te has-ta la
+\T1/phv/m/n/12 (apro-xi-ma-da-men-te
  []
 
 
@@ -1908,18 +1861,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 640--640
  []
 
 
-Underfull \hbox (badness 2573) in paragraph at lines 640--640
-[]|\T1/phv/m/n/12 Bloques me-dios de
+Underfull \hbox (badness 10000) in paragraph at lines 640--640
+[]|\T1/phv/m/n/12 Bloques me-dios
  []
 
 
-Underfull \hbox (badness 4391) in paragraph at lines 640--640
-\T1/phv/m/n/12 ex-pan-sión y ma-yor
- []
-
-
-Underfull \hbox (badness 3965) in paragraph at lines 640--640
-\T1/phv/m/n/12 pro-fun-di-dad (apro-xi-
+Underfull \hbox (badness 10000) in paragraph at lines 640--640
+\T1/phv/m/n/12 (apro-xi-ma-da-men-te
  []
 
 
@@ -1946,48 +1894,68 @@ Overfull \hbox (4.87944pt too wide) in paragraph at lines 634--643
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[29]
-Underfull \hbox (badness 10000) in paragraph at lines 670--670
-[]|\T1/phv/m/n/12 Primeros blo-ques
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 668--668
+[]|\T1/phv/m/n/12 Desde la en-tra-da
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 670--670
-\T1/phv/m/n/12 (apro-xi-ma-da-men-te
+Underfull \hbox (badness 10000) in paragraph at lines 668--668
+\T1/phv/m/n/12 (\T1/phv/m/sl/12 stem\T1/phv/m/n/12 ) has-ta los
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 671--671
+Underfull \hbox (badness 10000) in paragraph at lines 668--668
+\T1/phv/m/n/12 pri-me-ros blo-ques
+ []
+
+
+Underfull \hbox (badness 3460) in paragraph at lines 668--668
+\T1/phv/m/sl/12 MB-Conv \T1/phv/m/n/12 (apro-xi-ma-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 668--668
+\T1/phv/m/n/12 da-men-te has-ta la
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 669--669
 []|\T1/phv/m/n/12 Zona in-ter-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 671--671
-[]|\T1/phv/m/n/12 Bloques me-dios
+Underfull \hbox (badness 2573) in paragraph at lines 669--669
+[]|\T1/phv/m/n/12 Bloques me-dios de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 671--671
-\T1/phv/m/n/12 (apro-xi-ma-da-men-te
+Underfull \hbox (badness 4391) in paragraph at lines 669--669
+\T1/phv/m/n/12 ex-pan-sión y ma-yor
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 672--672
+Underfull \hbox (badness 3965) in paragraph at lines 669--669
+\T1/phv/m/n/12 pro-fun-di-dad (apro-xi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 670--670
 []|\T1/phv/m/n/12 Zona tar-día
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 672--672
+Underfull \hbox (badness 10000) in paragraph at lines 670--670
 []|\T1/phv/m/n/12 Últimos blo-ques
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 672--672
+Underfull \hbox (badness 10000) in paragraph at lines 670--670
 \T1/phv/m/n/12 (apro-xi-ma-da-men-te
  []
 
 
-Overfull \hbox (4.87944pt too wide) in paragraph at lines 665--674
+Overfull \hbox (4.87944pt too wide) in paragraph at lines 663--672
  [][] 
  []
 
@@ -1995,50 +1963,114 @@ Overfull \hbox (4.87944pt too wide) in paragraph at lines 665--674
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[30]
-
-File: ./Images/image3.png Graphic file (type bmp)
-<./Images/image3.png>
 [31]
-chapter 5.
-File: ./Images/historico_metricas_mobilenetv2_1.png Graphic file (type bmp)
-<./Images/historico_metricas_mobilenetv2_1.png>
+Underfull \hbox (badness 10000) in paragraph at lines 699--699
+[]|\T1/phv/m/n/12 Primeros blo-ques
+ []
 
 
-File: ./Images/image3.png Graphic file (type bmp)
-<./Images/image3.png>
-[32
-
-]
-File: ./Images/resumen_metricas_mobilenetv2_1.png Graphic file (type bmp)
-<./Images/resumen_metricas_mobilenetv2_1.png>
+Underfull \hbox (badness 10000) in paragraph at lines 699--699
+\T1/phv/m/n/12 (apro-xi-ma-da-men-te
+ []
 
 
-File: ./Images/image3.png Graphic file (type bmp)
-<./Images/image3.png>
-[33]
-File: ./Images/matriz_confusion_mobilenetv2_1.png Graphic file (type bmp)
-<./Images/matriz_confusion_mobilenetv2_1.png>
+Underfull \hbox (badness 10000) in paragraph at lines 700--700
+[]|\T1/phv/m/n/12 Zona in-ter-
+ []
 
 
-File: ./Images/image3.png Graphic file (type bmp)
-<./Images/image3.png>
-[34]
-Overfull \hbox (4.48766pt too wide) in paragraph at lines 750--751
-[]\T1/phv/m/n/12 Las cla-ses \T1/lmtt/m/n/12 Target_Spot\T1/phv/m/n/12 , \T1/lm
-tt/m/n/12 powdery_mildew\T1/phv/m/n/12 , \T1/lmtt/m/n/12 Early_blight \T1/phv/m
-/n/12 y \T1/lmtt/m/n/12 Septoria_leaf_spot
+Underfull \hbox (badness 10000) in paragraph at lines 700--700
+[]|\T1/phv/m/n/12 Bloques me-dios
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 700--700
+\T1/phv/m/n/12 (apro-xi-ma-da-men-te
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 701--701
+[]|\T1/phv/m/n/12 Zona tar-día
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 701--701
+[]|\T1/phv/m/n/12 Últimos blo-ques
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 701--701
+\T1/phv/m/n/12 (apro-xi-ma-da-men-te
+ []
+
+
+Overfull \hbox (4.87944pt too wide) in paragraph at lines 694--703
+ [][] 
  []
 
 
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
+[32]
+chapter 5.
+
+LaTeX Warning: Reference `fig:fig8' on page 33 undefined on input line 721.
+
+File: ./Images/historico_metricas_mobilenetv2_1.png Graphic file (type bmp)
+<./Images/historico_metricas_mobilenetv2_1.png>
+
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[33
+
+]
+
+LaTeX Warning: Reference `fig:fig9' on page 34 undefined on input line 744.
+
+
+LaTeX Warning: Reference `fig:fig10' on page 34 undefined on input line 744.
+
+File: ./Images/resumen_metricas_mobilenetv2_1.png Graphic file (type bmp)
+<./Images/resumen_metricas_mobilenetv2_1.png>
+
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[34]
+File: ./Images/matriz_confusion_mobilenetv2_1.png Graphic file (type bmp)
+<./Images/matriz_confusion_mobilenetv2_1.png>
+
+
+LaTeX Warning: Reference `fig:fig9' on page 35 undefined on input line 762.
+
+
+LaTeX Warning: Reference `fig:fig10' on page 35 undefined on input line 773.
+
+
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
 [35]
+Overfull \hbox (4.48766pt too wide) in paragraph at lines 779--780
+[]\T1/phv/m/n/12 Las cla-ses \T1/lmtt/m/n/12 Target_Spot\T1/phv/m/n/12 , \T1/lm
+tt/m/n/12 powdery_mildew\T1/phv/m/n/12 , \T1/lmtt/m/n/12 Early_blight \T1/phv/m
+/n/12 y \T1/lmtt/m/n/12 Septoria_leaf_spot
+ []
+
+
+LaTeX Warning: Reference `fig:fig10' on page 36 undefined on input line 789.
+
+
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[36]
 File: ./Images/historico_metricas_mobilenetv2_2.png Graphic file (type bmp)
 <./Images/historico_metricas_mobilenetv2_2.png>
 
-Overfull \hbox (3.72972pt too wide) in paragraph at lines 764--765
+Overfull \hbox (3.72972pt too wide) in paragraph at lines 793--794
  [] 
  []
 
@@ -2046,19 +2078,19 @@ Overfull \hbox (3.72972pt too wide) in paragraph at lines 764--765
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[36]
+[37]
 File: ./Images/resumen_metricas_mobilenetv2_2.png Graphic file (type bmp)
 <./Images/resumen_metricas_mobilenetv2_2.png>
 File: ./Images/matriz_confusion_mobilenetv2_2.png Graphic file (type bmp)
 <./Images/matriz_confusion_mobilenetv2_2.png>
 
-Overfull \hbox (5.8412pt too wide) in paragraph at lines 799--800
+Overfull \hbox (5.8412pt too wide) in paragraph at lines 828--829
 \T1/phv/m/n/12 dad en en cla-ses me-nos re-pre-sen-ta-das en el da-ta-set co-mo
  las cla-ses \T1/lmtt/m/n/12 powdery_mildew
  []
 
 
-Overfull \hbox (4.48766pt too wide) in paragraph at lines 805--806
+Overfull \hbox (4.48766pt too wide) in paragraph at lines 834--835
 []\T1/phv/m/n/12 Las cla-ses \T1/lmtt/m/n/12 Target_Spot\T1/phv/m/n/12 , \T1/lm
 tt/m/n/12 powdery_mildew\T1/phv/m/n/12 , \T1/lmtt/m/n/12 Early_blight \T1/phv/m
 /n/12 y \T1/lmtt/m/n/12 Septoria_leaf_spot
@@ -2068,38 +2100,30 @@ tt/m/n/12 powdery_mildew\T1/phv/m/n/12 , \T1/lmtt/m/n/12 Early_blight \T1/phv/m
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[37]
+[38]
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[38]
+[39]
 File: ./Images/historico_metricas_efficientnetb0_1.png Graphic file (type bmp)
 <./Images/historico_metricas_efficientnetb0_1.png>
 
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[39]
+[40]
 File: ./Images/historico_metricas_nasnetmobile_1.png Graphic file (type bmp)
 <./Images/historico_metricas_nasnetmobile_1.png>
 
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[40]
-
-File: ./Images/image3.png Graphic file (type bmp)
-<./Images/image3.png>
 [41]
-chapter 6.
-
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[42
-
-]
-chapter A.
+[42]
+chapter 6.
 
 
 File: ./Images/image3.png Graphic file (type bmp)
@@ -2107,7 +2131,15 @@ File: ./Images/image3.png Graphic file (type bmp)
 [43
 
 ]
-Overfull \hbox (9.84406pt too wide) in paragraph at lines 901--901
+chapter A.
+
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[44
+
+]
+Overfull \hbox (9.84406pt too wide) in paragraph at lines 913--913
 \T1/phv/m/n/12 Geeks. Con-sul-ta-do el 28 de oc-tu-bre de 2025, des-de []$https
  : / / www . geeksforgeeks .
  []
@@ -2116,22 +2148,22 @@ Overfull \hbox (9.84406pt too wide) in paragraph at lines 901--901
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[44
+[45
 
 ]
-Overfull \hbox (5.24687pt too wide) in paragraph at lines 901--901
+Overfull \hbox (5.24687pt too wide) in paragraph at lines 913--913
 [][]\T1/phv/m/n/12 Gevens, A., & Wil-bur, J. (2014). \T1/phv/m/sl/12 To-ma-to L
 a-te Blight\T1/phv/m/n/12 . Uni-ver-sity of Winsconsin-Madison.
  []
 
 
-Overfull \hbox (18.43239pt too wide) in paragraph at lines 901--901
+Overfull \hbox (18.43239pt too wide) in paragraph at lines 913--913
 [][]\T1/phv/m/n/12 Hazzard, R. (2022, ju-lio). \T1/phv/m/sl/12 Two-spotted Spi-
 der Mi-te\T1/phv/m/n/12 . Uni-ver-sity of Mas-sa-chu-setts Amherst.
  []
 
 
-Overfull \hbox (11.04686pt too wide) in paragraph at lines 901--901
+Overfull \hbox (11.04686pt too wide) in paragraph at lines 913--913
 \T1/phv/m/n/12 Con-sul-ta-do el 23 de oc-tu-bre de 2025, des-de []$https : / / 
 www . umass . edu / agriculture -[]
  []
@@ -2140,14 +2172,14 @@ www . umass . edu / agriculture -[]
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[45]
-Overfull \hbox (9.6869pt too wide) in paragraph at lines 901--901
+[46]
+Overfull \hbox (9.6869pt too wide) in paragraph at lines 913--913
 [][]\T1/phv/m/n/12 Pacific North-west con-tri-bu-tors. (2025a). \T1/phv/m/sl/12
  oma-to (So-la-num lycopersicum)-Bacterial Spot\T1/phv/m/n/12 .
  []
 
 
-Overfull \hbox (1.56319pt too wide) in paragraph at lines 901--901
+Overfull \hbox (1.56319pt too wide) in paragraph at lines 913--913
 [][]\T1/phv/m/n/12 Pacific North-west con-tri-bu-tors. (2025b). \T1/phv/m/sl/12
  To-ma-to (So-la-num lycopersicum)-Early Blight\T1/phv/m/n/12 .
  []
@@ -2156,7 +2188,7 @@ Overfull \hbox (1.56319pt too wide) in paragraph at lines 901--901
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[46] 
+[47] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (TFT.aux
 LaTeX Info: Redefining \sptext on input line 13.
@@ -2167,17 +2199,21 @@ LaTeX Info: Redefining \% on input line 13.
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package logreq Info: Writing requests to 'TFT.run.xml'.
 \openout1 = `TFT.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37893 strings out of 403249
- 775724 string characters out of 5458377
- 1867623 words of memory out of 5000000
- 65856 multiletter control sequences out of 15000+600000
+ 37911 strings out of 403249
+ 776739 string characters out of 5458377
+ 1867812 words of memory out of 5000000
+ 65871 multiletter control sequences out of 15000+600000
  657801 words of font info for 80 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 108i,17n,107p,11285b,5563s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,17n,107p,11285b,5561s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on TFT.pdf (46 pages).
+Output written on TFT.pdf (47 pages).
