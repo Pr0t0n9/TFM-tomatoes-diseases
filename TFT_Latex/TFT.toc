@@ -18,9 +18,9 @@
 \contentsline {subsection}{\numberline {4.4.6}Modelo \textit {NASNetMobile} 1}{28}{subsection.4.4.6}%
 \contentsline {subsection}{\numberline {4.4.7}Modelo \textit {NASNetMobile} 2}{29}{subsection.4.4.7}%
 \contentsline {section}{\numberline {4.5}Arquitecturas}{29}{section.4.5}%
-\contentsline {section}{\numberline {4.6}\textit {MobileNetV2}}{29}{section.4.6}%
-\contentsline {section}{\numberline {4.7}\textit {EfficientNetB0}}{30}{section.4.7}%
-\contentsline {section}{\numberline {4.8}\textit {NASNetMobile}}{31}{section.4.8}%
+\contentsline {subsection}{\numberline {4.5.1}\textit {MobileNetV2}}{29}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}\textit {EfficientNetB0}}{30}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}\textit {NASNetMobile}}{31}{subsection.4.5.3}%
 \contentsline {chapter}{\numberline {5}Evaluación y resultados}{33}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Modelo \textit {MobileNetV2}}{33}{section.5.1}%
 \contentsline {subsection}{\numberline {5.1.1}Entrenamiento 1}{33}{subsection.5.1.1}%

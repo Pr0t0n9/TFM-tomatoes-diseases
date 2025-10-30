@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.9.6)  30 OCT 2025 08:24
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.9.6)  30 OCT 2025 08:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1831,9 +1831,6 @@ File: ./Images/Modelos/summary_nasnetmobile_1.png Graphic file (type bmp)
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [28]
-LaTeX Font Info:    Font shape `T1/phv/b/it' in size <17.28> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 617.
-
 Missing character: There is no ” in font phvro8t!
 
 Overfull \hbox (4.0262pt too wide) in paragraph at lines 623--624
@@ -2014,6 +2011,8 @@ File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [32]
 chapter 5.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <17.28> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 712.
 
 LaTeX Warning: Reference `fig:fig8' on page 33 undefined on input line 721.
 
@@ -2210,7 +2209,7 @@ Package logreq Info: Writing requests to 'TFT.run.xml'.
 Here is how much of TeX's memory you used:
  37911 strings out of 403249
  776739 string characters out of 5458377
- 1867812 words of memory out of 5000000
+ 1867833 words of memory out of 5000000
  65871 multiletter control sequences out of 15000+600000
  657801 words of font info for 80 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
