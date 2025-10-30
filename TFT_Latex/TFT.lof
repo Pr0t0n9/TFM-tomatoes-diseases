@@ -14,16 +14,19 @@
 \contentsline {figure}{\numberline {4.3}{\ignorespaces \color {slcolor}{\underline {Resumen del modelo \textit {MobileNetV2} 2}}}}{26}{figure.4.3}%
 \contentsline {figure}{\numberline {4.4}{\ignorespaces \color {slcolor}{\underline {Resumen del modelo \textit {MobileNetV2} 3}}}}{27}{figure.4.4}%
 \contentsline {figure}{\numberline {4.5}{\ignorespaces \color {slcolor}{\underline {Resumen del modelo \textit {EfficientNetB0} 1}}}}{28}{figure.4.5}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces \color {slcolor}{\underline {Resumen del modelo \textit {NASNetMobile} 1}}}}{28}{figure.4.6}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces \color {slcolor}{\underline {Resumen del modelo \textit {EfficientNetB0} 2}}}}{29}{figure.4.6}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces \color {slcolor}{\underline {Resumen del modelo \textit {EfficientNetB0} 3}}}}{29}{figure.4.7}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces \color {slcolor}{\underline {Resumen del modelo \textit {NASNetMobile} 1}}}}{30}{figure.4.8}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces \color {slcolor}{\underline {Resumen del modelo \textit {NASNetMobile} 2}}}}{31}{figure.4.9}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces \color {slcolor}{\underline {Histórico de métricas del entrenamiento 1 del modelo \textit {MobileNetV2}}}}}{34}{figure.5.1}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces \color {slcolor}{\underline {Resumen de métricas del modelo \textit {MobileNetV2} en el entrenamiento 1}}}}{35}{figure.5.2}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces \color {slcolor}{\underline {Matriz de confusión del modelo \textit {MobileNetV2} en el entrenamiento 1}}}}{36}{figure.5.3}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces \color {slcolor}{\underline {Histórico de métricas del entrenamiento 2 del modelo \textit {MobileNetV2}}}}}{37}{figure.5.4}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces \color {slcolor}{\underline {Resumen de métricas del modelo \textit {MobileNetV2} en el entrenamiento 2}}}}{38}{figure.5.5}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces \color {slcolor}{\underline {Matriz de confusión del modelo \textit {MobileNetV2} en el entrenamiento 2}}}}{39}{figure.5.6}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces \color {slcolor}{\underline {Histórico de métricas del entrenamiento 2 del modelo \textit {EfficientNetB0}}}}}{40}{figure.5.7}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces \color {slcolor}{\underline {Histórico de métricas del entrenamiento 1 del modelo \textit {NASNetMobile}}}}}{41}{figure.5.8}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces \color {slcolor}{\underline {Histórico de métricas del entrenamiento 1 del modelo \textit {MobileNetV2}}}}}{37}{figure.5.1}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces \color {slcolor}{\underline {Resumen de métricas del modelo \textit {MobileNetV2} en el entrenamiento 1}}}}{38}{figure.5.2}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces \color {slcolor}{\underline {Matriz de confusión del modelo \textit {MobileNetV2} en el entrenamiento 1}}}}{39}{figure.5.3}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces \color {slcolor}{\underline {Histórico de métricas del entrenamiento 2 del modelo \textit {MobileNetV2}}}}}{40}{figure.5.4}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces \color {slcolor}{\underline {Resumen de métricas del modelo \textit {MobileNetV2} en el entrenamiento 2}}}}{41}{figure.5.5}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces \color {slcolor}{\underline {Matriz de confusión del modelo \textit {MobileNetV2} en el entrenamiento 2}}}}{42}{figure.5.6}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces \color {slcolor}{\underline {Histórico de métricas del entrenamiento 2 del modelo \textit {EfficientNetB0}}}}}{43}{figure.5.7}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces \color {slcolor}{\underline {Histórico de métricas del entrenamiento 1 del modelo \textit {NASNetMobile}}}}}{45}{figure.5.8}%
 \addvspace {10\p@ }
 \def \@chapapp {\appendixname }
 \addvspace {10\p@ }

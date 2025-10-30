@@ -550,15 +550,14 @@ Este modelo usa de capa base \textit{MobileNetV2} preentrenada con los pesos de 
 \end{center}
 \end{figure}
 
-Finalmente para la compilación se usa el optimizador Adam, la función de pérdida de entropía cruzada categórica y se escoge la métrica de precisión para evaluar el rendimiento. Sin embargo, no se usa un \textit{learning rate} por defecto (), se usa un \textit{learning rate} menor ().
+Finalmente para la compilación se usa el optimizador Adam, la función de pérdida de entropía cruzada categórica y se escoge la métrica de precisión para evaluar el rendimiento. Sin embargo, no se usa un \textit{learning rate} por defecto (\texttt{1e-3}), se usa un \textit{learning rate} menor (\texttt{1e-5}).
 
 Se usa la función de pérdida de entropía cruzada categórica porque al crear los conjuntos de datos con ImageDatagenerator como se indica en la Sección \ref{sec:sec4.3} se usa el parámetro \textit{class mode} con valor categorical que convierte las etiquetas a vectores \textit{one-hot encoded}.
 
 
 \subsection{Modelo \textit{MobileNetV2} 3}\label{sec:sec4.4.3}
 
-Este modelo usa de capa base \textit{MobileNetV2} preentrenada con los pesos de \textit{ImageNet}. Posteriormente se congelan las capas del modelo base para evitar que los pesos se modifiquen durante el entrenamiento y se use correctamente la técnica de \textit{transfer learning}. A continuación se añade una capa de \textit{GlobalAveragePooling} y una capa densa con 11 neuronas y función de activación \textit{softmax}, ya que nos enfrentamos a una clasificación de 11 clases.
-Esta información es la que se muestra en la Figura \ref{fig:mobilenetv2_3}.
+Este modelo usa de capa base \textit{MobileNetV2} preentrenada con los pesos de \textit{ImageNet}. Posteriormente se congelan las capas del modelo base para evitar que los pesos se modifiquen durante el entrenamiento, pero en esta ocasión se descongelan algunas capas, usando la técnica de \textit{fine tuning}. Concretamente, se descongela a partir de la capa 80 con el objetivo de que el modelo se adapte mejor a nuestro caso concreto como se explica en el Cuadro \ref{tab:arquitectura_MobileNetV2}. A continuación se añade una capa de \textit{GlobalAveragePooling} y una capa densa con 11 neuronas y función de activación \textit{softmax}, ya que nos enfrentamos a una clasificación de 11 clases. Esta información es la que se muestra en la Figura \ref{fig:mobilenetv2_3}.
 
 \begin{figure}[ht]
 \begin{center}
@@ -568,9 +567,9 @@ Esta información es la que se muestra en la Figura \ref{fig:mobilenetv2_3}.
 \end{center}
 \end{figure}
 
-Finalmente para la compilación se usa el optimizador Adam, la función de pérdida de entropía cruzada categórica y se escoge la métrica de precisión para evaluar el rendimiento. 
+Finalmente para la compilación se usa el optimizador Adam, la función de pérdida de entropía cruzada categórica y se escoge la métrica de precisión para evaluar el rendimiento. Sin embargo, no se usa un \textit{learning rate} por defecto (\texttt{1e-3}), se usa un \textit{learning rate} menor (\texttt{5e-6}).
 
-Se usa la función de pérdida de entropía cruzada categórica porque al crear los conjuntos de datos con ImageDatagenerator como se indica en la sessción \ref{sec:sec4.3} se usa el parámetro class mode con valor categorical que convierte las etiquetas a vectores one-hot encoded.
+Se usa la función de pérdida de entropía cruzada categórica porque al crear los conjuntos de datos con ImageDatagenerator como se indica en la Sección \ref{sec:sec4.3} se usa el parámetro \textit{class mode} con valor categorical que convierte las etiquetas a vectores \textit{one-hot encoded}.
 
 
 \subsection{Modelo \textit{EfficientNetB0} 1}\label{sec:sec4.4.4}
@@ -588,12 +587,49 @@ Esta información es la que se muestra en la Figura \ref{fig:efficientnetb0_1}.
 
 Finalmente para la compilación se usa el optimizador Adam, la función de pérdida de entropía cruzada categórica y se escoge la métrica de precisión para evaluar el rendimiento. 
 
+Se usa la función de pérdida de entropía cruzada categórica porque al crear los conjuntos de datos con ImageDatagenerator como se indica en la Sección \ref{sec:sec4.3} se usa el parámetro \textit{class mode} con valor categorical que convierte las etiquetas a vectores \textit{one-hot encoded}.
+
+
+
 \subsection{Modelo \textit{EfficientNetB0} 2}\label{sec:sec4.4.5}
 
-\subsection{Modelo \textit{NASNetMobile} 1}\label{sec:sec4.4.6}
+Este modelo usa de capa base \textit{EfficientNetB0} preentrenada con los pesos de \textit{ImageNet}. Posteriormente se congelan las capas del modelo base para evitar que los pesos se modifiquen durante el entrenamiento, pero en esta ocasión se descongelan algunas capas, usando la técnica de \textit{fine tuning}. Concretamente, se descongela a partir de la capa 100 con el objetivo de que el modelo se adapte mejor a nuestro caso concreto como se explica en el Cuadro \ref{tab:arquitectura_EfficientNetB0}. A continuación se añade una capa de \textit{GlobalAveragePooling} y una capa densa con 11 neuronas y función de activación \textit{softmax}, ya que nos enfrentamos a una clasificación de 11 clases. Esta información es la que se muestra en la Figura \ref{fig:efficientnetb0_2}.
 
-Este modelo usa de capa base \textit{NASNetMobile} preentrenada con los pesos de ImageNet. Posteriormente se congelan las capas del modelo base para evitar que los pesos se modifiquen durante el entrenamiento y se use correctamente la técnica de \textit{transfer learning}. A continuación se añade una capa de \textit{GlobalAveragePooling} y una capa densa con 11 neuronas y función de activación \textit{softmax}, ya que nos enfrentamos a una clasificación de 11 clases.
-Esta información es la que se muestra en la Figura \ref{fig:nasnetmobile_1}.
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.7]{./Images/Modelos/summary_efficientnetb0_2.png}
+\caption{\headlinecolor{\underline{Resumen del modelo \textit{EfficientNetB0} 2}}}
+\label{fig:efficientnetb0_2}
+\end{center}
+\end{figure}
+
+Finalmente para la compilación se usa el optimizador Adam, la función de pérdida de entropía cruzada categórica y se escoge la métrica de precisión para evaluar el rendimiento. Sin embargo, no se usa un \textit{learning rate} por defecto (\texttt{1e-3}), se usa un \textit{learning rate} menor (\texttt{1e-5}).
+
+Se usa la función de pérdida de entropía cruzada categórica porque al crear los conjuntos de datos con ImageDatagenerator como se indica en la Sección \ref{sec:sec4.3} se usa el parámetro \textit{class mode} con valor categorical que convierte las etiquetas a vectores \textit{one-hot encoded}.
+
+
+
+\subsection{Modelo \textit{EfficientNetB0} 3}\label{sec:sec4.4.6}
+
+Este modelo usa de capa base \textit{EfficientNetB0} preentrenada con los pesos de \textit{ImageNet}. Posteriormente se congelan las capas del modelo base para evitar que los pesos se modifiquen durante el entrenamiento, pero en esta ocasión se descongelan algunas capas, usando la técnica de \textit{fine tuning}. Concretamente, se descongela a partir de la capa 100 con el objetivo de que el modelo se adapte mejor a nuestro caso concreto como se explica en el Cuadro \ref{tab:arquitectura_EfficientNetB0}. A continuación se añade una capa de \textit{GlobalAveragePooling} y una capa densa con 11 neuronas y función de activación \textit{softmax}, ya que nos enfrentamos a una clasificación de 11 clases. Esta información es la que se muestra en la Figura \ref{fig:efficientnetb0_2}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.7]{./Images/Modelos/summary_efficientnetb0_3.png}
+\caption{\headlinecolor{\underline{Resumen del modelo \textit{EfficientNetB0} 3}}}
+\label{fig:efficientnetb0_3}
+\end{center}
+\end{figure}
+
+Finalmente para la compilación se usa el optimizador Adam, la función de pérdida de entropía cruzada categórica y se escoge la métrica de precisión para evaluar el rendimiento. Sin embargo, no se usa un \textit{learning rate} por defecto (\texttt{1e-3}), se usa un \textit{learning rate} menor (\texttt{3e-6}).
+
+Se usa la función de pérdida de entropía cruzada categórica porque al crear los conjuntos de datos con ImageDatagenerator como se indica en la Sección \ref{sec:sec4.3} se usa el parámetro \textit{class mode} con valor categorical que convierte las etiquetas a vectores \textit{one-hot encoded}.
+
+
+
+\subsection{Modelo \textit{NASNetMobile} 1}\label{sec:sec4.4.7}
+
+Este modelo usa de capa base \textit{NASNetMobile} preentrenada con los pesos de ImageNet. Posteriormente se congelan las capas del modelo base para evitar que los pesos se modifiquen durante el entrenamiento y se use correctamente la técnica de \textit{transfer learning}. A continuación se añade una capa de \textit{GlobalAveragePooling} y una capa densa con 11 neuronas y función de activación \textit{softmax}, ya que nos enfrentamos a una clasificación de 11 clases. Esta información es la que se muestra en la Figura \ref{fig:nasnetmobile_1}.
 
 \begin{figure}[ht]
 \begin{center}
@@ -606,7 +642,22 @@ Esta información es la que se muestra en la Figura \ref{fig:nasnetmobile_1}.
 Finalmente para la compilación se usa el optimizador Adam, la función de pérdida de entropía cruzada categórica y se escoge la métrica de precisión para evaluar el rendimiento. 
 
 
-\subsection{Modelo \textit{NASNetMobile} 2}\label{sec:sec4.4.7}
+
+\subsection{Modelo \textit{NASNetMobile} 2}\label{sec:sec4.4.8}
+
+Este modelo usa de capa base \textit{NASNetMobile} preentrenada con los pesos de \textit{ImageNet}. Posteriormente se congelan las capas del modelo base para evitar que los pesos se modifiquen durante el entrenamiento, pero en esta ocasión se descongelan algunas capas, usando la técnica de \textit{fine tuning}. Concretamente, se descongela a partir de la capa 100 con el objetivo de que el modelo se adapte mejor a nuestro caso concreto como se explica en el Cuadro \ref{tab:arquitectura_NASNetMobile}. A continuación se añade una capa de \textit{GlobalAveragePooling} y una capa densa con 11 neuronas y función de activación \textit{softmax}, ya que nos enfrentamos a una clasificación de 11 clases. Esta información es la que se muestra en la Figura \ref{fig:nasnetmobile_2}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.7]{./Images/Modelos/summary_nasnetmobile_2.png}
+\caption{\headlinecolor{\underline{Resumen del modelo \textit{NASNetMobile} 2}}}
+\label{fig:nasnetmobile_2}
+\end{center}
+\end{figure}
+
+Finalmente para la compilación se usa el optimizador Adam, la función de pérdida de entropía cruzada categórica y se escoge la métrica de precisión para evaluar el rendimiento. Sin embargo, no se usa un \textit{learning rate} por defecto (\texttt{1e-3}), se usa un \textit{learning rate} menor (\texttt{5e-6}).
+
+Se usa la función de pérdida de entropía cruzada categórica porque al crear los conjuntos de datos con ImageDatagenerator como se indica en la Sección \ref{sec:sec4.3} se usa el parámetro \textit{class mode} con valor categorical que convierte las etiquetas a vectores \textit{one-hot encoded}.
 
 
 
@@ -709,7 +760,7 @@ Zona tardía / cabeza del modelo & Últimos bloques (aproximadamente de la capa 
 En este capítulo se presentan los resultados obtenidos al usar los datos preprocesados explicado en la sección \ref{sec:sec4.3} a los modelos descritos en la sección \ref{sec:sec4.4}.
 
 
-\section{Modelo \textit{MobileNetV2}}\label{sec:sec5.1}
+\section{Modelo \textit{MobileNetV2} 1}\label{sec:sec5.1}
 
 En esta sección se van a mostrar los resultados del entrenamiento del modelo descrito en la subsección \ref{sec:sec4.4.1}. A este modelo se han aplicado varios entrenamientos distintos explicados en las subsecciones \ref{sec:sec5.1.1}, \ref{sec:sec5.1.2} y \ref{sec:sec5.1.3}.
 
@@ -722,9 +773,9 @@ Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las
 
 \begin{figure}[ht]
 \begin{center}
-\includegraphics[scale=0.5]{./Images/historico_metricas_mobilenetv2_1.png}
+\includegraphics[scale=0.5]{./Images/Resultados/Histórico Métricas/mobilenetv2_1_1.png}
 \caption{\headlinecolor{\underline{Histórico de métricas del entrenamiento 1 del modelo \textit{MobileNetV2}}}}
-\label{fig:fig11}
+\label{fig:metrics_historic_mobilenetv2_1_1}
 \end{center}
 \end{figure}
 
@@ -745,17 +796,17 @@ Para poder comparar este entrenamiento con el de la subsección \ref{sec:sec5.1.
 
 \begin{figure}[ht]
 \begin{center}
-\includegraphics[scale=0.7]{./Images/resumen_metricas_mobilenetv2_1.png}
+\includegraphics[scale=0.7]{./Images/Resultados/Métricas resumen/mobilenetv2_1_1.png}
 \caption{\headlinecolor{\underline{Resumen de métricas del modelo \textit{MobileNetV2} en el entrenamiento 1}}}
-\label{fig:fig12}
+\label{fig:metrics_summary_mobilenetv2_1_1}
 \end{center}
 \end{figure}
 
 \begin{figure}[ht]
 \begin{center}
-\includegraphics[scale=0.5]{./Images/matriz_confusion_mobilenetv2_1.png}
+\includegraphics[scale=0.5]{./Images/Resultados/Matriz de confusión/mobilenetv2_1_1.png}
 \caption{\headlinecolor{\underline{Matriz de confusión del modelo \textit{MobileNetV2} en el entrenamiento 1}}}
-\label{fig:fig13}
+\label{fig:confusion_matrix_mobilenetv2_1_1}
 \end{center}
 \end{figure}
 
@@ -790,9 +841,9 @@ Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las
 
 \begin{figure}[ht]
 \begin{center}
-\includegraphics[scale=0.5]{./Images/historico_metricas_mobilenetv2_2.png}
+\includegraphics[scale=0.5]{./Images/Resultados/Histórico Métricas/mobilenetv2_1_2.png}
 \caption{\headlinecolor{\underline{Histórico de métricas del entrenamiento 2 del modelo \textit{MobileNetV2}}}}
-\label{fig:fig14}
+\label{fig:metrics_historic_mobilenetv2_1_2}
 \end{center}
 \end{figure}
 
@@ -811,17 +862,17 @@ El rendimiento global es prácticamente el mismo que el conseguido con el entren
 
 \begin{figure}[ht]
 \begin{center}
-\includegraphics[scale=0.7]{./Images/resumen_metricas_mobilenetv2_2.png}
+\includegraphics[scale=0.7]{./Images/Resultados/Métricas resumen/mobilenetv2_1_2.png}
 \caption{\headlinecolor{\underline{Resumen de métricas del modelo \textit{MobileNetV2} en el entrenamiento 2}}}
-\label{fig:fig15}
+\label{fig:metrics_summary_mobilenetv2_1_2}
 \end{center}
 \end{figure}
 
 \begin{figure}[ht]
 \begin{center}
-\includegraphics[scale=0.5]{./Images/matriz_confusion_mobilenetv2_2.png}
+\includegraphics[scale=0.5]{./Images/Resultados/Matriz de confusión/mobilenetv2_1_2.png}
 \caption{\headlinecolor{\underline{Matriz de confusión del modelo \textit{MobileNetV2} en el entrenamiento 2}}}
-\label{fig:fig16}
+\label{fig:confusion_matrix_mobilenetv2_1_2}
 \end{center}
 \end{figure}
 
@@ -842,8 +893,13 @@ El modelo con obtenido en la subsección \ref{sec:sec5.1.1} equilibra mejor los 
 \subsection{Entrenamiento 3}\label{sec:sec5.1.3}
 
 
+\section{Modelo \textit{MobileNetV2} 2}\label{sec:sec5.2}
 
-\section{Modelo \textit{EfficientNetB0}}\label{sec:sec5.2}
+\section{Modelo \textit{MobileNetV2} 3}\label{sec:sec5.3}
+
+
+
+\section{Modelo \textit{EfficientNetB0} 1}\label{sec:sec5.4}
 
 En esta sección se van a mostrar los resultados del entrenamiento del modelo descrito en la subsección \ref{sec:sec4.4.2}. Este entrenamiento se ha realizado usando los pesos de clases descritos en el Cuadro \ref{tab:pesos_por_clase_entrenamiento}. Solo se ha sometido a 10 épocas y se han usado los callbacks de \textit{ModelCheckpoint} e \textit{HistorySaver}, ya que el objetivo de este entrenamiento es observar la tendencia inicial.
 
@@ -851,7 +907,7 @@ Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las
 
 \begin{figure}[ht]
 \begin{center}
-\includegraphics[scale=0.5]{./Images/historico_metricas_efficientnetb0_1.png}
+\includegraphics[scale=0.5]{./Images/Resultados/Histórico Métricas/efficientnetb0_1.png}
 \caption{\headlinecolor{\underline{Histórico de métricas del entrenamiento 2 del modelo \textit{EfficientNetB0}}}}
 \label{fig:fig17}
 \end{center}
@@ -869,7 +925,12 @@ En esta figura se puede observar el comportamiento de las métricas de precisió
 El modelo no está aprendiendo absolutamente nada más allá del azar. Para mejorar esta situación se descongelarán algunas capas superiores del modelo base \textit{EfficientNetB0}, haciendo uso de la técnica de \textit{fine tuning}.
 
 
-\section{Modelo \textit{NASNetMobile}}\label{sec:sec5.3}
+\section{Modelo \textit{EfficientNetB0} 2}\label{sec:sec5.4}
+
+\section{Modelo \textit{EfficientNetB0} 3}\label{sec:sec5.5}
+
+
+\section{Modelo \textit{NASNetMobile} 1}\label{sec:sec5.6}
 
 En esta sección se van a mostrar los resultados del entrenamiento del modelo descrito en la subsección \ref{sec:sec4.4.3}. A este modelo se han aplicado varios entrenamientos distintos explicados en las subsecciones \ref{sec:sec5.3.1}, .
 
@@ -880,9 +941,9 @@ Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las
 
 \begin{figure}[ht]
 \begin{center}
-\includegraphics[scale=0.5]{./Images/historico_metricas_nasnetmobile_1.png}
+\includegraphics[scale=0.5]{./Images/Resultados/Histórico Métricas/nasnetmobile_1.png}
 \caption{\headlinecolor{\underline{Histórico de métricas del entrenamiento 1 del modelo \textit{NASNetMobile}}}}
-\label{fig:fig18}
+\label{fig:metrics_historic_mobilenetv2_3}
 \end{center}
 \end{figure}
 
@@ -898,6 +959,9 @@ En esta figura se puede observar el comportamiento de las métricas de precisió
 El modelo mejora rápidamente durante las primeras 5 épocas. A partir de ese punto, tanto la precisión de entrenmaiento como la de validación se estabilizan alrededor del 75\%, lo cual indica que el modelo ha aprendido bien las características generales, pero está alcanzando su límite. 
 
 Para mejorar este resultado se podría entrenar más épocas añadiendo los callbacks \textit{EarlyStopping} para que pare la ejecución si el modelo no mejora y con \textit{ReduceLROnPlateau} para que disminuya el \textit{learning rate} en el entrenamiento y haga que no se estanquen sus valores.
+
+
+\section{Modelo \textit{NASNetMobile} 2}\label{sec:sec5.7}
 
 
 \chapter{Conclusiones}\label{cap:cap6}
