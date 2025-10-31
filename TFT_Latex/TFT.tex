@@ -769,7 +769,7 @@ En esta sección se van a mostrar los resultados del entrenamiento del modelo de
 
 Este entrenamiento se ha realizado usando los pesos de clases descritos en el Cuadro \ref{tab:pesos_por_clase_entrenamiento}. Solo se ha sometido a 10 épocas y se han usado los callbacks de \textit{ModelCheckpoint} e \textit{HistorySaver}, ya que el objetivo de este entrenamiento es observar la tendencia inicial para poderlo comparar con el entrenamiento de la sección \ref{sec:sec5.1.2} y poder determinar qué tanto puede influir los pesos en las clases.
 
-Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las métricas recogidas en el fichero generado por el callback \textit{HistorySaver} en la Figura \ref{fig:fig8}.
+Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las métricas recogidas en el fichero generado por el callback \textit{HistorySaver} en la Figura \ref{fig:metrics_historic_mobilenetv2_1_1}.
 
 \begin{figure}[ht]
 \begin{center}
@@ -792,7 +792,7 @@ En resumen, ambas métricas de precisión tienden a subir acercándose a 1 y las
 
 La precisión de entrenamiento se estabiliza alrededor de 0.8, con incrementos pequeños al final. Esto puede indicar que el modelo se está acercando a su límite de capacidad con la configuración actual. Para exprimir aún más este modelo con intención de mejorarlo se podría aumentar el número de épocas con el callback \textit{EarlyStopping} para que pare el entrenamiento en caso de que no mejore y el callback de \textit{ReduceLROnPlateau} para que reduzca el \textit{learning rate} en el entrenamiento y haga que no se estanquen sus valores. 
 
-Para poder comparar este entrenamiento con el de la subsección \ref{sec:sec5.1.2} es necesario realizar un análisis de métricas por clases. Para ello se van a mostrar las métricas del método \texttt{classification\_report} de la librería \textit{Sklearn} en la Figura \ref{fig:fig9} y la matriz de confusión en la Figura \ref{fig:fig10}.
+Para poder comparar este entrenamiento con el de la subsección \ref{sec:sec5.1.2} es necesario realizar un análisis de métricas por clases. Para ello se van a mostrar las métricas del método \texttt{classification\_report} de la librería \textit{Sklearn} en la Figura \ref{fig:metrics_summary_mobilenetv2_1_1} y la matriz de confusión en la Figura \ref{fig:confusion_matrix_mobilenetv2_1_1}.
 
 \begin{figure}[ht]
 \begin{center}
@@ -810,7 +810,7 @@ Para poder comparar este entrenamiento con el de la subsección \ref{sec:sec5.1.
 \end{center}
 \end{figure}
 
-Para entender las métricas de la Figura \ref{fig:fig9} se va a hacer una breve explicación de cada una de ellas:
+Para entender las métricas de la Figura \ref{fig:metrics_summary_mobilenetv2_1_1} se va a hacer una breve explicación de cada una de ellas:
 
 \begin{bulletlist}
 \item Precisión (\textit{Precision}): De todas las imágenes que el modelo predijo como una clase, cuántas realmente pertenecen a esa clase.
@@ -821,7 +821,7 @@ Para entender las métricas de la Figura \ref{fig:fig9} se va a hacer una breve 
 
 Sabiendo esto se puede decir que el modelo tiene un rendimiento homogéneo entre clases habiendo un balance bastante bueno entre precisión y sensibilidad en practicamente todas las clases.
 
-Para extraer resultados de la Figura \ref{fig:fig10} se va a explicar qué es una matriz de confusión.  Una matriz de confusión es una herramienta que permite la visualización del desempeño de un modelo de clasificación. Cada columna representa el número de predicciones de cada clase, mientras que cada fila representa a las instancias en la clase real.
+Para extraer resultados de la Figura \ref{fig:confusion_matrix_mobilenetv2_1_1} se va a explicar qué es una matriz de confusión.  Una matriz de confusión es una herramienta que permite la visualización del desempeño de un modelo de clasificación. Cada columna representa el número de predicciones de cada clase, mientras que cada fila representa a las instancias en la clase real.
 
 De esta manera se puede afirmar que:
 
@@ -833,11 +833,12 @@ De esta manera se puede afirmar que:
 Este modelo tiene un comportamiento sólido y equilibrado, generaliza bien y consigue que incluso las clases con menos muestras tengan buenos niveles de recall. 
 
 
+
 \subsection{Entrenamiento 2}\label{sec:sec5.1.2}
 
 Este entrenamiento es igual que el anterior, pero sin tener en cuenta los pesos de las clases.
 
-Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las métricas recogidas en el fichero generado por el callback \textit{HistorySaver} en la Figura \ref{fig:fig10}.
+Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las métricas recogidas en el fichero generado por el callback \textit{HistorySaver} en la Figura \ref{fig:metrics_historic_mobilenetv2_1_2}.
 
 \begin{figure}[ht]
 \begin{center}
@@ -847,7 +848,7 @@ Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las
 \end{center}
 \end{figure}
 
-En la Figura \ref{fig:fig11} podemos observar el comportamiento de las métricas de precisión y pérdida de entrenamiento y validación a lo largo de las épocas a las que se ha sometido el modelo descrito en la subsección \ref{sec:sec4.4.1} en el entrenamiento. A continuación se describe lo que se puede interpretar:  
+En la Figura \ref{fig:metrics_historic_mobilenetv2_1_2} podemos observar el comportamiento de las métricas de precisión y pérdida de entrenamiento y validación a lo largo de las épocas a las que se ha sometido el modelo descrito en la subsección \ref{sec:sec4.4.1} en el entrenamiento. A continuación se describe lo que se puede interpretar:  
 
 \begin{bulletlist}
 \item Precisión de entrenamiento: Comienza alrededor de 0.6 y sube rápidamente a un valor cercano a 0.8, mostrando que el modelo aprende bien de los datos de entrenamiento.
@@ -858,7 +859,7 @@ En la Figura \ref{fig:fig11} podemos observar el comportamiento de las métricas
 
 En resumen, ambas métricas de precisión tienden a subir acercándose a 1 y las métricas de pérdidas a bajar acercándose a 0. Ambas tendencias se realizan de manera progresiva sin señales de \textit{overfitting}. 
 
-El rendimiento global es prácticamente el mismo que el conseguido con el entrenmaiento de la subsección \ref{sec:sec5.1.1}, por lo que para poder compararlos más detalladamente es necesario realizar un análisis de métricas por clases. Para ello se van a mostrar las métricas del método \texttt{classification\_report} de la librería \textit{Sklearn} en la Figura \ref{fig:fig12} y la matriz de confusión en la Figura \ref{fig:fig13}.
+El rendimiento global es prácticamente el mismo que el conseguido con el entrenmaiento de la subsección \ref{sec:sec5.1.1}, por lo que para poder compararlos más detalladamente es necesario realizar un análisis de métricas por clases. Para ello se van a mostrar las métricas del método \texttt{classification\_report} de la librería \textit{Sklearn} en la Figura \ref{fig:metrics_summary_mobilenetv2_1_2} y la matriz de confusión en la Figura \ref{fig:confusion_matrix_mobilenetv2_1_2}.
 
 \begin{figure}[ht]
 \begin{center}
@@ -878,7 +879,7 @@ El rendimiento global es prácticamente el mismo que el conseguido con el entren
 
 En general se obtiene un buen rendimiento, existiendo un buen balance entre precisión y sensibilidad en practicamente todas las clases. Aún así, se pueden observar diferencias en algunas clases con respecto al modelo resultante de la subsección \ref{sec:sec5.1.1}. En concreto se puede determinar una disminución en la métrica de sensibilidad en en clases menos representadas en el dataset como las clases \texttt{powdery\_mildew} (de 0.93 a 0.80), \texttt{Septoria\_leaf\_spot} (de 0.71 a 0.61) y \texttt{Spidermite\_Two-spotted\_\-spider\_mite} (de 0.84 a 0.70).
 
-En cuanto a los resultados de la Figura \ref{fig:fig13} son bastantes similares a los de la subsección \ref{sec:sec5.1.1}
+En cuanto a los resultados de la Figura \ref{fig:confusion_matrix_mobilenetv2_1_2} son bastantes similares a los de la subsección \ref{sec:sec5.1.1}
 
 \begin{bulletlist}
 \item Las clases \texttt{Tomato\_Yellow\_Leaf\_Curl\_Virus}, \texttt{Tomato\_mosaic\_virus} y \texttt{healthy} siguen siendo las que mejor se detectan.
@@ -893,6 +894,8 @@ El modelo con obtenido en la subsección \ref{sec:sec5.1.1} equilibra mejor los 
 \subsection{Entrenamiento 3}\label{sec:sec5.1.3}
 
 
+
+
 \section{Modelo \textit{MobileNetV2} 2}\label{sec:sec5.2}
 
 \section{Modelo \textit{MobileNetV2} 3}\label{sec:sec5.3}
@@ -903,13 +906,13 @@ El modelo con obtenido en la subsección \ref{sec:sec5.1.1} equilibra mejor los 
 
 En esta sección se van a mostrar los resultados del entrenamiento del modelo descrito en la subsección \ref{sec:sec4.4.2}. Este entrenamiento se ha realizado usando los pesos de clases descritos en el Cuadro \ref{tab:pesos_por_clase_entrenamiento}. Solo se ha sometido a 10 épocas y se han usado los callbacks de \textit{ModelCheckpoint} e \textit{HistorySaver}, ya que el objetivo de este entrenamiento es observar la tendencia inicial.
 
-Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las métricas recogidas en el fichero generado por el callback \textit{HistorySaver} en la Figura \ref{fig:fig14}.
+Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las métricas recogidas en el fichero generado por el callback \textit{HistorySaver} en la Figura \ref{fig:summary_metrics_efficientnetb0_1}.
 
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[scale=0.5]{./Images/Resultados/Histórico Métricas/efficientnetb0_1.png}
 \caption{\headlinecolor{\underline{Histórico de métricas del entrenamiento 2 del modelo \textit{EfficientNetB0}}}}
-\label{fig:fig17}
+\label{fig:summary_metrics_efficientnetb0_1}
 \end{center}
 \end{figure}
 
@@ -932,18 +935,14 @@ El modelo no está aprendiendo absolutamente nada más allá del azar. Para mejo
 
 \section{Modelo \textit{NASNetMobile} 1}\label{sec:sec5.7}
 
-En esta sección se van a mostrar los resultados del entrenamiento del modelo descrito en la subsección \ref{sec:sec4.4.3}. A este modelo se han aplicado varios entrenamientos distintos explicados en las subsecciones \ref{sec:sec5.3.1}, .
-
-
-\subsection{Entrenamiento 1}\label{sec:sec5.3.1}
-
-Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las métricas recogidas en el fichero generado por el callback \textit{HistorySaver} en la Figura \ref{fig:fig15}.
+En esta sección se van a mostrar los resultados del entrenamiento del modelo descrito en la subsección \ref{sec:sec4.4.7}. 
+Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las métricas recogidas en el fichero generado por el callback \textit{HistorySaver} en la Figura \ref{fig:metrics_historic_nasnetmobile_1}.
 
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[scale=0.5]{./Images/Resultados/Histórico Métricas/nasnetmobile_1.png}
 \caption{\headlinecolor{\underline{Histórico de métricas del entrenamiento 1 del modelo \textit{NASNetMobile}}}}
-\label{fig:metrics_historic_mobilenetv2_3}
+\label{fig:metrics_historic_nasnetmobile_1}
 \end{center}
 \end{figure}
 

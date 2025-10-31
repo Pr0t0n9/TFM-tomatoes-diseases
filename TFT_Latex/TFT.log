@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.9.6)  30 OCT 2025 18:07
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.9.6)  31 OCT 2025 18:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1581,8 +1581,7 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 34.
 Package tocbasic Info: Using my definition of `\numberline' on input line 35.
 Package tocbasic Info: Using my definition of `\numberline' on input line 36.
 Package tocbasic Info: Using my definition of `\numberline' on input line 37.
-Package tocbasic Info: Using my definition of `\numberline' on input line 38.
-Package tocbasic Info: Using my definition of `\numberline' on input line 40.
+Package tocbasic Info: Using my definition of `\numberline' on input line 39.
 )
 \tf@toc=\write5
 \openout5 = `TFT.toc'.
@@ -2043,9 +2042,6 @@ File: ./Images/image3.png Graphic file (type bmp)
 chapter 5.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <17.28> not available
 (Font)              Font shape `T1/phv/b/sl' tried instead on input line 763.
-
-LaTeX Warning: Reference `fig:fig8' on page 36 undefined on input line 772.
-
 File: ./Images/Resultados/Histórico Métricas/mobilenetv2_1_1.png Graphic file (
 type bmp)
 <./Images/Resultados/Histórico Métricas/mobilenetv2_1_1.png>
@@ -2056,12 +2052,6 @@ File: ./Images/image3.png Graphic file (type bmp)
 [36
 
 ]
-
-LaTeX Warning: Reference `fig:fig9' on page 37 undefined on input line 795.
-
-
-LaTeX Warning: Reference `fig:fig10' on page 37 undefined on input line 795.
-
 File: ./Images/Resultados/Métricas resumen/mobilenetv2_1_1.png Graphic file (ty
 pe bmp)
 <./Images/Resultados/Métricas resumen/mobilenetv2_1_1.png>
@@ -2075,13 +2065,6 @@ File: ./Images/Resultados/Matriz de confusión/mobilenetv2_1_1.png Graphic file
 <./Images/Resultados/Matriz de confusión/mobilenetv2_1_1.png>
 
 
-LaTeX Warning: Reference `fig:fig9' on page 38 undefined on input line 813.
-
-
-LaTeX Warning: Reference `fig:fig10' on page 38 undefined on input line 824.
-
-
-
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [38]
@@ -2092,9 +2075,6 @@ tt/m/n/12 powdery_mildew\T1/phv/m/n/12 , \T1/lmtt/m/n/12 Early_blight \T1/phv/m
  []
 
 
-LaTeX Warning: Reference `fig:fig10' on page 39 undefined on input line 840.
-
-
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
@@ -2103,18 +2083,9 @@ File: ./Images/Resultados/Histórico Métricas/mobilenetv2_1_2.png Graphic file 
 type bmp)
 <./Images/Resultados/Histórico Métricas/mobilenetv2_1_2.png>
 
-Overfull \hbox (3.72972pt too wide) in paragraph at lines 844--845
+Overfull \hbox (3.72972pt too wide) in paragraph at lines 845--846
  [] 
  []
-
-
-LaTeX Warning: Reference `fig:fig11' on page 40 undefined on input line 850.
-
-
-LaTeX Warning: Reference `fig:fig12' on page 40 undefined on input line 861.
-
-
-LaTeX Warning: Reference `fig:fig13' on page 40 undefined on input line 861.
 
 
 
@@ -2128,16 +2099,13 @@ File: ./Images/Resultados/Matriz de confusión/mobilenetv2_1_2.png Graphic file
 (type bmp)
 <./Images/Resultados/Matriz de confusión/mobilenetv2_1_2.png>
 
-Overfull \hbox (5.8412pt too wide) in paragraph at lines 879--880
+Overfull \hbox (5.8412pt too wide) in paragraph at lines 880--881
 \T1/phv/m/n/12 dad en en cla-ses me-nos re-pre-sen-ta-das en el da-ta-set co-mo
  las cla-ses \T1/lmtt/m/n/12 powdery_mildew
  []
 
 
-LaTeX Warning: Reference `fig:fig13' on page 41 undefined on input line 881.
-
-
-Overfull \hbox (4.48766pt too wide) in paragraph at lines 885--886
+Overfull \hbox (4.48766pt too wide) in paragraph at lines 886--887
 []\T1/phv/m/n/12 Las cla-ses \T1/lmtt/m/n/12 Target_Spot\T1/phv/m/n/12 , \T1/lm
 tt/m/n/12 powdery_mildew\T1/phv/m/n/12 , \T1/lmtt/m/n/12 Early_blight \T1/phv/m
 /n/12 y \T1/lmtt/m/n/12 Septoria_leaf_spot
@@ -2152,9 +2120,6 @@ File: ./Images/image3.png Graphic file (type bmp)
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [42]
-
-LaTeX Warning: Reference `fig:fig14' on page 43 undefined on input line 906.
-
 File: ./Images/Resultados/Histórico Métricas/efficientnetb0_1.png Graphic file 
 (type bmp)
 <./Images/Resultados/Histórico Métricas/efficientnetb0_1.png>
@@ -2163,9 +2128,6 @@ File: ./Images/Resultados/Histórico Métricas/efficientnetb0_1.png Graphic file
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [43]
-
-LaTeX Warning: Reference `fig:fig15' on page 44 undefined on input line 940.
-
 File: ./Images/Resultados/Histórico Métricas/nasnetmobile_1.png Graphic file (t
 ype bmp)
 <./Images/Resultados/Histórico Métricas/nasnetmobile_1.png>
@@ -2178,16 +2140,12 @@ File: ./Images/image3.png Graphic file (type bmp)
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [45]
-
-File: ./Images/image3.png Graphic file (type bmp)
-<./Images/image3.png>
-[46]
 chapter 6.
 
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[47
+[46
 
 ]
 chapter A.
@@ -2195,10 +2153,10 @@ chapter A.
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[48
+[47
 
 ]
-Overfull \hbox (9.84406pt too wide) in paragraph at lines 977--977
+Overfull \hbox (9.84406pt too wide) in paragraph at lines 976--976
 \T1/phv/m/n/12 Geeks. Con-sul-ta-do el 28 de oc-tu-bre de 2025, des-de []$https
  : / / www . geeksforgeeks .
  []
@@ -2207,22 +2165,22 @@ Overfull \hbox (9.84406pt too wide) in paragraph at lines 977--977
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[49
+[48
 
 ]
-Overfull \hbox (5.24687pt too wide) in paragraph at lines 977--977
+Overfull \hbox (5.24687pt too wide) in paragraph at lines 976--976
 [][]\T1/phv/m/n/12 Gevens, A., & Wil-bur, J. (2014). \T1/phv/m/sl/12 To-ma-to L
 a-te Blight\T1/phv/m/n/12 . Uni-ver-sity of Winsconsin-Madison.
  []
 
 
-Overfull \hbox (18.43239pt too wide) in paragraph at lines 977--977
+Overfull \hbox (18.43239pt too wide) in paragraph at lines 976--976
 [][]\T1/phv/m/n/12 Hazzard, R. (2022, ju-lio). \T1/phv/m/sl/12 Two-spotted Spi-
 der Mi-te\T1/phv/m/n/12 . Uni-ver-sity of Mas-sa-chu-setts Amherst.
  []
 
 
-Overfull \hbox (11.04686pt too wide) in paragraph at lines 977--977
+Overfull \hbox (11.04686pt too wide) in paragraph at lines 976--976
 \T1/phv/m/n/12 Con-sul-ta-do el 23 de oc-tu-bre de 2025, des-de []$https : / / 
 www . umass . edu / agriculture -[]
  []
@@ -2231,14 +2189,14 @@ www . umass . edu / agriculture -[]
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[50]
-Overfull \hbox (9.6869pt too wide) in paragraph at lines 977--977
+[49]
+Overfull \hbox (9.6869pt too wide) in paragraph at lines 976--976
 [][]\T1/phv/m/n/12 Pacific North-west con-tri-bu-tors. (2025a). \T1/phv/m/sl/12
  oma-to (So-la-num lycopersicum)-Bacterial Spot\T1/phv/m/n/12 .
  []
 
 
-Overfull \hbox (1.56319pt too wide) in paragraph at lines 977--977
+Overfull \hbox (1.56319pt too wide) in paragraph at lines 976--976
 [][]\T1/phv/m/n/12 Pacific North-west con-tri-bu-tors. (2025b). \T1/phv/m/sl/12
  To-ma-to (So-la-num lycopersicum)-Early Blight\T1/phv/m/n/12 .
  []
@@ -2247,7 +2205,7 @@ Overfull \hbox (1.56319pt too wide) in paragraph at lines 977--977
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[51] 
+[50] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (TFT.aux
 LaTeX Info: Redefining \sptext on input line 13.
@@ -2258,21 +2216,17 @@ LaTeX Info: Redefining \% on input line 13.
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package logreq Info: Writing requests to 'TFT.run.xml'.
 \openout1 = `TFT.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37965 strings out of 403249
- 779387 string characters out of 5458377
- 1868561 words of memory out of 5000000
- 65923 multiletter control sequences out of 15000+600000
+ 37953 strings out of 403249
+ 779266 string characters out of 5458377
+ 1868464 words of memory out of 5000000
+ 65911 multiletter control sequences out of 15000+600000
  657801 words of font info for 80 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  108i,17n,107p,11285b,5561s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on TFT.pdf (51 pages).
+Output written on TFT.pdf (50 pages).
