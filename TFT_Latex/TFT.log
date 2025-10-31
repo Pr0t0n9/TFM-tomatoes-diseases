@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.9.6)  31 OCT 2025 18:23
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.9.6)  31 OCT 2025 18:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2156,7 +2156,7 @@ File: ./Images/image3.png Graphic file (type bmp)
 [47
 
 ]
-Overfull \hbox (9.84406pt too wide) in paragraph at lines 976--976
+Overfull \hbox (9.84406pt too wide) in paragraph at lines 984--984
 \T1/phv/m/n/12 Geeks. Con-sul-ta-do el 28 de oc-tu-bre de 2025, des-de []$https
  : / / www . geeksforgeeks .
  []
@@ -2168,19 +2168,19 @@ File: ./Images/image3.png Graphic file (type bmp)
 [48
 
 ]
-Overfull \hbox (5.24687pt too wide) in paragraph at lines 976--976
+Overfull \hbox (5.24687pt too wide) in paragraph at lines 984--984
 [][]\T1/phv/m/n/12 Gevens, A., & Wil-bur, J. (2014). \T1/phv/m/sl/12 To-ma-to L
 a-te Blight\T1/phv/m/n/12 . Uni-ver-sity of Winsconsin-Madison.
  []
 
 
-Overfull \hbox (18.43239pt too wide) in paragraph at lines 976--976
+Overfull \hbox (18.43239pt too wide) in paragraph at lines 984--984
 [][]\T1/phv/m/n/12 Hazzard, R. (2022, ju-lio). \T1/phv/m/sl/12 Two-spotted Spi-
 der Mi-te\T1/phv/m/n/12 . Uni-ver-sity of Mas-sa-chu-setts Amherst.
  []
 
 
-Overfull \hbox (11.04686pt too wide) in paragraph at lines 976--976
+Overfull \hbox (11.04686pt too wide) in paragraph at lines 984--984
 \T1/phv/m/n/12 Con-sul-ta-do el 23 de oc-tu-bre de 2025, des-de []$https : / / 
 www . umass . edu / agriculture -[]
  []
@@ -2190,13 +2190,13 @@ www . umass . edu / agriculture -[]
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [49]
-Overfull \hbox (9.6869pt too wide) in paragraph at lines 976--976
+Overfull \hbox (9.6869pt too wide) in paragraph at lines 984--984
 [][]\T1/phv/m/n/12 Pacific North-west con-tri-bu-tors. (2025a). \T1/phv/m/sl/12
  oma-to (So-la-num lycopersicum)-Bacterial Spot\T1/phv/m/n/12 .
  []
 
 
-Overfull \hbox (1.56319pt too wide) in paragraph at lines 976--976
+Overfull \hbox (1.56319pt too wide) in paragraph at lines 984--984
 [][]\T1/phv/m/n/12 Pacific North-west con-tri-bu-tors. (2025b). \T1/phv/m/sl/12
  To-ma-to (So-la-num lycopersicum)-Early Blight\T1/phv/m/n/12 .
  []

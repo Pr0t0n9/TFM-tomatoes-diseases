@@ -896,7 +896,10 @@ El modelo con obtenido en la subsección \ref{sec:sec5.1.1} equilibra mejor los 
 
 
 
+
 \section{Modelo \textit{MobileNetV2} 2}\label{sec:sec5.2}
+
+
 
 \section{Modelo \textit{MobileNetV2} 3}\label{sec:sec5.3}
 
@@ -930,7 +933,11 @@ El modelo no está aprendiendo absolutamente nada más allá del azar. Para mejo
 
 \section{Modelo \textit{EfficientNetB0} 2}\label{sec:sec5.5}
 
+
+
 \section{Modelo \textit{EfficientNetB0} 3}\label{sec:sec5.6}
+
+
 
 
 \section{Modelo \textit{NASNetMobile} 1}\label{sec:sec5.7}
@@ -958,6 +965,7 @@ En esta figura se puede observar el comportamiento de las métricas de precisió
 El modelo mejora rápidamente durante las primeras 5 épocas. A partir de ese punto, tanto la precisión de entrenmaiento como la de validación se estabilizan alrededor del 75\%, lo cual indica que el modelo ha aprendido bien las características generales, pero está alcanzando su límite. 
 
 Para mejorar este resultado se podría entrenar más épocas añadiendo los callbacks \textit{EarlyStopping} para que pare la ejecución si el modelo no mejora y con \textit{ReduceLROnPlateau} para que disminuya el \textit{learning rate} en el entrenamiento y haga que no se estanquen sus valores.
+
 
 
 \section{Modelo \textit{NASNetMobile} 2}\label{sec:sec5.8}
