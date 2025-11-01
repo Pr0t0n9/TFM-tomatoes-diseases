@@ -36,8 +36,11 @@
 \contentsline {figure}{\numberline {5.15}{\ignorespaces \color {slcolor}{\underline {Matriz de confusión del modelo \textit {MobileNetV2} 3}}}}{52}{figure.5.15}%
 \contentsline {figure}{\numberline {5.16}{\ignorespaces \color {slcolor}{\underline {Histórico de métricas del del modelo \textit {EfficientNetB0} 1}}}}{53}{figure.5.16}%
 \contentsline {figure}{\numberline {5.17}{\ignorespaces \color {slcolor}{\underline {Histórico de métricas del entrenamiento del modelo \textit {EfficientNetB0} 2}}}}{54}{figure.5.17}%
-\contentsline {figure}{\numberline {5.18}{\ignorespaces \color {slcolor}{\underline {Histórico de métricas del entrenamiento del modelo \textit {EfficientNetB0} 3}}}}{55}{figure.5.18}%
-\contentsline {figure}{\numberline {5.19}{\ignorespaces \color {slcolor}{\underline {Histórico de métricas del entrenamiento 1 del modelo \textit {NASNetMobile}}}}}{56}{figure.5.19}%
+\contentsline {figure}{\numberline {5.18}{\ignorespaces \color {slcolor}{\underline {Histórico de métricas del entrenamiento del modelo \textit {EfficientNetB0} 1}}}}{55}{figure.5.18}%
+\contentsline {figure}{\numberline {5.19}{\ignorespaces \color {slcolor}{\underline {Histórico de métricas del entrenamiento del modelo \textit {NASNetMobile} 1}}}}{56}{figure.5.19}%
+\contentsline {figure}{\numberline {5.20}{\ignorespaces \color {slcolor}{\underline {Histórico de métricas del entrenamiento del modelo \textit {NASNetMobile} 2}}}}{58}{figure.5.20}%
+\contentsline {figure}{\numberline {5.21}{\ignorespaces \color {slcolor}{\underline {Resumen de métricas del modelo \textit {NASNetMobile} 2}}}}{59}{figure.5.21}%
+\contentsline {figure}{\numberline {5.22}{\ignorespaces \color {slcolor}{\underline {Matriz de confusión del modelo \textit {NASNetMobile} 2}}}}{60}{figure.5.22}%
 \addvspace {10\p@ }
 \def \@chapapp {\appendixname }
 \addvspace {10\p@ }

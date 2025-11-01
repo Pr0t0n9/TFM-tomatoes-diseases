@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.9.6)  1 NOV 2025 13:26
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.9.6)  1 NOV 2025 16:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1635,6 +1635,9 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 37.
 Package tocbasic Info: Using my definition of `\numberline' on input line 38.
 Package tocbasic Info: Using my definition of `\numberline' on input line 39.
 Package tocbasic Info: Using my definition of `\numberline' on input line 40.
+Package tocbasic Info: Using my definition of `\numberline' on input line 41.
+Package tocbasic Info: Using my definition of `\numberline' on input line 42.
+Package tocbasic Info: Using my definition of `\numberline' on input line 43.
 )
 \tf@lof=\write6
 \openout6 = `TFT.lof'.
@@ -2244,16 +2247,43 @@ ype bmp)
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [56]
+File: ./Images/Resultados/Histórico Métricas/nasnetmobile_2.png Graphic file (t
+ype bmp)
+<./Images/Resultados/Histórico Métricas/nasnetmobile_2.png>
+
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [57]
+
+LaTeX Warning: Reference `fig:confusion_matrix_nasntmobile_2' on page 58 undefi
+ned on input line 1198.
+
+File: ./Images/Resultados/Métricas resumen/nasnetmobile_2.png Graphic file (typ
+e bmp)
+<./Images/Resultados/Métricas resumen/nasnetmobile_2.png>
+File: ./Images/Resultados/Matriz de confusión/nasnetmobile_2.png Graphic file (
+type bmp)
+<./Images/Resultados/Matriz de confusión/nasnetmobile_2.png>
+
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[58]
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[59]
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[60]
 chapter 6.
 
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[58
+[61
 
 ]
 chapter A.
@@ -2261,10 +2291,10 @@ chapter A.
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[59
+[62
 
 ]
-Overfull \hbox (9.84406pt too wide) in paragraph at lines 1184--1184
+Overfull \hbox (9.84406pt too wide) in paragraph at lines 1240--1240
 \T1/phv/m/n/12 Geeks. Con-sul-ta-do el 28 de oc-tu-bre de 2025, des-de []$https
  : / / www . geeksforgeeks .
  []
@@ -2273,22 +2303,22 @@ Overfull \hbox (9.84406pt too wide) in paragraph at lines 1184--1184
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[60
+[63
 
 ]
-Overfull \hbox (5.24687pt too wide) in paragraph at lines 1184--1184
+Overfull \hbox (5.24687pt too wide) in paragraph at lines 1240--1240
 [][]\T1/phv/m/n/12 Gevens, A., & Wil-bur, J. (2014). \T1/phv/m/sl/12 To-ma-to L
 a-te Blight\T1/phv/m/n/12 . Uni-ver-sity of Winsconsin-Madison.
  []
 
 
-Overfull \hbox (18.43239pt too wide) in paragraph at lines 1184--1184
+Overfull \hbox (18.43239pt too wide) in paragraph at lines 1240--1240
 [][]\T1/phv/m/n/12 Hazzard, R. (2022, ju-lio). \T1/phv/m/sl/12 Two-spotted Spi-
 der Mi-te\T1/phv/m/n/12 . Uni-ver-sity of Mas-sa-chu-setts Amherst.
  []
 
 
-Overfull \hbox (11.04686pt too wide) in paragraph at lines 1184--1184
+Overfull \hbox (11.04686pt too wide) in paragraph at lines 1240--1240
 \T1/phv/m/n/12 Con-sul-ta-do el 23 de oc-tu-bre de 2025, des-de []$https : / / 
 www . umass . edu / agriculture -[]
  []
@@ -2297,14 +2327,14 @@ www . umass . edu / agriculture -[]
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[61]
-Overfull \hbox (9.6869pt too wide) in paragraph at lines 1184--1184
+[64]
+Overfull \hbox (9.6869pt too wide) in paragraph at lines 1240--1240
 [][]\T1/phv/m/n/12 Pacific North-west con-tri-bu-tors. (2025a). \T1/phv/m/sl/12
  oma-to (So-la-num lycopersicum)-Bacterial Spot\T1/phv/m/n/12 .
  []
 
 
-Overfull \hbox (1.56319pt too wide) in paragraph at lines 1184--1184
+Overfull \hbox (1.56319pt too wide) in paragraph at lines 1240--1240
 [][]\T1/phv/m/n/12 Pacific North-west con-tri-bu-tors. (2025b). \T1/phv/m/sl/12
  To-ma-to (So-la-num lycopersicum)-Early Blight\T1/phv/m/n/12 .
  []
@@ -2313,7 +2343,7 @@ Overfull \hbox (1.56319pt too wide) in paragraph at lines 1184--1184
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[62] 
+[65] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (TFT.aux
 LaTeX Info: Redefining \sptext on input line 13.
@@ -2324,17 +2354,21 @@ LaTeX Info: Redefining \% on input line 13.
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package logreq Info: Writing requests to 'TFT.run.xml'.
 \openout1 = `TFT.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38081 strings out of 403249
- 785805 string characters out of 5458377
- 1871083 words of memory out of 5000000
- 66034 multiletter control sequences out of 15000+600000
+ 38116 strings out of 403249
+ 787610 string characters out of 5458377
+ 1871493 words of memory out of 5000000
+ 66068 multiletter control sequences out of 15000+600000
  657801 words of font info for 80 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  108i,17n,107p,11285b,5561s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on TFT.pdf (62 pages).
+Output written on TFT.pdf (65 pages).

@@ -34,8 +34,8 @@
 \contentsline {section}{\numberline {5.6}Modelo \textit {EfficientNetB0} 3}{55}{section.5.6}%
 \contentsline {section}{\numberline {5.7}Modelo \textit {NASNetMobile} 1}{56}{section.5.7}%
 \contentsline {section}{\numberline {5.8}Modelo \textit {NASNetMobile} 2}{57}{section.5.8}%
-\contentsline {chapter}{\numberline {6}Conclusiones}{58}{chapter.6}%
+\contentsline {chapter}{\numberline {6}Conclusiones}{61}{chapter.6}%
 \def \@chapapp {\appendixname }
-\contentsline {chapter}{\numberline {A}Anexo I: Ejemplo de anexo}{59}{appendix.Alph1}%
+\contentsline {chapter}{\numberline {A}Anexo I: Ejemplo de anexo}{62}{appendix.Alph1}%
 \contentsfinish 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -645,7 +645,7 @@ Finalmente para la compilación se usa el optimizador Adam, la función de pérd
 
 \subsection{Modelo \textit{NASNetMobile} 2}\label{sec:sec4.4.8}
 
-Este modelo usa de capa base \textit{NASNetMobile} preentrenada con los pesos de \textit{ImageNet}. Posteriormente se congelan las capas del modelo base para evitar que los pesos se modifiquen durante el entrenamiento, pero en esta ocasión se descongelan algunas capas, usando la técnica de \textit{fine tuning}. Concretamente, se descongela a partir de la capa 100 con el objetivo de que el modelo se adapte mejor a nuestro caso concreto como se explica en el Cuadro \ref{tab:arquitectura_NASNetMobile}. A continuación se añade una capa de \textit{GlobalAveragePooling} y una capa densa con 11 neuronas y función de activación \textit{softmax}, ya que nos enfrentamos a una clasificación de 11 clases. Esta información es la que se muestra en la Figura \ref{fig:nasnetmobile_2}.
+Este modelo usa de capa base \textit{NASNetMobile} preentrenada con los pesos de \textit{ImageNet}. Posteriormente se congelan las capas del modelo base para evitar que los pesos se modifiquen durante el entrenamiento, pero en esta ocasión se descongelan algunas capas, usando la técnica de \textit{fine tuning}. Concretamente, se descongela a partir de la capa 60 con el objetivo de que el modelo se adapte mejor a nuestro caso concreto como se explica en el Cuadro \ref{tab:arquitectura_NASNetMobile}. A continuación se añade una capa de \textit{GlobalAveragePooling} y una capa densa con 11 neuronas y función de activación \textit{softmax}, ya que nos enfrentamos a una clasificación de 11 clases. Esta información es la que se muestra en la Figura \ref{fig:nasnetmobile_2}.
 
 \begin{figure}[ht]
 \begin{center}
@@ -1123,7 +1123,7 @@ Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[scale=0.5]{./Images/Resultados/Histórico Métricas/efficientnetb0_3.png}
-\caption{\headlinecolor{\underline{Histórico de métricas del entrenamiento del modelo \textit{EfficientNetB0} 3}}}
+\caption{\headlinecolor{\underline{Histórico de métricas del entrenamiento del modelo \textit{EfficientNetB0} 1}}}
 \label{fig:summary_metrics_efficientnetb0_3}
 \end{center}
 \end{figure}
@@ -1142,13 +1142,14 @@ En definitiva, se puede decir que se ha disminuido el sobreajuste, el modelo ha 
 
 \section{Modelo \textit{NASNetMobile} 1}\label{sec:sec5.7}
 
-En esta sección se van a mostrar los resultados del entrenamiento del modelo descrito en la subsección \ref{sec:sec4.4.7}. 
+En esta sección se van a mostrar los resultados del entrenamiento del modelo descrito en la subsección \ref{sec:sec4.4.7}. Este entrenamiento se ha realizado usando los pesos de clases descritos en el Cuadro \ref{tab:pesos_por_clase_entrenamiento}.Solo see ha sometido a 15 épocas y se han usado los callbacks de \textit{ModelCheckpoint} e \textit{HistorySaver}, ya que el objetivo de este entrenamiento es observar la tendencia inicial.
+
 Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las métricas recogidas en el fichero generado por el callback \textit{HistorySaver} en la Figura \ref{fig:metrics_historic_nasnetmobile_1}.
 
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[scale=0.5]{./Images/Resultados/Histórico Métricas/nasnetmobile_1.png}
-\caption{\headlinecolor{\underline{Histórico de métricas del entrenamiento 1 del modelo \textit{NASNetMobile}}}}
+\caption{\headlinecolor{\underline{Histórico de métricas del entrenamiento del modelo \textit{NASNetMobile} 1}}}
 \label{fig:metrics_historic_nasnetmobile_1}
 \end{center}
 \end{figure}
@@ -1169,6 +1170,61 @@ Para mejorar este resultado se podría entrenar más épocas añadiendo los call
 
 
 \section{Modelo \textit{NASNetMobile} 2}\label{sec:sec5.8}
+
+En esta sección se van a mostrar los resultados del entrenamiento del modelo descrito en la subsección \ref{sec:sec4.4.8}. Este entrenamiento se ha realizado usando los pesos de clases descritos en el Cuadro \ref{tab:pesos_por_clase_entrenamiento}. Se ha sometido a 10 épocas y se han usado los callbacks de \textit{ModelCheckpoint} e \textit{HistorySaver}.
+
+Para mostrar los resultados del mismo se va a comenzar mostrando las métricas recogidas en el fichero generado por el callback \textit{HistorySaver} en la Figura \ref{fig:metrics_historic_nasnetmobile_2}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.45]{./Images/Resultados/Histórico Métricas/nasnetmobile_2.png}
+\caption{\headlinecolor{\underline{Histórico de métricas del entrenamiento del modelo \textit{NASNetMobile} 2}}}
+\label{fig:metrics_historic_nasnetmobile_2}
+\end{center}
+\end{figure}
+
+En esta figura se puede observar el comportamiento de las métricas de precisión y pérdida de entrenamiento y validación a lo largo de las épocas a las que se ha sometido el modelo descrito en la subsección \ref{sec:sec4.4.8} en el entrenamiento. A continuación se describe lo que se puede interpretar:  
+
+\begin{bulletlist}
+\item Precisión de entrenamiento: Comienza alrededor de 0.2 y sube rápidamente a un valor cercano a 0.9, mostrando que el modelo aprende bien de los datos de entrenamiento.
+\item Pérdida de entrenamiento: Disminuye de un valor cercano a 2 hasta cerca de 0.25, lo que confirma que el modelo está optimizando correctamente con la función de pérdida elegida para los datos de entrenamiento.
+\item Precisión de validación: Aumenta de un valor próximo a 0.2 a un valor cercano a 0.9, lo que muestra que el modelo aprende bien de datos distintos a los de entrenamiento.
+\item Pérdida de validación: Disminuye de un valor cercano a 2 a un valor próximo a 0.25, confirmando que la función de pérdida optimiza bien el modelo.
+\end{bulletlist}
+
+
+En resumen, ambas métricas de precisión tienden a subir acercándose a 1 y las métricas de pérdidas a bajar acercándose a 0. Ambas tendencias se realizan de manera progresiva sin señales de \textit{overfitting}. 
+
+En términos generales se tiene un buen modelo, pero para poder comparar con el resto es necesario realizar un análisis de métricas por clases. Para ello se van a mostrar las métricas del método \texttt{classification\_report} de la librería \textit{Sklearn} en la Figura \ref{fig:metrics_summary_nasnetmobile_2} y la matriz de confusión en la Figura \ref{fig:confusion_matrix_nasntmobile_2}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.7]{./Images/Resultados/Métricas resumen/nasnetmobile_2.png}
+\caption{\headlinecolor{\underline{Resumen de métricas del modelo \textit{NASNetMobile} 2}}}
+\label{fig:metrics_summary_nasnetmobile_2}
+\end{center}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.5]{./Images/Resultados/Matriz de confusión/nasnetmobile_2.png}
+\caption{\headlinecolor{\underline{Matriz de confusión del modelo \textit{NASNetMobile} 2}}}
+\label{fig:confusion_matrix_nasnetmobile_2}
+\end{center}
+\end{figure}
+
+En general se obtiene un buen rendimiento, existiendo un buen balance entre precisión y sensibilidad en practicamente todas las clases. Todos los valores de ambas métricas se encuentran entre 0.8 y 0.99, demostrando que no existen demasiadas diferencias entre las clases, afirmando la robustez del modelo.
+
+En cuanto a los resultados de la matriz de confusión de la Figura \ref{fig:confusion_matrix_nasnetmobile_2} :
+
+\begin{bulletlist}
+\item Las clases \texttt{Tomato\_Yellow\_Leaf\_Curl\_Virus}, \texttt{Tomato\_mosaic\_virus} y \texttt{healthy} son clasificadas casi a la perfección. Cuando nuestro modelo predice esas clases tiene una tas de acierto mayor al 95\%.
+\item Las clases \texttt{Septoria\_Leaf\_spot}, \texttt{Early\_blight} y \texttt{Late\_blight} y son las más conflictivas, ya que el modelo tiende a clasificar otras imágenes como ellas.
+\end{bulletlist}
+
+Este modelo tiene un comportamiento sólido y equilibrado, generaliza bien y consigue que incluso las clases con menos muestras tengan buenos niveles de precisión y sensibilidad.
+
+Descongelar desde la capa 60 hacia adelante ha sido una excelente elección. Se ha permitido que los bloques finales aprendan patrones específicos de las hojas y texturas de las enfermedades y el learning rate bajo fue clave para no destruir los pesos de ImageNet.
 
 
 \chapter{Conclusiones}\label{cap:cap6}
