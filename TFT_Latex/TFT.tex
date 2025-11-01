@@ -893,7 +893,7 @@ El modelo con obtenido en la subsección \ref{sec:sec5.1.1} equilibra mejor los 
 
 \subsection{Entrenamiento 3}\label{sec:sec5.1.3}
 
-Este entrenamiento se ha realizado usando los pesos de clases descritos en el Cuadro \ref{tab:pesos_por_clase_entrenamiento}. Solo se ha sometido a 20 épocas y además de los callbacks de \textit{ModelCheckpoint} e \textit{HistorySaver}, se han usado también los callbacks de ReduceLROnPlateau y EarlyStopping.
+Este entrenamiento se ha realizado usando los pesos de clases descritos en el Cuadro \ref{tab:pesos_por_clase_entrenamiento}. Se ha sometido a 20 épocas y además de los callbacks de \textit{ModelCheckpoint} e \textit{HistorySaver}, se han usado también los callbacks de ReduceLROnPlateau y EarlyStopping.
 
 Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las métricas recogidas en el fichero generado por el callback \textit{HistorySaver} en la Figura \ref{fig:metrics_historic_mobilenetv2_1_3}.
 
@@ -915,8 +915,6 @@ En esta figura se puede observar el comportamiento de las métricas de precisió
 \end{bulletlist}
 
 En resumen, ambas métricas de precisión tienden a subir acercándose a 1 y las métricas de pérdidas a bajar acercándose a 0. Ambas tendencias se realizan de manera progresiva sin señales de \textit{overfitting}. Cabe destacar que el callback de ReduceLROnPlateau se ha activado en la época 13 reduciendo el learning rate de \texttt{1e-3} a \texttt{5e-4} y en la época 18 reduciendo el learning rate de \texttt{5e-4} a \texttt{2.5e-4}, esxplicando la estabilización que existe.
-
-La precisión de entrenamiento se estabiliza alrededor de 0.85, con incrementos pequeños al final. Esto puede indicar que el modelo se está acercando a su límite de capacidad con la configuración actual. Para exprimir aún más este modelo con intención de mejorarlo se podrían congelar algunas capas del modelo base (\textit{fine tuning}) y reducir el learning rate. Esto dará como resultado el modelo del la Subsección \ref{sec:sec4.4.2}.
 
 Para poder comparar este entrenamiento con el resto es necesario realizar un análisis de métricas por clases. Para ello se van a mostrar las métricas del método \texttt{classification\_report} de la librería \textit{Sklearn} en la Figura \ref{fig:metrics_summary_mobilenetv2_1_3} y la matriz de confusión en la Figura \ref{fig:confusion_matrix_mobilenetv2_1_3}.
 
@@ -951,9 +949,116 @@ Este modelo tiene un comportamiento sólido y equilibrado, generaliza bien y con
 
 \section{Modelo \textit{MobileNetV2} 2}\label{sec:sec5.2}
 
+En esta sección se explicarán los resultados obtenidos al entrenar el modelo explicado en la Subsección \ref{sec:sec4.4.2}. El entrenamiento se ha realizado usando los pesos de clases descritos en el Cuadro \ref{tab:pesos_por_clase_entrenamiento}. Se ha sometido a 20 épocas y además de los callbacks de \textit{ModelCheckpoint} e \textit{HistorySaver}, se han usado también los callbacks de ReduceLROnPlateau y EarlyStopping.
+
+Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las métricas recogidas en el fichero generado por el callback \textit{HistorySaver} en la Figura \ref{fig:metrics_historic_mobilenetv2_2}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.45]{./Images/Resultados/Histórico Métricas/mobilentv2_2.png}
+\caption{\headlinecolor{\underline{Histórico de métricas del entrenamiento del modelo \textit{MobileNetV2} 2}}}
+\label{fig:metrics_historic_mobilenetv2_2}
+\end{center}
+\end{figure}
+
+En esta figura se puede observar el comportamiento de las métricas de precisión y pérdida de entrenamiento y validación a lo largo de las épocas a las que se ha sometido el modelo descrito en la subsección \ref{sec:sec4.4.2} en el entrenamiento. A continuación se describe lo que se puede interpretar:  
+
+\begin{bulletlist}
+\item Precisión de entrenamiento: Comienza alrededor de 0.5 y sube rápidamente a un valor cercano a 0.9, mostrando que el modelo aprende bien de los datos de entrenamiento.
+\item Pérdida de entrenamiento: Disminuye de un valor cercano a 1.4 hasta cerca de 0.2, lo que confirma que el modelo está optimizando correctamente con la función de pérdida elegida para los datos de entrenamiento.
+\item Precisión de validación: Aumenta de un valor próximo a 0.5 a un valor cercano a 0.9, lo que muestra que el modelo aprende bien de datos distintos a los de entrenamiento.
+\item Pérdida de validación: Disminuye de un valor cercano a 1.4 a un valor próximo a 0.2, confirmando que la función de pérdida optimiza bien el modelo.
+\end{bulletlist}
+
+En resumen, ambas métricas de precisión tienden a subir acercándose a 1 y las métricas de pérdidas a bajar acercándose a 0. Ambas tendencias se realizan de manera progresiva sin señales de \textit{overfitting}. 
+
+En términos generales se tiene un buen modelo, pero para poder comparar con el resto es necesario realizar un análisis de métricas por clases. Para ello se van a mostrar las métricas del método \texttt{classification\_report} de la librería \textit{Sklearn} en la Figura \ref{fig:metrics_summary_mobilenetv2_2} y la matriz de confusión en la Figura \ref{fig:confusion_matrix_mobilenetv2_2}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.7]{./Images/Resultados/Métricas resumen/mobilentv2_2.png}
+\caption{\headlinecolor{\underline{Resumen de métricas del modelo \textit{MobileNetV2} 2}}}
+\label{fig:metrics_summary_mobilenetv2_2}
+\end{center}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.5]{./Images/Resultados/Matriz de confusión/mobilentv2_2.png}
+\caption{\headlinecolor{\underline{Matriz de confusión del modelo \textit{MobileNetV2} 2}}}
+\label{fig:confusion_matrix_mobilenetv2_2}
+\end{center}
+\end{figure}
+
+En general se obtiene un buen rendimiento, existiendo un buen balance entre precisión y sensibilidad en practicamente todas las clases. Todos los valores de ambas métricas se encuentran entre 0.8 y 0.99, demostrando que no existen demasiadas diferencias entre las clases, afirmando la robustez del modelo.
+
+En cuanto a los resultados de la matriz de confusión de la Figura \ref{fig:confusion_matrix_mobilenetv2_2} :
+
+\begin{bulletlist}
+\item Las clases \texttt{Tomato\_Yellow\_Leaf\_Curl\_Virus}, \texttt{Tomato\_mosaic\_virus} y \texttt{healthy} son clasificadas casi a la perfección. Cuando nuestro modelo predice esas clases tiene una tas de acierto mayor al 95\%.
+\item Las clases \texttt{Target\_Spot} y \texttt{Early\_blight} son las más conflictivas, ya que el modelo tiende a clasificar otras imágenes como ellas.
+\end{bulletlist}
+
+Este modelo tiene un comportamiento sólido y equilibrado, generaliza bien y consigue que incluso las clases con menos muestras tengan buenos niveles de precisión y sensibilidad. El modelo está aprovechando las capas de alto nivel para aprender los patrones específicos de tus hojas de tomate, sin destruir la base entrenada en ImageNet.
+
+Para seguir refinando este modelo se descongelarán más capas del modelo base y se reducirá el learning rate, estos cambos se aplican en el modelo de la Subsección \ref{sec:sec4.4.3}. 
 
 
 \section{Modelo \textit{MobileNetV2} 3}\label{sec:sec5.3}
+
+En esta sección se explicarán los resultados obtenidos al entrenar el modelo explicado en la Subsección \ref{sec:sec4.4.3}. El entrenamiento se ha realizado usando los pesos de clases descritos en el Cuadro \ref{tab:pesos_por_clase_entrenamiento}. Se ha sometido a 20 épocas y además de los callbacks de \textit{ModelCheckpoint} e \textit{HistorySaver}, se han usado también los callbacks de ReduceLROnPlateau y EarlyStopping.
+
+Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las métricas recogidas en el fichero generado por el callback \textit{HistorySaver} en la Figura \ref{fig:metrics_historic_mobilenetv2_2}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.45]{./Images/Resultados/Histórico Métricas/mobilenetv2_3.png}
+\caption{\headlinecolor{\underline{Histórico de métricas del entrenamiento del modelo \textit{MobileNetV2} 3}}}
+\label{fig:metrics_historic_mobilenetv2_3}
+\end{center}
+\end{figure}
+
+En esta figura se puede observar el comportamiento de las métricas de precisión y pérdida de entrenamiento y validación a lo largo de las épocas a las que se ha sometido el modelo descrito en la subsección \ref{sec:sec4.4.2} en el entrenamiento. A continuación se describe lo que se puede interpretar:  
+
+\begin{bulletlist}
+\item Precisión de entrenamiento: Comienza alrededor de 0.5 y sube rápidamente a un valor cercano a 0.9, mostrando que el modelo aprende bien de los datos de entrenamiento.
+\item Pérdida de entrenamiento: Disminuye de un valor cercano a 1.75 hasta cerca de 0.25, lo que confirma que el modelo está optimizando correctamente con la función de pérdida elegida para los datos de entrenamiento.
+\item Precisión de validación: Aumenta de un valor próximo a 0.5 a un valor cercano a 0.9, lo que muestra que el modelo aprende bien de datos distintos a los de entrenamiento.
+\item Pérdida de validación: Disminuye de un valor cercano a 1.75 a un valor próximo a 0.25, confirmando que la función de pérdida optimiza bien el modelo.
+\end{bulletlist}
+
+En resumen, ambas métricas de precisión tienden a subir acercándose a 1 y las métricas de pérdidas a bajar acercándose a 0. Ambas tendencias se realizan de manera progresiva sin señales de \textit{overfitting}. 
+
+En términos generales se tiene un buen modelo, pero para poder comparar con el resto es necesario realizar un análisis de métricas por clases. Para ello se van a mostrar las métricas del método \texttt{classification\_report} de la librería \textit{Sklearn} en la Figura \ref{fig:metrics_summary_mobilenetv2_3} y la matriz de confusión en la Figura \ref{fig:confusion_matrix_mobilenetv2_3}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.7]{./Images/Resultados/Métricas resumen/mobilenetv2_3.png}
+\caption{\headlinecolor{\underline{Resumen de métricas del modelo \textit{MobileNetV2} 3}}}
+\label{fig:metrics_summary_mobilenetv2_3}
+\end{center}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.5]{./Images/Resultados/Matriz de confusión/mobilenetv2_3.png}
+\caption{\headlinecolor{\underline{Matriz de confusión del modelo \textit{MobileNetV2} 3}}}
+\label{fig:confusion_matrix_mobilenetv2_3}
+\end{center}
+\end{figure}
+
+En general se obtiene un buen rendimiento, existiendo un buen balance entre precisión y sensibilidad en practicamente todas las clases. Todos los valores de ambas métricas se encuentran entre 0.7 y 0.99, demostrando que no existen demasiadas diferencias entre las clases, afirmando la robustez del modelo. Comparandolo con el anterior modelo la única clase que ha mejorado es \texttt{Early\_blight} (mejora sensibilidad de 0.835 a 0.9), pero el resto de clases se mantienen en valores similares o peores.
+
+En cuanto a los resultados de la matriz de confusión de la Figura \ref{fig:confusion_matrix_mobilenetv2_3} :
+
+\begin{bulletlist}
+\item Las clases \texttt{Tomato\_Yellow\_Leaf\_Curl\_Virus}, \texttt{Tomato\_mosaic\_virus} y \texttt{healthy} son clasificadas casi a la perfección. Cuando nuestro modelo predice esas clases tiene una tas de acierto mayor al 95\%.
+\item Las clases \texttt{Target\_Spot} y \texttt{Septoria\_Leaf\_spot} son las más conflictivas, ya que el modelo tiende a clasificar otras imágenes como ellas.
+\end{bulletlist}
+
+Este modelo tiene un comportamiento sólido y equilibrado, generaliza bien y consigue que incluso las clases con menos muestras tengan buenos niveles de precisión y sensibilidad.
+
+En este modelo se han desbloquedo más capas del modelo base dando más libertad para aprender características específicas (como texturas finas de enfermedades). Pero también rompe parcialmente la estructura previa de ImageNet, reduciendo la estabilidad de las características más generales. Eso demuestra que se observen mejoras en alguna clase, pero pérdida de rendimiento general.
 
 
 
