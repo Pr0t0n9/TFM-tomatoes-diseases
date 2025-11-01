@@ -51,6 +51,7 @@
 %-------------------COMANDOS PARA TABLAS  E IMAGENES ---------------------%
 \usepackage{tikz}
 \usepackage{tabularx}
+\newcolumntype{Y}{>{\centering\arraybackslash}X} % centrado en columnas X
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %-----------------COMANDOS PARA CABECERAS Y PIE DE PAGINA -----------------%
@@ -124,7 +125,7 @@ modelos de aprendizaje profundo}
   || >{\centering}X 
   || >{\raggedleft\arraybackslash}X || }
  Titulación:\\Máster en Big Data y Ciencia de Datos\\ 
- & Alumno/a: Marín Lucas, Rubén\\DNI: 07272889-J 
+ & Alumno/a: Marín Lucas, Rubén\\DNI: 07272889J 
  & Convocatoria: \\
  Curso Académico\\ 2024-2025 
   & Director/a del TFT: Ricardo Lebrón Aguilar   
@@ -238,7 +239,7 @@ Entre las enfermedades más comunes se encuentran:
 
 \begin{figure}[ht]
 \begin{center}
-\includegraphics[scale=0.2]{./Images/Intro/Yellow-leaf-curl-virus-tomato.jpg}
+\includegraphics[scale=0.13]{./Images/Intro/Yellow-leaf-curl-virus-tomato.jpg}
 \caption{\headlinecolor{\underline{Virus de la hoja amarilla en una planta de tomate}}} % https://www.greenlife.co.ke/tomato-yellow-leaf-curl-virus/
 \label{fig:yellow_leaf_curl_virus_tomato}
 \end{center}
@@ -1226,6 +1227,55 @@ En cuanto a los resultados de la matriz de confusión de la Figura \ref{fig:conf
 Este modelo tiene un comportamiento sólido y equilibrado, generaliza bien y consigue que incluso las clases con menos muestras tengan buenos niveles de precisión y sensibilidad.
 
 Descongelar desde la capa 60 hacia adelante ha sido una excelente elección. Se ha permitido que los bloques finales aprendan patrones específicos de las hojas y texturas de las enfermedades y el learning rate bajo fue clave para no destruir los pesos de ImageNet.
+
+
+\section{Comparativa de modelos}\label{sec:sec5.9}
+
+En esta sección se van a comparar los mejores modelos que se han hallado en este estudio, es decir, se van a comparar los modelos de las subsecciones \ref{sec:sec4.4.2}, \ref{sec:sec4.4.3} y \ref{sec:sec4.4.8}, a par tir de los resultados obtenidos en las secciones \ref{sec:sec5.2}, \ref{sec:sec5.3} y \ref{sec:sec5.8} respectivamente.
+
+\begin{table}[ht] 
+\centering
+\caption{\headlinecolor{\underline{Resúmenes de modelos}}}
+\label{tab:resumen_modelos}
+\begin{tabular}{|c|c|c|c|c|} \hline
+\rowcolor{naranja}
+\multicolumn{5}{|c|}{\textbf{Resumen de modelos}} \\ \hline
+\rowcolor{naranja!30}
+Modelo & Número & Fine tuning & Learning rate & Épocas \\ \hline
+MobileNetV2 2 & 1 & 100 capas & \texttt{1e-5} & 20 \\ \hline
+MobileNetV2 3 & 2 & 80 capas & \texttt{5e-6} & 20 \\ \hline
+NASNetMobile & 3& 60 capas & \texttt{5e-6} & 15 \\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[ht] 
+\centering
+\caption{\headlinecolor{\underline{Comparativa de modelos con métricas globales}}}
+\label{tab:comparativa_modelos}
+\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}p{1.15cm}|Y|Y|>{\centering\arraybackslash}p{2cm}|>{\centering\arraybackslash}p{2cm}|Y|Y|} \hline
+\rowcolor{naranja}
+\multicolumn{7}{|c|}{\textbf{Resumen de métricas}} \\ \hline
+\rowcolor{naranja!30}
+Modelo & Precisión macro & Precisión weighted & Sensibilidad macro & Sensibilidad weighted & F1-Score macro & F1-Score weighted \\ \hline
+1 & 0.931 & 0.931 & 0.931 & 0.931 & 0.931 & 0.931 \\ \hline
+2 & 0.921 & 0.921 & 0.921 & 0.921 & 0.921 & 0.921 \\ \hline
+3 & 0.924 & 0.924 & 0.924 & 0.924 & 0.924 & 0.924 \\ \hline
+\end{tabularx}
+\end{table}
+
+Los tres modelos presentan rendimientos muy próximos, con precisiones superiores al 92\%, lo que indica una buena capacidad de generalización en la clasificación de las once clases de enfermedades.
+
+El modelo MobileNetV2 con fine-tuning de 100 capas y learning rate de 1e-5 obtiene las mejores métricas globales, alcanzando un accuracy del 93.9\% y un f1-score macro de 0.939. Este modelo destaca por su rendimiento equilibrado en la mayoría de las clases, con especial solidez en Tomato mosaic virus (f1 = 0.974) y Healthy (f1 = 0.968).
+
+En comparación, el modelo MobileNetV2 (fine-tuning 80) muestra un rendimiento ligeramente inferior (accuracy 92.4\%), aunque mantiene una buena estabilidad entre clases. Las diferencias más notables respecto al modelo anterior se observan en Septoria leaf spot y Spider mites, donde presenta valores de recall algo más bajos.
+
+Por su parte, NASNetMobile (fine-tuning 60) alcanza un rendimiento global similar (accuracy 92.0\%), con un comportamiento especialmente bueno en las clases Spider mites (f1 = 0.962) y Target Spot (f1 = 0.931). Sin embargo, en otras clases como Bacterial spot o Septoria leaf spot su precisión se reduce notablemente, lo que sugiere una menor estabilidad interclase.
+
+En conjunto, los resultados confirman que las arquitecturas basadas en MobileNetV2 ofrecen un mejor compromiso entre rendimiento y eficiencia computacional en este conjunto de datos.
+Las diferencias entre los modelos son moderadas (menos de dos puntos porcentuales en accuracy), pero la configuración con fine-tuning más profundo (100 capas) muestra una ligera ventaja consistente en las métricas promedio y una mayor estabilidad entre clases.
+
+Estos resultados serán considerados en el apartado de Conclusiones para la selección del modelo final.
 
 
 \chapter{Conclusiones}\label{cap:cap6}

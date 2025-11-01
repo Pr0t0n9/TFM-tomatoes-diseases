@@ -34,6 +34,7 @@
 \contentsline {section}{\numberline {5.6}Modelo \textit {EfficientNetB0} 3}{51}{section.5.6}%
 \contentsline {section}{\numberline {5.7}Modelo \textit {NASNetMobile} 1}{52}{section.5.7}%
 \contentsline {section}{\numberline {5.8}Modelo \textit {NASNetMobile} 2}{54}{section.5.8}%
-\contentsline {chapter}{\numberline {6}Conclusiones}{57}{chapter.6}%
+\contentsline {section}{\numberline {5.9}Comparativa de modelos}{56}{section.5.9}%
+\contentsline {chapter}{\numberline {6}Conclusiones}{58}{chapter.6}%
 \contentsfinish 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
