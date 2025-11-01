@@ -1,11 +1,12 @@
-\documentclass[12pt,a4paper]{scrreprt}
+\documentclass[11pt,a4paper]{scrreprt}
 
 % Gráficos y geometría
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
-\usepackage[left=2.75cm,right=2.6cm,top=3.5cm,bottom=3.5cm]{geometry}
+\usepackage[left=3cm,right=3cm,top=4.4cm,bottom=2.19cm]{geometry} % márgenes 4.4 cm superior, 2.19 cm. inferior, izquierdo y derecho de 3 cm
+
 
 
 % Índices y listas
@@ -84,7 +85,7 @@
 
 % Interlineado y espaciado entre párrafos
 \usepackage{setspace}
-\setstretch{1.15} % interlineado 1.3
+\setstretch{1.15} % interlineado 1.15
 \setlength{\parskip}{0.8em} % espacio entre párrafos
 
 
@@ -1195,7 +1196,7 @@ En esta figura se puede observar el comportamiento de las métricas de precisió
 
 En resumen, ambas métricas de precisión tienden a subir acercándose a 1 y las métricas de pérdidas a bajar acercándose a 0. Ambas tendencias se realizan de manera progresiva sin señales de \textit{overfitting}. 
 
-En términos generales se tiene un buen modelo, pero para poder comparar con el resto es necesario realizar un análisis de métricas por clases. Para ello se van a mostrar las métricas del método \texttt{classification\_report} de la librería \textit{Sklearn} en la Figura \ref{fig:metrics_summary_nasnetmobile_2} y la matriz de confusión en la Figura \ref{fig:confusion_matrix_nasntmobile_2}.
+En términos generales se tiene un buen modelo, pero para poder comparar con el resto es necesario realizar un análisis de métricas por clases. Para ello se van a mostrar las métricas del método \texttt{classification\_report} de la librería \textit{Sklearn} en la Figura \ref{fig:metrics_summary_nasnetmobile_2} y la matriz de confusión en la Figura \ref{fig:confusion_matrix_nasnetmobile_2}.
 
 \begin{figure}[ht]
 \begin{center}
@@ -1231,9 +1232,6 @@ Descongelar desde la capa 60 hacia adelante ha sido una excelente elección. Se 
 
 Se selecciona el mejor modelo y se muestra una gráfica probando el modelo (desarrollar)
 
-
-\appendix
-\chapter{Anexo I: Ejemplo de anexo}\label{cap:anexo1}
 
 
 \printbibliography
