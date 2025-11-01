@@ -19,67 +19,1302 @@
 
 \refsection{0}
   \datalist[entry]{apa/apasortcite//global/global/global}
-    \entry{agrotendencia1}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=81264ddae791f329adec82263b96497b}{%
-           family={{Ing. Agr. Miguel Silva}},
-           familyi={I\bibinitperiod}}}%
+    \entry{research11}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=17bb9b2a407b749d8d8dd0caa85e505a}{%
+           family={Al\bibnamedelima Sahili},
+           familyi={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Zahraa},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ab9ad0fd1072886327bd8fcf16882d22}{%
+           family={Awad},
+           familyi={A\bibinitperiod},
+           given={Mariette},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
       }
-      \strng{namehash}{81264ddae791f329adec82263b96497b}
-      \strng{fullhash}{81264ddae791f329adec82263b96497b}
-      \strng{fullhashraw}{81264ddae791f329adec82263b96497b}
-      \strng{bibnamehash}{81264ddae791f329adec82263b96497b}
-      \strng{authorbibnamehash}{81264ddae791f329adec82263b96497b}
-      \strng{authornamehash}{81264ddae791f329adec82263b96497b}
-      \strng{authorfullhash}{81264ddae791f329adec82263b96497b}
-      \strng{authorfullhashraw}{81264ddae791f329adec82263b96497b}
+      \strng{namehash}{fda7991240849e2cd7fd604fe3adfd40}
+      \strng{fullhash}{fda7991240849e2cd7fd604fe3adfd40}
+      \strng{fullhashraw}{fda7991240849e2cd7fd604fe3adfd40}
+      \strng{bibnamehash}{fda7991240849e2cd7fd604fe3adfd40}
+      \strng{authorbibnamehash}{fda7991240849e2cd7fd604fe3adfd40}
+      \strng{authornamehash}{fda7991240849e2cd7fd604fe3adfd40}
+      \strng{authorfullhash}{fda7991240849e2cd7fd604fe3adfd40}
+      \strng{authorfullhashraw}{fda7991240849e2cd7fd604fe3adfd40}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv}
+      \field{title}{The Power of Transfer Learning in Agricultural Applications: AgriNet}
+      \field{year}{2022}
+      \verb{doi}
+      \verb 10.1016/j.ecoinf.2020.101182
+      \endverb
+    \endentry
+    \entry{research10}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=0775ad99a253fa10ad60ff54c863f11e}{%
+           family={Atila},
+           familyi={A\bibinitperiod},
+           given={Ümit},
+           giveni={Ü\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8b78950be008c1fbdf1c76df6a42c6cf}{%
+           family={Uçar},
+           familyi={U\bibinitperiod},
+           given={Murat},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0ccca59243d986df2c6a5a6120374744}{%
+           family={Akyol},
+           familyi={A\bibinitperiod},
+           given={Kemal},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e09fdf7c2644e8fea58b98672305cac6}{%
+           family={Uçar},
+           familyi={U\bibinitperiod},
+           given={Emine},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2d93a2140d33ce1d23f73c7e8578f90d}
+      \strng{fullhash}{88a8f62632fdc58ee1388d7a0b02f233}
+      \strng{fullhashraw}{88a8f62632fdc58ee1388d7a0b02f233}
+      \strng{bibnamehash}{88a8f62632fdc58ee1388d7a0b02f233}
+      \strng{authorbibnamehash}{88a8f62632fdc58ee1388d7a0b02f233}
+      \strng{authornamehash}{2d93a2140d33ce1d23f73c7e8578f90d}
+      \strng{authorfullhash}{88a8f62632fdc58ee1388d7a0b02f233}
+      \strng{authorfullhashraw}{88a8f62632fdc58ee1388d7a0b02f233}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ecological Informatics}
+      \field{title}{Plant leaf disease classification using EfficientNet deep learning model}
+      \field{volume}{61}
+      \field{year}{2021}
+      \field{pages}{101\bibrangedash 182}
+      \range{pages}{82}
+      \verb{doi}
+      \verb 10.1016/j.ecoinf.2020.101182
+      \endverb
+    \endentry
+    \entry{research3}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=a06a24a184d39c3aa9a7718cd9a5868d}{%
+           family={Bay},
+           familyi={B\bibinitperiod},
+           given={Herbert},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3930ab1f2439c0d8503b32a7814fb81a}{%
+           family={Ess},
+           familyi={E\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1fffde1e018446dc52c3da9c6e26ec11}{%
+           family={Tuytelaars},
+           familyi={T\bibinitperiod},
+           given={Tinne},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d3bc7b9be5061411a87f19fcdf39499c}{%
+           family={{Van Gool}},
+           familyi={V\bibinitperiod},
+           given={Luc},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{afcf849adae780548ff56e7094a304c6}
+      \strng{fullhash}{33981033b0ac39dc53953dde2c12b1c2}
+      \strng{fullhashraw}{33981033b0ac39dc53953dde2c12b1c2}
+      \strng{bibnamehash}{33981033b0ac39dc53953dde2c12b1c2}
+      \strng{authorbibnamehash}{33981033b0ac39dc53953dde2c12b1c2}
+      \strng{authornamehash}{afcf849adae780548ff56e7094a304c6}
+      \strng{authorfullhash}{33981033b0ac39dc53953dde2c12b1c2}
+      \strng{authorfullhashraw}{33981033b0ac39dc53953dde2c12b1c2}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computer Vision and Image Understanding}
+      \field{number}{3}
+      \field{title}{Speeded-Up Robust Features (SURF)}
+      \field{volume}{110}
+      \field{year}{2008}
+      \field{pages}{346\bibrangedash 359}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1016/j.cviu.2007.09.014
+      \endverb
+    \endentry
+    \entry{eorganic}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=de455674a294917b482e98b2cebb7fee}{%
+           family={{Baysal-Gurel, Fulya and Miller, Sally}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {eOrganic}%
+      }
+      \strng{namehash}{de455674a294917b482e98b2cebb7fee}
+      \strng{fullhash}{de455674a294917b482e98b2cebb7fee}
+      \strng{fullhashraw}{de455674a294917b482e98b2cebb7fee}
+      \strng{bibnamehash}{de455674a294917b482e98b2cebb7fee}
+      \strng{authorbibnamehash}{de455674a294917b482e98b2cebb7fee}
+      \strng{authornamehash}{de455674a294917b482e98b2cebb7fee}
+      \strng{authorfullhash}{de455674a294917b482e98b2cebb7fee}
+      \strng{authorfullhashraw}{de455674a294917b482e98b2cebb7fee}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Early Blight Management for Organic Tomato Production}
+      \field{urlday}{21}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2010}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://eorganic.org/node/4961
+      \endverb
+      \verb{url}
+      \verb https://eorganic.org/node/4961
+      \endverb
+    \endentry
+    \entry{research5}{article}{}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=8b39f02125fcd58c318e033e819ef0bf}{%
+           family={Chéné},
+           familyi={C\bibinitperiod},
+           given={Yann},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9106641016846be7ecb6f36314335519}{%
+           family={Rousseau},
+           familyi={R\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4c4c3cc761fd25a7dfeba4e9f6469d68}{%
+           family={Lucidarme},
+           familyi={L\bibinitperiod},
+           given={Philippe},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e74ca83892ca46fa8ee053f91f1995bb}{%
+           family={Bertheloot},
+           familyi={B\bibinitperiod},
+           given={Jessica},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2cea16229582898191f9546e027cdb97}{%
+           family={Caffier},
+           familyi={C\bibinitperiod},
+           given={Valérie},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=916a4f03c2b83e1d98c4c284337311b2}{%
+           family={Morel},
+           familyi={M\bibinitperiod},
+           given={Philippe},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d1ab5089e8c4d152b80290697d6399d0}{%
+           family={Belin},
+           familyi={B\bibinitperiod},
+           given={Étienne},
+           giveni={É\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c1612ad598beff6b99e71ba78bd1dab2}{%
+           family={Chapeau-Blondeau},
+           familyi={C\bibinithyphendelim B\bibinitperiod},
+           given={François},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e6e210c3a3c6fe4bd4cd04549f335cbf}
+      \strng{fullhash}{7640be4440f591fd1c0c883daad4007e}
+      \strng{fullhashraw}{7640be4440f591fd1c0c883daad4007e}
+      \strng{bibnamehash}{7640be4440f591fd1c0c883daad4007e}
+      \strng{authorbibnamehash}{7640be4440f591fd1c0c883daad4007e}
+      \strng{authornamehash}{e6e210c3a3c6fe4bd4cd04549f335cbf}
+      \strng{authorfullhash}{7640be4440f591fd1c0c883daad4007e}
+      \strng{authorfullhashraw}{7640be4440f591fd1c0c883daad4007e}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computers and Electronics in Agriculture}
+      \field{title}{On the use of depth camera for 3D phenotyping of entire plants}
+      \field{volume}{82}
+      \field{year}{2012}
+      \field{pages}{122\bibrangedash 127}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1016/j.compag.2011.12.007
+      \endverb
+    \endentry
+    \entry{Efficientnet}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9ee462c70f7cb116ef83b3daceefda37}{%
+           family={contributors},
+           familyi={c\bibinitperiod},
+           given={GeeksforGeeks},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {GeeksforGeeks}%
+      }
+      \strng{namehash}{9ee462c70f7cb116ef83b3daceefda37}
+      \strng{fullhash}{9ee462c70f7cb116ef83b3daceefda37}
+      \strng{fullhashraw}{9ee462c70f7cb116ef83b3daceefda37}
+      \strng{bibnamehash}{9ee462c70f7cb116ef83b3daceefda37}
+      \strng{authorbibnamehash}{9ee462c70f7cb116ef83b3daceefda37}
+      \strng{authornamehash}{9ee462c70f7cb116ef83b3daceefda37}
+      \strng{authorfullhash}{9ee462c70f7cb116ef83b3daceefda37}
+      \strng{authorfullhashraw}{9ee462c70f7cb116ef83b3daceefda37}
       \field{extraname}{1}
-      \field{sortinit}{I}
-      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{sortinit}{c}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{extradate}{1}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://agrotendencia.tv/agricultura/cultivos/hortalizas/el-cultivo-de-tomate/#Historia_del_tomate_o_jitomate}}
-      \field{note}{Accessed: 28 July 2025}
-      \field{title}{Cultivo de tomate: Cómo se realiza, plagas e importancia - Agrotendencia TV}
+      \field{title}{Efficientnet Architecture}
+      \field{urlday}{28}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
       \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.geeksforgeeks.org/computer-vision/efficientnet-architecture/
+      \endverb
+      \verb{url}
+      \verb https://www.geeksforgeeks.org/computer-vision/efficientnet-architecture/
+      \endverb
     \endentry
-    \entry{agrotendencia2}{misc}{}{}
+    \entry{MobilenetV2Architecture}{online}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=81264ddae791f329adec82263b96497b}{%
-           family={{Ing. Agr. Miguel Silva}},
-           familyi={I\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=9ee462c70f7cb116ef83b3daceefda37}{%
+           family={contributors},
+           familyi={c\bibinitperiod},
+           given={GeeksforGeeks},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
       }
-      \strng{namehash}{81264ddae791f329adec82263b96497b}
-      \strng{fullhash}{81264ddae791f329adec82263b96497b}
-      \strng{fullhashraw}{81264ddae791f329adec82263b96497b}
-      \strng{bibnamehash}{81264ddae791f329adec82263b96497b}
-      \strng{authorbibnamehash}{81264ddae791f329adec82263b96497b}
-      \strng{authornamehash}{81264ddae791f329adec82263b96497b}
-      \strng{authorfullhash}{81264ddae791f329adec82263b96497b}
-      \strng{authorfullhashraw}{81264ddae791f329adec82263b96497b}
+      \list{organization}{1}{%
+        {GeeksforGeeks}%
+      }
+      \strng{namehash}{9ee462c70f7cb116ef83b3daceefda37}
+      \strng{fullhash}{9ee462c70f7cb116ef83b3daceefda37}
+      \strng{fullhashraw}{9ee462c70f7cb116ef83b3daceefda37}
+      \strng{bibnamehash}{9ee462c70f7cb116ef83b3daceefda37}
+      \strng{authorbibnamehash}{9ee462c70f7cb116ef83b3daceefda37}
+      \strng{authornamehash}{9ee462c70f7cb116ef83b3daceefda37}
+      \strng{authorfullhash}{9ee462c70f7cb116ef83b3daceefda37}
+      \strng{authorfullhashraw}{9ee462c70f7cb116ef83b3daceefda37}
       \field{extraname}{2}
-      \field{sortinit}{I}
-      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{sortinit}{c}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{extradate}{2}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://agrotendencia.tv/agricultura/cultivos/hortalizas/el-cultivo-de-tomate/#Control_de_plagas_y_enfermedades_del_tomate}}
-      \field{note}{Accessed: 28 July 2025}
-      \field{title}{Cultivo de tomate: Cómo se realiza, plagas e importancia - Agrotendencia TV}
+      \field{title}{Mobilenet V2 Architecture in Computer Vision}
+      \field{urlday}{28}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
       \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.geeksforgeeks.org/computer-vision/mobilenet-v2-architecture-in-computer-vision/#key-features-of-mobilenet-v2
+      \endverb
+      \verb{url}
+      \verb https://www.geeksforgeeks.org/computer-vision/mobilenet-v2-architecture-in-computer-vision/#key-features-of-mobilenet-v2
+      \endverb
     \endentry
-    \entry{wikipedia2}{misc}{}{}
+    \entry{research2}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=521763e082baf91e4935f956c6c0f8b3}{%
+           family={Dalal},
+           familyi={D\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d90650ec8434180101eb4aeec8e4a0c6}{%
+           family={Triggs},
+           familyi={T\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8316a8a4748fedae6ff9c5414cecc95a}
+      \strng{fullhash}{8316a8a4748fedae6ff9c5414cecc95a}
+      \strng{fullhashraw}{8316a8a4748fedae6ff9c5414cecc95a}
+      \strng{bibnamehash}{8316a8a4748fedae6ff9c5414cecc95a}
+      \strng{authorbibnamehash}{8316a8a4748fedae6ff9c5414cecc95a}
+      \strng{authornamehash}{8316a8a4748fedae6ff9c5414cecc95a}
+      \strng{authorfullhash}{8316a8a4748fedae6ff9c5414cecc95a}
+      \strng{authorfullhashraw}{8316a8a4748fedae6ff9c5414cecc95a}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{2005 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR'05)}
+      \field{title}{Histograms of oriented gradients for human detection}
+      \field{volume}{1}
+      \field{year}{2005}
+      \field{pages}{886\bibrangedash 893}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/CVPR.2005.177
+      \endverb
+    \endentry
+    \entry{ucipm}{online}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=1341fbb637e67849ef821a874f6a9b43}{%
+           family={Davis},
+           familyi={D\bibinitperiod},
+           given={R.\bibnamedelimi M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=58c7f439f38a3fed86963ed23f0b2900}{%
+           family={Miyao},
+           familyi={M\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b21ef5ebd3e43a403e3231617b829646}{%
+           family={Subbarao},
+           familyi={S\bibinitperiod},
+           given={K.\bibnamedelimi V.},
+           giveni={K\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=50a6a37f6df6afe50a82ea358af9d1d7}{%
+           family={Stapleton},
+           familyi={S\bibinitperiod},
+           given={J.\bibnamedelimi J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=277aa518f9f73e8a9a1650e8d7bfc8aa}{%
+           family={Aegerter},
+           familyi={A\bibinitperiod},
+           given={B.\bibnamedelimi J.},
+           giveni={B\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {University of California}%
+      }
+      \strng{namehash}{08a338e544be1ccb862362b6924e7e20}
+      \strng{fullhash}{e556c579bba52f08b6401bd7d970b387}
+      \strng{fullhashraw}{e556c579bba52f08b6401bd7d970b387}
+      \strng{bibnamehash}{e556c579bba52f08b6401bd7d970b387}
+      \strng{authorbibnamehash}{e556c579bba52f08b6401bd7d970b387}
+      \strng{authornamehash}{08a338e544be1ccb862362b6924e7e20}
+      \strng{authorfullhash}{e556c579bba52f08b6401bd7d970b387}
+      \strng{authorfullhashraw}{e556c579bba52f08b6401bd7d970b387}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Tomato (Solanum lycopersicum)-Bacterial Spot}
+      \field{urlday}{23}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://ipm.ucanr.edu/agriculture/tomato/bacterial-spot/#gsc.tab=0
+      \endverb
+      \verb{url}
+      \verb https://ipm.ucanr.edu/agriculture/tomato/bacterial-spot/#gsc.tab=0
+      \endverb
+    \endentry
+    \entry{diazpendon2010tylcv}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=e8dabc42697c8d6a0714e4a918b2f858}{%
+           family={Díaz-Pendón},
+           familyi={D\bibinithyphendelim P\bibinitperiod},
+           given={J.\bibnamedelimi A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2b95a3b7dc297f7bace1002b4f1565c0}{%
+           family={Cañizares},
+           familyi={C\bibinitperiod},
+           given={M.\bibnamedelimi C.},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1b87441a29764b10bfc6ecff43fe6700}{%
+           family={Moriones},
+           familyi={M\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=be94fdee3e994e8a17c8959e8fac322f}{%
+           family={Bejarano},
+           familyi={B\bibinitperiod},
+           given={E.\bibnamedelimi R.},
+           giveni={E\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ae1d8459d033158e7a7d292a31ca16fd}{%
+           family={Czosnek},
+           familyi={C\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b63a71837aacec81b7da93c07e042133}{%
+           family={Navas-Castillo},
+           familyi={N\bibinithyphendelim C\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9f9a92756369bf332d310c995be15c33}
+      \strng{fullhash}{84d6d3bc1c225958879b981769add446}
+      \strng{fullhashraw}{84d6d3bc1c225958879b981769add446}
+      \strng{bibnamehash}{84d6d3bc1c225958879b981769add446}
+      \strng{authorbibnamehash}{84d6d3bc1c225958879b981769add446}
+      \strng{authornamehash}{9f9a92756369bf332d310c995be15c33}
+      \strng{authorfullhash}{84d6d3bc1c225958879b981769add446}
+      \strng{authorfullhashraw}{84d6d3bc1c225958879b981769add446}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Molecular Plant Pathology}
+      \field{number}{4}
+      \field{title}{Tomato yellow leaf curl viruses: ménage à trois between the virus complex, the plant and the whitefly vector}
+      \field{volume}{11}
+      \field{year}{2010}
+      \field{pages}{441\bibrangedash 450}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1111/j.1364-3703.2010.00618.x
+      \endverb
+    \endentry
+    \entry{research12}{article}{}{}
+      \name{author}{9}{}{%
+        {{un=0,uniquepart=base,hash=c3778c53419e6e4e2598e6eaae6ce1a3}{%
+           family={Dong},
+           familyi={D\bibinitperiod},
+           given={Xinyu},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2fcad2f085abd2fe54e0e80222881976}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Ki},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ac867844c38288b5e646ad84a16108dd}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Qianding},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9ee66ca0f30ca7794398e2e1d2463195}{%
+           family={Ge},
+           familyi={G\bibinitperiod},
+           given={Qinglong},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cbf24ccafbfa34bc4744fc143187ca7d}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Kejun},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=13f64a3ea3d40c1de2085f309067ad35}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Xingkai},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=90487b7a646f853877979b10b40210ff}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Xue},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=18fd61fd80ec91fb9347b6c9358d6b82}{%
+           family={Liang},
+           familyi={L\bibinitperiod},
+           given={Lei},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1e99223955878129336412c789377803}{%
+           family={Hao},
+           familyi={H\bibinitperiod},
+           given={Gefei},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a768a45a2b431840612da1a962217c92}
+      \strng{fullhash}{99545ab97c0075904622355943f880a1}
+      \strng{fullhashraw}{99545ab97c0075904622355943f880a1}
+      \strng{bibnamehash}{99545ab97c0075904622355943f880a1}
+      \strng{authorbibnamehash}{99545ab97c0075904622355943f880a1}
+      \strng{authornamehash}{a768a45a2b431840612da1a962217c92}
+      \strng{authorfullhash}{99545ab97c0075904622355943f880a1}
+      \strng{authorfullhashraw}{99545ab97c0075904622355943f880a1}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Plant Phenomics}
+      \field{title}{PDDD-PreTrain: A Series of Commonly Used Pre-Trained Models Support Image-Based Plant Disease Diagnosis}
+      \field{volume}{5}
+      \field{year}{2023}
+      \field{pages}{0054}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.34133/plantphenomics.0054
+      \endverb
+    \endentry
+    \entry{britannica}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9064e193d60d1840eaeec38c9eda51f4}{%
+           family={{Editors of Encyclopedia Britannica}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Encyclopedia Britannica}%
+      }
+      \strng{namehash}{9064e193d60d1840eaeec38c9eda51f4}
+      \strng{fullhash}{9064e193d60d1840eaeec38c9eda51f4}
+      \strng{fullhashraw}{9064e193d60d1840eaeec38c9eda51f4}
+      \strng{bibnamehash}{9064e193d60d1840eaeec38c9eda51f4}
+      \strng{authorbibnamehash}{9064e193d60d1840eaeec38c9eda51f4}
+      \strng{authornamehash}{9064e193d60d1840eaeec38c9eda51f4}
+      \strng{authorfullhash}{9064e193d60d1840eaeec38c9eda51f4}
+      \strng{authorfullhashraw}{9064e193d60d1840eaeec38c9eda51f4}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{8}
+      \field{title}{late blight}
+      \field{urlday}{22}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.britannica.com/science/late-blight
+      \endverb
+      \verb{url}
+      \verb https://www.britannica.com/science/late-blight
+      \endverb
+    \endentry
+    \entry{research6}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=2ab6eb544c8328d9150b813e82010739}{%
+           family={Garcia-Ruiz},
+           familyi={G\bibinithyphendelim R\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6e71b79635d49e6409cbae83e432900e}{%
+           family={Sankaran},
+           familyi={S\bibinitperiod},
+           given={Sindhuja},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9d36be7b43aa19262b419c25e1ff2484}{%
+           family={Maja},
+           familyi={M\bibinitperiod},
+           given={Joe\bibnamedelima Mari},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=74443824ebfae581ba5bda740f24a65c}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Won\bibnamedelima Suk},
+           giveni={W\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=60556bdb235603627bc78f2a21b3380d}{%
+           family={Rasmussen},
+           familyi={R\bibinitperiod},
+           given={Jesper},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d108064c9eafa1e0ed6d019c9ac7ea1a}{%
+           family={Ehsani},
+           familyi={E\bibinitperiod},
+           given={Reza},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9ba4c097fe4809e170ff9a40fe8a80d9}
+      \strng{fullhash}{640b368d325f98b69d8e8b2adc24f058}
+      \strng{fullhashraw}{640b368d325f98b69d8e8b2adc24f058}
+      \strng{bibnamehash}{640b368d325f98b69d8e8b2adc24f058}
+      \strng{authorbibnamehash}{640b368d325f98b69d8e8b2adc24f058}
+      \strng{authornamehash}{9ba4c097fe4809e170ff9a40fe8a80d9}
+      \strng{authorfullhash}{640b368d325f98b69d8e8b2adc24f058}
+      \strng{authorfullhashraw}{640b368d325f98b69d8e8b2adc24f058}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computers and Electronics in Agriculture}
+      \field{title}{Comparison of two aerial imaging platforms for identification of Huanglongbing-infected citrus trees}
+      \field{volume}{91}
+      \field{year}{2012}
+      \field{pages}{106\bibrangedash 115}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1016/j.compag.2012.12.002
+      \endverb
+    \endentry
+    \entry{winsconsinmadison}{online}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=14115e105e1d9484be260fbbc2e7c48d}{%
+           family={Gevens},
+           familyi={G\bibinitperiod},
+           given={Amanda},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4f1a01c6eadf133136e6908314901378}{%
+           family={Wilbur},
+           familyi={W\bibinitperiod},
+           given={Jaimie},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {University of Winsconsin-Madison}%
+      }
+      \strng{namehash}{338f240e5f2c87a56adce1ec6dc53ed8}
+      \strng{fullhash}{338f240e5f2c87a56adce1ec6dc53ed8}
+      \strng{fullhashraw}{338f240e5f2c87a56adce1ec6dc53ed8}
+      \strng{bibnamehash}{338f240e5f2c87a56adce1ec6dc53ed8}
+      \strng{authorbibnamehash}{338f240e5f2c87a56adce1ec6dc53ed8}
+      \strng{authornamehash}{338f240e5f2c87a56adce1ec6dc53ed8}
+      \strng{authorfullhash}{338f240e5f2c87a56adce1ec6dc53ed8}
+      \strng{authorfullhashraw}{338f240e5f2c87a56adce1ec6dc53ed8}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Tomato Late Blight}
+      \field{urlday}{22}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2014}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://vegpath.plantpath.wisc.edu/diseases/tomato-late-blight/
+      \endverb
+      \verb{url}
+      \verb https://vegpath.plantpath.wisc.edu/diseases/tomato-late-blight/
+      \endverb
+    \endentry
+    \entry{umass}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6d6b880a877de9eca570674d447cf5eb}{%
+           family={Hazzard},
+           familyi={H\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {University of Massachusetts Amherst}%
+      }
+      \strng{namehash}{6d6b880a877de9eca570674d447cf5eb}
+      \strng{fullhash}{6d6b880a877de9eca570674d447cf5eb}
+      \strng{fullhashraw}{6d6b880a877de9eca570674d447cf5eb}
+      \strng{bibnamehash}{6d6b880a877de9eca570674d447cf5eb}
+      \strng{authorbibnamehash}{6d6b880a877de9eca570674d447cf5eb}
+      \strng{authornamehash}{6d6b880a877de9eca570674d447cf5eb}
+      \strng{authorfullhash}{6d6b880a877de9eca570674d447cf5eb}
+      \strng{authorfullhashraw}{6d6b880a877de9eca570674d447cf5eb}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{7}
+      \field{title}{Two-spotted Spider Mite}
+      \field{urlday}{23}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/two-spotted-spider-mite
+      \endverb
+      \verb{url}
+      \verb https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/two-spotted-spider-mite
+      \endverb
+    \endentry
+    \entry{research7}{inbook}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=c5e3a676e2ac1164b3afcd539c131fc9}{%
+           family={Krizhevsky},
+           familyi={K\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8d569d1d5b8b5a7836017a98b430f959}{%
+           family={Sutskever},
+           familyi={S\bibinitperiod},
+           given={Ilya},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=813bd95fe553e6079cd53a567b238287}{%
+           family={Hinton},
+           familyi={H\bibinitperiod},
+           given={Geoffrey\bibnamedelima E.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{4}{}{%
+        {{hash=3ef139cfd819ad7d3af54f3d2e9507b9}{%
+           family={Pereira},
+           familyi={P\bibinitperiod},
+           given={Fernando},
+           giveni={F\bibinitperiod}}}%
+        {{hash=57683730ceb22e5d170051dedfc04a8e}{%
+           family={Burges},
+           familyi={B\bibinitperiod},
+           given={Christopher\bibnamedelimb J.\bibnamedelimi C.},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=ac762f2592005edf6bad58f566967c6c}{%
+           family={Bottou},
+           familyi={B\bibinitperiod},
+           given={Léon},
+           giveni={L\bibinitperiod}}}%
+        {{hash=68a0238356fbd88b34be8886f25938a7}{%
+           family={Weinberger},
+           familyi={W\bibinitperiod},
+           given={Kilian\bibnamedelima Q.},
+           giveni={K\bibinitperiod\bibinitdelim Q\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Curran Associates, Inc.}%
+      }
+      \strng{namehash}{dd291871bfa8ee64447232f1cca429aa}
+      \strng{fullhash}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{fullhashraw}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{bibnamehash}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{authorbibnamehash}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{authornamehash}{dd291871bfa8ee64447232f1cca429aa}
+      \strng{authorfullhash}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{authorfullhashraw}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{editorbibnamehash}{e161a1e94798321ef725ddbcb76b1a1d}
+      \strng{editornamehash}{e3983cbb240d7424d83bef9902560db4}
+      \strng{editorfullhash}{e161a1e94798321ef725ddbcb76b1a1d}
+      \strng{editorfullhashraw}{e161a1e94798321ef725ddbcb76b1a1d}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems}
+      \field{title}{ImageNet classification with deep convolutional neural networks}
+      \field{year}{2012}
+      \field{pages}{1097\bibrangedash 1105}
+      \range{pages}{9}
+    \endentry
+    \entry{research1}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=83f4643381c1cc2c483b4210498fedb0}{%
+           family={Lowe},
+           familyi={L\bibinitperiod},
+           given={David\bibnamedelima G.},
+           giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{83f4643381c1cc2c483b4210498fedb0}
+      \strng{fullhash}{83f4643381c1cc2c483b4210498fedb0}
+      \strng{fullhashraw}{83f4643381c1cc2c483b4210498fedb0}
+      \strng{bibnamehash}{83f4643381c1cc2c483b4210498fedb0}
+      \strng{authorbibnamehash}{83f4643381c1cc2c483b4210498fedb0}
+      \strng{authornamehash}{83f4643381c1cc2c483b4210498fedb0}
+      \strng{authorfullhash}{83f4643381c1cc2c483b4210498fedb0}
+      \strng{authorfullhashraw}{83f4643381c1cc2c483b4210498fedb0}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Computer Vision}
+      \field{title}{Distinctive image features from scale-invariant keypoints}
+      \field{volume}{60}
+      \field{year}{2004}
+      \field{pages}{91\bibrangedash 110}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1023/B:VISI.0000029664.99615.94
+      \endverb
+    \endentry
+    \entry{research9}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=607dbf01aa099c32de7724226a4ce9e4}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Jianbo},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=34520130998d73aedb557b3f205ffb7c}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Xiaobin},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=73000bba957f0a17ba904c8c67a9e299}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Xiaoya},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d6d287b79e53c487953c1b4005812afa}{%
+           family={Tong},
+           familyi={T\bibinitperiod},
+           given={Jin},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=902858cfe165cf5b77e0a197d66cf2fc}{%
+           family={Peng},
+           familyi={P\bibinitperiod},
+           given={Jungui},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=ad7805c3bf3e59adc5ece9d2b0adf7e4}{%
+           family={Murugappan},
+           familyi={M\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{cebfacd8cd65124c48476a817e7de346}
+      \strng{fullhash}{2e71dd5b94fa5f6d4ac648b313550896}
+      \strng{fullhashraw}{2e71dd5b94fa5f6d4ac648b313550896}
+      \strng{bibnamehash}{2e71dd5b94fa5f6d4ac648b313550896}
+      \strng{authorbibnamehash}{2e71dd5b94fa5f6d4ac648b313550896}
+      \strng{authornamehash}{cebfacd8cd65124c48476a817e7de346}
+      \strng{authorfullhash}{2e71dd5b94fa5f6d4ac648b313550896}
+      \strng{authorfullhashraw}{2e71dd5b94fa5f6d4ac648b313550896}
+      \strng{editorbibnamehash}{ad7805c3bf3e59adc5ece9d2b0adf7e4}
+      \strng{editornamehash}{ad7805c3bf3e59adc5ece9d2b0adf7e4}
+      \strng{editorfullhash}{ad7805c3bf3e59adc5ece9d2b0adf7e4}
+      \strng{editorfullhashraw}{ad7805c3bf3e59adc5ece9d2b0adf7e4}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PeerJ Comput Science}
+      \field{title}{Improved MobileNetV2 crop disease identification model for intelligent agriculture}
+      \field{volume}{9}
+      \field{year}{2023}
+      \field{pages}{e0123262}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.7717/peerj-cs.1595
+      \endverb
+    \endentry
+    \entry{cornell}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=92db798fdfbc8b87df24d26f2ff1757c}{%
+           family={{McGrath, Margaret}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Cornell CALS}%
+      }
+      \strng{namehash}{92db798fdfbc8b87df24d26f2ff1757c}
+      \strng{fullhash}{92db798fdfbc8b87df24d26f2ff1757c}
+      \strng{fullhashraw}{92db798fdfbc8b87df24d26f2ff1757c}
+      \strng{bibnamehash}{92db798fdfbc8b87df24d26f2ff1757c}
+      \strng{authorbibnamehash}{92db798fdfbc8b87df24d26f2ff1757c}
+      \strng{authornamehash}{92db798fdfbc8b87df24d26f2ff1757c}
+      \strng{authorfullhash}{92db798fdfbc8b87df24d26f2ff1757c}
+      \strng{authorfullhashraw}{92db798fdfbc8b87df24d26f2ff1757c}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Early blight on tomatoes}
+      \field{urlday}{21}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://blogs.cornell.edu/livegpath/gallery/tomato/early-blight/
+      \endverb
+      \verb{url}
+      \verb https://blogs.cornell.edu/livegpath/gallery/tomato/early-blight/
+      \endverb
+    \endentry
+    \entry{research8}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=3d5cef4b839058d910a96eb89dd891df}{%
+           family={Mohanty},
+           familyi={M\bibinitperiod},
+           given={Sharada\bibnamedelima P.},
+           giveni={S\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=73548d83308fe701f7b5640229166fa9}{%
+           family={Hughes},
+           familyi={H\bibinitperiod},
+           given={David\bibnamedelima P.},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=932172cbce9830fa1763c426c7088452}{%
+           family={Salathé},
+           familyi={S\bibinitperiod},
+           given={Marcel},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6ea77a721d17a53fa97fdbc566620da1}
+      \strng{fullhash}{bed9ff7df5fae19ced31aab749a7cd68}
+      \strng{fullhashraw}{bed9ff7df5fae19ced31aab749a7cd68}
+      \strng{bibnamehash}{bed9ff7df5fae19ced31aab749a7cd68}
+      \strng{authorbibnamehash}{bed9ff7df5fae19ced31aab749a7cd68}
+      \strng{authornamehash}{6ea77a721d17a53fa97fdbc566620da1}
+      \strng{authorfullhash}{bed9ff7df5fae19ced31aab749a7cd68}
+      \strng{authorfullhashraw}{bed9ff7df5fae19ced31aab749a7cd68}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Frontiers in Plant Science}
+      \field{title}{Using Deep Learning for Image-Based Plant Disease Detection}
+      \field{volume}{7}
+      \field{year}{2016}
+      \verb{doi}
+      \verb 10.3389/fpls.2016.01419
+      \endverb
+    \endentry
+    \entry{kaggle}{misc}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=61fbf5b01ba5490aea523c13bf94635b}{%
+           family={Motwani},
+           familyi={M\bibinitperiod},
+           given={Ashish},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=db7ed0a5b893a714f2d5600b84ed6131}{%
+           family={Khan},
+           familyi={K\bibinitperiod},
+           given={Qasim},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Kaggle}%
+      }
+      \strng{namehash}{57a63050e2881115fed4455018d38253}
+      \strng{fullhash}{57a63050e2881115fed4455018d38253}
+      \strng{fullhashraw}{57a63050e2881115fed4455018d38253}
+      \strng{bibnamehash}{57a63050e2881115fed4455018d38253}
+      \strng{authorbibnamehash}{57a63050e2881115fed4455018d38253}
+      \strng{authornamehash}{57a63050e2881115fed4455018d38253}
+      \strng{authorfullhash}{57a63050e2881115fed4455018d38253}
+      \strng{authorfullhashraw}{57a63050e2881115fed4455018d38253}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{title}{Tomato Leaves Dataset}
+      \field{urlday}{4}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.kaggle.com/datasets/ashishmotwani/tomato/data
+      \endverb
+      \verb{url}
+      \verb https://www.kaggle.com/datasets/ashishmotwani/tomato/data
+      \endverb
+    \endentry
+    \entry{pacificnorthwest2}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6d1324a382b9d90d94922547935c4682}{%
+           family={{Pacific Northwest contributors}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Pacific Northwest Handbooks}%
+      }
+      \strng{namehash}{6d1324a382b9d90d94922547935c4682}
+      \strng{fullhash}{6d1324a382b9d90d94922547935c4682}
+      \strng{fullhashraw}{6d1324a382b9d90d94922547935c4682}
+      \strng{bibnamehash}{6d1324a382b9d90d94922547935c4682}
+      \strng{authorbibnamehash}{6d1324a382b9d90d94922547935c4682}
+      \strng{authornamehash}{6d1324a382b9d90d94922547935c4682}
+      \strng{authorfullhash}{6d1324a382b9d90d94922547935c4682}
+      \strng{authorfullhashraw}{6d1324a382b9d90d94922547935c4682}
+      \field{extraname}{1}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{omato (Solanum lycopersicum)-Bacterial Spot}
+      \field{urlday}{23}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://pnwhandbooks.org/plantdisease/host-disease/tomato-solanum-lycopersicum-bacterial-spot
+      \endverb
+      \verb{url}
+      \verb https://pnwhandbooks.org/plantdisease/host-disease/tomato-solanum-lycopersicum-bacterial-spot
+      \endverb
+    \endentry
+    \entry{pacificnorthwest1}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6d1324a382b9d90d94922547935c4682}{%
+           family={{Pacific Northwest contributors}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Pacific Northwest Handbooks}%
+      }
+      \strng{namehash}{6d1324a382b9d90d94922547935c4682}
+      \strng{fullhash}{6d1324a382b9d90d94922547935c4682}
+      \strng{fullhashraw}{6d1324a382b9d90d94922547935c4682}
+      \strng{bibnamehash}{6d1324a382b9d90d94922547935c4682}
+      \strng{authorbibnamehash}{6d1324a382b9d90d94922547935c4682}
+      \strng{authornamehash}{6d1324a382b9d90d94922547935c4682}
+      \strng{authorfullhash}{6d1324a382b9d90d94922547935c4682}
+      \strng{authorfullhashraw}{6d1324a382b9d90d94922547935c4682}
+      \field{extraname}{2}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Tomato (Solanum lycopersicum)-Early Blight}
+      \field{urlday}{21}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://pnwhandbooks.org/plantdisease/host-disease/tomato-solanum-lycopersicum-early-blight
+      \endverb
+      \verb{url}
+      \verb https://pnwhandbooks.org/plantdisease/host-disease/tomato-solanum-lycopersicum-early-blight
+      \endverb
+    \endentry
+    \entry{research4}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=a349a4a05e12ace4e8875d1c0514a3c4}{%
+           family={Raza},
+           familyi={R\bibinitperiod},
+           given={Shan-e-Ahmed},
+           giveni={S\bibinithyphendelim e\bibinithyphendelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a9a2ffc3e0671d1c11cf99450e98e429}{%
+           family={Prince},
+           familyi={P\bibinitperiod},
+           given={Gillian},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=434c1a323f0affddf2fbb0af2adf1648}{%
+           family={Clarkson},
+           familyi={C\bibinitperiod},
+           given={John\bibnamedelima P.},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b3adf5249ac917ba03ae0060f5cd8fb6}{%
+           family={Rajpoot},
+           familyi={R\bibinitperiod},
+           given={Nasir\bibnamedelima M.},
+           giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{17d71092ed1e0618af2ca0bc848d7202}
+      \strng{fullhash}{ed8f772e3e1d9cfa41bcfb4b7244d521}
+      \strng{fullhashraw}{ed8f772e3e1d9cfa41bcfb4b7244d521}
+      \strng{bibnamehash}{ed8f772e3e1d9cfa41bcfb4b7244d521}
+      \strng{authorbibnamehash}{ed8f772e3e1d9cfa41bcfb4b7244d521}
+      \strng{authornamehash}{17d71092ed1e0618af2ca0bc848d7202}
+      \strng{authorfullhash}{ed8f772e3e1d9cfa41bcfb4b7244d521}
+      \strng{authorfullhashraw}{ed8f772e3e1d9cfa41bcfb4b7244d521}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PLoS ONE}
+      \field{number}{4}
+      \field{title}{Automatic detection of diseased tomato plants using thermal and stereo visible light images}
+      \field{volume}{10}
+      \field{year}{2015}
+      \field{pages}{e0123262}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1371/journal.pone.0123262
+      \endverb
+    \endentry
+    \entry{agrotendencia1}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=df9cd126ee3b1794c55a67fc6057d18e}{%
+           family={Silva},
+           familyi={S\bibinitperiod},
+           given={Miguel},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Agrotendencia TV}%
+      }
+      \strng{namehash}{df9cd126ee3b1794c55a67fc6057d18e}
+      \strng{fullhash}{df9cd126ee3b1794c55a67fc6057d18e}
+      \strng{fullhashraw}{df9cd126ee3b1794c55a67fc6057d18e}
+      \strng{bibnamehash}{df9cd126ee3b1794c55a67fc6057d18e}
+      \strng{authorbibnamehash}{df9cd126ee3b1794c55a67fc6057d18e}
+      \strng{authornamehash}{df9cd126ee3b1794c55a67fc6057d18e}
+      \strng{authorfullhash}{df9cd126ee3b1794c55a67fc6057d18e}
+      \strng{authorfullhashraw}{df9cd126ee3b1794c55a67fc6057d18e}
+      \field{extraname}{1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{1}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cultivo de tomate: Cómo se realiza, plagas e importancia}
+      \field{urlday}{28}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://agrotendencia.tv/agricultura/cultivos/hortalizas/el-cultivo-de-tomate/#Historia_del_tomate_o_jitomate
+      \endverb
+      \verb{url}
+      \verb https://agrotendencia.tv/agricultura/cultivos/hortalizas/el-cultivo-de-tomate/#Historia_del_tomate_o_jitomate
+      \endverb
+    \endentry
+    \entry{agrotendencia2}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=df9cd126ee3b1794c55a67fc6057d18e}{%
+           family={Silva},
+           familyi={S\bibinitperiod},
+           given={Miguel},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Agrotendencia TV}%
+      }
+      \strng{namehash}{df9cd126ee3b1794c55a67fc6057d18e}
+      \strng{fullhash}{df9cd126ee3b1794c55a67fc6057d18e}
+      \strng{fullhashraw}{df9cd126ee3b1794c55a67fc6057d18e}
+      \strng{bibnamehash}{df9cd126ee3b1794c55a67fc6057d18e}
+      \strng{authorbibnamehash}{df9cd126ee3b1794c55a67fc6057d18e}
+      \strng{authornamehash}{df9cd126ee3b1794c55a67fc6057d18e}
+      \strng{authorfullhash}{df9cd126ee3b1794c55a67fc6057d18e}
+      \strng{authorfullhashraw}{df9cd126ee3b1794c55a67fc6057d18e}
+      \field{extraname}{2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{2}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cultivo de tomate: Cómo se realiza, plagas e importancia}
+      \field{urlday}{28}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://agrotendencia.tv/agricultura/cultivos/hortalizas/el-cultivo-de-tomate/#Historia_del_tomate_o_jitomate
+      \endverb
+      \verb{url}
+      \verb https://agrotendencia.tv/agricultura/cultivos/hortalizas/el-cultivo-de-tomate/#Historia_del_tomate_o_jitomate
+      \endverb
+    \endentry
+    \entry{wikipedia2}{online}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=b6aea1a416c89509a7df1cbb69249cb6}{%
            family={{Wikipedia contributors}},
            familyi={W\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Wikipedia}%
       }
       \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
       \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
@@ -93,15 +1328,21 @@
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{extradate}{1}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://es.wikipedia.org/wiki/Anexo:Producci%C3%B3n_mundial_de_tomate}}
-      \field{note}{Accessed: 28 July 2025}
-      \field{title}{Producción mundial del tomate -- Wikipedia, The Free Encyclopedia}
-      \field{year}{2025}
+      \field{title}{Producción mundial del tomate}
+      \field{urlday}{28}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://es.wikipedia.org/wiki/Anexo:Producci%C3%B3n_mundial_de_tomate
+      \endverb
+      \verb{url}
+      \verb https://es.wikipedia.org/wiki/Anexo:Producci%C3%B3n_mundial_de_tomate
+      \endverb
     \endentry
     \entry{wikipedia1}{online}{}{}
       \name{author}{1}{}{%
@@ -124,15 +1365,15 @@
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{extradate}{2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{month}{7}
-      \field{note}{Accessed: 28 July 2025}
       \field{title}{Solanum lycopersicum}
-      \field{year}{2025}
+      \field{urlday}{28}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://es.wikipedia.org/wiki/Solanum_lycopersicum
       \endverb
@@ -142,67 +1383,1302 @@
     \endentry
   \enddatalist
   \datalist[entry]{apa/global//global/global/global}
-    \entry{agrotendencia1}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=81264ddae791f329adec82263b96497b}{%
-           family={{Ing. Agr. Miguel Silva}},
-           familyi={I\bibinitperiod}}}%
+    \entry{research11}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=17bb9b2a407b749d8d8dd0caa85e505a}{%
+           family={Al\bibnamedelima Sahili},
+           familyi={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Zahraa},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ab9ad0fd1072886327bd8fcf16882d22}{%
+           family={Awad},
+           familyi={A\bibinitperiod},
+           given={Mariette},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
       }
-      \strng{namehash}{81264ddae791f329adec82263b96497b}
-      \strng{fullhash}{81264ddae791f329adec82263b96497b}
-      \strng{fullhashraw}{81264ddae791f329adec82263b96497b}
-      \strng{bibnamehash}{81264ddae791f329adec82263b96497b}
-      \strng{authorbibnamehash}{81264ddae791f329adec82263b96497b}
-      \strng{authornamehash}{81264ddae791f329adec82263b96497b}
-      \strng{authorfullhash}{81264ddae791f329adec82263b96497b}
-      \strng{authorfullhashraw}{81264ddae791f329adec82263b96497b}
+      \strng{namehash}{fda7991240849e2cd7fd604fe3adfd40}
+      \strng{fullhash}{fda7991240849e2cd7fd604fe3adfd40}
+      \strng{fullhashraw}{fda7991240849e2cd7fd604fe3adfd40}
+      \strng{bibnamehash}{fda7991240849e2cd7fd604fe3adfd40}
+      \strng{authorbibnamehash}{fda7991240849e2cd7fd604fe3adfd40}
+      \strng{authornamehash}{fda7991240849e2cd7fd604fe3adfd40}
+      \strng{authorfullhash}{fda7991240849e2cd7fd604fe3adfd40}
+      \strng{authorfullhashraw}{fda7991240849e2cd7fd604fe3adfd40}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv}
+      \field{title}{The Power of Transfer Learning in Agricultural Applications: AgriNet}
+      \field{year}{2022}
+      \verb{doi}
+      \verb 10.1016/j.ecoinf.2020.101182
+      \endverb
+    \endentry
+    \entry{research10}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=0775ad99a253fa10ad60ff54c863f11e}{%
+           family={Atila},
+           familyi={A\bibinitperiod},
+           given={Ümit},
+           giveni={Ü\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8b78950be008c1fbdf1c76df6a42c6cf}{%
+           family={Uçar},
+           familyi={U\bibinitperiod},
+           given={Murat},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0ccca59243d986df2c6a5a6120374744}{%
+           family={Akyol},
+           familyi={A\bibinitperiod},
+           given={Kemal},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e09fdf7c2644e8fea58b98672305cac6}{%
+           family={Uçar},
+           familyi={U\bibinitperiod},
+           given={Emine},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2d93a2140d33ce1d23f73c7e8578f90d}
+      \strng{fullhash}{88a8f62632fdc58ee1388d7a0b02f233}
+      \strng{fullhashraw}{88a8f62632fdc58ee1388d7a0b02f233}
+      \strng{bibnamehash}{88a8f62632fdc58ee1388d7a0b02f233}
+      \strng{authorbibnamehash}{88a8f62632fdc58ee1388d7a0b02f233}
+      \strng{authornamehash}{2d93a2140d33ce1d23f73c7e8578f90d}
+      \strng{authorfullhash}{88a8f62632fdc58ee1388d7a0b02f233}
+      \strng{authorfullhashraw}{88a8f62632fdc58ee1388d7a0b02f233}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ecological Informatics}
+      \field{title}{Plant leaf disease classification using EfficientNet deep learning model}
+      \field{volume}{61}
+      \field{year}{2021}
+      \field{pages}{101\bibrangedash 182}
+      \range{pages}{82}
+      \verb{doi}
+      \verb 10.1016/j.ecoinf.2020.101182
+      \endverb
+    \endentry
+    \entry{research3}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=a06a24a184d39c3aa9a7718cd9a5868d}{%
+           family={Bay},
+           familyi={B\bibinitperiod},
+           given={Herbert},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3930ab1f2439c0d8503b32a7814fb81a}{%
+           family={Ess},
+           familyi={E\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1fffde1e018446dc52c3da9c6e26ec11}{%
+           family={Tuytelaars},
+           familyi={T\bibinitperiod},
+           given={Tinne},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d3bc7b9be5061411a87f19fcdf39499c}{%
+           family={{Van Gool}},
+           familyi={V\bibinitperiod},
+           given={Luc},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{afcf849adae780548ff56e7094a304c6}
+      \strng{fullhash}{33981033b0ac39dc53953dde2c12b1c2}
+      \strng{fullhashraw}{33981033b0ac39dc53953dde2c12b1c2}
+      \strng{bibnamehash}{33981033b0ac39dc53953dde2c12b1c2}
+      \strng{authorbibnamehash}{33981033b0ac39dc53953dde2c12b1c2}
+      \strng{authornamehash}{afcf849adae780548ff56e7094a304c6}
+      \strng{authorfullhash}{33981033b0ac39dc53953dde2c12b1c2}
+      \strng{authorfullhashraw}{33981033b0ac39dc53953dde2c12b1c2}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computer Vision and Image Understanding}
+      \field{number}{3}
+      \field{title}{Speeded-Up Robust Features (SURF)}
+      \field{volume}{110}
+      \field{year}{2008}
+      \field{pages}{346\bibrangedash 359}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1016/j.cviu.2007.09.014
+      \endverb
+    \endentry
+    \entry{eorganic}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=de455674a294917b482e98b2cebb7fee}{%
+           family={{Baysal-Gurel, Fulya and Miller, Sally}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {eOrganic}%
+      }
+      \strng{namehash}{de455674a294917b482e98b2cebb7fee}
+      \strng{fullhash}{de455674a294917b482e98b2cebb7fee}
+      \strng{fullhashraw}{de455674a294917b482e98b2cebb7fee}
+      \strng{bibnamehash}{de455674a294917b482e98b2cebb7fee}
+      \strng{authorbibnamehash}{de455674a294917b482e98b2cebb7fee}
+      \strng{authornamehash}{de455674a294917b482e98b2cebb7fee}
+      \strng{authorfullhash}{de455674a294917b482e98b2cebb7fee}
+      \strng{authorfullhashraw}{de455674a294917b482e98b2cebb7fee}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Early Blight Management for Organic Tomato Production}
+      \field{urlday}{21}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2010}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://eorganic.org/node/4961
+      \endverb
+      \verb{url}
+      \verb https://eorganic.org/node/4961
+      \endverb
+    \endentry
+    \entry{research5}{article}{}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=8b39f02125fcd58c318e033e819ef0bf}{%
+           family={Chéné},
+           familyi={C\bibinitperiod},
+           given={Yann},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9106641016846be7ecb6f36314335519}{%
+           family={Rousseau},
+           familyi={R\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4c4c3cc761fd25a7dfeba4e9f6469d68}{%
+           family={Lucidarme},
+           familyi={L\bibinitperiod},
+           given={Philippe},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e74ca83892ca46fa8ee053f91f1995bb}{%
+           family={Bertheloot},
+           familyi={B\bibinitperiod},
+           given={Jessica},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2cea16229582898191f9546e027cdb97}{%
+           family={Caffier},
+           familyi={C\bibinitperiod},
+           given={Valérie},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=916a4f03c2b83e1d98c4c284337311b2}{%
+           family={Morel},
+           familyi={M\bibinitperiod},
+           given={Philippe},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d1ab5089e8c4d152b80290697d6399d0}{%
+           family={Belin},
+           familyi={B\bibinitperiod},
+           given={Étienne},
+           giveni={É\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c1612ad598beff6b99e71ba78bd1dab2}{%
+           family={Chapeau-Blondeau},
+           familyi={C\bibinithyphendelim B\bibinitperiod},
+           given={François},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e6e210c3a3c6fe4bd4cd04549f335cbf}
+      \strng{fullhash}{7640be4440f591fd1c0c883daad4007e}
+      \strng{fullhashraw}{7640be4440f591fd1c0c883daad4007e}
+      \strng{bibnamehash}{7640be4440f591fd1c0c883daad4007e}
+      \strng{authorbibnamehash}{7640be4440f591fd1c0c883daad4007e}
+      \strng{authornamehash}{e6e210c3a3c6fe4bd4cd04549f335cbf}
+      \strng{authorfullhash}{7640be4440f591fd1c0c883daad4007e}
+      \strng{authorfullhashraw}{7640be4440f591fd1c0c883daad4007e}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computers and Electronics in Agriculture}
+      \field{title}{On the use of depth camera for 3D phenotyping of entire plants}
+      \field{volume}{82}
+      \field{year}{2012}
+      \field{pages}{122\bibrangedash 127}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1016/j.compag.2011.12.007
+      \endverb
+    \endentry
+    \entry{Efficientnet}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9ee462c70f7cb116ef83b3daceefda37}{%
+           family={contributors},
+           familyi={c\bibinitperiod},
+           given={GeeksforGeeks},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {GeeksforGeeks}%
+      }
+      \strng{namehash}{9ee462c70f7cb116ef83b3daceefda37}
+      \strng{fullhash}{9ee462c70f7cb116ef83b3daceefda37}
+      \strng{fullhashraw}{9ee462c70f7cb116ef83b3daceefda37}
+      \strng{bibnamehash}{9ee462c70f7cb116ef83b3daceefda37}
+      \strng{authorbibnamehash}{9ee462c70f7cb116ef83b3daceefda37}
+      \strng{authornamehash}{9ee462c70f7cb116ef83b3daceefda37}
+      \strng{authorfullhash}{9ee462c70f7cb116ef83b3daceefda37}
+      \strng{authorfullhashraw}{9ee462c70f7cb116ef83b3daceefda37}
       \field{extraname}{1}
-      \field{sortinit}{I}
-      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{sortinit}{c}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{extradate}{1}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://agrotendencia.tv/agricultura/cultivos/hortalizas/el-cultivo-de-tomate/#Historia_del_tomate_o_jitomate}}
-      \field{note}{Accessed: 28 July 2025}
-      \field{title}{Cultivo de tomate: Cómo se realiza, plagas e importancia - Agrotendencia TV}
+      \field{title}{Efficientnet Architecture}
+      \field{urlday}{28}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
       \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.geeksforgeeks.org/computer-vision/efficientnet-architecture/
+      \endverb
+      \verb{url}
+      \verb https://www.geeksforgeeks.org/computer-vision/efficientnet-architecture/
+      \endverb
     \endentry
-    \entry{agrotendencia2}{misc}{}{}
+    \entry{MobilenetV2Architecture}{online}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=81264ddae791f329adec82263b96497b}{%
-           family={{Ing. Agr. Miguel Silva}},
-           familyi={I\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=9ee462c70f7cb116ef83b3daceefda37}{%
+           family={contributors},
+           familyi={c\bibinitperiod},
+           given={GeeksforGeeks},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
       }
-      \strng{namehash}{81264ddae791f329adec82263b96497b}
-      \strng{fullhash}{81264ddae791f329adec82263b96497b}
-      \strng{fullhashraw}{81264ddae791f329adec82263b96497b}
-      \strng{bibnamehash}{81264ddae791f329adec82263b96497b}
-      \strng{authorbibnamehash}{81264ddae791f329adec82263b96497b}
-      \strng{authornamehash}{81264ddae791f329adec82263b96497b}
-      \strng{authorfullhash}{81264ddae791f329adec82263b96497b}
-      \strng{authorfullhashraw}{81264ddae791f329adec82263b96497b}
+      \list{organization}{1}{%
+        {GeeksforGeeks}%
+      }
+      \strng{namehash}{9ee462c70f7cb116ef83b3daceefda37}
+      \strng{fullhash}{9ee462c70f7cb116ef83b3daceefda37}
+      \strng{fullhashraw}{9ee462c70f7cb116ef83b3daceefda37}
+      \strng{bibnamehash}{9ee462c70f7cb116ef83b3daceefda37}
+      \strng{authorbibnamehash}{9ee462c70f7cb116ef83b3daceefda37}
+      \strng{authornamehash}{9ee462c70f7cb116ef83b3daceefda37}
+      \strng{authorfullhash}{9ee462c70f7cb116ef83b3daceefda37}
+      \strng{authorfullhashraw}{9ee462c70f7cb116ef83b3daceefda37}
       \field{extraname}{2}
-      \field{sortinit}{I}
-      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{sortinit}{c}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{extradate}{2}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://agrotendencia.tv/agricultura/cultivos/hortalizas/el-cultivo-de-tomate/#Control_de_plagas_y_enfermedades_del_tomate}}
-      \field{note}{Accessed: 28 July 2025}
-      \field{title}{Cultivo de tomate: Cómo se realiza, plagas e importancia - Agrotendencia TV}
+      \field{title}{Mobilenet V2 Architecture in Computer Vision}
+      \field{urlday}{28}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
       \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.geeksforgeeks.org/computer-vision/mobilenet-v2-architecture-in-computer-vision/#key-features-of-mobilenet-v2
+      \endverb
+      \verb{url}
+      \verb https://www.geeksforgeeks.org/computer-vision/mobilenet-v2-architecture-in-computer-vision/#key-features-of-mobilenet-v2
+      \endverb
     \endentry
-    \entry{wikipedia2}{misc}{}{}
+    \entry{research2}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=521763e082baf91e4935f956c6c0f8b3}{%
+           family={Dalal},
+           familyi={D\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d90650ec8434180101eb4aeec8e4a0c6}{%
+           family={Triggs},
+           familyi={T\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8316a8a4748fedae6ff9c5414cecc95a}
+      \strng{fullhash}{8316a8a4748fedae6ff9c5414cecc95a}
+      \strng{fullhashraw}{8316a8a4748fedae6ff9c5414cecc95a}
+      \strng{bibnamehash}{8316a8a4748fedae6ff9c5414cecc95a}
+      \strng{authorbibnamehash}{8316a8a4748fedae6ff9c5414cecc95a}
+      \strng{authornamehash}{8316a8a4748fedae6ff9c5414cecc95a}
+      \strng{authorfullhash}{8316a8a4748fedae6ff9c5414cecc95a}
+      \strng{authorfullhashraw}{8316a8a4748fedae6ff9c5414cecc95a}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{2005 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR'05)}
+      \field{title}{Histograms of oriented gradients for human detection}
+      \field{volume}{1}
+      \field{year}{2005}
+      \field{pages}{886\bibrangedash 893}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/CVPR.2005.177
+      \endverb
+    \endentry
+    \entry{ucipm}{online}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=1341fbb637e67849ef821a874f6a9b43}{%
+           family={Davis},
+           familyi={D\bibinitperiod},
+           given={R.\bibnamedelimi M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=58c7f439f38a3fed86963ed23f0b2900}{%
+           family={Miyao},
+           familyi={M\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b21ef5ebd3e43a403e3231617b829646}{%
+           family={Subbarao},
+           familyi={S\bibinitperiod},
+           given={K.\bibnamedelimi V.},
+           giveni={K\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=50a6a37f6df6afe50a82ea358af9d1d7}{%
+           family={Stapleton},
+           familyi={S\bibinitperiod},
+           given={J.\bibnamedelimi J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=277aa518f9f73e8a9a1650e8d7bfc8aa}{%
+           family={Aegerter},
+           familyi={A\bibinitperiod},
+           given={B.\bibnamedelimi J.},
+           giveni={B\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {University of California}%
+      }
+      \strng{namehash}{08a338e544be1ccb862362b6924e7e20}
+      \strng{fullhash}{e556c579bba52f08b6401bd7d970b387}
+      \strng{fullhashraw}{e556c579bba52f08b6401bd7d970b387}
+      \strng{bibnamehash}{e556c579bba52f08b6401bd7d970b387}
+      \strng{authorbibnamehash}{e556c579bba52f08b6401bd7d970b387}
+      \strng{authornamehash}{08a338e544be1ccb862362b6924e7e20}
+      \strng{authorfullhash}{e556c579bba52f08b6401bd7d970b387}
+      \strng{authorfullhashraw}{e556c579bba52f08b6401bd7d970b387}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Tomato (Solanum lycopersicum)-Bacterial Spot}
+      \field{urlday}{23}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://ipm.ucanr.edu/agriculture/tomato/bacterial-spot/#gsc.tab=0
+      \endverb
+      \verb{url}
+      \verb https://ipm.ucanr.edu/agriculture/tomato/bacterial-spot/#gsc.tab=0
+      \endverb
+    \endentry
+    \entry{diazpendon2010tylcv}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=e8dabc42697c8d6a0714e4a918b2f858}{%
+           family={Díaz-Pendón},
+           familyi={D\bibinithyphendelim P\bibinitperiod},
+           given={J.\bibnamedelimi A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2b95a3b7dc297f7bace1002b4f1565c0}{%
+           family={Cañizares},
+           familyi={C\bibinitperiod},
+           given={M.\bibnamedelimi C.},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1b87441a29764b10bfc6ecff43fe6700}{%
+           family={Moriones},
+           familyi={M\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=be94fdee3e994e8a17c8959e8fac322f}{%
+           family={Bejarano},
+           familyi={B\bibinitperiod},
+           given={E.\bibnamedelimi R.},
+           giveni={E\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ae1d8459d033158e7a7d292a31ca16fd}{%
+           family={Czosnek},
+           familyi={C\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b63a71837aacec81b7da93c07e042133}{%
+           family={Navas-Castillo},
+           familyi={N\bibinithyphendelim C\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9f9a92756369bf332d310c995be15c33}
+      \strng{fullhash}{84d6d3bc1c225958879b981769add446}
+      \strng{fullhashraw}{84d6d3bc1c225958879b981769add446}
+      \strng{bibnamehash}{84d6d3bc1c225958879b981769add446}
+      \strng{authorbibnamehash}{84d6d3bc1c225958879b981769add446}
+      \strng{authornamehash}{9f9a92756369bf332d310c995be15c33}
+      \strng{authorfullhash}{84d6d3bc1c225958879b981769add446}
+      \strng{authorfullhashraw}{84d6d3bc1c225958879b981769add446}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Molecular Plant Pathology}
+      \field{number}{4}
+      \field{title}{Tomato yellow leaf curl viruses: ménage à trois between the virus complex, the plant and the whitefly vector}
+      \field{volume}{11}
+      \field{year}{2010}
+      \field{pages}{441\bibrangedash 450}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1111/j.1364-3703.2010.00618.x
+      \endverb
+    \endentry
+    \entry{research12}{article}{}{}
+      \name{author}{9}{}{%
+        {{un=0,uniquepart=base,hash=c3778c53419e6e4e2598e6eaae6ce1a3}{%
+           family={Dong},
+           familyi={D\bibinitperiod},
+           given={Xinyu},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2fcad2f085abd2fe54e0e80222881976}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Ki},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ac867844c38288b5e646ad84a16108dd}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Qianding},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9ee66ca0f30ca7794398e2e1d2463195}{%
+           family={Ge},
+           familyi={G\bibinitperiod},
+           given={Qinglong},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cbf24ccafbfa34bc4744fc143187ca7d}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Kejun},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=13f64a3ea3d40c1de2085f309067ad35}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Xingkai},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=90487b7a646f853877979b10b40210ff}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Xue},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=18fd61fd80ec91fb9347b6c9358d6b82}{%
+           family={Liang},
+           familyi={L\bibinitperiod},
+           given={Lei},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1e99223955878129336412c789377803}{%
+           family={Hao},
+           familyi={H\bibinitperiod},
+           given={Gefei},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a768a45a2b431840612da1a962217c92}
+      \strng{fullhash}{99545ab97c0075904622355943f880a1}
+      \strng{fullhashraw}{99545ab97c0075904622355943f880a1}
+      \strng{bibnamehash}{99545ab97c0075904622355943f880a1}
+      \strng{authorbibnamehash}{99545ab97c0075904622355943f880a1}
+      \strng{authornamehash}{a768a45a2b431840612da1a962217c92}
+      \strng{authorfullhash}{99545ab97c0075904622355943f880a1}
+      \strng{authorfullhashraw}{99545ab97c0075904622355943f880a1}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Plant Phenomics}
+      \field{title}{PDDD-PreTrain: A Series of Commonly Used Pre-Trained Models Support Image-Based Plant Disease Diagnosis}
+      \field{volume}{5}
+      \field{year}{2023}
+      \field{pages}{0054}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.34133/plantphenomics.0054
+      \endverb
+    \endentry
+    \entry{britannica}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9064e193d60d1840eaeec38c9eda51f4}{%
+           family={{Editors of Encyclopedia Britannica}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Encyclopedia Britannica}%
+      }
+      \strng{namehash}{9064e193d60d1840eaeec38c9eda51f4}
+      \strng{fullhash}{9064e193d60d1840eaeec38c9eda51f4}
+      \strng{fullhashraw}{9064e193d60d1840eaeec38c9eda51f4}
+      \strng{bibnamehash}{9064e193d60d1840eaeec38c9eda51f4}
+      \strng{authorbibnamehash}{9064e193d60d1840eaeec38c9eda51f4}
+      \strng{authornamehash}{9064e193d60d1840eaeec38c9eda51f4}
+      \strng{authorfullhash}{9064e193d60d1840eaeec38c9eda51f4}
+      \strng{authorfullhashraw}{9064e193d60d1840eaeec38c9eda51f4}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{8}
+      \field{title}{late blight}
+      \field{urlday}{22}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.britannica.com/science/late-blight
+      \endverb
+      \verb{url}
+      \verb https://www.britannica.com/science/late-blight
+      \endverb
+    \endentry
+    \entry{research6}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=2ab6eb544c8328d9150b813e82010739}{%
+           family={Garcia-Ruiz},
+           familyi={G\bibinithyphendelim R\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6e71b79635d49e6409cbae83e432900e}{%
+           family={Sankaran},
+           familyi={S\bibinitperiod},
+           given={Sindhuja},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9d36be7b43aa19262b419c25e1ff2484}{%
+           family={Maja},
+           familyi={M\bibinitperiod},
+           given={Joe\bibnamedelima Mari},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=74443824ebfae581ba5bda740f24a65c}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Won\bibnamedelima Suk},
+           giveni={W\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=60556bdb235603627bc78f2a21b3380d}{%
+           family={Rasmussen},
+           familyi={R\bibinitperiod},
+           given={Jesper},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d108064c9eafa1e0ed6d019c9ac7ea1a}{%
+           family={Ehsani},
+           familyi={E\bibinitperiod},
+           given={Reza},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9ba4c097fe4809e170ff9a40fe8a80d9}
+      \strng{fullhash}{640b368d325f98b69d8e8b2adc24f058}
+      \strng{fullhashraw}{640b368d325f98b69d8e8b2adc24f058}
+      \strng{bibnamehash}{640b368d325f98b69d8e8b2adc24f058}
+      \strng{authorbibnamehash}{640b368d325f98b69d8e8b2adc24f058}
+      \strng{authornamehash}{9ba4c097fe4809e170ff9a40fe8a80d9}
+      \strng{authorfullhash}{640b368d325f98b69d8e8b2adc24f058}
+      \strng{authorfullhashraw}{640b368d325f98b69d8e8b2adc24f058}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computers and Electronics in Agriculture}
+      \field{title}{Comparison of two aerial imaging platforms for identification of Huanglongbing-infected citrus trees}
+      \field{volume}{91}
+      \field{year}{2012}
+      \field{pages}{106\bibrangedash 115}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1016/j.compag.2012.12.002
+      \endverb
+    \endentry
+    \entry{winsconsinmadison}{online}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=14115e105e1d9484be260fbbc2e7c48d}{%
+           family={Gevens},
+           familyi={G\bibinitperiod},
+           given={Amanda},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4f1a01c6eadf133136e6908314901378}{%
+           family={Wilbur},
+           familyi={W\bibinitperiod},
+           given={Jaimie},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {University of Winsconsin-Madison}%
+      }
+      \strng{namehash}{338f240e5f2c87a56adce1ec6dc53ed8}
+      \strng{fullhash}{338f240e5f2c87a56adce1ec6dc53ed8}
+      \strng{fullhashraw}{338f240e5f2c87a56adce1ec6dc53ed8}
+      \strng{bibnamehash}{338f240e5f2c87a56adce1ec6dc53ed8}
+      \strng{authorbibnamehash}{338f240e5f2c87a56adce1ec6dc53ed8}
+      \strng{authornamehash}{338f240e5f2c87a56adce1ec6dc53ed8}
+      \strng{authorfullhash}{338f240e5f2c87a56adce1ec6dc53ed8}
+      \strng{authorfullhashraw}{338f240e5f2c87a56adce1ec6dc53ed8}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Tomato Late Blight}
+      \field{urlday}{22}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2014}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://vegpath.plantpath.wisc.edu/diseases/tomato-late-blight/
+      \endverb
+      \verb{url}
+      \verb https://vegpath.plantpath.wisc.edu/diseases/tomato-late-blight/
+      \endverb
+    \endentry
+    \entry{umass}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6d6b880a877de9eca570674d447cf5eb}{%
+           family={Hazzard},
+           familyi={H\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {University of Massachusetts Amherst}%
+      }
+      \strng{namehash}{6d6b880a877de9eca570674d447cf5eb}
+      \strng{fullhash}{6d6b880a877de9eca570674d447cf5eb}
+      \strng{fullhashraw}{6d6b880a877de9eca570674d447cf5eb}
+      \strng{bibnamehash}{6d6b880a877de9eca570674d447cf5eb}
+      \strng{authorbibnamehash}{6d6b880a877de9eca570674d447cf5eb}
+      \strng{authornamehash}{6d6b880a877de9eca570674d447cf5eb}
+      \strng{authorfullhash}{6d6b880a877de9eca570674d447cf5eb}
+      \strng{authorfullhashraw}{6d6b880a877de9eca570674d447cf5eb}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{7}
+      \field{title}{Two-spotted Spider Mite}
+      \field{urlday}{23}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/two-spotted-spider-mite
+      \endverb
+      \verb{url}
+      \verb https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/two-spotted-spider-mite
+      \endverb
+    \endentry
+    \entry{research7}{inbook}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=c5e3a676e2ac1164b3afcd539c131fc9}{%
+           family={Krizhevsky},
+           familyi={K\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8d569d1d5b8b5a7836017a98b430f959}{%
+           family={Sutskever},
+           familyi={S\bibinitperiod},
+           given={Ilya},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=813bd95fe553e6079cd53a567b238287}{%
+           family={Hinton},
+           familyi={H\bibinitperiod},
+           given={Geoffrey\bibnamedelima E.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{4}{}{%
+        {{hash=3ef139cfd819ad7d3af54f3d2e9507b9}{%
+           family={Pereira},
+           familyi={P\bibinitperiod},
+           given={Fernando},
+           giveni={F\bibinitperiod}}}%
+        {{hash=57683730ceb22e5d170051dedfc04a8e}{%
+           family={Burges},
+           familyi={B\bibinitperiod},
+           given={Christopher\bibnamedelimb J.\bibnamedelimi C.},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=ac762f2592005edf6bad58f566967c6c}{%
+           family={Bottou},
+           familyi={B\bibinitperiod},
+           given={Léon},
+           giveni={L\bibinitperiod}}}%
+        {{hash=68a0238356fbd88b34be8886f25938a7}{%
+           family={Weinberger},
+           familyi={W\bibinitperiod},
+           given={Kilian\bibnamedelima Q.},
+           giveni={K\bibinitperiod\bibinitdelim Q\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Curran Associates, Inc.}%
+      }
+      \strng{namehash}{dd291871bfa8ee64447232f1cca429aa}
+      \strng{fullhash}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{fullhashraw}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{bibnamehash}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{authorbibnamehash}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{authornamehash}{dd291871bfa8ee64447232f1cca429aa}
+      \strng{authorfullhash}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{authorfullhashraw}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{editorbibnamehash}{e161a1e94798321ef725ddbcb76b1a1d}
+      \strng{editornamehash}{e3983cbb240d7424d83bef9902560db4}
+      \strng{editorfullhash}{e161a1e94798321ef725ddbcb76b1a1d}
+      \strng{editorfullhashraw}{e161a1e94798321ef725ddbcb76b1a1d}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems}
+      \field{title}{ImageNet classification with deep convolutional neural networks}
+      \field{year}{2012}
+      \field{pages}{1097\bibrangedash 1105}
+      \range{pages}{9}
+    \endentry
+    \entry{research1}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=83f4643381c1cc2c483b4210498fedb0}{%
+           family={Lowe},
+           familyi={L\bibinitperiod},
+           given={David\bibnamedelima G.},
+           giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{83f4643381c1cc2c483b4210498fedb0}
+      \strng{fullhash}{83f4643381c1cc2c483b4210498fedb0}
+      \strng{fullhashraw}{83f4643381c1cc2c483b4210498fedb0}
+      \strng{bibnamehash}{83f4643381c1cc2c483b4210498fedb0}
+      \strng{authorbibnamehash}{83f4643381c1cc2c483b4210498fedb0}
+      \strng{authornamehash}{83f4643381c1cc2c483b4210498fedb0}
+      \strng{authorfullhash}{83f4643381c1cc2c483b4210498fedb0}
+      \strng{authorfullhashraw}{83f4643381c1cc2c483b4210498fedb0}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Computer Vision}
+      \field{title}{Distinctive image features from scale-invariant keypoints}
+      \field{volume}{60}
+      \field{year}{2004}
+      \field{pages}{91\bibrangedash 110}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1023/B:VISI.0000029664.99615.94
+      \endverb
+    \endentry
+    \entry{research9}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=607dbf01aa099c32de7724226a4ce9e4}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Jianbo},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=34520130998d73aedb557b3f205ffb7c}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Xiaobin},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=73000bba957f0a17ba904c8c67a9e299}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Xiaoya},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d6d287b79e53c487953c1b4005812afa}{%
+           family={Tong},
+           familyi={T\bibinitperiod},
+           given={Jin},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=902858cfe165cf5b77e0a197d66cf2fc}{%
+           family={Peng},
+           familyi={P\bibinitperiod},
+           given={Jungui},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=ad7805c3bf3e59adc5ece9d2b0adf7e4}{%
+           family={Murugappan},
+           familyi={M\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{cebfacd8cd65124c48476a817e7de346}
+      \strng{fullhash}{2e71dd5b94fa5f6d4ac648b313550896}
+      \strng{fullhashraw}{2e71dd5b94fa5f6d4ac648b313550896}
+      \strng{bibnamehash}{2e71dd5b94fa5f6d4ac648b313550896}
+      \strng{authorbibnamehash}{2e71dd5b94fa5f6d4ac648b313550896}
+      \strng{authornamehash}{cebfacd8cd65124c48476a817e7de346}
+      \strng{authorfullhash}{2e71dd5b94fa5f6d4ac648b313550896}
+      \strng{authorfullhashraw}{2e71dd5b94fa5f6d4ac648b313550896}
+      \strng{editorbibnamehash}{ad7805c3bf3e59adc5ece9d2b0adf7e4}
+      \strng{editornamehash}{ad7805c3bf3e59adc5ece9d2b0adf7e4}
+      \strng{editorfullhash}{ad7805c3bf3e59adc5ece9d2b0adf7e4}
+      \strng{editorfullhashraw}{ad7805c3bf3e59adc5ece9d2b0adf7e4}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PeerJ Comput Science}
+      \field{title}{Improved MobileNetV2 crop disease identification model for intelligent agriculture}
+      \field{volume}{9}
+      \field{year}{2023}
+      \field{pages}{e0123262}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.7717/peerj-cs.1595
+      \endverb
+    \endentry
+    \entry{cornell}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=92db798fdfbc8b87df24d26f2ff1757c}{%
+           family={{McGrath, Margaret}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Cornell CALS}%
+      }
+      \strng{namehash}{92db798fdfbc8b87df24d26f2ff1757c}
+      \strng{fullhash}{92db798fdfbc8b87df24d26f2ff1757c}
+      \strng{fullhashraw}{92db798fdfbc8b87df24d26f2ff1757c}
+      \strng{bibnamehash}{92db798fdfbc8b87df24d26f2ff1757c}
+      \strng{authorbibnamehash}{92db798fdfbc8b87df24d26f2ff1757c}
+      \strng{authornamehash}{92db798fdfbc8b87df24d26f2ff1757c}
+      \strng{authorfullhash}{92db798fdfbc8b87df24d26f2ff1757c}
+      \strng{authorfullhashraw}{92db798fdfbc8b87df24d26f2ff1757c}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Early blight on tomatoes}
+      \field{urlday}{21}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://blogs.cornell.edu/livegpath/gallery/tomato/early-blight/
+      \endverb
+      \verb{url}
+      \verb https://blogs.cornell.edu/livegpath/gallery/tomato/early-blight/
+      \endverb
+    \endentry
+    \entry{research8}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=3d5cef4b839058d910a96eb89dd891df}{%
+           family={Mohanty},
+           familyi={M\bibinitperiod},
+           given={Sharada\bibnamedelima P.},
+           giveni={S\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=73548d83308fe701f7b5640229166fa9}{%
+           family={Hughes},
+           familyi={H\bibinitperiod},
+           given={David\bibnamedelima P.},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=932172cbce9830fa1763c426c7088452}{%
+           family={Salathé},
+           familyi={S\bibinitperiod},
+           given={Marcel},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6ea77a721d17a53fa97fdbc566620da1}
+      \strng{fullhash}{bed9ff7df5fae19ced31aab749a7cd68}
+      \strng{fullhashraw}{bed9ff7df5fae19ced31aab749a7cd68}
+      \strng{bibnamehash}{bed9ff7df5fae19ced31aab749a7cd68}
+      \strng{authorbibnamehash}{bed9ff7df5fae19ced31aab749a7cd68}
+      \strng{authornamehash}{6ea77a721d17a53fa97fdbc566620da1}
+      \strng{authorfullhash}{bed9ff7df5fae19ced31aab749a7cd68}
+      \strng{authorfullhashraw}{bed9ff7df5fae19ced31aab749a7cd68}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Frontiers in Plant Science}
+      \field{title}{Using Deep Learning for Image-Based Plant Disease Detection}
+      \field{volume}{7}
+      \field{year}{2016}
+      \verb{doi}
+      \verb 10.3389/fpls.2016.01419
+      \endverb
+    \endentry
+    \entry{kaggle}{misc}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=61fbf5b01ba5490aea523c13bf94635b}{%
+           family={Motwani},
+           familyi={M\bibinitperiod},
+           given={Ashish},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=db7ed0a5b893a714f2d5600b84ed6131}{%
+           family={Khan},
+           familyi={K\bibinitperiod},
+           given={Qasim},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Kaggle}%
+      }
+      \strng{namehash}{57a63050e2881115fed4455018d38253}
+      \strng{fullhash}{57a63050e2881115fed4455018d38253}
+      \strng{fullhashraw}{57a63050e2881115fed4455018d38253}
+      \strng{bibnamehash}{57a63050e2881115fed4455018d38253}
+      \strng{authorbibnamehash}{57a63050e2881115fed4455018d38253}
+      \strng{authornamehash}{57a63050e2881115fed4455018d38253}
+      \strng{authorfullhash}{57a63050e2881115fed4455018d38253}
+      \strng{authorfullhashraw}{57a63050e2881115fed4455018d38253}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{title}{Tomato Leaves Dataset}
+      \field{urlday}{4}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.kaggle.com/datasets/ashishmotwani/tomato/data
+      \endverb
+      \verb{url}
+      \verb https://www.kaggle.com/datasets/ashishmotwani/tomato/data
+      \endverb
+    \endentry
+    \entry{pacificnorthwest2}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6d1324a382b9d90d94922547935c4682}{%
+           family={{Pacific Northwest contributors}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Pacific Northwest Handbooks}%
+      }
+      \strng{namehash}{6d1324a382b9d90d94922547935c4682}
+      \strng{fullhash}{6d1324a382b9d90d94922547935c4682}
+      \strng{fullhashraw}{6d1324a382b9d90d94922547935c4682}
+      \strng{bibnamehash}{6d1324a382b9d90d94922547935c4682}
+      \strng{authorbibnamehash}{6d1324a382b9d90d94922547935c4682}
+      \strng{authornamehash}{6d1324a382b9d90d94922547935c4682}
+      \strng{authorfullhash}{6d1324a382b9d90d94922547935c4682}
+      \strng{authorfullhashraw}{6d1324a382b9d90d94922547935c4682}
+      \field{extraname}{1}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{omato (Solanum lycopersicum)-Bacterial Spot}
+      \field{urlday}{23}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://pnwhandbooks.org/plantdisease/host-disease/tomato-solanum-lycopersicum-bacterial-spot
+      \endverb
+      \verb{url}
+      \verb https://pnwhandbooks.org/plantdisease/host-disease/tomato-solanum-lycopersicum-bacterial-spot
+      \endverb
+    \endentry
+    \entry{pacificnorthwest1}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6d1324a382b9d90d94922547935c4682}{%
+           family={{Pacific Northwest contributors}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Pacific Northwest Handbooks}%
+      }
+      \strng{namehash}{6d1324a382b9d90d94922547935c4682}
+      \strng{fullhash}{6d1324a382b9d90d94922547935c4682}
+      \strng{fullhashraw}{6d1324a382b9d90d94922547935c4682}
+      \strng{bibnamehash}{6d1324a382b9d90d94922547935c4682}
+      \strng{authorbibnamehash}{6d1324a382b9d90d94922547935c4682}
+      \strng{authornamehash}{6d1324a382b9d90d94922547935c4682}
+      \strng{authorfullhash}{6d1324a382b9d90d94922547935c4682}
+      \strng{authorfullhashraw}{6d1324a382b9d90d94922547935c4682}
+      \field{extraname}{2}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Tomato (Solanum lycopersicum)-Early Blight}
+      \field{urlday}{21}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://pnwhandbooks.org/plantdisease/host-disease/tomato-solanum-lycopersicum-early-blight
+      \endverb
+      \verb{url}
+      \verb https://pnwhandbooks.org/plantdisease/host-disease/tomato-solanum-lycopersicum-early-blight
+      \endverb
+    \endentry
+    \entry{research4}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=a349a4a05e12ace4e8875d1c0514a3c4}{%
+           family={Raza},
+           familyi={R\bibinitperiod},
+           given={Shan-e-Ahmed},
+           giveni={S\bibinithyphendelim e\bibinithyphendelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a9a2ffc3e0671d1c11cf99450e98e429}{%
+           family={Prince},
+           familyi={P\bibinitperiod},
+           given={Gillian},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=434c1a323f0affddf2fbb0af2adf1648}{%
+           family={Clarkson},
+           familyi={C\bibinitperiod},
+           given={John\bibnamedelima P.},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b3adf5249ac917ba03ae0060f5cd8fb6}{%
+           family={Rajpoot},
+           familyi={R\bibinitperiod},
+           given={Nasir\bibnamedelima M.},
+           giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{17d71092ed1e0618af2ca0bc848d7202}
+      \strng{fullhash}{ed8f772e3e1d9cfa41bcfb4b7244d521}
+      \strng{fullhashraw}{ed8f772e3e1d9cfa41bcfb4b7244d521}
+      \strng{bibnamehash}{ed8f772e3e1d9cfa41bcfb4b7244d521}
+      \strng{authorbibnamehash}{ed8f772e3e1d9cfa41bcfb4b7244d521}
+      \strng{authornamehash}{17d71092ed1e0618af2ca0bc848d7202}
+      \strng{authorfullhash}{ed8f772e3e1d9cfa41bcfb4b7244d521}
+      \strng{authorfullhashraw}{ed8f772e3e1d9cfa41bcfb4b7244d521}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PLoS ONE}
+      \field{number}{4}
+      \field{title}{Automatic detection of diseased tomato plants using thermal and stereo visible light images}
+      \field{volume}{10}
+      \field{year}{2015}
+      \field{pages}{e0123262}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1371/journal.pone.0123262
+      \endverb
+    \endentry
+    \entry{agrotendencia1}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=df9cd126ee3b1794c55a67fc6057d18e}{%
+           family={Silva},
+           familyi={S\bibinitperiod},
+           given={Miguel},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Agrotendencia TV}%
+      }
+      \strng{namehash}{df9cd126ee3b1794c55a67fc6057d18e}
+      \strng{fullhash}{df9cd126ee3b1794c55a67fc6057d18e}
+      \strng{fullhashraw}{df9cd126ee3b1794c55a67fc6057d18e}
+      \strng{bibnamehash}{df9cd126ee3b1794c55a67fc6057d18e}
+      \strng{authorbibnamehash}{df9cd126ee3b1794c55a67fc6057d18e}
+      \strng{authornamehash}{df9cd126ee3b1794c55a67fc6057d18e}
+      \strng{authorfullhash}{df9cd126ee3b1794c55a67fc6057d18e}
+      \strng{authorfullhashraw}{df9cd126ee3b1794c55a67fc6057d18e}
+      \field{extraname}{1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{1}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cultivo de tomate: Cómo se realiza, plagas e importancia}
+      \field{urlday}{28}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://agrotendencia.tv/agricultura/cultivos/hortalizas/el-cultivo-de-tomate/#Historia_del_tomate_o_jitomate
+      \endverb
+      \verb{url}
+      \verb https://agrotendencia.tv/agricultura/cultivos/hortalizas/el-cultivo-de-tomate/#Historia_del_tomate_o_jitomate
+      \endverb
+    \endentry
+    \entry{agrotendencia2}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=df9cd126ee3b1794c55a67fc6057d18e}{%
+           family={Silva},
+           familyi={S\bibinitperiod},
+           given={Miguel},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Agrotendencia TV}%
+      }
+      \strng{namehash}{df9cd126ee3b1794c55a67fc6057d18e}
+      \strng{fullhash}{df9cd126ee3b1794c55a67fc6057d18e}
+      \strng{fullhashraw}{df9cd126ee3b1794c55a67fc6057d18e}
+      \strng{bibnamehash}{df9cd126ee3b1794c55a67fc6057d18e}
+      \strng{authorbibnamehash}{df9cd126ee3b1794c55a67fc6057d18e}
+      \strng{authornamehash}{df9cd126ee3b1794c55a67fc6057d18e}
+      \strng{authorfullhash}{df9cd126ee3b1794c55a67fc6057d18e}
+      \strng{authorfullhashraw}{df9cd126ee3b1794c55a67fc6057d18e}
+      \field{extraname}{2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{2}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cultivo de tomate: Cómo se realiza, plagas e importancia}
+      \field{urlday}{28}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://agrotendencia.tv/agricultura/cultivos/hortalizas/el-cultivo-de-tomate/#Historia_del_tomate_o_jitomate
+      \endverb
+      \verb{url}
+      \verb https://agrotendencia.tv/agricultura/cultivos/hortalizas/el-cultivo-de-tomate/#Historia_del_tomate_o_jitomate
+      \endverb
+    \endentry
+    \entry{wikipedia2}{online}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=b6aea1a416c89509a7df1cbb69249cb6}{%
            family={{Wikipedia contributors}},
            familyi={W\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Wikipedia}%
       }
       \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
       \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
@@ -216,15 +2692,21 @@
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{extradate}{1}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://es.wikipedia.org/wiki/Anexo:Producci%C3%B3n_mundial_de_tomate}}
-      \field{note}{Accessed: 28 July 2025}
-      \field{title}{Producción mundial del tomate -- Wikipedia, The Free Encyclopedia}
-      \field{year}{2025}
+      \field{title}{Producción mundial del tomate}
+      \field{urlday}{28}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://es.wikipedia.org/wiki/Anexo:Producci%C3%B3n_mundial_de_tomate
+      \endverb
+      \verb{url}
+      \verb https://es.wikipedia.org/wiki/Anexo:Producci%C3%B3n_mundial_de_tomate
+      \endverb
     \endentry
     \entry{wikipedia1}{online}{}{}
       \name{author}{1}{}{%
@@ -247,15 +2729,15 @@
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{extradate}{2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{month}{7}
-      \field{note}{Accessed: 28 July 2025}
       \field{title}{Solanum lycopersicum}
-      \field{year}{2025}
+      \field{urlday}{28}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://es.wikipedia.org/wiki/Solanum_lycopersicum
       \endverb

@@ -774,7 +774,7 @@ Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[scale=0.5]{./Images/Resultados/Histórico Métricas/mobilenetv2_1_1.png}
-\caption{\headlinecolor{\underline{Histórico de métricas del entrenamiento 1 del modelo \textit{MobileNetV2}}}}
+\caption{\headlinecolor{\underline{Histórico de métricas del entrenamiento 1 del modelo \textit{MobileNetV2} 1}}}
 \label{fig:metrics_historic_mobilenetv2_1_1}
 \end{center}
 \end{figure}
@@ -797,7 +797,7 @@ Para poder comparar este entrenamiento con el de la subsección \ref{sec:sec5.1.
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[scale=0.7]{./Images/Resultados/Métricas resumen/mobilenetv2_1_1.png}
-\caption{\headlinecolor{\underline{Resumen de métricas del modelo \textit{MobileNetV2} en el entrenamiento 1}}}
+\caption{\headlinecolor{\underline{Resumen de métricas del modelo \textit{MobileNetV2} 1 en el entrenamiento 1}}}
 \label{fig:metrics_summary_mobilenetv2_1_1}
 \end{center}
 \end{figure}
@@ -805,7 +805,7 @@ Para poder comparar este entrenamiento con el de la subsección \ref{sec:sec5.1.
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[scale=0.5]{./Images/Resultados/Matriz de confusión/mobilenetv2_1_1.png}
-\caption{\headlinecolor{\underline{Matriz de confusión del modelo \textit{MobileNetV2} en el entrenamiento 1}}}
+\caption{\headlinecolor{\underline{Matriz de confusión del modelo \textit{MobileNetV2} 1 en el entrenamiento 1}}}
 \label{fig:confusion_matrix_mobilenetv2_1_1}
 \end{center}
 \end{figure}
@@ -843,7 +843,7 @@ Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[scale=0.5]{./Images/Resultados/Histórico Métricas/mobilenetv2_1_2.png}
-\caption{\headlinecolor{\underline{Histórico de métricas del entrenamiento 2 del modelo \textit{MobileNetV2}}}}
+\caption{\headlinecolor{\underline{Histórico de métricas del entrenamiento 2 del modelo \textit{MobileNetV2} 1}}}
 \label{fig:metrics_historic_mobilenetv2_1_2}
 \end{center}
 \end{figure}
@@ -864,7 +864,7 @@ El rendimiento global es prácticamente el mismo que el conseguido con el entren
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[scale=0.7]{./Images/Resultados/Métricas resumen/mobilenetv2_1_2.png}
-\caption{\headlinecolor{\underline{Resumen de métricas del modelo \textit{MobileNetV2} en el entrenamiento 2}}}
+\caption{\headlinecolor{\underline{Resumen de métricas del modelo \textit{MobileNetV2} 1 en el entrenamiento 2}}}
 \label{fig:metrics_summary_mobilenetv2_1_2}
 \end{center}
 \end{figure}
@@ -872,7 +872,7 @@ El rendimiento global es prácticamente el mismo que el conseguido con el entren
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[scale=0.5]{./Images/Resultados/Matriz de confusión/mobilenetv2_1_2.png}
-\caption{\headlinecolor{\underline{Matriz de confusión del modelo \textit{MobileNetV2} en el entrenamiento 2}}}
+\caption{\headlinecolor{\underline{Matriz de confusión del modelo \textit{MobileNetV2} 1 en el entrenamiento 2}}}
 \label{fig:confusion_matrix_mobilenetv2_1_2}
 \end{center}
 \end{figure}
@@ -893,7 +893,59 @@ El modelo con obtenido en la subsección \ref{sec:sec5.1.1} equilibra mejor los 
 
 \subsection{Entrenamiento 3}\label{sec:sec5.1.3}
 
+Este entrenamiento se ha realizado usando los pesos de clases descritos en el Cuadro \ref{tab:pesos_por_clase_entrenamiento}. Solo se ha sometido a 20 épocas y además de los callbacks de \textit{ModelCheckpoint} e \textit{HistorySaver}, se han usado también los callbacks de ReduceLROnPlateau y EarlyStopping.
 
+Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las métricas recogidas en el fichero generado por el callback \textit{HistorySaver} en la Figura \ref{fig:metrics_historic_mobilenetv2_1_3}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.5]{./Images/Resultados/Histórico Métricas/mobilenetv2_1_3.png}
+\caption{\headlinecolor{\underline{Histórico de métricas del entrenamiento 3 del modelo \textit{MobileNetV2} 1}}}
+\label{fig:metrics_historic_mobilenetv2_1_3}
+\end{center}
+\end{figure}
+
+En esta figura se puede observar el comportamiento de las métricas de precisión y pérdida de entrenamiento y validación a lo largo de las épocas a las que se ha sometido el modelo descrito en la subsección \ref{sec:sec4.4.1} en el entrenamiento. A continuación se describe lo que se puede interpretar:  
+
+\begin{bulletlist}
+\item Precisión de entrenamiento: Comienza alrededor de 0.65 y sube rápidamente a un valor cercano a 0.85, mostrando que el modelo aprende bien de los datos de entrenamiento.
+\item Pérdida de entrenamiento: Disminuye de un valor cercano a 1.1 hasta cerca de 0.5, lo que confirma que el modelo está optimizando correctamente con la función de pérdida elegida para los datos de entrenamiento.
+\item Precisión de validación: Aumenta de un valor cercano a 0.75 a un valor cercano a 0.85, lo que muestra que el modelo aprende bien de datos distintos a los de entrenamiento.
+\item Pérdida de validación: Disminuye de un valor cercano a 0.8 a un valor cercano a 0.5, confirmando que la función de pérdida optimiza bien el modelo.
+\end{bulletlist}
+
+En resumen, ambas métricas de precisión tienden a subir acercándose a 1 y las métricas de pérdidas a bajar acercándose a 0. Ambas tendencias se realizan de manera progresiva sin señales de \textit{overfitting}. Cabe destacar que el callback de ReduceLROnPlateau se ha activado en la época 13 reduciendo el learning rate de \texttt{1e-3} a \texttt{5e-4} y en la época 18 reduciendo el learning rate de \texttt{5e-4} a \texttt{2.5e-4}, esxplicando la estabilización que existe.
+
+La precisión de entrenamiento se estabiliza alrededor de 0.85, con incrementos pequeños al final. Esto puede indicar que el modelo se está acercando a su límite de capacidad con la configuración actual. Para exprimir aún más este modelo con intención de mejorarlo se podrían congelar algunas capas del modelo base (\textit{fine tuning}) y reducir el learning rate. Esto dará como resultado el modelo del la Subsección \ref{sec:sec4.4.2}.
+
+Para poder comparar este entrenamiento con el resto es necesario realizar un análisis de métricas por clases. Para ello se van a mostrar las métricas del método \texttt{classification\_report} de la librería \textit{Sklearn} en la Figura \ref{fig:metrics_summary_mobilenetv2_1_3} y la matriz de confusión en la Figura \ref{fig:confusion_matrix_mobilenetv2_1_3}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.7]{./Images/Resultados/Métricas resumen/mobilenetv2_1_3.png}
+\caption{\headlinecolor{\underline{Resumen de métricas del modelo \textit{MobileNetV2} 1 en el entrenamiento 3}}}
+\label{fig:metrics_summary_mobilenetv2_1_3}
+\end{center}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.5]{./Images/Resultados/Matriz de confusión/mobilenetv2_1_3.png}
+\caption{\headlinecolor{\underline{Matriz de confusión del modelo \textit{MobileNetV2} 1 en el entrenamiento 3}}}
+\label{fig:confusion_matrix_mobilenetv2_1_3}
+\end{center}
+\end{figure}
+
+En general se obtiene un buen rendimiento, existiendo un buen balance entre precisión y sensibilidad en practicamente todas las clases. Todos los valores de ambas métricas se encuentran entre 0.7 y 0.99, demostrando que no existen demasiadas diferencias entre las clases, afirmando la robustez del modelo.
+
+En cuanto a los resultados de la Figura \ref{fig:confusion_matrix_mobilenetv2_1_3} :
+
+\begin{bulletlist}
+\item Las clases \texttt{Tomato\_Yellow\_Leaf\_Curl\_Virus}, \texttt{Tomato\_mosaic\_virus} y \texttt{Spidermite\_Two\_spotted\_spider\_mite} son clasificadas casi a la perfección. Cuando nuestro modelo predice esas clases tiene una tas de acierto mayor al 90\%.
+\item Las clases \texttt{Target\_Spot}, \texttt{Early\_blight} y \texttt{Septoria\_leaf\_spot} son las más conflictivas, ya que el modelo tiende a clasificar otras imágenes como ellas.
+\end{bulletlist}
+
+Este modelo tiene un comportamiento sólido y equilibrado, generaliza bien y consigue que incluso las clases con menos muestras tengan buenos niveles de precisión y sensibilidad. Para seguir refinando este modelo se descongelarán algunas capas del modelo base (fine tuning) y se reducirá el learning rate, estos cambos se aplican en el modelo de la Subsección \ref{sec:sec4.4.2}. 
 
 
 
@@ -907,19 +959,19 @@ El modelo con obtenido en la subsección \ref{sec:sec5.1.1} equilibra mejor los 
 
 \section{Modelo \textit{EfficientNetB0} 1}\label{sec:sec5.4}
 
-En esta sección se van a mostrar los resultados del entrenamiento del modelo descrito en la subsección \ref{sec:sec4.4.2}. Este entrenamiento se ha realizado usando los pesos de clases descritos en el Cuadro \ref{tab:pesos_por_clase_entrenamiento}. Solo se ha sometido a 10 épocas y se han usado los callbacks de \textit{ModelCheckpoint} e \textit{HistorySaver}, ya que el objetivo de este entrenamiento es observar la tendencia inicial.
+En esta sección se van a mostrar los resultados del entrenamiento del modelo descrito en la subsección \ref{sec:sec4.4.4}. Este entrenamiento se ha realizado usando los pesos de clases descritos en el Cuadro \ref{tab:pesos_por_clase_entrenamiento}. Solo se ha sometido a 10 épocas y se han usado los callbacks de \textit{ModelCheckpoint} e \textit{HistorySaver}, ya que el objetivo de este entrenamiento es observar la tendencia inicial.
 
 Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las métricas recogidas en el fichero generado por el callback \textit{HistorySaver} en la Figura \ref{fig:summary_metrics_efficientnetb0_1}.
 
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[scale=0.5]{./Images/Resultados/Histórico Métricas/efficientnetb0_1.png}
-\caption{\headlinecolor{\underline{Histórico de métricas del entrenamiento 2 del modelo \textit{EfficientNetB0}}}}
+\caption{\headlinecolor{\underline{Histórico de métricas del del modelo \textit{EfficientNetB0} 1}}}
 \label{fig:summary_metrics_efficientnetb0_1}
 \end{center}
 \end{figure}
 
-En esta figura se puede observar el comportamiento de las métricas de precisión y pérdida de entrenamiento y validación a lo largo de las épocas a las que se ha sometido el modelo descrito en la subsección \ref{sec:sec4.4.1} en el entrenamiento. A continuación se describe lo que se puede interpretar:  
+En esta figura se puede observar el comportamiento de las métricas de precisión y pérdida de entrenamiento y validación a lo largo de las épocas a las que se ha sometido el modelo descrito en la subsección \ref{sec:sec4.4.4} en el entrenamiento. A continuación se describe lo que se puede interpretar:  
 
 \begin{bulletlist}
 \item Precisión de entrenamiento: Queda constante en aproximadamente 0.09, un valor muy lejano a 1, lo que demuestra que el modelo no aprende de los datos de entrenamiento.
@@ -933,11 +985,54 @@ El modelo no está aprendiendo absolutamente nada más allá del azar. Para mejo
 
 \section{Modelo \textit{EfficientNetB0} 2}\label{sec:sec5.5}
 
+En esta sección se van a mostrar los resultados del entrenamiento del modelo descrito en la subsección \ref{sec:sec4.4.5}. Este entrenamiento se ha realizado usando los pesos de clases descritos en el Cuadro \ref{tab:pesos_por_clase_entrenamiento}. Solo se ha sometido a 10 épocas y se han usado los callbacks de \textit{ModelCheckpoint} e \textit{HistorySaver}, ya que el objetivo de este entrenamiento es observar la tendencia inicial.
+
+Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las métricas recogidas en el fichero generado por el callback \textit{HistorySaver} en la Figura \ref{fig:summary_metrics_efficientnetb0_2}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.45]{./Images/Resultados/Histórico Métricas/efficientnetb0_2.png}
+\caption{\headlinecolor{\underline{Histórico de métricas del entrenamiento del modelo \textit{EfficientNetB0} 2}}}
+\label{fig:summary_metrics_efficientnetb0_2}
+\end{center}
+\end{figure}
+
+En esta figura se puede observar el comportamiento de las métricas de precisión y pérdida de entrenamiento y validación a lo largo de las épocas a las que se ha sometido el modelo descrito en la subsección \ref{sec:sec4.4.5} en el entrenamiento. A continuación se describe lo que se puede interpretar:  
+
+\begin{bulletlist}
+\item Precisión de entrenamiento: Aumenta desde un valor aproximado a 0.2 a un valor aproximado a 0.5, lo que demuestra que el modelo está aprendiendo de los datos de entrenamiento.
+\item Pérdida de entrenamiento: Disminuye de un valor cercano a 2.2 a un valor aproximado a 1.4, mostrando una tendencia decreciente.
+\item Precisión de validación: Decrece de un valor cercano a 0.25 a un valor cercano a 0.15, por lo que el modelo no generaliza.
+\item Pérdida de validación: Aumenta desde un valor aproximado a 2.2 a un valor aproximado a 2.8, bastante lejano a 0.
+\end{bulletlist}
+
+En definitiva, se puede decir que el modelo está aprendiendo a memorizar el conjunto de entrenamiento, pero pierde capacidad de generalización, es decir tiene sobreajuste. Para mejorar esta situación, se va a disminuir el \textit{learning rate} en el modelo de la sección \ref{sec:sec4.4.6}
 
 
 \section{Modelo \textit{EfficientNetB0} 3}\label{sec:sec5.6}
 
+En esta sección se van a mostrar los resultados del entrenamiento del modelo descrito en la subsección \ref{sec:sec4.4.6}. Este entrenamiento se ha realizado usando los pesos de clases descritos en el Cuadro \ref{tab:pesos_por_clase_entrenamiento}. Solo se ha sometido a 10 épocas y se han usado los callbacks de \textit{ModelCheckpoint} e \textit{HistorySaver}, ya que el objetivo de este entrenamiento es observar la tendencia inicial.
 
+Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las métricas recogidas en el fichero generado por el callback \textit{HistorySaver} en la Figura \ref{fig:summary_metrics_efficientnetb0_3}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.5]{./Images/Resultados/Histórico Métricas/efficientnetb0_3.png}
+\caption{\headlinecolor{\underline{Histórico de métricas del entrenamiento del modelo \textit{EfficientNetB0} 3}}}
+\label{fig:summary_metrics_efficientnetb0_3}
+\end{center}
+\end{figure}
+
+En esta figura se puede observar el comportamiento de las métricas de precisión y pérdida de entrenamiento y validación a lo largo de las épocas a las que se ha sometido el modelo descrito en la subsección \ref{sec:sec4.4.6} en el entrenamiento. A continuación se describe lo que se puede interpretar:  
+
+\begin{bulletlist}
+\item Precisión de entrenamiento: Aumenta desde un valor aproximado a 0.15 a un valor aproximado a 0.35, lo que demuestra que el modelo está aprendiendo de los datos de entrenamiento.
+\item Pérdida de entrenamiento: Disminuye de un valor cercano a 2.3 a un valor aproximado a 1.8, mostrando una tendencia descendente.
+\item Precisión de validación: Aumenta de un valor cercano a 0.15 a un valor cercano a 0.25, por lo que el está empezando a generalizar.
+\item Pérdida de validación: Oscila en un valor cercano a 2.2, por lo que no existe un generalización clara.
+\end{bulletlist}
+
+En definitiva, se puede decir que se ha disminuido el sobreajuste, el modelo ha comenzado a generalizar, pero no lo suficiente y con la suficiente estabilidad para considerarlo un buen resultado. Para afinar más este modelo se podría incluir una capa de \textit{dropout} antes de la capa densa y entrenar más épocas con los callbacks de ReduceLROnPlateau y EarlyStopping. Aún así, no se esperan excelentes resultados, simplemente una mejora en la regularización.
 
 
 \section{Modelo \textit{NASNetMobile} 1}\label{sec:sec5.7}
