@@ -775,7 +775,7 @@ En este capítulo se presentan los resultados obtenidos al usar los datos prepro
 
 El rendimiento de los modelos propuestos se evalúan utilizando diferentes métricas como, la precisión, la sensibilidad, \textit{F1-score} y soporte. Las métricas de evaluación se establecen utilizando fórmulas que usan TP, TN, FP y FN, que denotan verdaderos positivos, verdaderos negativos, falsos positivos y falsos negativos, respectivamente. De esta manera se definen las siguientes métricas:
 
-\begin{itemize}
+\begin{bulletlist}
   \item Precisión (\textit{Precision}): Mide la proporción de verdaderos positivos sobre el total de predicciones positivas.
     
     \begin{equation*}
@@ -799,9 +799,9 @@ El rendimiento de los modelos propuestos se evalúan utilizando diferentes métr
     \end{equation*}
 
 
-\end{itemize}
+\end{bulletlist}
 
-Para extraer resultados de esta figura se va a explicar qué es una matriz de confusión.  Una matriz de confusión es una herramienta que permite la visualización del desempeño de un modelo de clasificación. Cada columna representa el número de predicciones de cada clase, mientras que cada fila representa a las instancias en la clase real. 
+Otra métrica útil para la evaluación de los modelos usada es la matriz de confusión. Se trata de una tabla que compara las predicciones del modelo con las etiquetas reales, mostrando en su diagonal principal el número de aciertos (instancias correctamente clasificadas) y fuera de la diagonal los errores (instancias que el modelo confundió con otra clase). Cada fila representa las predicciones reales y cada columna las predicciones del modelo, lo que permite identificar con precisión qué clases son más propensas a ser confundidas entre sí.
 
 
 
