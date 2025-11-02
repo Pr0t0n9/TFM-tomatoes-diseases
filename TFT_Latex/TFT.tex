@@ -141,11 +141,19 @@ modelos de aprendizaje profundo}
 \listoftables
 
 \begin{abstract}
-Lorem ipsum (RESUMEN)
-\vspace{0.5cm}
+El cultivo de tomate es uno de los cultivos hortícolas más importantes a nivel mundial. Sin embargo, su producción se ve amenazada por una amplia variedad de enfermedades causadas por hongos, bacterias, virus y nematodos. Estas enfermedades pueden provocar una bajada de rendimiento que van desde reducciones parciales hasta la pérdida completa de la cosecha. Dada la magnitud del impacto de estas enfermedades, la detección temprana y precisa de las mismas es crucial. Permite una correcta intervención que minimiza las pérdidas, permitiendo la reducción del uso innecesario de los agroquímicos y mejorando la sostenibilidad. 
 
-\keywords{primero, segundo, tercero}
+Los enfoques tradicionales para la detección de enfermedades suelen requerir mucha mano de obra, consumen mucho tiempo y son propensos a errores, lo que dificulta la intervención temprana. En este contexto el objetivo general de este proyecto consiste en desarrollar y evaluar un sistema inteligente basado en técnicas de aprendizaje profundo capaz de identificar el estado de salud y las principales enfermedades en hojas de tomate a partir de imágenes, asegurando un alto grado de precisión y capacidad de generalización.
+
+Entre las tareas de preprocesamiento típicas se han transformado todas las imágenes a tamaños de 224x224 y se han normalizado. Además, se han usado las técnicas de \textit{data agmentation} y fijación de pesos en las clases con el objetivo evitar sesgos hacia ciertas clases y aumentar la capacidad de generalización. Posteriormente para el modelado se han creado modelos de redes neuronales convolucionales basados en las arquitecturas \textit{MobileNetV2}, \textit{EfficientNetB0} y \textit{NASNetMobile} preentrenadas con una base de datos de imágenes muy grande (\textit{ImageNet}), dado que permite aprovechar representaciones visuales previamente aprendidas como bordes, texturas y patrones para iniciar el entrenamiento en un dominio especíﬁco con menor cantidad de datos.
+
+Entre los modelos evaluados, \textit{MobileNetV2} con 100 capas descongeladas (\textit{fine tuning}), tasa de aprendizaje (\textit{learning rate}) de \texttt{1e-5} y entrenado a 20 épocas, mostró el mejor rendimiento, alcanzando una precisión global del 94\% y un \textit{F1-score} macro de 0.939, lo que refleja una elevada capacidad de precisiób y una buena generalización entre las distintas enfermedades. 
+
+Este resultado confirma la viabilidad del uso de redes neuronales convolucionales para la detección automática de patologías en hojas de tomate, ofreciendo una herramienta potencialmente útil para la monitorización temprana de cultivos y la reducción del uso de productos fitosanitarios, contribuyendo así a una agricultura más precisa y sostenible.
+
+\keywords{detección de enfermedades, hojas de tomate, redes neuronales convolucionales, \textit{MobileNetV2}, \textit{fine tuning}}
 \end{abstract}
+
 \newpage
 \section*{Agradecimientos}\label{sec:agradecimientos}
 Quiero dar las gracias a toda mi familia y amigos por ayudarme y darme fuerzas para seguir adelante en todo momento.
@@ -290,7 +298,7 @@ En la literatura sobre clasificación automática de enfermedades foliares media
 
 Por otra parte, no siempre es suficiente con observar métricas sobre el modelo en su conjunto, sino que a veces también es relevante analizar métricas como las mencionadas (precisión, sensibilidad y F1-Score) por clases, para determinar si existe algún sesgo hacia alguna clase (). En esta línea para apoyarse en alguna métrica más visual también es interesante el uso de la matriz de confusión que permite ver cómo se comporta el modelo entre diferentes clases pudiendo visualizar el número de imágenes por clases, los predicciones sobre las mismas con sus aciertos y fallos de un vistazo ().
 
-
+Más allá de entrenar una única red convolucional sobre imágenes de hojas, los estudios recientes incorporan un enfoque adicional que consiste en crear \textit{ensembles} o las combinaciones de diferentes arquitecturas y luego combinan sus predicciones por votación (\textit{hard-voting}, \textit{soft-voting}) o mediante promedios ponderados. En esta línea nos encontramos estudios como el realizado en el artículo que utilizaron tres arquitecturas, \textit{DenseNet201}, \textit{InceptionV3} y \textit{Xception} y un método de \textit{weighted soft-voting}  para lograr un precisión superior al de cada modelo individual ().
 
 
 \chapter{Implementación y desarrollo}\label{cap:cap4}
@@ -1318,7 +1326,8 @@ Las conclusiones obtenidas tras el desarrollo completo de este proyecto son las 
 
 En consecuencia, se selecciona este modelo (\ref{sec:sec4.4.2}) como el modelo final propuesto, al ofrecer el mejor equilibrio entre métricas globales e interclase, que garantizan una mayor precisión y capacidad de generalización. Este modelo cumple el objetivo de desarrollar un sistema preciso y adaptable para la clasificación automática de enfermedades en hojas de tomate. Los resultados obtenidos permiten afirmar que dicho objetivo se ha alcanzado satisfactoriamente, logrando un modelo con un rendimiento competitivo y una adecuada robustez frente a la variabilidad del conjunto de datos.
 
-Trabajos futuros..
+Como líneas futuras de trabajo, se plantea incorporar técnicas \textit{ensembles} que permita combinar las diferentes arquitecturas para lograr mejorar la detección de las clases más conflictivas ().
+
 
 \printbibliography
 
