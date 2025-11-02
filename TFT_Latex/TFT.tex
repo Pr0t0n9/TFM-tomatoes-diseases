@@ -1,18 +1,19 @@
-\documentclass[12pt,a4paper]{scrreprt}
+\documentclass[11pt,a4paper]{scrreprt}
 
 % Gráficos y geometría
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
-\usepackage[left=2.75cm,right=2.6cm,top=3.5cm,bottom=3.5cm]{geometry}
+\usepackage[left=3cm,right=3cm,top=4.4cm,bottom=2.19cm]{geometry} % márgenes 4.4 cm superior, 2.19 cm. inferior, izquierdo y derecho de 3 cm
+
 
 
 % Índices y listas
 \usepackage{titletoc}
 \usepackage[shortlabels]{enumitem}
 \newlist{bulletlist}{itemize}{1} % Definición de una lista personalizada llamada "bulletlist"
-\setlist[bulletlist]{label=\LARGE\textbullet, left=1.5em}
+\setlist[bulletlist]{label=\LARGE\textbullet, left=1.3em}
 
 
 % Colores
@@ -50,6 +51,7 @@
 %-------------------COMANDOS PARA TABLAS  E IMAGENES ---------------------%
 \usepackage{tikz}
 \usepackage{tabularx}
+\newcolumntype{Y}{>{\centering\arraybackslash}X} % centrado en columnas X
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %-----------------COMANDOS PARA CABECERAS Y PIE DE PAGINA -----------------%
@@ -82,6 +84,11 @@
 \usepackage[backend=biber, style=apa]{biblatex}
 \addbibresource{Bibliografia_TFT.bib}
 
+% Interlineado y espaciado entre párrafos
+\usepackage{setspace}
+\setstretch{1.15} % interlineado 1.15
+\setlength{\parskip}{0.8em} % espacio entre párrafos
+
 
 
 %%%%%%-------------------+++++++++--INICIO DEL DOCUMENTO--+++++++++---------------------------%%%%%
@@ -101,7 +108,7 @@
 %\fontsize{25}{10.4}\fontseries{b}\selectfont
 \fontsize{25}{25}\fontseries{b}\selectfont
 %\vspace{14cm}
-\vspace{13cm}
+\vspace{12cm}
 \textbf{Desarrollo de un sistema de\\
 diagnóstico de enfermedades\\
 en hojas de tomate mediante\\ 
@@ -111,14 +118,14 @@ modelos de aprendizaje profundo}
 
 \fontsize{12}{12}\selectfont
 \fontseries{m}\selectfont
-\vspace{5cm}
+\vspace{4cm}
 \centering
 \begin{tabularx}{1\textwidth} { 
   || >{\raggedright}X 
   || >{\centering}X 
   || >{\raggedleft\arraybackslash}X || }
  Titulación:\\Máster en Big Data y Ciencia de Datos\\ 
- & Alumno/a: Marín Lucas, Rubén\\DNI: 07272889-J 
+ & Alumno/a: Marín Lucas, Rubén\\DNI: 07272889J 
  & Convocatoria: \\
  Curso Académico\\ 2024-2025 
   & Director/a del TFT: Ricardo Lebrón Aguilar   
@@ -147,37 +154,39 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 \chapter{Introducción}\label{cap:cap1}
 
-\section{Motivación}\label{sec:sec1.1}
-
 Tomate o tomatera (\textit{Solanum lycopersicum}) es una planta herbácea de la familia Solanaceae cultivada en todo el mundo para el cultivo de su fruto, el tomate o jitomate, uno de los ingredientes más universales de ensaladas y salsas en el mundo entero. \parencite{wikipedia1} 
 
-Según los últimos estudios filogenéticos, la planta silvestre de la cual surge el tomate doméstico actual tiene origen en la zona andina del norte de Perú y sur de Ecuador. Su domesticación y diversificación posterior se originó en México.
-
-Los pueblos aztecas y mayas lo usaban en su cocina y fue exportado al resto del mundo a partir de la llegada de los españoles que lo distribuyeron a lo largo de sus colonias en el Caribe y la península ibérica a partir de lo cual pudo llegar al resto de eruopa. También lo llevaron a Filipinas y de allí pudo entrar al continente asiático. \parencite{agrotendencia1} 
+Según los últimos estudios filogenéticos, la planta silvestre de la cual surge el tomate doméstico actual tiene origen en la zona andina del norte de Perú y sur de Ecuador. Su domesticación y diversificación posterior se originó en México. Los pueblos aztecas y mayas lo usaban en su cocina y fue exportado al resto del mundo a partir de la llegada de los españoles que lo distribuyeron a lo largo de sus colonias en el Caribe y la península ibérica a partir de lo cual pudo llegar al resto de eruopa. También lo llevaron a Filipinas y de allí pudo entrar al continente asiático. \parencite{agrotendencia1} 
 
 \begin{figure}[ht]
 \begin{center}
-\includegraphics[scale=0.2]{./Images/Distribucion_tomate.jpg}
+\includegraphics[scale=0.15]{./Images/Intro/Distribucion_tomate.jpg}
 \caption{\headlinecolor{\underline{Origen del tomate}}}
-
-\label{fig:fig1}
-
+\label{fig:origen_tomate}
 \end{center}
 \end{figure}
 
-La producción mundial de tomate ascendió a más de 186 millones de toneladas en 2022 según los datos de la Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO). Según esta misma organización esta es la evolución de los 20 países que más han producido hasta 2022: \parencite{wikipedia2}
+La producción mundial de tomate ascendió a más de 186 millones de toneladas en 2022 según los datos de la Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO). Según esta misma organización la evolución de los 10 países que más han producido hasta 2022 es la mostrada en el Cuadro \ref{tab:producción_mundial_tomate}. \parencite{wikipedia2}
 
 \begin{table}[ht] 
 \centering
-\caption{\headlinecolor{\underline{Top 20 países productores de tomates 2022}}}
+\caption{\headlinecolor{\underline{Top 10 países productores de tomates 2022}}}
 \label{tab:producción_mundial_tomate}
 \begin{tabular}{|c|c|c|c|c|} \hline
 \rowcolor{naranja}
-\multicolumn{5}{|c|}{\textbf{Titulo}} \\ \hline
+\multicolumn{5}{|c|}{\textbf{Top 10 países productores de tomates 2022}} \\ \hline
 \rowcolor{naranja!30}
 País & 2000 & 2010 & 2020 & 2022 \\ \hline
 China & 22 200 & 46 760 & 64 680 & 68 242 \\ \hline
-... & ... & ... & ... & ... \\ \hline
+India & 7430 & 12 433 & 20 550 & 20 694 \\ \hline
+Turquía & 8890 & 10 052 & 13 204 & 13 000 \\ \hline
+Estados Unidos & 12 622 & 14 053 & 10 939 & 10 200 \\ \hline
+Egipto & 6786 & 8545 & 6494 & 6275 \\ \hline
+Italia & 7538 & 6025 & 6248 & 6136 \\ \hline
+México & 2666 & 2998 & 4137 & 4208 \\ \hline
+Brasil & 3005 & 4107 & 3757 & 3810 \\ \hline
+Nigeria & 1261 & 1800 & 3390 & 3685 \\ \hline
+España & 3766 & 4313 & 4313 & 3652 \\ \hline
 \end{tabular}
 \end{table}
 
@@ -186,28 +195,57 @@ Como ya se ha mencionado, el cultivo de tomate es uno de los cultivos hortícola
 Entre las enfermedades más comunes se encuentran:
 
 \begin{itemize}[label=\textbullet]
-\item Tizón tardío (\textit{Phytophthora infestans}): Puede destruir por completo una plantación si no se controla a tiempo, especialmente en condiciones húmedas y templadas.
+\item Tizón tardío (\textit{Late blight}): El agente causal es el oomiceto \textit{Phytophthora infestans} que afecta a las plantas solanáceas. Se desarrolla mejor en condiciones de humedad alta, lluvias, rocío persistente o días nublados, y temperaturas frías (entre 10\textdegree y 20\textdegree). Su ciclo incluye esporangios, zoosporas (en condiciones húmedas) y puede sobrevivir mediante estructuras resistentes (oosporas) o restos vegetales infectados \parencite{britannica}. Las primeras lesiones aparecen típicamente en hojas o tallos donde aparecen manchas de aspecto mojado que luego se tornan a manchas oscuras e irregulares. Bajo condiciones muy húmedas se observa una capa blanca o algodonosa de esporulación en el envés de las hojas u otras partes \parencite{winsconsinmadison} como se puede observar en la Figura \ref{fig:late_blight}.
 
 \begin{figure}[ht]
 \begin{center}
-\includegraphics[scale=0.4]{./Images/Tizon_tardio_tomate.jpg}
-\caption{\headlinecolor{\underline{Tizón tardío en una planta de tomate}}}
-\label{fig:fig2}
+\includegraphics[scale=0.5]{./Images/Intro/Late-blight-tomato.jpg}
+\caption{\headlinecolor{\underline{Tizón tardío en una planta de tomate}}} % https://www.purdue.edu/newsroom/archive/releases/2013/Q3/late-blight-disease-found-on-indiana-tomato-samples.html
+\label{fig:late_blight}
 \end{center}
 \end{figure}
 
-\item Tizón temprano (\textit{Alternaria solani}): Produce defoliación progresiva, debilitando la planta y reduciendo el número y calidad de los frutos.
+\item Tizón precoz (\textit{Early blight}): El agente causal principal es el hongo \textit{Alternaria solani} (y en algunos casos \textit{Alternaria tomatophila}) que puede sobrevivir en residuos de plantas enfermas, en el suelo, sobre plantas de la familia de las solanáceas y también transmitirse por semillas o plántulas infectadas \parencite{cornell}. Las condiciones favorables para su desarrollo incluyen: temperaturas cálidas (por encima de 25\textdegree), humedad elevada o periodos de hojas mojadas \parencite{pacificnorthwest1}. Los primeros síntomas suelen aparecer en las hojas más viejas, situadas en la base de la planta, aparecen manchas oscuras que a menudo presentan anillos concéntricos. Alrededor de esas manchas la hoja puede ponerse amarilla (clorosis) y luego necrosarse, lo que deriva en caída de hojas o defoliación parcial del vegetal \parencite{eorganic} como puede observarse en la Figura \ref{fig:early_blight}.
 
 \begin{figure}[ht]
 \begin{center}
-\includegraphics[scale=0.2]{./Images/Tizon_temprano_tomate.jpg}
-\caption{\headlinecolor{\underline{Tizón temprano en una planta de tomate}}}
-\label{fig:fig3}
+\includegraphics[scale=0.2]{./Images/Intro/Early-blight-tomato.jpg}
+\caption{\headlinecolor{\underline{Tizón precoz en una planta de tomate}}} % https://renaissancefarms.org/blog/early-blight-in-tomatoes/
+\label{fig:early_blight}
 \end{center}
 \end{figure}
 
-\item Fusariosis vascular (\textit{Fusarium oxysporum}): Ataca el sistema vascular, provocando marchitez y muerte de plantas.
-\item Virus como TYLCV y TSWV: Pueden causar deformaciones severas y reducciones completas en la producción, especialmente cuando se transmiten por vectores como la mosca blanca.
+\item Mancha bacteriana (\textit{Bacterial spot}): Es causada por bacterias del género \textit{Xanthomonas} que atacan al tomate. El patógeno puede sobrevivir en residuos vegetales, en semillas contaminadas, en plantas voluntarias o en malas hierbas de la familia de las solanáceas \parencite{pacificnorthwest2}. Las condiciones favorables incluyen alta humedad y temperaturas templadas o calientes (20\textdegree o más). En las hojas aparecen manchas húmedas, luego se tornan oscuras, ásperas y con margen amarillo en ocasiones. Las manchas suelen aparecer primero en hojas viejas o en el dosel inferior de la planta, desde donde pueden subir \parencite{ucipm} como muestra la Figura \ref{fig:bacterial_spot}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.2]{./Images/Intro/Bacterial-spot-tomato.jpg}
+\caption{\headlinecolor{\underline{Mancha bacteriana en una planta de tomate}}} % https://www.growingproduce.com/crop-protection/a-new-bacterial-spot-strain-is-a-headache-for-tomato-growers/
+\label{fig:bacterial_spot}
+\end{center}
+\end{figure}
+
+\item Picadura de la araña roja de dos manchas (\textit{Two\-spotted spider mite}): El agente es la araña roja de dos manchas (\textit{Tetranychus urticae}) un ácaro (ni hongo, ni bacteria) que ataca muchas hortalizas incluyendo el tomate. Se alimenta mediante piezas bucales que perforan las células de las hojas (generalmente en el envés) y succionan el contenido, provocando daño celular, pérdida de clorofila y debilitamiento de la planta. Su reproducción es rápida, especialmente bajo condiciones de calor y sequedad, prefiere hojas viejas, la parte baja de la planta, y condiciones de ambiente seco, polvoso, con buena radiación y temperatura elevadas. En las hojas aparecen pequeñas manchas puntiformes, amarillas o blanquecinas, que resultan del daño celular tipo "picoteado" (\textit{stippling}) como se muestra en la Figura \ref{fig:two_spotted_spider_mite}. \parencite{umass}
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.1]{./Images/Intro/Two-spotted-spider-mite.jpg}
+\caption{\headlinecolor{\underline{Picadura de la araña roja de dos manchas en una planta de tomate}}} % https://ar.inspiredpencil.com/pictures-2023/red-spider-mites-on-tomato-plants
+\label{fig:two_spotted_spider_mite}
+\end{center}
+\end{figure}
+
+\item Virus de la hoja amarilla (\textit{Yellow leaf curl virus}): El agente causal es un virus los begomovirus, que afecta principalmente al tomate y ocasionalmente otras solanáceas. El vector principal es la mosca blanca, Bemisia tabaci, que adquiere el virus al alimentarse de plantas infectadas y luego lo transmite a plantas sanas. Las hojas muestran claramente: amarilleamiento entre las venas (clorosis interveinal), márgenes de la hoja amarillos, hojas enrolladas o curvadas hacia arriba y hacia dentro, y foliolos más pequeños de lo normal como muestra la Figura \ref{fig:yellow_leaf_curl_virus_tomato}. \parencite{diazpendon2010tylcv}
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.13]{./Images/Intro/Yellow-leaf-curl-virus-tomato.jpg}
+\caption{\headlinecolor{\underline{Virus de la hoja amarilla en una planta de tomate}}} % https://www.greenlife.co.ke/tomato-yellow-leaf-curl-virus/
+\label{fig:yellow_leaf_curl_virus_tomato}
+\end{center}
+\end{figure}
+
+
 \end{itemize}
 
 La manifestación simultánea o sucesiva de estas enfermedades es una de las principales causas en la disminución en la productividad del cultivo a escala global. Además, muchas de estas enfermedades no solo viven en la planta sino que persisten en el suelo, semillas o herramientas que hayan inteactuado con la planta, lo que dificulta su erradicación y aumenta los costos del tratamiento. \parencite{agrotendencia2}
@@ -215,31 +253,17 @@ La manifestación simultánea o sucesiva de estas enfermedades es una de las pri
 Dada la magnitud del impacto de estas enfermedades, la detección temprana y precisa de las mismas es crucial. Permite una correcta intervención que minimiza las pérdidas, permitiendo la reducción del uso innecesario de los agroquímicos y mejorando la sostenibilidad. En este contexto, las tecnologías basadas en visión por computadora, sensores remotos e inteligencia artificial ofrecen soluciones eficaces para mejorar el seguimiento y el control sanitario de este cultivo clave.
 
 
-\section{Estructura del resto del documento}\label{sec:sec1.2}
-
-La documentación de este proyecto se ha desarrollado dividiendo el contenidoen distintos caítulos con el objetivo de facilitar la comprensión por parte del lector. A continuación se enuncia la información presente en cada capítulo del resto del documento:
-
-\begin{bulletlist}
-\item Capítulo 2. Objetivos: se describe el objetivo principal del proyecto junto con los objetivos intermedios necesarios para conseguirlo.
-\item Capítulo 3. Estado del Arte: 
-\item Capítulo 4. Implementación y desarrollo: se explica el preprocesamientode los datos y las técnicas ML aplicadas a los mismos.
-\item Capítulo 5. Evaluación y resultados: se presentan los resultados obtenidos al aplicar las técnicas ML.
-\item Capítulo 6. Conclusiones
-\end{bulletlist}
-
-
-
 \chapter{Objetivos}\label{cap:cap2}
 
-El objetivo general de este proyecto consiste en conseguir un clasificador que a partir de imágenes de hojas de plantas de tomate distinga entre estado saludable y 10 enfermedades distintas.
+El objetivo general de este proyecto consiste en desarrollar y evaluar un sistema inteligente basado en técnicas de aprendizaje profundo capaz de identificar el estado de salud y las principales enfermedades en hojas de tomate a partir de imágenes, asegurando un alto grado de precisión y capacidad de generalización.
 
 \section{Objetivos específicos}\label{sec:sec2.1}
 
 \begin{enumerate}[label=\bfseries\headlinecolor\arabic*.]
-\item Analizar dataset de hojas de tomate.
-\item Implementar y entrenar modelos CNN para la clasificación.
-\item Evaluar la precisión de los modelos y comparar resultados.
-
+\item Revisar el estado del arte relacionado con la detección de enfermedades en plantas, con espacial énfasis en el cultivo del tomate. 
+\item Analizar y preparar el conjunto de datos aplicando las técnicas necesarias de preprocesamiento de imágenes para garantizar la calidad y homogeneidad del material de entrenamiento.
+\item Implementar y entrenar distintos modelos utilizando arquitecturas preentrenadas con alguna base de datos para adaptarlas a la tarea de clasificación de enfermedades en hojas de tomate. 
+\item Evaluar los modelos desarrollados comparando su rendimiento mediante métricas como precsión, sensibilidad o capacidad de generalización.
 \end{enumerate}
 
 
@@ -247,16 +271,17 @@ El objetivo general de este proyecto consiste en conseguir un clasificador que a
 
 En los últimos años la aplicación de técnicas de inteligencia artificial en la agricultura ha cobrado un papel relevante, especialmente en tareas de diagnóstico temprano de enfermedades en cultivos.  El uso de aprendizaje profundo permite automatizar la detección de patrones en imágenes, lo cual puede ayudar a los agricultores a tomar decisiones más rápidas y eficientes.
 
-Inicialmente, los métodos empleados para esta tarea incluían algoritmos de aprendizaje supervisado como máquinas de vectores de soporte (SVM), k\-vecinos más cercanos (KNN) y redes bayesianas. Sin embargo, estos enfoques dependían en gran medida de una segmentación previa precisa y de la extracción manual de características, lo que limitaba su capacidad de generalización y precisión en entornos reales.
+Inicialmente, el enfoque tradicional para las tareas de clasificación de imágenes se basaba en características diseñadas manualmente como SIFT \parencite{research1}, HoG \parencite{research2}, SURF \parencite{research3}, etc, para luego usar algún algoritmo de aprendizaje supervisado como máquinas de vectores de soporte (SVM), k\-vecinos más cercanos (K\-NN) y redes bayesianas. Sin embargo, estos enfoques dependían en gran medida de las características predefinidas. La ingeniería de características en sí misma es un proceso complejo y laborioso que debe revisarse cada vez que el problema en cuestión o el conjunto de datos asociado cambia considerablemente. Este problema se da en todos los intentos tradicionales de detectar enfermedades de las plantas , ya que se basabann en gran medida en características diseñadas manualmente, técnicas de mejora de imágenes y otras metodologías complejas.
 
-Con la llegada de las redes neuronales convolucionales (CNN), se ha producido un cambio significativo en la forma de abordar este problema. Las CNN son capaces de aprender representaciones directamente a partir de los datos de imagen, eliminando la necesidad de ingeniería manual de características. Diversos estudios han demostrado su eficacia para la clasificación de enfermedades en hojas de tomate.
+Además, los enfoques tradicionales para la clasificación de enfermedades mediante ML suelen centrarse en un número reducido de clases, normalmente dentro de un mismo cultivo. Por ejemplo, se han usado imágenes térmicas y estéreo para detectar el moho polvoriento (\textit{powdery mildew}) en hojas de tomate \parencite{research4}, imágenes RGBD para detección del tizón del manzano (\textit{apple scab}) \parencite{research5} y sensores basados en aeronaves para la detección del virus del rizado amarillo del tomate (\textit{tomato yellow leaf curl}) mediante el uso de un conjunto de pasos clásicos de extracción de características \parencite{research6}.
 
-Por ejemplo, una revisión publicada en la Revista de Investigación e Innovación de las Ciencias de la Universidad Tecnológica de Bolívar \parencite{estudio1}, las técnicas tradicionales de aprendizaje supervisado como SVM, KNN y lógica difusa muestran limitaciones significativas en tareas de detección de enfermedades en imágenes de frutas debido a su dependencia de extracción manual de características y segmentación previa. En contraste, las redes neuronales convolucionales han demostrado una precisión superior, mayor robustez frente a la variabilidad y mayor capacidad de generalización. Esta revisión respalda la elección de CNNs como enfoque principal en este trabajo.
+Posteriormente han aparecido estudios que usan entrenamiento supervisado de extremo a extremo utilizando una arquitectura de red neuronal convolucional (CNN) como \parencite{research7} que demostraron que este tipo de arquitecturas tienen un buen desempeño incluos en problemas de clasificación de imágenes con un número de clases, superando con creces a los enfoques tradicionales. El hecho de no depender de la laboriosa fase de la ingeniería de características, además de la generalización que alcanza convierte este enfoque en un candidato prometedor para la detección computacional de enfermedades en plantas. \parencite{research8}
 
-Por otra parte, Valeria Maeda Gutiérrez (2019) \parencite{estudio2} realizó una comparativa entre varias arquitecturas CNN, incluyendo AlexNet, GoogleNet, InceptionV3, ResNet 18 y ResNet 50 aplicadas al conjunto de datos PlantVillage. Todas las arquitecturas consiguieron más del 98\% de precisión y sensibilidad, lo que confirma la ideonidad de las mismas para la tarea que se pretende hacer. Concretamente con GoogleNet consiguió una precisión del 99,3\% y una sensibilidad del 99,1\%
+Para aplicaciones de diagnóstico de enfermedades en plantas es habitual seleccionar arquitecturas que equilibren precisión y coste computacional. Arquitecturas ligeras como MobileNetV2 y NASNetMobile han demostrado ser adecuadas para sistemas móviles por su bajo número de parámetros y alta velocidad de inferencia, manteniendo precisiones comparables a modelos más pesados tras \textit{fine tuning} \parencite{research9}. Por su parte, EfficientNet-B0, diseñado mediante \textit{compound scaling}, ofrece una eficiencia de parámetros superior y suele vencer a tradicionales en relación precisión y tamaño \parencite{research10}. Estas características hacen que MobileNetV2, EfficientNet-B0 y NASNetMobile sean opciones sólidas para aplicaciones prácticas de diagnóstico en tomate, especialmente cuando el despliegue en dispositivos con recursos limitados.
 
-En otra línea, Eduardo A.Huerta-Mora, Víctor González-Huitrón, Héctor Rodríguez-Rangel y Leonel Ernesto Amabilis-Sosa (2024) \parencite{estudio3} emplearon la arquitectura VGG16 con técnicas de fine-tuning para el mismo conjunto de datos PlantVillage, obteniendo alrededor del 90\% de sensibilidad y precisión. Este hecho confirma que esta arquitectura también puede ser interesante para el estudia a realizar.
+El uso de modelos preentrenados en bases de datos extensas como \textit{ImageNet} constituye una práctica consolidada en tareas de clasificación de enfermedades foliares, dado que permiten aprovechar representaciones visuales previamente aprendidas (bordes, texturas, patrones) para iniciar el entrenamiento en un dominio específico con menor cantidad de datos. Estudios recientes demuestran que el uso de \textit{transfer learning} a partir de arquitecturas entrenadas sobre \textit{ImageNet} acelera la convergencia, reduciendo el número de épocas (\textit{epochs}), cantidad de datos y riesgo de sobreajuste (\textit{overfitting}) \parencite{research11}. No obstante, también se advierte que la diferencia de dominio entre \textit{Imagenet} y las imágenes reales de hojas puede afectar a la generalización, lo cual resalta la importancia de una augmentación adecuada, ajustes de hiperparámetros y validación con imágenes de campo \parencite{research12}.
 
+En este trabajo se emplean modelos basados en las aruitecturas MobileNetV2, EfficientNetB0 y NASNetMobile preentrenados con ImageNet como punto de partida, lo que permite centrar el esfuerzo en la adaptación al problema de enfermedades de tomate mediante fine-tuning y validación rigurosa.
 
 
 \chapter{Implementación y desarrollo}\label{cap:cap4}
@@ -292,13 +317,13 @@ En cuanto a las librerías de Python usadas para la implementación, se presenta
 \item Plantcv: es una librería de Python de código abierto diseñada específicamente para el análisis de imágenes de plantas. Se ha usado para lectura de las imágenes.
 \item Tensorflow: es una librería de software de código abierto creada por Google para desarrollar y entrenar modelos de machine learning (ML) y deep learning (DL). Recibe este nombre porque trabaja con tensores, estructuras de datos multidimensionales, como matrices o vectores que fluyen a través de un grafo computacional de operaciones. Se ha usado para crear y entrenar los modelos descritos en este proyecto.
 \item Seaborn: esta librería permite la visualización de los datos a través de distintos tipos de gráficas. Ha sido usada para realizar los distintos gráficos como las matrices de confusión para evaluar los modelos.
-\item Sklearn: .
+\item Sklearn: es una librería que contiene un gran número funciones relacionadas con modelos de machine learning (ML) y deep learning (DL). Se ha usado para extraer las principales métricas de los modelos tras su entrenamiento.
 \end{bulletlist}
 
 
 \section{Procedencia y descripción de los datos}\label{sec:sec4.2}
 
-Los datos provienen de la plataforma online de ciencia de datos de Google, Kaggle, que funciona como una mezcla de red social, repositorio de datasets y espacio de competición. En concreto, el conjunto de datos usuado es el llamado "Tomato Leaves Dataset" (***Enlace). Según su descripción en la misma plataforma se trata de un conjunto de datos de más de 20.000 imágenes de hojas de tomate con 11 clases, 10 enfermedades y una clase sana. Estas imágenes se han recopilado tanto en entornos de laboratorio como en entornos naturales.
+Los datos provienen de la plataforma online de ciencia de datos de Google, Kaggle, que funciona como una mezcla de red social, repositorio de datasets y espacio de competición. En concreto, el conjunto de datos usuado es el llamado "Tomato Leaves Dataset". Según su descripción en la misma plataforma se trata de un conjunto de datos de más de 20.000 imágenes de hojas de tomate con 11 clases, 10 enfermedades y una clase sana. Estas imágenes se han recopilado tanto en entornos de laboratorio como en entornos naturales. \parencite{kaggle}
 
 En concreto se pueden extraer dos directorios que servirán como conjunto de datos para el entrenamiento y conjunto de datos para validación, ambos cuentan con 11 directorios con imágenes dentro. Cada uno de estos subdirectorios representa una de las clases que serán brevemente expuestas a continuación:
 
@@ -328,9 +353,9 @@ Clase & Traducción Clase \\ \hline
 
 \section{Preprocesado de los datos}\label{sec:sec4.3}
 
-Al realizar la carga de datos se tiene un directorio con dos subdirectorios, cada uno de ellos representará un conjunto de datos, uno de datos de entrenamiento (train) y otro de validación (valid). Cada uno de estos directorios contienen a su vez 11 directorios, representando cada una de las clases. 
+Al realizar la carga de datos se tiene un directorio con dos subdirectorios, cada uno de ellos representará un conjunto de datos, uno de datos de entrenamiento (\textit{train}) y otro de validación (\textit{valid}). Cada uno de estos directorios contienen a su vez 11 directorios, representando cada una de las clases. 
 
-Llegados a este punto, se llevan a cabo las primeras tareas de exploración de las imágenes.
+A continuación, se llevan a cabo las primeras tareas de exploración de las imágenes.
 
 En primer lugar, seleccionando el directorio que contiene los datos de entrenamiento se realiza una función para obtener el número de imágenes existentes por cada tipo de tamaño. Gracias a esta función se sabe que se cuentan con imágenes de variables tamaños, concretamente existen 760 tipos de tamaños distintos. En la siguiente tabla se exponen los 5 tipos de tamaño que más se repiten:
 
@@ -351,43 +376,43 @@ Tamaño (píxeles) & N\textsuperscript{o} imágenes \\ \hline
 \end{tabular}
 \end{table}
 
-De cara a construir un modelo todas las imágenes tienen que tener el mismo tamaño y debida a esta primera toma de contacto se toma la decisión de transformar todas las imágenes a tamaño de 256x256 píxeles.
+De cara a construir un modelo todas las imágenes tienen que tener el mismo tamaño y debida a esta primera toma de contacto se toma la decisión de transformar todas las imágenes a tamaño de 256x256 píxeles. Sin embargo, debido a los modelos usados se termina convirtiendo a imágenes de tamaño 224x224, ya que es un tamañao estándar que entiende cualquier modelo y es el más cercano a los dos tipo de tamños de imágenes más usuales en nuestros datos.
 
-En segundo lugar, se realiza una muestra aleatoria de una imagen por clase, para visualizar el tipo de imágenes que se vana tratar.
+En segundo lugar, se realiza una muestra aleatoria de una imagen por clase, para visualizar el tipo de imágenes que se van a tratar en la Figura \ref{fig:random_per_class}.
 
 \begin{figure}[ht]
 \begin{center}
-\includegraphics[scale=0.4]{./Images/Imagen_aleatoria_por_clase.png}
+\includegraphics[scale=0.4]{./Images/Preprocesado/Imagen_aleatoria_por_clase.png}
 \caption{\headlinecolor{\underline{Imagen aleatoria por clase}}}
-\label{fig:fig4}
+\label{fig:random_per_class}
 \end{center}
 \end{figure}
 
-Se puede observar la gran variedad de imágenes que existen, con distintos brillos, distintos fondos o incluso giradas:
+En la Figura \ref{fig:random_per_class} se puede observar la gran variedad de imágenes que existen, con distintos brillos, distintos fondos o incluso giradas:
 
 \begin{bulletlist}
 \item En cuanto al brillo se puede observar que la imagen de \texttt{Target\_Spot} tiene mucho más brillo que la de \texttt{Tomato\_Yellow\_Leaf\_Curl\_Virus}.
-\item Con respecto al fondo podemos vir distinciones entre la imagen \texttt{Bacterial\_spot} con un fondo grisáceo plano, la imagen \texttt{Late\_blight} con fondo completamente negro y la foto \texttt{Early\_blight} en la que se ve el resto de la planta de tomate, no solo se ve una hoja.
+\item Con respecto al fondo podemos ver distinciones entre la imagen \texttt{Bacterial\_spot} con un fondo grisáceo plano, la imagen \texttt{Late\_blight} con fondo completamente negro y la foto \texttt{Early\_blight} en la que se ve el resto de la planta de tomate, no solo se ve una hoja.
 \item También se puede destacar la diferencia entre las posiciones de las hojas, algunas como \texttt{Bacterial\_spot} tienen el tallo abajo, otras como \texttt{Leaf\_Mold} tienen el tallo arriba y otras como \texttt{Septoria\_leaf\_spot} tienen el tallo horizontal. 
 \item Además se tiene un ejemplo de imagen rotada, concretamente la \texttt{Septoria\-\_leaf\_spot}
 \end{bulletlist}
 
-Debido a esta gran variedad de imágenes y de enfermedades se llegó a la conclusión de que no tiene mucho sentido usar funciones especiales de la librería PlantCV, ya que esta está muy orientada al fenotipado clásico (área, forma, color, índices), y esas características a veces no capturan la complejidad de patrones de enfermedades, que suelen ser más sutiles y no lineales. La estrategia que se ha seguido es pasar a un pipeline de deep learning con imágenes preprocesadas de forma estándar. De esta manera el modelo aprenderá por si mismo las características discriminantes en lugar de imponer un conjunto de "features" manuales.
+Debido a esta gran variedad de imágenes y de enfermedades se llegó a la conclusión de que no tiene mucho sentido usar funciones especiales de la librería PlantCV, ya que esta está muy orientada al fenotipado clásico (área, forma, color, índices), y esas características a veces no capturan la complejidad de patrones de enfermedades, que suelen ser más sutiles y no lineales. La estrategia que se ha seguido es pasar a un pipeline de \textit{deep learning} con imágenes preprocesadas de forma estándar. De esta manera el modelo aprenderá por si mismo las características discriminantes en lugar de imponer un conjunto de \textit{features} manuales.
 
 A continuación se dispuso a formar los conjuntos de datos que usará el modelo. Hasta ahora se tienen datos para el entrenamiento del modelo y para la validación del mismo, sin embargo, no se tienen datos para realizar pruebas sobre el modelo resultante. Por lo tanto, se formará un nuevo conjunto de datos de pruebas a partir del cunjunto de entrenamiento, concretamente, seleccionando un 20\% de sus datos.
 
 Para realizar esta tarea se recorre el directorio de datos de entrenamiento y aleatoriamente se seleccionan imágenes de cada subdirectorio (clase) y se añaden a un nuevo directorio que será el de datos de prueba.
 
-Otra tarea importante en cuanto al procesado de los datos es normalizar los mismos. Para ello, se hace uso de ImageDataGenerator de Tensorflow. Se usa esta función porque también sirve para aplicar la técnica de data augmentation en los datos de entrenamiento. Esta técnica consiste en generar datos adicionales a partir de los ya existentes aplicando transformaciones que mantienen la esencia de la información original, pero la presentan de manera distinta. Su objetivo principal es enriquecer el conjunto de entrenamiento para mejorar la capacidad de generalización del modelo resultante.
+Otra tarea importante en cuanto al procesado de los datos es normalizar los mismos. Para ello, se hace uso de \textit{ImageDatagenerator} de Tensorflow. Se usa esta función porque también sirve para aplicar la técnica de aumento de datos (\textit{data augmentation}) \parencite{research12} en los datos de entrenamiento. Esta técnica consiste en generar datos adicionales a partir de los ya existentes aplicando transformaciones que mantienen la esencia de la información original, pero la presentan de manera distinta. Su objetivo principal es enriquecer el conjunto de entrenamiento para mejorar la capacidad de generalización del modelo resultante.
 
-Es decir, a los tres conjuntos de datos se le apliza normalización que consiste en transformar los pixeles de cada imagen de valores que van de 0 a 255 (escala RGB) a valores entre 0 y 1. Además a las imágenes del conjunto de entrenamiento se le aplica la técnica de data augmentation que se ha mencionado anteriormente, concretamente se le aplican las siguientes transformaciones:
+Es decir, a los tres conjuntos de datos se le apliza normalización que consiste en transformar los pixeles de cada imagen de valores que van de 0 a 255 (escala RGB) a valores entre 0 y 1. Además a las imágenes del conjunto de entrenamiento se le aplica la técnica de \textit{data augmentation} que se ha mencionado anteriormente, concretamente se le aplican las siguientes transformaciones:
 
 \begin{bulletlist}
 \item Rota aleatoriamente la imagen hasta más menos 20 grados.
 \item Aplica un zoom aleatorio entre 80\% y 120\% del tamaño original.
 \item Desplaza la imagen horizontalmente hasta un 20\% de su ancho.
 \item Desplaza la imagen verticalmente hasta un 20\% de su alto.
-\item Aplica una transformación de cizallamiento (shear), como si se deformara la imagen en diagonal.
+\item Aplica una transformación de cizallamiento (\textit{shear}), como si se deformara la imagen en diagonal.
 \item Gira horizontalmente las imágenes aleatoriamente.
 \item Cambia el brillo aleatoriamente entre 80\% y 120\%.
 \item Cuando una transformación (como una rotación o desplazamiento) deja espacios vacíos en la imagen, estos se rellenan con el valor del píxel más cercano.
@@ -395,7 +420,7 @@ Es decir, a los tres conjuntos de datos se le apliza normalización que consiste
 
 Estas transformaciones se aplicarán aleatoriamente cada vez que el generador entrega un lote al modelo durante el entrenamiento. De esta manera, el modelo el modelo nunca verá dos veces exactamente la misma versión de la imagen.
 
-Como ya se ha mencionado se ha usado ImageDataGenerator para formar los conjuntos de datos. Concretamente lo que permite es crear generadores, que no son más que objetos que producen datos de forma incremental, lote a lote, en lugar de cargar todo el dataset en memoria de golpe. El generador se conecta a un directorio con datos y los va leyendo en lotes de un tamaño determinado, en este caso se ha usado un tamaño de 32, es decir, va formando lotes de 32 imágnes y a estas se les aplica normalización y también las transformaciones de data augmentation mencionadas si son datos de entrenamiento.
+Como ya se ha mencionado se ha usado \textit{ImageDatagenerator} para formar los conjuntos de datos. Concretamente lo que permite es crear generadores, que no son más que objetos que producen datos de forma incremental, lote a lote, en lugar de cargar todo el \textit{dataset} en memoria de golpe. El generador se conecta a un directorio con datos y los va leyendo en lotes de un tamaño determinado, en este caso se ha usado un tamaño de 32, es decir, va formando lotes de 32 imágnes y a estas se les aplica normalización y también las transformaciones de \textit{data augmentation} mencionadas si son datos de entrenamiento.
 
 De esta manera, quedan los siguientes conjuntos de datos:
 
@@ -465,93 +490,807 @@ Clase & N\textsuperscript{o} imágenes & Peso \\ \hline
 
 En esta sección se describe la estrategia de modelado empleada, común a todos los experimentos realizados posteriormente. El enfoque adoptado se basa en el uso de redes neuronales convolucionales (CNN), dado que constituyen la arquitectura de referencia en tareas de clasificación de imágenes al ser capaces de extraer de manera automática y jerárquica características relevantes de los datos visuales.
 
-Considerando las limitaciones de recursos computacionales disponibles, se optó por la técnica de transfer learning. Esta metodología permite aprovechar modelos previamente entrenados sobre grandes bases de datos, de modo que las capas iniciales ya contienen representaciones generales de las imágenes. Posteriormente, dichas representaciones se ajustan mediante un proceso de fine-tuning a la tarea específica de clasificación de enfermedades en hojas de tomate.
+Considerando las limitaciones de recursos computacionales disponibles, se optó por la técnica de \textit{transfer learning}. Esta metodología permite aprovechar modelos previamente entrenados sobre grandes bases de datos, de modo que las capas iniciales ya contienen representaciones generales de las imágenes. Posteriormente, dichas representaciones se ajustan a la tarea específica de clasificación de enfermedades en hojas de tomate.
 
+Concretamente se han usado los modelos \textit{MobileNetV2}, \textit{NASNetMobile} y \textit{EfficientNetB0} preentrenados con el dataset de \textit{ImageNet}. De esta manera se aprovechan los pesos previamente aprendidos, que contienen representaciones visuales generales como bordes, texturas y formas, para inicializar la red. Posteriormente, esta red se adapta a la clasificación de enfermedades en hojas de tomate. 
+
+Además, cabe mencionar que para algunos modelos se ha usado la técnica de \textit{fine tuning} que va un poco más allá que \textit{transfer learning}, ya que tras entrenar un modelo con una gran base de datos se descongelan algunas de sus capas para que el modelo final se adapte más a la tarea específica que en este caso es la clasificación de enfermedades en hojas de tomate.
+
+Al haber usado la técnica de \textit{fine tuning} tiene sentido añadir las características principales de las arquitecturas de redes neuronales usadas. Esta tarea se lleva a cabo en la sección \ref{sec:sec4.5}.
 Con el objetivo de gestionar mejor los recursos disponibles, se implementaron disitntos callbacks:
 
 \begin{bulletlist}
-\item HistorySaver: permite guardar el historial de métricas en un archivo externo. Esto resulta especialmente útil en entornos con recursos limitados o sesiones interrumpibles (como Google Colab), ya que garantiza que la información del entrenamiento no se pierda.
-\item ModelCheckpoint: encargado de almacenar en disco el modelo con mejor desempeño en validación, según la métrica \texttt{val\_accuracy}. De este modo, se asegura la conservación de la mejor versión del modelo entrenado, evitando depender únicamente de los pesos finales.
+\item \textit{HistorySaver}: permite guardar el historial de métricas en un archivo externo. Esto resulta especialmente útil en entornos con recursos limitados o sesiones interrumpibles (como Google Colab), ya que garantiza que la información del entrenamiento no se pierda. Concretamente se ha usado para guardar las métricas de precisión y pérdida de entrenamiento y validación.
+\item \textit{ModelCheckpoint}: encargado de almacenar en disco el modelo con mejor desempeño en validación, según la métrica  de precisión (\texttt{val\_accuracy}). De este modo, se asegura la conservación de la mejor versión del modelo entrenado, evitando depender únicamente de los pesos finales.
 \end{bulletlist}
 
-Estos callbacks se han usado en todos los modelos. Sin embargo, en los llamados modelos optimizados se han usado otros dos callbacks:
+Estos callbacks se han usado en todos los entrenamientos. Sin embargo, en algunos entrenamientos se han usado además otros dos callbacks:
 
 \begin{bulletlist}
-\item EarlyStopping: detiene el entrenamiento de forma anticipada si la pérdida de validación no mejora durante un número determinado de épocas consecutivas. Esto evita sobreentrenamiento y reduce el tiempo de cómputo innecesario.
-\item ReduceLROnPlateau: ajusta de manera dinámica la tasa de aprendizaje cuando la pérdida de validación alcanza una meseta. Gracias a esta reducción progresiva, el modelo puede seguir afinando sus parámetros con pasos cada vez más pequeños, lo que mejora la convergencia.
+\item \textit{EarlyStopping}: detiene el entrenamiento de forma anticipada si la pérdida de validación no mejora durante un número determinado de épocas consecutivas. Esto evita sobreentrenamiento y reduce el tiempo de cómputo innecesario.
+\item \textit{ReduceLROnPlateau}: ajusta de manera dinámica la tasa de aprendizaje cuando la pérdida de validación alcanza una meseta. Gracias a esta reducción progresiva, el modelo puede seguir afinando sus parámetros con pasos cada vez más pequeños, lo que mejora la convergencia.
 \end{bulletlist}
 
 En conjunto, estos callbacks permitieron no solo optimizar el uso de los recursos computacionales disponibles, sino también obtener modelos más robustos y con mejor capacidad de generalización.
 
-Los modelos previamente entrenados que se han usado son MobileNetV2, EfficientNetB0, NASNetMobile..
+Por último cabe destacar que para que los modelos puedan ser reconstruidos por cualquiera con acceso a los mismos datos de los que se parte es necesario fijar a un valor fijo disintas semillas aleatorias:
+
+\begin{bulletlist}
+\item Para la inicialización de los pesos en el modelo se usa \texttt{tf.random.set\_seed(42)}.
+\item Para la generación de los conjuntos de datos con \textit{ImageDatagenerator} se usa el parámetro \texttt{seed} con valor 42.
+\item Para el barajado de los datos del conjunto de entrenmaiento \texttt{random.seed(42)} y \texttt{np.random.seed(42)}.
+\end{bulletlist}
+
+
+\subsection{Modelo \textit{MobileNetV2} 1}\label{sec:sec4.4.1}
+
+Este modelo usa de capa base \textit{MobileNetV2} preentrenada con los pesos de \textit{ImageNet}. Posteriormente se congelan las capas del modelo base para evitar que los pesos se modifiquen durante el entrenamiento y se use correctamente la técnica de \textit{transfer learning}. A continuación se añade una capa de \textit{GlobalAveragePooling} y una capa densa con 11 neuronas y función de activación \textit{softmax}, ya que nos enfrentamos a una clasificación de 11 clases.
+Esta información es la que se muestra en la Figura \ref{fig:mobilenetv2_1}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.7]{./Images/Modelos/summary_mobilnetv2_1.png}
+\caption{\headlinecolor{\underline{Resumen del modelo \textit{MobileNetV2} 1}}}
+\label{fig:mobilenetv2_1}
+\end{center}
+\end{figure}
+
+Finalmente para la compilación se usa el optimizador Adam, la función de pérdida de entropía cruzada categórica y se escoge la métrica de precisión para evaluar el rendimiento. 
+
+Se usa la función de pérdida de entropía cruzada categórica porque al crear los conjuntos de datos con ImageDatagenerator como se indica en la sessción \ref{sec:sec4.3} se usa el parámetro class mode con valor categorical que convierte las etiquetas a vectores one-hot encoded.
+
+
+\subsection{Modelo \textit{MobileNetV2} 2}\label{sec:sec4.4.2}
+
+Este modelo usa de capa base \textit{MobileNetV2} preentrenada con los pesos de \textit{ImageNet}. Posteriormente se congelan las capas del modelo base para evitar que los pesos se modifiquen durante el entrenamiento, pero en esta ocasión se descongelan algunas capas, usando la técnica de \textit{fine tuning}. Concretamente, se descongela a partir de la capa 100 con el objetivo de que el modelo se adapte mejor a nuestro caso concreto como se explica en el Cuadro \ref{tab:arquitectura_MobileNetV2}. A continuación se añade una capa de \textit{GlobalAveragePooling} y una capa densa con 11 neuronas y función de activación \textit{softmax}, ya que nos enfrentamos a una clasificación de 11 clases. Esta información es la que se muestra en la Figura \ref{fig:mobilenetv2_2}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.7]{./Images/Modelos/summary_mobilnetv2_2.png}
+\caption{\headlinecolor{\underline{Resumen del modelo \textit{MobileNetV2} 2}}}
+\label{fig:mobilenetv2_2}
+\end{center}
+\end{figure}
+
+Finalmente para la compilación se usa el optimizador Adam, la función de pérdida de entropía cruzada categórica y se escoge la métrica de precisión para evaluar el rendimiento. Sin embargo, no se usa un \textit{learning rate} por defecto (\texttt{1e-3}), se usa un \textit{learning rate} menor (\texttt{1e-5}).
+
+Se usa la función de pérdida de entropía cruzada categórica porque al crear los conjuntos de datos con ImageDatagenerator como se indica en la Sección \ref{sec:sec4.3} se usa el parámetro \textit{class mode} con valor categorical que convierte las etiquetas a vectores \textit{one-hot encoded}.
+
+
+\subsection{Modelo \textit{MobileNetV2} 3}\label{sec:sec4.4.3}
+
+Este modelo usa de capa base \textit{MobileNetV2} preentrenada con los pesos de \textit{ImageNet}. Posteriormente se congelan las capas del modelo base para evitar que los pesos se modifiquen durante el entrenamiento, pero en esta ocasión se descongelan algunas capas, usando la técnica de \textit{fine tuning}. Concretamente, se descongela a partir de la capa 80 con el objetivo de que el modelo se adapte mejor a nuestro caso concreto como se explica en el Cuadro \ref{tab:arquitectura_MobileNetV2}. A continuación se añade una capa de \textit{GlobalAveragePooling} y una capa densa con 11 neuronas y función de activación \textit{softmax}, ya que nos enfrentamos a una clasificación de 11 clases. Esta información es la que se muestra en la Figura \ref{fig:mobilenetv2_3}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.7]{./Images/Modelos/summary_mobilnetv2_2.png}
+\caption{\headlinecolor{\underline{Resumen del modelo \textit{MobileNetV2} 3}}}
+\label{fig:mobilenetv2_3}
+\end{center}
+\end{figure}
+
+Finalmente para la compilación se usa el optimizador Adam, la función de pérdida de entropía cruzada categórica y se escoge la métrica de precisión para evaluar el rendimiento. Sin embargo, no se usa un \textit{learning rate} por defecto (\texttt{1e-3}), se usa un \textit{learning rate} menor (\texttt{5e-6}).
+
+Se usa la función de pérdida de entropía cruzada categórica porque al crear los conjuntos de datos con ImageDatagenerator como se indica en la Sección \ref{sec:sec4.3} se usa el parámetro \textit{class mode} con valor categorical que convierte las etiquetas a vectores \textit{one-hot encoded}.
+
+
+\subsection{Modelo \textit{EfficientNetB0} 1}\label{sec:sec4.4.4}
+
+Este modelo usa de capa base \textit{EfficientNetB0} preentrenada con los pesos de \textit{ImageNet}. Posteriormente se congelan las capas del modelo base para evitar que los pesos se modifiquen durante el entrenamiento y se use correctamente la técnica de \textit{transfer learning}. A continuación se añade una capa de \textit{GlobalAveragePooling} y una capa densa con 11 neuronas y función de activación \textit{softmax}, ya que nos enfrentamos a una clasificación de 11 clases.
+Esta información es la que se muestra en la Figura \ref{fig:efficientnetb0_1}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.7]{./Images/Modelos/summary_efficientnetb0_1.png}
+\caption{\headlinecolor{\underline{Resumen del modelo \textit{EfficientNetB0} 1}}}
+\label{fig:efficientnetb0_1}
+\end{center}
+\end{figure}
+
+Finalmente para la compilación se usa el optimizador Adam, la función de pérdida de entropía cruzada categórica y se escoge la métrica de precisión para evaluar el rendimiento. 
+
+Se usa la función de pérdida de entropía cruzada categórica porque al crear los conjuntos de datos con ImageDatagenerator como se indica en la Sección \ref{sec:sec4.3} se usa el parámetro \textit{class mode} con valor categorical que convierte las etiquetas a vectores \textit{one-hot encoded}.
+
+
+
+\subsection{Modelo \textit{EfficientNetB0} 2}\label{sec:sec4.4.5}
+
+Este modelo usa de capa base \textit{EfficientNetB0} preentrenada con los pesos de \textit{ImageNet}. Posteriormente se congelan las capas del modelo base para evitar que los pesos se modifiquen durante el entrenamiento, pero en esta ocasión se descongelan algunas capas, usando la técnica de \textit{fine tuning}. Concretamente, se descongela a partir de la capa 100 con el objetivo de que el modelo se adapte mejor a nuestro caso concreto como se explica en el Cuadro \ref{tab:arquitectura_EfficientNetB0}. A continuación se añade una capa de \textit{GlobalAveragePooling} y una capa densa con 11 neuronas y función de activación \textit{softmax}, ya que nos enfrentamos a una clasificación de 11 clases. Esta información es la que se muestra en la Figura \ref{fig:efficientnetb0_2}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.7]{./Images/Modelos/summary_efficientnetb0_2.png}
+\caption{\headlinecolor{\underline{Resumen del modelo \textit{EfficientNetB0} 2}}}
+\label{fig:efficientnetb0_2}
+\end{center}
+\end{figure}
+
+Finalmente para la compilación se usa el optimizador Adam, la función de pérdida de entropía cruzada categórica y se escoge la métrica de precisión para evaluar el rendimiento. Sin embargo, no se usa un \textit{learning rate} por defecto (\texttt{1e-3}), se usa un \textit{learning rate} menor (\texttt{1e-5}).
+
+Se usa la función de pérdida de entropía cruzada categórica porque al crear los conjuntos de datos con ImageDatagenerator como se indica en la Sección \ref{sec:sec4.3} se usa el parámetro \textit{class mode} con valor categorical que convierte las etiquetas a vectores \textit{one-hot encoded}.
+
+
+
+\subsection{Modelo \textit{EfficientNetB0} 3}\label{sec:sec4.4.6}
+
+Este modelo usa de capa base \textit{EfficientNetB0} preentrenada con los pesos de \textit{ImageNet}. Posteriormente se congelan las capas del modelo base para evitar que los pesos se modifiquen durante el entrenamiento, pero en esta ocasión se descongelan algunas capas, usando la técnica de \textit{fine tuning}. Concretamente, se descongela a partir de la capa 100 con el objetivo de que el modelo se adapte mejor a nuestro caso concreto como se explica en el Cuadro \ref{tab:arquitectura_EfficientNetB0}. A continuación se añade una capa de \textit{GlobalAveragePooling} y una capa densa con 11 neuronas y función de activación \textit{softmax}, ya que nos enfrentamos a una clasificación de 11 clases. Esta información es la que se muestra en la Figura \ref{fig:efficientnetb0_2}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.7]{./Images/Modelos/summary_efficientnetb0_3.png}
+\caption{\headlinecolor{\underline{Resumen del modelo \textit{EfficientNetB0} 3}}}
+\label{fig:efficientnetb0_3}
+\end{center}
+\end{figure}
+
+Finalmente para la compilación se usa el optimizador Adam, la función de pérdida de entropía cruzada categórica y se escoge la métrica de precisión para evaluar el rendimiento. Sin embargo, no se usa un \textit{learning rate} por defecto (\texttt{1e-3}), se usa un \textit{learning rate} menor (\texttt{3e-6}).
+
+Se usa la función de pérdida de entropía cruzada categórica porque al crear los conjuntos de datos con ImageDatagenerator como se indica en la Sección \ref{sec:sec4.3} se usa el parámetro \textit{class mode} con valor categorical que convierte las etiquetas a vectores \textit{one-hot encoded}.
+
+
+
+\subsection{Modelo \textit{NASNetMobile} 1}\label{sec:sec4.4.7}
+
+Este modelo usa de capa base \textit{NASNetMobile} preentrenada con los pesos de ImageNet. Posteriormente se congelan las capas del modelo base para evitar que los pesos se modifiquen durante el entrenamiento y se use correctamente la técnica de \textit{transfer learning}. A continuación se añade una capa de \textit{GlobalAveragePooling} y una capa densa con 11 neuronas y función de activación \textit{softmax}, ya que nos enfrentamos a una clasificación de 11 clases. Esta información es la que se muestra en la Figura \ref{fig:nasnetmobile_1}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.7]{./Images/Modelos/summary_nasnetmobile_1.png}
+\caption{\headlinecolor{\underline{Resumen del modelo \textit{NASNetMobile} 1}}}
+\label{fig:nasnetmobile_1}
+\end{center}
+\end{figure}
+
+Finalmente para la compilación se usa el optimizador Adam, la función de pérdida de entropía cruzada categórica y se escoge la métrica de precisión para evaluar el rendimiento. 
+
+
+
+\subsection{Modelo \textit{NASNetMobile} 2}\label{sec:sec4.4.8}
+
+Este modelo usa de capa base \textit{NASNetMobile} preentrenada con los pesos de \textit{ImageNet}. Posteriormente se congelan las capas del modelo base para evitar que los pesos se modifiquen durante el entrenamiento, pero en esta ocasión se descongelan algunas capas, usando la técnica de \textit{fine tuning}. Concretamente, se descongela a partir de la capa 60 con el objetivo de que el modelo se adapte mejor a nuestro caso concreto como se explica en el Cuadro \ref{tab:arquitectura_NASNetMobile}. A continuación se añade una capa de \textit{GlobalAveragePooling} y una capa densa con 11 neuronas y función de activación \textit{softmax}, ya que nos enfrentamos a una clasificación de 11 clases. Esta información es la que se muestra en la Figura \ref{fig:nasnetmobile_2}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.7]{./Images/Modelos/summary_nasnetmobile_2.png}
+\caption{\headlinecolor{\underline{Resumen del modelo \textit{NASNetMobile} 2}}}
+\label{fig:nasnetmobile_2}
+\end{center}
+\end{figure}
+
+Finalmente para la compilación se usa el optimizador Adam, la función de pérdida de entropía cruzada categórica y se escoge la métrica de precisión para evaluar el rendimiento. Sin embargo, no se usa un \textit{learning rate} por defecto (\texttt{1e-3}), se usa un \textit{learning rate} menor (\texttt{5e-6}).
+
+Se usa la función de pérdida de entropía cruzada categórica porque al crear los conjuntos de datos con ImageDatagenerator como se indica en la Sección \ref{sec:sec4.3} se usa el parámetro \textit{class mode} con valor categorical que convierte las etiquetas a vectores \textit{one-hot encoded}.
+
+
+
+\section{Arquitecturas}\label{sec:sec4.5}
+
+En esta sección se explicarán las principales características de las arquitecturas empleadas para construir los modelos de la sección \ref{sec:sec4.4}
+
+\subsection{\textit{MobileNetV2}}\label{sec:sec4.5.1}
+
+\textit{MobileNetV2} es una arquitectura de CNN muy efieciente diseñada para aplicaciones de visión integrada en móviles. Ha sido desarrollada por Google para mejorar a su antedecesor \textit{MobileNetV1} proporcionando una mejor precisión y reduciendo la capacidad de cómputo. Sus características claves son las siguientes \parencite{MobilenetV2Architecture}:
+
+\begin{enumerate}[label=\bfseries\headlinecolor\arabic*.]
+\item Bloques residuales invertidos (\textit{Inverted Residuals}): Primero se expande el número de canales mediante una convolución 1×1 (capa de expansión). Luego se aplica una convolución \textit{"depthwise"} (convolución separada por canal) para realizar el filtrado espacial. Finalmente, se reduce de nuevo el número de canales a la dimensión deseada mediante otra 1×1 (capa de proyección). Esta estructura permite conservar dimensiones de entrada/salida mientras se reduce el coste computacional.
+\item Convoluciones separables en profundidad (\textit{Depthwise Separable Convolutions}): Al igual que su antedecesor, utiliza convoluciones separables, es decir, se descompone una convolución estándar en dos operaciones; primero una convolución \textit{"depthwise"} por cada canal, luego una \textit{"pointwise”} 1×1 que mezcla los canales. Esto reduce considerablemente el número de parámetros y de cálculos, lo que mejora la eficiencia.
+\item Embotellamientos lineales (\textit{Linear Bottlenecks}): Entre capas se insertan \textit{bottlenecks} lineales, que ayudan a que la "variedad" (\textit{manifold}) de los datos de entrada no se comprima excesivamente. Esta práctica contribuye a conservar mayor información, lo cual mejora la precisión del modelo.
+\item Función de activación ReLU6: emplea la función de activación ReLU6, una versión modificada de la ReLU clásica que limita los valores de activación al rango [0, 6]. Esto favorece la cuantización (es decir, el uso eficiente de formatos de menor precisión) en dispositivos móviles manteniendo un buen equilibrio entre eficiencia y precisión.
+\end{enumerate}
+
+A continuación en el Cuadro \ref{tab:arquitectura_MobileNetV2} se expone una división funcional de la red para entender qué aprenden las capas:
+
+\begin{table}[ht] 
+\centering
+\caption{\headlinecolor{\underline{División funcional de MobileNetV2}}} %https://uk.mathworks.com/help/deeplearning/ref/mobilenetv2.html
+\label{tab:arquitectura_MobileNetV2}
+\begin{tabular}{|p{2.5cm}|p{4cm}|p{8cm}|}
+\rowcolor{naranja}
+\multicolumn{3}{|c|}{\textbf{División funcional de MobileNetV2}} \\ \hline
+\rowcolor{naranja!30}
+Zona & Capas & Aprendizaje \\ \hline
+Zona temprana & Primeros bloques (aproximadamente hasta la capa 20) & Características muy básicas: bordes, texturas simples, colores, orientación, gradientes, es decir, filtros universales que casi cualquier red visual aprende \\ \hline
+Zona intermedia & Bloques medios (aproximadamente de la capa 20 a la 80) & Características más complejas: combinaciones de formas, patrones locales, partes de objetos, texturas específicas de hojas/plantas, etc. Aquí ya se empiezan a adaptar a dominios más específicos. \\ \hline
+Zona tardía / cabeza del modelo & Últimos bloques (aproximadamente de la capa 80 hasta la final) & Características de muy alto nivel: semánticas del dominio, relaciones globales en la imagen y adaptación al problema concreto \\ \hline
+\end{tabular}
+\end{table}
+
+
+\subsection{\textit{EfficientNetB0}}\label{sec:sec4.5.2}
+
+\textit{EfficientNet} es una familia de redes neuronales convolucionales (CNN) cuyo objetivo es lograr un alto rendimiento con menos recursos computacionales en comparación con arquitecturas anteriores. Sus características claves son las siguientes \parencite{Efficientnet}:
+
+\begin{enumerate}[label=\bfseries\headlinecolor\arabic*.]
+\item Tallo (\textit{Stem}): Comienza con una etapa de stem que consiste en una convolución estándar seguida de normalización por lotes (\textit{Batch Normalization}) y activación ReLU6.
+\item Cuerpo (\textit{Body}): se compone de una serie de bloques MBConv con diferentes configuraciones (expansión de canales, tamaños de kernel, stride, mecanismo \textit{"squeeze-and-excitation"}).
+\item Head (\textit{Cabeza}): Incluye un bloque convolutional final para clasificación.
+\item Bloques internos: Al igual que \textit{MobileNetV2} usa convoluciones separables en profundidad (\textit{Depthwise Separable Convolutions}) y bloques residuales invertidos (\textit{Inverted Residuals}). Además añade bloques \textit{Squeeze-and-Excitation} para calibrar la importancia de los canales.
+\end{enumerate}
+
+A continuación en el Cuadro \ref{tab:arquitectura_EfficientNetB0} se expone una división funcional de la red para entender qué aprenden las capas:
+
+\begin{table}[ht] 
+\centering
+\caption{\headlinecolor{\underline{División funcional de EfficientNetB0}}} %https://uk.mathworks.com/help/deeplearning/ref/mobilenetv2.html
+\label{tab:arquitectura_EfficientNetB0}
+\begin{tabular}{|p{2.5cm}|p{4cm}|p{8cm}|}
+\rowcolor{naranja}
+\multicolumn{3}{|c|}{\textbf{División funcional de EfficientNetB0}} \\ \hline
+\rowcolor{naranja!30}
+Zona & Capas & Aprendizaje \\ \hline
+Zona temprana & Desde la entrada (\textit{stem}) hasta los primeros bloques \textit{MBConv} (aproximadamente hasta la capa 20) & Características muy básicas: bordes, texturas simples, colores, orientación, gradientes, es decir, filtros universales que casi cualquier red visual aprende \\ \hline
+Zona intermedia & Bloques medios de \textit{MBConv} con mayor expansión y mayor profundidad (aproximadamente de la capa 20 a la 80) & Características más complejas: combinaciones de formas, patrones locales, partes de objetos, texturas específicas de hojas/plantas, etc. Aquí ya se empiezan a adaptar a dominios más específicos. \\ \hline
+Zona tardía / cabeza del modelo & Últimos bloques (aproximadamente de la capa 80 hasta la final) & Características de muy alto nivel: semánticas del dominio, relaciones globales en la imagen y adaptación al problema concreto \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+
+\subsection{\textit{NASNetMobile}}\label{sec:sec4.5.3}
+
+\textit{NASNetMobile} es una arquitectura de CNN . Sus características claves son las siguientes \parencite{MobilenetV2Architecture}:
+
+\begin{enumerate}[label=\bfseries\headlinecolor\arabic*.]
+\item 
+\item 
+\item 
+\item 
+\end{enumerate}
+
+A continuación en el Cuadro \ref{tab:arquitectura_NASNetMobile} se expone una división funcional de la red para entender qué aprenden las capas:
+
+\begin{table}[ht] 
+\centering
+\caption{\headlinecolor{\underline{División funcional de NASNetMobile}}} %https://uk.mathworks.com/help/deeplearning/ref/mobilenetv2.html
+\label{tab:arquitectura_NASNetMobile}
+\begin{tabular}{|p{2.5cm}|p{4cm}|p{8cm}|}
+\rowcolor{naranja}
+\multicolumn{3}{|c|}{\textbf{División funcional de NASNetMobile}} \\ \hline
+\rowcolor{naranja!30}
+Zona & Capas & Aprendizaje \\ \hline
+Zona temprana & Primeros bloques (aproximadamente hasta la capa 20) & Características muy básicas: bordes, texturas simples, colores, orientación, gradientes, es decir, filtros universales que casi cualquier red visual aprende \\ \hline
+Zona intermedia & Bloques medios (aproximadamente de la capa 20 a la 80) & Características más complejas: combinaciones de formas, patrones locales, partes de objetos, texturas específicas de hojas/plantas, etc. Aquí ya se empiezan a adaptar a dominios más específicos. \\ \hline
+Zona tardía / cabeza del modelo & Últimos bloques (aproximadamente de la capa 80 hasta la final) & Características de muy alto nivel: semánticas del dominio, relaciones globales en la imagen y adaptación al problema concreto \\ \hline
+\end{tabular}
+\end{table}
+
+
 
 \chapter{Evaluación y resultados}\label{cap:cap5}
 
-Secciones con cada modelo concreto y sus parámetros y los resultados mostrados con las métricas y una matriz de confusión
+En este capítulo se presentan los resultados obtenidos al usar los datos preprocesados explicado en la sección \ref{sec:sec4.3} a los modelos descritos en la sección \ref{sec:sec4.4}.
 
-\section{Modelo MobileNetV2 base}\label{sec:sec5.1}
+
+\section{Modelo \textit{MobileNetV2} 1}\label{sec:sec5.1}
+
+En esta sección se van a mostrar los resultados del entrenamiento del modelo descrito en la subsección \ref{sec:sec4.4.1}. A este modelo se han aplicado varios entrenamientos distintos explicados en las subsecciones \ref{sec:sec5.1.1}, \ref{sec:sec5.1.2} y \ref{sec:sec5.1.3}.
+
+
+\subsection{Entrenamiento 1}\label{sec:sec5.1.1}
+
+Este entrenamiento se ha realizado usando los pesos de clases descritos en el Cuadro \ref{tab:pesos_por_clase_entrenamiento}. Solo se ha sometido a 10 épocas y se han usado los callbacks de \textit{ModelCheckpoint} e \textit{HistorySaver}, ya que el objetivo de este entrenamiento es observar la tendencia inicial para poderlo comparar con el entrenamiento de la sección \ref{sec:sec5.1.2} y poder determinar qué tanto puede influir los pesos en las clases.
+
+Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las métricas recogidas en el fichero generado por el callback \textit{HistorySaver} en la Figura \ref{fig:metrics_historic_mobilenetv2_1_1}.
 
 \begin{figure}[ht]
 \begin{center}
-\includegraphics[scale=0.5]{./Images/historico_metricas_mobilenetv2_1.png}
-\caption{\headlinecolor{\underline{Histórico de métricas del modelo MobileNetV2 base}}}
-\label{fig:fig5}
+\includegraphics[scale=0.5]{./Images/Resultados/Histórico Métricas/mobilenetv2_1_1.png}
+\caption{\headlinecolor{\underline{Histórico de métricas del entrenamiento 1 del modelo \textit{MobileNetV2} 1}}}
+\label{fig:metrics_historic_mobilenetv2_1_1}
+\end{center}
+\end{figure}
+
+En esta figura se puede observar el comportamiento de las métricas de precisión y pérdida de entrenamiento y validación a lo largo de las épocas a las que se ha sometido el modelo descrito en la subsección \ref{sec:sec4.4.1} en el entrenamiento. A continuación se describe lo que se puede interpretar:  
+
+\begin{bulletlist}
+\item Precisión de entrenamiento: Comienza alrededor de 0.6 y sube rápidamente a un valor cercano a 0.8, mostrando que el modelo aprende bien de los datos de entrenamiento.
+\item Pérdida de entrenamiento: Disminuye de un valor cercano a 1 hasta cerca de 0.6, lo que confirma que el modelo está optimizando correctamente con la función de pérdida elegida para los datos de entrenamiento.
+\item Precisión de validación: Aumenta de un valor cercano a 0.7 a un valor cercano a 0.8, lo que muestra que el modelo aprende bien de datos distintos a los de entrenamiento.
+\item Pérdida de validación: Disminuye de un valor cercano a 0.8 a un valor cercano a 0.5, confirmando que la función de pérdida optimiza bien el modelo.
+\end{bulletlist}
+
+En resumen, ambas métricas de precisión tienden a subir acercándose a 1 y las métricas de pérdidas a bajar acercándose a 0. Ambas tendencias se realizan de manera progresiva sin señales de \textit{overfitting}. 
+
+La precisión de entrenamiento se estabiliza alrededor de 0.8, con incrementos pequeños al final. Esto puede indicar que el modelo se está acercando a su límite de capacidad con la configuración actual. Para exprimir aún más este modelo con intención de mejorarlo se podría aumentar el número de épocas con el callback \textit{EarlyStopping} para que pare el entrenamiento en caso de que no mejore y el callback de \textit{ReduceLROnPlateau} para que reduzca el \textit{learning rate} en el entrenamiento y haga que no se estanquen sus valores. 
+
+Para poder comparar este entrenamiento con el de la subsección \ref{sec:sec5.1.2} es necesario realizar un análisis de métricas por clases. Para ello se van a mostrar las métricas del método \texttt{classification\_report} de la librería \textit{Sklearn} en la Figura \ref{fig:metrics_summary_mobilenetv2_1_1} y la matriz de confusión en la Figura \ref{fig:confusion_matrix_mobilenetv2_1_1}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.7]{./Images/Resultados/Métricas resumen/mobilenetv2_1_1.png}
+\caption{\headlinecolor{\underline{Resumen de métricas del modelo \textit{MobileNetV2} 1 en el entrenamiento 1}}}
+\label{fig:metrics_summary_mobilenetv2_1_1}
 \end{center}
 \end{figure}
 
 \begin{figure}[ht]
 \begin{center}
-\includegraphics[scale=0.7]{./Images/resumen_metricas_mobilenetv2_1.png}
-\caption{\headlinecolor{\underline{Resumen de las métricas del modelo MobileNetV2 base}}}
-\label{fig:fig6}
+\includegraphics[scale=0.5]{./Images/Resultados/Matriz de confusión/mobilenetv2_1_1.png}
+\caption{\headlinecolor{\underline{Matriz de confusión del modelo \textit{MobileNetV2} 1 en el entrenamiento 1}}}
+\label{fig:confusion_matrix_mobilenetv2_1_1}
+\end{center}
+\end{figure}
+
+Para entender las métricas de la Figura \ref{fig:metrics_summary_mobilenetv2_1_1} se va a hacer una breve explicación de cada una de ellas:
+
+\begin{bulletlist}
+\item Precisión (\textit{Precision}): De todas las imágenes que el modelo predijo como una clase, cuántas realmente pertenecen a esa clase.
+\item Sensibilidad (\textit{Recall}): De todas las imágenes que son realmente de una clase, cuántas fueron detectadas correctamente.
+\item \textit{F1-Score}: Es el promedio armónico entre precisión y sensibilidad.
+\item Soporte (\textit{Support}): El número de imágenes reales de cada clase en el conjunto de test.
+\end{bulletlist}
+
+Sabiendo esto se puede decir que el modelo tiene un rendimiento homogéneo entre clases habiendo un balance bastante bueno entre precisión y sensibilidad en practicamente todas las clases.
+
+Para extraer resultados de la Figura \ref{fig:confusion_matrix_mobilenetv2_1_1} se va a explicar qué es una matriz de confusión.  Una matriz de confusión es una herramienta que permite la visualización del desempeño de un modelo de clasificación. Cada columna representa el número de predicciones de cada clase, mientras que cada fila representa a las instancias en la clase real.
+
+De esta manera se puede afirmar que:
+
+\begin{bulletlist}
+\item Las clases \texttt{Tomato\_Yellow\_Leaf\_Curl\_Virus}, \texttt{Tomato\_mosaic\_virus} y \texttt{healthy} son clasificadas casi a la perfección. Cuando nuestro modelo predice esas clases tiene una tas de acierto mayor al 90\%.
+\item Las clases \texttt{Target\_Spot}, \texttt{powdery\_mildew}, \texttt{Early\_blight} y \texttt{Septoria\_leaf\_spot} son las más conflictivas, ya que el modelo tiende a clasificar otras imágenes como ellas.
+\end{bulletlist}
+
+Este modelo tiene un comportamiento sólido y equilibrado, generaliza bien y consigue que incluso las clases con menos muestras tengan buenos niveles de recall. 
+
+
+
+\subsection{Entrenamiento 2}\label{sec:sec5.1.2}
+
+Este entrenamiento es igual que el anterior, pero sin tener en cuenta los pesos de las clases.
+
+Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las métricas recogidas en el fichero generado por el callback \textit{HistorySaver} en la Figura \ref{fig:metrics_historic_mobilenetv2_1_2}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.5]{./Images/Resultados/Histórico Métricas/mobilenetv2_1_2.png}
+\caption{\headlinecolor{\underline{Histórico de métricas del entrenamiento 2 del modelo \textit{MobileNetV2} 1}}}
+\label{fig:metrics_historic_mobilenetv2_1_2}
+\end{center}
+\end{figure}
+
+En la Figura \ref{fig:metrics_historic_mobilenetv2_1_2} podemos observar el comportamiento de las métricas de precisión y pérdida de entrenamiento y validación a lo largo de las épocas a las que se ha sometido el modelo descrito en la subsección \ref{sec:sec4.4.1} en el entrenamiento. A continuación se describe lo que se puede interpretar:  
+
+\begin{bulletlist}
+\item Precisión de entrenamiento: Comienza alrededor de 0.6 y sube rápidamente a un valor cercano a 0.8, mostrando que el modelo aprende bien de los datos de entrenamiento.
+\item Pérdida de entrenamiento: Disminuye de un valor cercano a 1 hasta cerca de 0.6, lo que confirma que el modelo está optimizando correctamente con la función de pérdida elegida para los datos de entrenamiento.
+\item Precisión de validación: Aumenta de un valor cercano a 0.7 a un valor cercano a 0.8, lo que muestra que el modelo aprende bien de datos distintos a los de entrenamiento.
+\item Pérdida de validación: Disminuye de un valor cercano a 0.8 a un valor cercano a 0.5, confirmando que la función de pérdida optimiza bien el modelo.
+\end{bulletlist}
+
+En resumen, ambas métricas de precisión tienden a subir acercándose a 1 y las métricas de pérdidas a bajar acercándose a 0. Ambas tendencias se realizan de manera progresiva sin señales de \textit{overfitting}. 
+
+El rendimiento global es prácticamente el mismo que el conseguido con el entrenmaiento de la subsección \ref{sec:sec5.1.1}, por lo que para poder compararlos más detalladamente es necesario realizar un análisis de métricas por clases. Para ello se van a mostrar las métricas del método \texttt{classification\_report} de la librería \textit{Sklearn} en la Figura \ref{fig:metrics_summary_mobilenetv2_1_2} y la matriz de confusión en la Figura \ref{fig:confusion_matrix_mobilenetv2_1_2}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.7]{./Images/Resultados/Métricas resumen/mobilenetv2_1_2.png}
+\caption{\headlinecolor{\underline{Resumen de métricas del modelo \textit{MobileNetV2} 1 en el entrenamiento 2}}}
+\label{fig:metrics_summary_mobilenetv2_1_2}
 \end{center}
 \end{figure}
 
 \begin{figure}[ht]
 \begin{center}
-\includegraphics[scale=0.5]{./Images/matriz_confusion_mobilenetv2_1.png}
-\caption{\headlinecolor{\underline{Matriz de confusión del modelo MobileNetV2 base}}}
-\label{fig:fig7}
+\includegraphics[scale=0.5]{./Images/Resultados/Matriz de confusión/mobilenetv2_1_2.png}
+\caption{\headlinecolor{\underline{Matriz de confusión del modelo \textit{MobileNetV2} 1 en el entrenamiento 2}}}
+\label{fig:confusion_matrix_mobilenetv2_1_2}
 \end{center}
 \end{figure}
 
-\section{Modelo MobileNetV2 optimizado}\label{sec:sec5.2}
+En general se obtiene un buen rendimiento, existiendo un buen balance entre precisión y sensibilidad en practicamente todas las clases. Aún así, se pueden observar diferencias en algunas clases con respecto al modelo resultante de la subsección \ref{sec:sec5.1.1}. En concreto se puede determinar una disminución en la métrica de sensibilidad en en clases menos representadas en el dataset como las clases \texttt{powdery\_mildew} (de 0.93 a 0.80), \texttt{Septoria\_leaf\_spot} (de 0.71 a 0.61) y \texttt{Spidermite\_Two-spotted\_\-spider\_mite} (de 0.84 a 0.70).
 
-\section{Modelo EfficientNetB0 base}\label{sec:sec5.3}
+En cuanto a los resultados de la Figura \ref{fig:confusion_matrix_mobilenetv2_1_2} son bastantes similares a los de la subsección \ref{sec:sec5.1.1}
 
-\section{Modelo NASNetMobile base}\label{sec:sec5.4}
+\begin{bulletlist}
+\item Las clases \texttt{Tomato\_Yellow\_Leaf\_Curl\_Virus}, \texttt{Tomato\_mosaic\_virus} y \texttt{healthy} siguen siendo las que mejor se detectan.
+\item Las clases \texttt{Target\_Spot}, \texttt{powdery\_mildew}, \texttt{Early\_blight} y \texttt{Septoria\_leaf\_spot} siguen siendo las más conflictivas.
+\end{bulletlist}
+
+Se puede decir que este modelo rinde igual en términos generales, pero pierde sensibilidad en las clases menos frecuentes. Esto demuestra la función de los pesos en las clases, es decir el balanceo de las mismas.
+
+El modelo con obtenido en la subsección \ref{sec:sec5.1.1} equilibra mejor los resultados sin sacrificar precisión general, por lo que es la opción más sólida para un sistema de diagnóstico de enfermedades, donde todas las clases tienen importancia clínica. Por tanto  el modelo que se seguirá mejorando en la suubsección subsección \ref{sec:sec5.1.3} 
+
+
+\subsection{Entrenamiento 3}\label{sec:sec5.1.3}
+
+Este entrenamiento se ha realizado usando los pesos de clases descritos en el Cuadro \ref{tab:pesos_por_clase_entrenamiento}. Se ha sometido a 20 épocas y además de los callbacks de \textit{ModelCheckpoint} e \textit{HistorySaver}, se han usado también los callbacks de ReduceLROnPlateau y EarlyStopping.
+
+Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las métricas recogidas en el fichero generado por el callback \textit{HistorySaver} en la Figura \ref{fig:metrics_historic_mobilenetv2_1_3}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.5]{./Images/Resultados/Histórico Métricas/mobilenetv2_1_3.png}
+\caption{\headlinecolor{\underline{Histórico de métricas del entrenamiento 3 del modelo \textit{MobileNetV2} 1}}}
+\label{fig:metrics_historic_mobilenetv2_1_3}
+\end{center}
+\end{figure}
+
+En esta figura se puede observar el comportamiento de las métricas de precisión y pérdida de entrenamiento y validación a lo largo de las épocas a las que se ha sometido el modelo descrito en la subsección \ref{sec:sec4.4.1} en el entrenamiento. A continuación se describe lo que se puede interpretar:  
+
+\begin{bulletlist}
+\item Precisión de entrenamiento: Comienza alrededor de 0.65 y sube rápidamente a un valor cercano a 0.85, mostrando que el modelo aprende bien de los datos de entrenamiento.
+\item Pérdida de entrenamiento: Disminuye de un valor cercano a 1.1 hasta cerca de 0.5, lo que confirma que el modelo está optimizando correctamente con la función de pérdida elegida para los datos de entrenamiento.
+\item Precisión de validación: Aumenta de un valor cercano a 0.75 a un valor cercano a 0.85, lo que muestra que el modelo aprende bien de datos distintos a los de entrenamiento.
+\item Pérdida de validación: Disminuye de un valor cercano a 0.8 a un valor cercano a 0.5, confirmando que la función de pérdida optimiza bien el modelo.
+\end{bulletlist}
+
+En resumen, ambas métricas de precisión tienden a subir acercándose a 1 y las métricas de pérdidas a bajar acercándose a 0. Ambas tendencias se realizan de manera progresiva sin señales de \textit{overfitting}. Cabe destacar que el callback de ReduceLROnPlateau se ha activado en la época 13 reduciendo el learning rate de \texttt{1e-3} a \texttt{5e-4} y en la época 18 reduciendo el learning rate de \texttt{5e-4} a \texttt{2.5e-4}, esxplicando la estabilización que existe.
+
+Para poder comparar este entrenamiento con el resto es necesario realizar un análisis de métricas por clases. Para ello se van a mostrar las métricas del método \texttt{classification\_report} de la librería \textit{Sklearn} en la Figura \ref{fig:metrics_summary_mobilenetv2_1_3} y la matriz de confusión en la Figura \ref{fig:confusion_matrix_mobilenetv2_1_3}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.7]{./Images/Resultados/Métricas resumen/mobilenetv2_1_3.png}
+\caption{\headlinecolor{\underline{Resumen de métricas del modelo \textit{MobileNetV2} 1 en el entrenamiento 3}}}
+\label{fig:metrics_summary_mobilenetv2_1_3}
+\end{center}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.5]{./Images/Resultados/Matriz de confusión/mobilenetv2_1_3.png}
+\caption{\headlinecolor{\underline{Matriz de confusión del modelo \textit{MobileNetV2} 1 en el entrenamiento 3}}}
+\label{fig:confusion_matrix_mobilenetv2_1_3}
+\end{center}
+\end{figure}
+
+En general se obtiene un buen rendimiento, existiendo un buen balance entre precisión y sensibilidad en practicamente todas las clases. Todos los valores de ambas métricas se encuentran entre 0.7 y 0.99, demostrando que no existen demasiadas diferencias entre las clases, afirmando la robustez del modelo.
+
+En cuanto a los resultados de la Figura \ref{fig:confusion_matrix_mobilenetv2_1_3} :
+
+\begin{bulletlist}
+\item Las clases \texttt{Tomato\_Yellow\_Leaf\_Curl\_Virus}, \texttt{Tomato\_mosaic\_virus} y \texttt{Spidermite\_Two\_spotted\_spider\_mite} son clasificadas casi a la perfección. Cuando nuestro modelo predice esas clases tiene una tas de acierto mayor al 90\%.
+\item Las clases \texttt{Target\_Spot}, \texttt{Early\_blight} y \texttt{Septoria\_leaf\_spot} son las más conflictivas, ya que el modelo tiende a clasificar otras imágenes como ellas.
+\end{bulletlist}
+
+Este modelo tiene un comportamiento sólido y equilibrado, generaliza bien y consigue que incluso las clases con menos muestras tengan buenos niveles de precisión y sensibilidad. Para seguir refinando este modelo se descongelarán algunas capas del modelo base (fine tuning) y se reducirá el learning rate, estos cambos se aplican en el modelo de la Subsección \ref{sec:sec4.4.2}. 
+
+
+
+\section{Modelo \textit{MobileNetV2} 2}\label{sec:sec5.2}
+
+En esta sección se explicarán los resultados obtenidos al entrenar el modelo explicado en la Subsección \ref{sec:sec4.4.2}. El entrenamiento se ha realizado usando los pesos de clases descritos en el Cuadro \ref{tab:pesos_por_clase_entrenamiento}. Se ha sometido a 20 épocas y además de los callbacks de \textit{ModelCheckpoint} e \textit{HistorySaver}, se han usado también los callbacks de ReduceLROnPlateau y EarlyStopping.
+
+Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las métricas recogidas en el fichero generado por el callback \textit{HistorySaver} en la Figura \ref{fig:metrics_historic_mobilenetv2_2}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.45]{./Images/Resultados/Histórico Métricas/mobilentv2_2.png}
+\caption{\headlinecolor{\underline{Histórico de métricas del entrenamiento del modelo \textit{MobileNetV2} 2}}}
+\label{fig:metrics_historic_mobilenetv2_2}
+\end{center}
+\end{figure}
+
+En esta figura se puede observar el comportamiento de las métricas de precisión y pérdida de entrenamiento y validación a lo largo de las épocas a las que se ha sometido el modelo descrito en la subsección \ref{sec:sec4.4.2} en el entrenamiento. A continuación se describe lo que se puede interpretar:  
+
+\begin{bulletlist}
+\item Precisión de entrenamiento: Comienza alrededor de 0.5 y sube rápidamente a un valor cercano a 0.9, mostrando que el modelo aprende bien de los datos de entrenamiento.
+\item Pérdida de entrenamiento: Disminuye de un valor cercano a 1.4 hasta cerca de 0.2, lo que confirma que el modelo está optimizando correctamente con la función de pérdida elegida para los datos de entrenamiento.
+\item Precisión de validación: Aumenta de un valor próximo a 0.5 a un valor cercano a 0.9, lo que muestra que el modelo aprende bien de datos distintos a los de entrenamiento.
+\item Pérdida de validación: Disminuye de un valor cercano a 1.4 a un valor próximo a 0.2, confirmando que la función de pérdida optimiza bien el modelo.
+\end{bulletlist}
+
+En resumen, ambas métricas de precisión tienden a subir acercándose a 1 y las métricas de pérdidas a bajar acercándose a 0. Ambas tendencias se realizan de manera progresiva sin señales de \textit{overfitting}. 
+
+En términos generales se tiene un buen modelo, pero para poder comparar con el resto es necesario realizar un análisis de métricas por clases. Para ello se van a mostrar las métricas del método \texttt{classification\_report} de la librería \textit{Sklearn} en la Figura \ref{fig:metrics_summary_mobilenetv2_2} y la matriz de confusión en la Figura \ref{fig:confusion_matrix_mobilenetv2_2}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.7]{./Images/Resultados/Métricas resumen/mobilentv2_2.png}
+\caption{\headlinecolor{\underline{Resumen de métricas del modelo \textit{MobileNetV2} 2}}}
+\label{fig:metrics_summary_mobilenetv2_2}
+\end{center}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.5]{./Images/Resultados/Matriz de confusión/mobilentv2_2.png}
+\caption{\headlinecolor{\underline{Matriz de confusión del modelo \textit{MobileNetV2} 2}}}
+\label{fig:confusion_matrix_mobilenetv2_2}
+\end{center}
+\end{figure}
+
+En general se obtiene un buen rendimiento, existiendo un buen balance entre precisión y sensibilidad en practicamente todas las clases. Todos los valores de ambas métricas se encuentran entre 0.8 y 0.99, demostrando que no existen demasiadas diferencias entre las clases, afirmando la robustez del modelo.
+
+En cuanto a los resultados de la matriz de confusión de la Figura \ref{fig:confusion_matrix_mobilenetv2_2} :
+
+\begin{bulletlist}
+\item Las clases \texttt{Tomato\_Yellow\_Leaf\_Curl\_Virus}, \texttt{Tomato\_mosaic\_virus} y \texttt{healthy} son clasificadas casi a la perfección. Cuando nuestro modelo predice esas clases tiene una tas de acierto mayor al 95\%.
+\item Las clases \texttt{Target\_Spot} y \texttt{Early\_blight} son las más conflictivas, ya que el modelo tiende a clasificar otras imágenes como ellas.
+\end{bulletlist}
+
+Este modelo tiene un comportamiento sólido y equilibrado, generaliza bien y consigue que incluso las clases con menos muestras tengan buenos niveles de precisión y sensibilidad. El modelo está aprovechando las capas de alto nivel para aprender los patrones específicos de tus hojas de tomate, sin destruir la base entrenada en ImageNet.
+
+Para seguir refinando este modelo se descongelarán más capas del modelo base y se reducirá el learning rate, estos cambos se aplican en el modelo de la Subsección \ref{sec:sec4.4.3}. 
+
+
+\section{Modelo \textit{MobileNetV2} 3}\label{sec:sec5.3}
+
+En esta sección se explicarán los resultados obtenidos al entrenar el modelo explicado en la Subsección \ref{sec:sec4.4.3}. El entrenamiento se ha realizado usando los pesos de clases descritos en el Cuadro \ref{tab:pesos_por_clase_entrenamiento}. Se ha sometido a 20 épocas y además de los callbacks de \textit{ModelCheckpoint} e \textit{HistorySaver}, se han usado también los callbacks de ReduceLROnPlateau y EarlyStopping.
+
+Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las métricas recogidas en el fichero generado por el callback \textit{HistorySaver} en la Figura \ref{fig:metrics_historic_mobilenetv2_2}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.45]{./Images/Resultados/Histórico Métricas/mobilenetv2_3.png}
+\caption{\headlinecolor{\underline{Histórico de métricas del entrenamiento del modelo \textit{MobileNetV2} 3}}}
+\label{fig:metrics_historic_mobilenetv2_3}
+\end{center}
+\end{figure}
+
+En esta figura se puede observar el comportamiento de las métricas de precisión y pérdida de entrenamiento y validación a lo largo de las épocas a las que se ha sometido el modelo descrito en la subsección \ref{sec:sec4.4.2} en el entrenamiento. A continuación se describe lo que se puede interpretar:  
+
+\begin{bulletlist}
+\item Precisión de entrenamiento: Comienza alrededor de 0.5 y sube rápidamente a un valor cercano a 0.9, mostrando que el modelo aprende bien de los datos de entrenamiento.
+\item Pérdida de entrenamiento: Disminuye de un valor cercano a 1.75 hasta cerca de 0.25, lo que confirma que el modelo está optimizando correctamente con la función de pérdida elegida para los datos de entrenamiento.
+\item Precisión de validación: Aumenta de un valor próximo a 0.5 a un valor cercano a 0.9, lo que muestra que el modelo aprende bien de datos distintos a los de entrenamiento.
+\item Pérdida de validación: Disminuye de un valor cercano a 1.75 a un valor próximo a 0.25, confirmando que la función de pérdida optimiza bien el modelo.
+\end{bulletlist}
+
+En resumen, ambas métricas de precisión tienden a subir acercándose a 1 y las métricas de pérdidas a bajar acercándose a 0. Ambas tendencias se realizan de manera progresiva sin señales de \textit{overfitting}. 
+
+En términos generales se tiene un buen modelo, pero para poder comparar con el resto es necesario realizar un análisis de métricas por clases. Para ello se van a mostrar las métricas del método \texttt{classification\_report} de la librería \textit{Sklearn} en la Figura \ref{fig:metrics_summary_mobilenetv2_3} y la matriz de confusión en la Figura \ref{fig:confusion_matrix_mobilenetv2_3}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.7]{./Images/Resultados/Métricas resumen/mobilenetv2_3.png}
+\caption{\headlinecolor{\underline{Resumen de métricas del modelo \textit{MobileNetV2} 3}}}
+\label{fig:metrics_summary_mobilenetv2_3}
+\end{center}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.5]{./Images/Resultados/Matriz de confusión/mobilenetv2_3.png}
+\caption{\headlinecolor{\underline{Matriz de confusión del modelo \textit{MobileNetV2} 3}}}
+\label{fig:confusion_matrix_mobilenetv2_3}
+\end{center}
+\end{figure}
+
+En general se obtiene un buen rendimiento, existiendo un buen balance entre precisión y sensibilidad en practicamente todas las clases. Todos los valores de ambas métricas se encuentran entre 0.7 y 0.99, demostrando que no existen demasiadas diferencias entre las clases, afirmando la robustez del modelo. Comparandolo con el anterior modelo la única clase que ha mejorado es \texttt{Early\_blight} (mejora sensibilidad de 0.835 a 0.9), pero el resto de clases se mantienen en valores similares o peores.
+
+En cuanto a los resultados de la matriz de confusión de la Figura \ref{fig:confusion_matrix_mobilenetv2_3} :
+
+\begin{bulletlist}
+\item Las clases \texttt{Tomato\_Yellow\_Leaf\_Curl\_Virus}, \texttt{Tomato\_mosaic\_virus} y \texttt{healthy} son clasificadas casi a la perfección. Cuando nuestro modelo predice esas clases tiene una tas de acierto mayor al 95\%.
+\item Las clases \texttt{Target\_Spot} y \texttt{Septoria\_Leaf\_spot} son las más conflictivas, ya que el modelo tiende a clasificar otras imágenes como ellas.
+\end{bulletlist}
+
+Este modelo tiene un comportamiento sólido y equilibrado, generaliza bien y consigue que incluso las clases con menos muestras tengan buenos niveles de precisión y sensibilidad.
+
+En este modelo se han desbloquedo más capas del modelo base dando más libertad para aprender características específicas (como texturas finas de enfermedades). Pero también rompe parcialmente la estructura previa de ImageNet, reduciendo la estabilidad de las características más generales. Eso demuestra que se observen mejoras en alguna clase, pero pérdida de rendimiento general.
+
+
+
+\section{Modelo \textit{EfficientNetB0} 1}\label{sec:sec5.4}
+
+En esta sección se van a mostrar los resultados del entrenamiento del modelo descrito en la subsección \ref{sec:sec4.4.4}. Este entrenamiento se ha realizado usando los pesos de clases descritos en el Cuadro \ref{tab:pesos_por_clase_entrenamiento}. Solo se ha sometido a 10 épocas y se han usado los callbacks de \textit{ModelCheckpoint} e \textit{HistorySaver}, ya que el objetivo de este entrenamiento es observar la tendencia inicial.
+
+Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las métricas recogidas en el fichero generado por el callback \textit{HistorySaver} en la Figura \ref{fig:summary_metrics_efficientnetb0_1}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.5]{./Images/Resultados/Histórico Métricas/efficientnetb0_1.png}
+\caption{\headlinecolor{\underline{Histórico de métricas del del modelo \textit{EfficientNetB0} 1}}}
+\label{fig:summary_metrics_efficientnetb0_1}
+\end{center}
+\end{figure}
+
+En esta figura se puede observar el comportamiento de las métricas de precisión y pérdida de entrenamiento y validación a lo largo de las épocas a las que se ha sometido el modelo descrito en la subsección \ref{sec:sec4.4.4} en el entrenamiento. A continuación se describe lo que se puede interpretar:  
+
+\begin{bulletlist}
+\item Precisión de entrenamiento: Queda constante en aproximadamente 0.09, un valor muy lejano a 1, lo que demuestra que el modelo no aprende de los datos de entrenamiento.
+\item Pérdida de entrenamiento: Queda practicamente constante en un valor cercano a 2.4, bastante lejano a 0.
+\item Precisión de validación: Oscila entre valores cercanos a 0.1, por lo que el modelo tampoco generaliza.
+\item Pérdida de validación: Oscila entre valores cercanos a 2.4, bastante lejano a 0.
+\end{bulletlist}
+
+El modelo no está aprendiendo absolutamente nada más allá del azar. Para mejorar esta situación se descongelarán algunas capas superiores del modelo base \textit{EfficientNetB0}, haciendo uso de la técnica de \textit{fine tuning}.
+
+
+\section{Modelo \textit{EfficientNetB0} 2}\label{sec:sec5.5}
+
+En esta sección se van a mostrar los resultados del entrenamiento del modelo descrito en la subsección \ref{sec:sec4.4.5}. Este entrenamiento se ha realizado usando los pesos de clases descritos en el Cuadro \ref{tab:pesos_por_clase_entrenamiento}. Solo se ha sometido a 10 épocas y se han usado los callbacks de \textit{ModelCheckpoint} e \textit{HistorySaver}, ya que el objetivo de este entrenamiento es observar la tendencia inicial.
+
+Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las métricas recogidas en el fichero generado por el callback \textit{HistorySaver} en la Figura \ref{fig:summary_metrics_efficientnetb0_2}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.45]{./Images/Resultados/Histórico Métricas/efficientnetb0_2.png}
+\caption{\headlinecolor{\underline{Histórico de métricas del entrenamiento del modelo \textit{EfficientNetB0} 2}}}
+\label{fig:summary_metrics_efficientnetb0_2}
+\end{center}
+\end{figure}
+
+En esta figura se puede observar el comportamiento de las métricas de precisión y pérdida de entrenamiento y validación a lo largo de las épocas a las que se ha sometido el modelo descrito en la subsección \ref{sec:sec4.4.5} en el entrenamiento. A continuación se describe lo que se puede interpretar:  
+
+\begin{bulletlist}
+\item Precisión de entrenamiento: Aumenta desde un valor aproximado a 0.2 a un valor aproximado a 0.5, lo que demuestra que el modelo está aprendiendo de los datos de entrenamiento.
+\item Pérdida de entrenamiento: Disminuye de un valor cercano a 2.2 a un valor aproximado a 1.4, mostrando una tendencia decreciente.
+\item Precisión de validación: Decrece de un valor cercano a 0.25 a un valor cercano a 0.15, por lo que el modelo no generaliza.
+\item Pérdida de validación: Aumenta desde un valor aproximado a 2.2 a un valor aproximado a 2.8, bastante lejano a 0.
+\end{bulletlist}
+
+En definitiva, se puede decir que el modelo está aprendiendo a memorizar el conjunto de entrenamiento, pero pierde capacidad de generalización, es decir tiene sobreajuste. Para mejorar esta situación, se va a disminuir el \textit{learning rate} en el modelo de la sección \ref{sec:sec4.4.6}
+
+
+\section{Modelo \textit{EfficientNetB0} 3}\label{sec:sec5.6}
+
+En esta sección se van a mostrar los resultados del entrenamiento del modelo descrito en la subsección \ref{sec:sec4.4.6}. Este entrenamiento se ha realizado usando los pesos de clases descritos en el Cuadro \ref{tab:pesos_por_clase_entrenamiento}. Solo se ha sometido a 10 épocas y se han usado los callbacks de \textit{ModelCheckpoint} e \textit{HistorySaver}, ya que el objetivo de este entrenamiento es observar la tendencia inicial.
+
+Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las métricas recogidas en el fichero generado por el callback \textit{HistorySaver} en la Figura \ref{fig:summary_metrics_efficientnetb0_3}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.5]{./Images/Resultados/Histórico Métricas/efficientnetb0_3.png}
+\caption{\headlinecolor{\underline{Histórico de métricas del entrenamiento del modelo \textit{EfficientNetB0} 1}}}
+\label{fig:summary_metrics_efficientnetb0_3}
+\end{center}
+\end{figure}
+
+En esta figura se puede observar el comportamiento de las métricas de precisión y pérdida de entrenamiento y validación a lo largo de las épocas a las que se ha sometido el modelo descrito en la subsección \ref{sec:sec4.4.6} en el entrenamiento. A continuación se describe lo que se puede interpretar:  
+
+\begin{bulletlist}
+\item Precisión de entrenamiento: Aumenta desde un valor aproximado a 0.15 a un valor aproximado a 0.35, lo que demuestra que el modelo está aprendiendo de los datos de entrenamiento.
+\item Pérdida de entrenamiento: Disminuye de un valor cercano a 2.3 a un valor aproximado a 1.8, mostrando una tendencia descendente.
+\item Precisión de validación: Aumenta de un valor cercano a 0.15 a un valor cercano a 0.25, por lo que el está empezando a generalizar.
+\item Pérdida de validación: Oscila en un valor cercano a 2.2, por lo que no existe un generalización clara.
+\end{bulletlist}
+
+En definitiva, se puede decir que se ha disminuido el sobreajuste, el modelo ha comenzado a generalizar, pero no lo suficiente y con la suficiente estabilidad para considerarlo un buen resultado. Para afinar más este modelo se podría incluir una capa de \textit{dropout} antes de la capa densa y entrenar más épocas con los callbacks de ReduceLROnPlateau y EarlyStopping. Aún así, no se esperan excelentes resultados, simplemente una mejora en la regularización.
+
+
+\section{Modelo \textit{NASNetMobile} 1}\label{sec:sec5.7}
+
+En esta sección se van a mostrar los resultados del entrenamiento del modelo descrito en la subsección \ref{sec:sec4.4.7}. Este entrenamiento se ha realizado usando los pesos de clases descritos en el Cuadro \ref{tab:pesos_por_clase_entrenamiento}.Solo see ha sometido a 15 épocas y se han usado los callbacks de \textit{ModelCheckpoint} e \textit{HistorySaver}, ya que el objetivo de este entrenamiento es observar la tendencia inicial.
+
+Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las métricas recogidas en el fichero generado por el callback \textit{HistorySaver} en la Figura \ref{fig:metrics_historic_nasnetmobile_1}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.5]{./Images/Resultados/Histórico Métricas/nasnetmobile_1.png}
+\caption{\headlinecolor{\underline{Histórico de métricas del entrenamiento del modelo \textit{NASNetMobile} 1}}}
+\label{fig:metrics_historic_nasnetmobile_1}
+\end{center}
+\end{figure}
+
+En esta figura se puede observar el comportamiento de las métricas de precisión y pérdida de entrenamiento y validación a lo largo de las épocas a las que se ha sometido el modelo descrito en la subsección \ref{sec:sec4.4.1} en el entrenamiento. A continuación se describe lo que se puede interpretar:  
+
+\begin{bulletlist}
+\item Precisión de entrenamiento: Comienza alrededor de 0.5 y sube rápidamente a un valor cercano a 0.7, mostrando que el modelo aprende bien de los datos de entrenamiento.
+\item Pérdida de entrenamiento: Disminuye de un valor cercano a 1.3 hasta cerca de 0.7, lo que confirma que el modelo está optimizando correctamente con la función de pérdida elegida para los datos de entrenamiento.
+\item Precisión de validación: Aumenta de un valor cercano a 0.65 a un valor cercano a 0.75, lo que muestra que el modelo aprende bien de datos distintos a los de entrenamiento.
+\item Pérdida de validación: Disminuye de un valor cercano a 1.1 a un valor cercano a 0.8, confirmando que la función de pérdida optimiza bien el modelo.
+\end{bulletlist}
+
+El modelo mejora rápidamente durante las primeras 5 épocas. A partir de ese punto, tanto la precisión de entrenmaiento como la de validación se estabilizan alrededor del 75\%, lo cual indica que el modelo ha aprendido bien las características generales, pero está alcanzando su límite. 
+
+Para mejorar este resultado se podría entrenar más épocas añadiendo los callbacks \textit{EarlyStopping} para que pare la ejecución si el modelo no mejora y con \textit{ReduceLROnPlateau} para que disminuya el \textit{learning rate} en el entrenamiento y haga que no se estanquen sus valores.
+
+
+
+\section{Modelo \textit{NASNetMobile} 2}\label{sec:sec5.8}
+
+En esta sección se van a mostrar los resultados del entrenamiento del modelo descrito en la subsección \ref{sec:sec4.4.8}. Este entrenamiento se ha realizado usando los pesos de clases descritos en el Cuadro \ref{tab:pesos_por_clase_entrenamiento}. Se ha sometido a 10 épocas y se han usado los callbacks de \textit{ModelCheckpoint} e \textit{HistorySaver}.
+
+Para mostrar los resultados del mismo se va a comenzar mostrando las métricas recogidas en el fichero generado por el callback \textit{HistorySaver} en la Figura \ref{fig:metrics_historic_nasnetmobile_2}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.45]{./Images/Resultados/Histórico Métricas/nasnetmobile_2.png}
+\caption{\headlinecolor{\underline{Histórico de métricas del entrenamiento del modelo \textit{NASNetMobile} 2}}}
+\label{fig:metrics_historic_nasnetmobile_2}
+\end{center}
+\end{figure}
+
+En esta figura se puede observar el comportamiento de las métricas de precisión y pérdida de entrenamiento y validación a lo largo de las épocas a las que se ha sometido el modelo descrito en la subsección \ref{sec:sec4.4.8} en el entrenamiento. A continuación se describe lo que se puede interpretar:  
+
+\begin{bulletlist}
+\item Precisión de entrenamiento: Comienza alrededor de 0.2 y sube rápidamente a un valor cercano a 0.9, mostrando que el modelo aprende bien de los datos de entrenamiento.
+\item Pérdida de entrenamiento: Disminuye de un valor cercano a 2 hasta cerca de 0.25, lo que confirma que el modelo está optimizando correctamente con la función de pérdida elegida para los datos de entrenamiento.
+\item Precisión de validación: Aumenta de un valor próximo a 0.2 a un valor cercano a 0.9, lo que muestra que el modelo aprende bien de datos distintos a los de entrenamiento.
+\item Pérdida de validación: Disminuye de un valor cercano a 2 a un valor próximo a 0.25, confirmando que la función de pérdida optimiza bien el modelo.
+\end{bulletlist}
+
+
+En resumen, ambas métricas de precisión tienden a subir acercándose a 1 y las métricas de pérdidas a bajar acercándose a 0. Ambas tendencias se realizan de manera progresiva sin señales de \textit{overfitting}. 
+
+En términos generales se tiene un buen modelo, pero para poder comparar con el resto es necesario realizar un análisis de métricas por clases. Para ello se van a mostrar las métricas del método \texttt{classification\_report} de la librería \textit{Sklearn} en la Figura \ref{fig:metrics_summary_nasnetmobile_2} y la matriz de confusión en la Figura \ref{fig:confusion_matrix_nasnetmobile_2}.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.7]{./Images/Resultados/Métricas resumen/nasnetmobile_2.png}
+\caption{\headlinecolor{\underline{Resumen de métricas del modelo \textit{NASNetMobile} 2}}}
+\label{fig:metrics_summary_nasnetmobile_2}
+\end{center}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.5]{./Images/Resultados/Matriz de confusión/nasnetmobile_2.png}
+\caption{\headlinecolor{\underline{Matriz de confusión del modelo \textit{NASNetMobile} 2}}}
+\label{fig:confusion_matrix_nasnetmobile_2}
+\end{center}
+\end{figure}
+
+En general se obtiene un buen rendimiento, existiendo un buen balance entre precisión y sensibilidad en practicamente todas las clases. Todos los valores de ambas métricas se encuentran entre 0.8 y 0.99, demostrando que no existen demasiadas diferencias entre las clases, afirmando la robustez del modelo.
+
+En cuanto a los resultados de la matriz de confusión de la Figura \ref{fig:confusion_matrix_nasnetmobile_2} :
+
+\begin{bulletlist}
+\item Las clases \texttt{Tomato\_Yellow\_Leaf\_Curl\_Virus}, \texttt{Tomato\_mosaic\_virus} y \texttt{healthy} son clasificadas casi a la perfección. Cuando nuestro modelo predice esas clases tiene una tas de acierto mayor al 95\%.
+\item Las clases \texttt{Septoria\_Leaf\_spot}, \texttt{Early\_blight} y \texttt{Late\_blight} y son las más conflictivas, ya que el modelo tiende a clasificar otras imágenes como ellas.
+\end{bulletlist}
+
+Este modelo tiene un comportamiento sólido y equilibrado, generaliza bien y consigue que incluso las clases con menos muestras tengan buenos niveles de precisión y sensibilidad.
+
+Descongelar desde la capa 60 hacia adelante ha sido una excelente elección. Se ha permitido que los bloques finales aprendan patrones específicos de las hojas y texturas de las enfermedades y el learning rate bajo fue clave para no destruir los pesos de ImageNet.
+
+
+\section{Comparativa de modelos}\label{sec:sec5.9}
+
+En esta sección se van a comparar los mejores modelos que se han hallado en este estudio, es decir, se van a comparar los modelos de las subsecciones \ref{sec:sec4.4.2}, \ref{sec:sec4.4.3} y \ref{sec:sec4.4.8}, a partir de los resultados obtenidos en las secciones \ref{sec:sec5.2}, \ref{sec:sec5.3} y \ref{sec:sec5.8} respectivamente. Para ello, en el Cuadro \ref{tab:resumen_modelos} se presentan las características generales de los modelos junto con un número asociado en la columna "Número", que será usado como identificador del modelo en el Cuadro \ref{tab:comparativa_modelos}, donde se tienen las principales métricas de cada modelo.
+
+\begin{table}[ht] 
+\centering
+\caption{\headlinecolor{\underline{Resúmenes de modelos}}}
+\label{tab:resumen_modelos}
+\begin{tabular}{|c|c|c|c|c|} \hline
+\rowcolor{naranja}
+\multicolumn{5}{|c|}{\textbf{Resumen de modelos}} \\ \hline
+\rowcolor{naranja!30}
+Modelo & Número & Fine tuning & Learning rate & Épocas \\ \hline
+MobileNetV2 2 & 1 & 100 capas & \texttt{1e-5} & 20 \\ \hline
+MobileNetV2 3 & 2 & 80 capas & \texttt{5e-6} & 20 \\ \hline
+NASNetMobile 2 & 3 & 60 capas & \texttt{5e-6} & 15 \\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[ht] 
+\centering
+\caption{\headlinecolor{\underline{Comparativa de modelos con métricas globales}}}
+\label{tab:comparativa_modelos}
+\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}p{1.15cm}|Y|Y|>{\centering\arraybackslash}p{2cm}|>{\centering\arraybackslash}p{2cm}|Y|Y|} \hline
+\rowcolor{naranja}
+\multicolumn{7}{|c|}{\textbf{Resumen de métricas}} \\ \hline
+\rowcolor{naranja!30}
+Modelo & Precisión macro & Precisión weighted & Sensibilidad macro & Sensibilidad weighted & F1-Score macro & F1-Score weighted \\ \hline
+1 & 0.940 & 0.941 & 0.941 & 0.939 & 0.939 & 0.939 \\ \hline
+2 & 0.925 & 0.927 & 0.927 & 0.924 & 0.924 & 0.924 \\ \hline
+3 & 0.925 & 0.923 & 0.926 & 0.920 & 0.925 & 0.920 \\ \hline
+\end{tabularx}
+\end{table}
+
+Los tres modelos presentan rendimientos muy próximos, con ambas precisiones superiores al 92\%, lo que indica una buena capacidad de generalización en la clasificación de las once clases.También cabe destacar que los tres modelos en las tres métricas tienen un valor muy parecido en macro y weighted, lo que sugiere que el conjunto de datos está relativamente equilibrado entre clases, y que los modelos no presentan sesgos fuertes hacia ninguna clase.
+
+El modelo MobileNetV2 2 obtiene las mejores métricas globales, alcanzando una precisión del 94\% y un f1-score de 93.9\%. Este modelo destaca por su rendimiento equilibrado en la mayoría de las clases, con especial solidez en \texttt{Tomato\_Yellow\_Leaf\_Curl\_Virus} (f1 = 0.985), \texttt{Tomato\_mosaic\_virus} (f1 = 0.974) y \texttt{healthy} (f1 = 0.968).
+
+En comparación, el modelo MobileNetV2 3 muestra un rendimiento ligeramente inferior con una precisión de 92.4\%, aunque mantiene una buena estabilidad entre clases. Las diferencias más notables respecto al modelo anterior se observan en \texttt{Septoria\_leaf\_spot} y \texttt{Spidermite\_Two-spotted\_spider\_mite}, donde presenta valores de sensibilidad algo más bajos.
+
+Por su parte, NASNetMobile 2 alcanza un rendimiento global similar con una precisión de 92.0\%, con un comportamiento especialmente bueno en las clases \texttt{Spidermite\_Two-spotted\_spider\_mite} (f1 = 0.962) y \texttt{Target\_spot} (f1 = 0.931). Sin embargo, en otras clases como \texttt{Bacterial\_spot} o \texttt{Septoria\_leaf\_spot} su precisión se reduce notablemente, lo que sugiere una menor estabilidad interclase.
+
+En conjunto, los resultados confirman que las arquitecturas basadas en MobileNetV2 ofrecen un mejor resultado. Las diferencias entre los modelos son moderadas, pero la configuración con fine tuning más profundo (100 capas) muestra una ligera ventaja consistente en las métricas promedio y una mayor estabilidad entre clases.
+
+Estos resultados serán considerados en el apartado \ref{cap:cap6} para la selección del modelo final.
 
 
 \chapter{Conclusiones}\label{cap:cap6}
 
-Se selecciona el mejor modelo y se muestra una gráfica probando el modelo (desarrollar)
-
-
-\appendix
-\chapter{Anexo I: Ejemplo de anexo}\label{cap:anexo1}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Las conclusiones obtenidas tras el desarrollo completo de este proyecto son las siguientes:
 
 \begin{enumerate}[label=\bfseries\headlinecolor\arabic*.]
-\item Primer elemento.
-\item Segundo elemento
-\item Tercer elemento.
-\begin{enumerate}[label=\alph*)]
-\item Primer subelemento.
-\item Segundo subelemento.
-\begin{itemize}[label=$\bullet$]
-\item Primer punto.
-\item Segundo punto.
-\end{itemize}
-
+\item Se realizó una revisión de la literatura sobre estudios relacionados con la detección de enfermedades en plantas, lo que permitió seleccionar arquitecturas preentrenadas ligeras y eficientes, como \textit{MobileNetV2} y \textit{NASNetMobile}.
+\item Se analizaron los datos disponibles y se realizaron distintas tareas como adaptación de número de píxeles por imagen, normalización, creación de conjunto de pruebas, \textit{data augmentation} y balanceo de clases con pesos predefinidos (\textit{class weight}),  para asegurar su homogeneidad, además de una estructuración equilibrada entre clases que facilitó un entrenamiento estable.
+\item Se desarrollaron ocho modelos basados en arquitecturas (MobileNetV2, EfficientNetB0, NASNetMobile) preentrenadas con ImageNet, ajustando parámetros como el \textit{learning rate} y el número de capas finamente ajustadas (\textit{fine tuning}).
+\item Se realizaron once entrenamientos, de los cuales tres modelos destacaron por su rendimiento. La comparativa detallada mostró que MobileNetV2 con \textit{fine tuning} de 100 capas y learning rate de \texttt{1e-5} alcanzó los mejores resultados globales, con una accuracy del 93.9\% y un f1-score macro de 0.939, superando ligeramente al resto de configuraciones y mostrando una mayor estabilidad interclase.
 \end{enumerate}
 
-\end{enumerate}
+En consecuencia, se selecciona este modelo (\ref{sec:sec4.4.2}) como el modelo final propuesto, al ofrecer el mejor equilibrio entre métricas globales e interclase, que garantizan una mayor precisión y capacidad de generalización. Este modelo cumple el objetivo de desarrollar un sistema preciso y adaptable para la clasificación automática de enfermedades en hojas de tomate. Los resultados obtenidos permiten afirmar que dicho objetivo se ha alcanzado satisfactoriamente, logrando un modelo con un rendimiento competitivo y una adecuada robustez frente a la variabilidad del conjunto de datos.
 
-\chapter{Anexo II: Otro ejemplo de anexo}\label{cap:anexo2}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
+Trabajos futuros..
 
 \printbibliography
 
