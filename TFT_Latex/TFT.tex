@@ -1279,18 +1279,18 @@ Estos resultados serán considerados en el apartado \ref{cap:cap6} para la selec
 
 \chapter{Conclusiones}\label{cap:cap6}
 
+Las conclusiones obtenidas tras el desarrollo completo de este proyecto son las siguientes:
 
 \begin{enumerate}[label=\bfseries\headlinecolor\arabic*.]
-\item Revisión del estado del arte: se analizaron las principales aproximaciones basadas en redes convolucionales para la detección de enfermedades en plantas, lo que permitió seleccionar arquitecturas preentrenadas ligeras y eficientes, como MobileNetV2 y NASNetMobile.
-\item Preparación del conjunto de datos: se aplicaron procesos de preprocesamiento y normalización de imágenes para asegurar su homogeneidad, además de una estructuración equilibrada entre clases que facilitó un entrenamiento estable.
-\item Implementación y entrenamiento de modelos: se desarrollaron ocho configuraciones basadas en arquitecturas preentrenadas, ajustando parámetros como la tasa de aprendizaje, el número de capas finamente ajustadas (fine-tuning) y el número de épocas de entrenamiento.
-\item Evaluación y comparación: se realizaron once entrenamientos, de los cuales tres modelos destacaron por su rendimiento. La comparativa detallada mostró que MobileNetV2 con fine-tuning de 100 capas y learning rate de 1e-5 alcanzó los mejores resultados globales, con una accuracy del 93.9\% y un f1-score macro de 0.939, superando ligeramente al resto de configuraciones y mostrando una mayor estabilidad interclase.
+\item Se realizó una revisión de la literatura sobre estudios relacionados con la detección de enfermedades en plantas, lo que permitió seleccionar arquitecturas preentrenadas ligeras y eficientes, como \textit{MobileNetV2} y \textit{NASNetMobile}.
+\item Se analizaron los datos disponibles y se realizaron distintas tareas como adaptación de número de píxeles por imagen, normalización, creación de conjunto de pruebas, \textit{data augmentation} y balanceo de clases con pesos predefinidos (\textit{class weight}),  para asegurar su homogeneidad, además de una estructuración equilibrada entre clases que facilitó un entrenamiento estable.
+\item Se desarrollaron ocho modelos basados en arquitecturas (MobileNetV2, EfficientNetB0, NASNetMobile) preentrenadas con ImageNet, ajustando parámetros como el \textit{learning rate} y el número de capas finamente ajustadas (\textit{fine tuning}).
+\item Se realizaron once entrenamientos, de los cuales tres modelos destacaron por su rendimiento. La comparativa detallada mostró que MobileNetV2 con \textit{fine tuning} de 100 capas y learning rate de \texttt{1e-5} alcanzó los mejores resultados globales, con una accuracy del 93.9\% y un f1-score macro de 0.939, superando ligeramente al resto de configuraciones y mostrando una mayor estabilidad interclase.
 \end{enumerate}
 
-En consecuencia, se selecciona este modelo como el modelo final propuesto, al ofrecer el mejor equilibrio entre rendimiento, capacidad de generalización y eficiencia computacional. Este modelo cumple el objetivo de desarrollar un sistema preciso y adaptable para la clasificación automática de enfermedades en hojas de tomate.
+En consecuencia, se selecciona este modelo (\ref{sec:sec4.4.2}) como el modelo final propuesto, al ofrecer el mejor equilibrio entre métricas globales e interclase, que garantizan una mayor precisión y capacidad de generalización. Este modelo cumple el objetivo de desarrollar un sistema preciso y adaptable para la clasificación automática de enfermedades en hojas de tomate. Los resultados obtenidos permiten afirmar que dicho objetivo se ha alcanzado satisfactoriamente, logrando un modelo con un rendimiento competitivo y una adecuada robustez frente a la variabilidad del conjunto de datos.
 
-El objetivo principal de este trabajo fue desarrollar y evaluar un sistema basado en técnicas de aprendizaje profundo capaz de identificar el estado de salud y las principales enfermedades en hojas de tomate a partir de imágenes, garantizando un alto grado de precisión y capacidad de generalización. Los resultados obtenidos permiten afirmar que dicho objetivo se ha alcanzado satisfactoriamente, logrando un modelo con un rendimiento competitivo y una adecuada robustez frente a la variabilidad del conjunto de datos.
-
+Trabajos futuros..
 
 \printbibliography
 
