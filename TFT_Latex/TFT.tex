@@ -1231,7 +1231,7 @@ Descongelar desde la capa 60 hacia adelante ha sido una excelente elección. Se 
 
 \section{Comparativa de modelos}\label{sec:sec5.9}
 
-En esta sección se van a comparar los mejores modelos que se han hallado en este estudio, es decir, se van a comparar los modelos de las subsecciones \ref{sec:sec4.4.2}, \ref{sec:sec4.4.3} y \ref{sec:sec4.4.8}, a par tir de los resultados obtenidos en las secciones \ref{sec:sec5.2}, \ref{sec:sec5.3} y \ref{sec:sec5.8} respectivamente.
+En esta sección se van a comparar los mejores modelos que se han hallado en este estudio, es decir, se van a comparar los modelos de las subsecciones \ref{sec:sec4.4.2}, \ref{sec:sec4.4.3} y \ref{sec:sec4.4.8}, a partir de los resultados obtenidos en las secciones \ref{sec:sec5.2}, \ref{sec:sec5.3} y \ref{sec:sec5.8} respectivamente. Para ello, en el Cuadro \ref{tab:resumen_modelos} se presentan las características generales de los modelos junto con un número asociado en la columna "Número", que será usado como identificador del modelo en el Cuadro \ref{tab:comparativa_modelos}, donde se tienen las principales métricas de cada modelo.
 
 \begin{table}[ht] 
 \centering
@@ -1244,7 +1244,7 @@ En esta sección se van a comparar los mejores modelos que se han hallado en est
 Modelo & Número & Fine tuning & Learning rate & Épocas \\ \hline
 MobileNetV2 2 & 1 & 100 capas & \texttt{1e-5} & 20 \\ \hline
 MobileNetV2 3 & 2 & 80 capas & \texttt{5e-6} & 20 \\ \hline
-NASNetMobile & 3& 60 capas & \texttt{5e-6} & 15 \\ \hline
+NASNetMobile 2 & 3 & 60 capas & \texttt{5e-6} & 15 \\ \hline
 \end{tabular}
 \end{table}
 
@@ -1258,30 +1258,38 @@ NASNetMobile & 3& 60 capas & \texttt{5e-6} & 15 \\ \hline
 \multicolumn{7}{|c|}{\textbf{Resumen de métricas}} \\ \hline
 \rowcolor{naranja!30}
 Modelo & Precisión macro & Precisión weighted & Sensibilidad macro & Sensibilidad weighted & F1-Score macro & F1-Score weighted \\ \hline
-1 & 0.931 & 0.931 & 0.931 & 0.931 & 0.931 & 0.931 \\ \hline
-2 & 0.921 & 0.921 & 0.921 & 0.921 & 0.921 & 0.921 \\ \hline
-3 & 0.924 & 0.924 & 0.924 & 0.924 & 0.924 & 0.924 \\ \hline
+1 & 0.940 & 0.941 & 0.941 & 0.939 & 0.939 & 0.939 \\ \hline
+2 & 0.925 & 0.927 & 0.927 & 0.924 & 0.924 & 0.924 \\ \hline
+3 & 0.925 & 0.923 & 0.926 & 0.920 & 0.925 & 0.920 \\ \hline
 \end{tabularx}
 \end{table}
 
-Los tres modelos presentan rendimientos muy próximos, con precisiones superiores al 92\%, lo que indica una buena capacidad de generalización en la clasificación de las once clases de enfermedades.
+Los tres modelos presentan rendimientos muy próximos, con ambas precisiones superiores al 92\%, lo que indica una buena capacidad de generalización en la clasificación de las once clases.También cabe destacar que los tres modelos en las tres métricas tienen un valor muy parecido en macro y weighted, lo que sugiere que el conjunto de datos está relativamente equilibrado entre clases, y que los modelos no presentan sesgos fuertes hacia ninguna clase.
 
-El modelo MobileNetV2 con fine-tuning de 100 capas y learning rate de 1e-5 obtiene las mejores métricas globales, alcanzando un accuracy del 93.9\% y un f1-score macro de 0.939. Este modelo destaca por su rendimiento equilibrado en la mayoría de las clases, con especial solidez en Tomato mosaic virus (f1 = 0.974) y Healthy (f1 = 0.968).
+El modelo MobileNetV2 2 obtiene las mejores métricas globales, alcanzando una precisión del 94\% y un f1-score de 93.9\%. Este modelo destaca por su rendimiento equilibrado en la mayoría de las clases, con especial solidez en \texttt{Tomato\_Yellow\_Leaf\_Curl\_Virus} (f1 = 0.985), \texttt{Tomato\_mosaic\_virus} (f1 = 0.974) y \texttt{healthy} (f1 = 0.968).
 
-En comparación, el modelo MobileNetV2 (fine-tuning 80) muestra un rendimiento ligeramente inferior (accuracy 92.4\%), aunque mantiene una buena estabilidad entre clases. Las diferencias más notables respecto al modelo anterior se observan en Septoria leaf spot y Spider mites, donde presenta valores de recall algo más bajos.
+En comparación, el modelo MobileNetV2 3 muestra un rendimiento ligeramente inferior con una precisión de 92.4\%, aunque mantiene una buena estabilidad entre clases. Las diferencias más notables respecto al modelo anterior se observan en \texttt{Septoria\_leaf\_spot} y \texttt{Spidermite\_Two-spotted\_spider\_mite}, donde presenta valores de sensibilidad algo más bajos.
 
-Por su parte, NASNetMobile (fine-tuning 60) alcanza un rendimiento global similar (accuracy 92.0\%), con un comportamiento especialmente bueno en las clases Spider mites (f1 = 0.962) y Target Spot (f1 = 0.931). Sin embargo, en otras clases como Bacterial spot o Septoria leaf spot su precisión se reduce notablemente, lo que sugiere una menor estabilidad interclase.
+Por su parte, NASNetMobile 2 alcanza un rendimiento global similar con una precisión de 92.0\%, con un comportamiento especialmente bueno en las clases \texttt{Spidermite\_Two-spotted\_spider\_mite} (f1 = 0.962) y \texttt{Target\_spot} (f1 = 0.931). Sin embargo, en otras clases como \texttt{Bacterial\_spot} o \texttt{Septoria\_leaf\_spot} su precisión se reduce notablemente, lo que sugiere una menor estabilidad interclase.
 
-En conjunto, los resultados confirman que las arquitecturas basadas en MobileNetV2 ofrecen un mejor compromiso entre rendimiento y eficiencia computacional en este conjunto de datos.
-Las diferencias entre los modelos son moderadas (menos de dos puntos porcentuales en accuracy), pero la configuración con fine-tuning más profundo (100 capas) muestra una ligera ventaja consistente en las métricas promedio y una mayor estabilidad entre clases.
+En conjunto, los resultados confirman que las arquitecturas basadas en MobileNetV2 ofrecen un mejor resultado. Las diferencias entre los modelos son moderadas, pero la configuración con fine tuning más profundo (100 capas) muestra una ligera ventaja consistente en las métricas promedio y una mayor estabilidad entre clases.
 
-Estos resultados serán considerados en el apartado de Conclusiones para la selección del modelo final.
+Estos resultados serán considerados en el apartado \ref{cap:cap6} para la selección del modelo final.
 
 
 \chapter{Conclusiones}\label{cap:cap6}
 
-Se selecciona el mejor modelo y se muestra una gráfica probando el modelo (desarrollar)
 
+\begin{enumerate}[label=\bfseries\headlinecolor\arabic*.]
+\item Revisión del estado del arte: se analizaron las principales aproximaciones basadas en redes convolucionales para la detección de enfermedades en plantas, lo que permitió seleccionar arquitecturas preentrenadas ligeras y eficientes, como MobileNetV2 y NASNetMobile.
+\item Preparación del conjunto de datos: se aplicaron procesos de preprocesamiento y normalización de imágenes para asegurar su homogeneidad, además de una estructuración equilibrada entre clases que facilitó un entrenamiento estable.
+\item Implementación y entrenamiento de modelos: se desarrollaron ocho configuraciones basadas en arquitecturas preentrenadas, ajustando parámetros como la tasa de aprendizaje, el número de capas finamente ajustadas (fine-tuning) y el número de épocas de entrenamiento.
+\item Evaluación y comparación: se realizaron once entrenamientos, de los cuales tres modelos destacaron por su rendimiento. La comparativa detallada mostró que MobileNetV2 con fine-tuning de 100 capas y learning rate de 1e-5 alcanzó los mejores resultados globales, con una accuracy del 93.9\% y un f1-score macro de 0.939, superando ligeramente al resto de configuraciones y mostrando una mayor estabilidad interclase.
+\end{enumerate}
+
+En consecuencia, se selecciona este modelo como el modelo final propuesto, al ofrecer el mejor equilibrio entre rendimiento, capacidad de generalización y eficiencia computacional. Este modelo cumple el objetivo de desarrollar un sistema preciso y adaptable para la clasificación automática de enfermedades en hojas de tomate.
+
+El objetivo principal de este trabajo fue desarrollar y evaluar un sistema basado en técnicas de aprendizaje profundo capaz de identificar el estado de salud y las principales enfermedades en hojas de tomate a partir de imágenes, garantizando un alto grado de precisión y capacidad de generalización. Los resultados obtenidos permiten afirmar que dicho objetivo se ha alcanzado satisfactoriamente, logrando un modelo con un rendimiento competitivo y una adecuada robustez frente a la variabilidad del conjunto de datos.
 
 
 \printbibliography
