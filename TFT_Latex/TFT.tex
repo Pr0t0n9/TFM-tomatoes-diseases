@@ -294,11 +294,11 @@ El uso de modelos preentrenados en bases de datos extensas como \textit{ImageNet
 
 En este trabajo se emplean modelos basados en las aruitecturas \textit{MobileNetV2}, \textit{EfficientNetB0} y \textit{NASNetMobile} preentrenados con \textit{ImageNet} como punto de partida, lo que permite centrar el esfuerzo en la adaptación al problema de enfermedades de tomate mediante fine-tuning y validación rigurosa.
 
-En la literatura sobre clasificación automática de enfermedades foliares mediante redes neuronales convolucionales, la evaluación del rendimiento del modelo rara vez se limita a la precisión global. Se emplean métricas complementarias como precisión, sensibilidad (\textit{recall}) y F1-Score para reflejar la capacidad del modelo tanto de minimizar falsos positivos como falsos negativos (), lo cual es crítico en un contexto agronómico donde tanto detectar tarde una enfermedad como etiquetar erróneamente una hoja sana pueden acarrear consecuencias importantes. De la misma manera, es interesante analizar la función de pérdidas de validación durante el entrenamiento, ya que permite evaluar la convergencia y ayudar a la detección de sobreajuste ().
+En la literatura sobre clasificación automática de enfermedades foliares mediante redes neuronales convolucionales, la evaluación del rendimiento del modelo rara vez se limita a la precisión global. Se emplean métricas complementarias como precisión, sensibilidad (\textit{recall}) y F1-Score para reflejar la capacidad del modelo tanto de minimizar falsos positivos como falsos negativos \parencite{}, lo cual es crítico en un contexto agronómico donde tanto detectar tarde una enfermedad como etiquetar erróneamente una hoja sana pueden acarrear consecuencias importantes. De la misma manera, es interesante analizar la función de pérdidas de validación durante el entrenamiento, ya que permite evaluar la convergencia y ayudar a la detección de sobreajuste \parencite{}.
 
-Por otra parte, no siempre es suficiente con observar métricas sobre el modelo en su conjunto, sino que a veces también es relevante analizar métricas como las mencionadas (precisión, sensibilidad y F1-Score) por clases, para determinar si existe algún sesgo hacia alguna clase (). En esta línea para apoyarse en alguna métrica más visual también es interesante el uso de la matriz de confusión que permite ver cómo se comporta el modelo entre diferentes clases pudiendo visualizar el número de imágenes por clases, los predicciones sobre las mismas con sus aciertos y fallos de un vistazo ().
+Por otra parte, no siempre es suficiente con observar métricas sobre el modelo en su conjunto, sino que a veces también es relevante analizar métricas como las mencionadas (precisión, sensibilidad y F1-Score) por clases, para determinar si existe algún sesgo hacia alguna clase \parencite{}. En esta línea para apoyarse en alguna métrica más visual también es interesante el uso de la matriz de confusión que permite ver cómo se comporta el modelo entre diferentes clases pudiendo visualizar el número de imágenes por clases, los predicciones sobre las mismas con sus aciertos y fallos de un vistazo \parencite{}.
 
-Más allá de entrenar una única red convolucional sobre imágenes de hojas, los estudios recientes incorporan un enfoque adicional que consiste en crear \textit{ensembles} o las combinaciones de diferentes arquitecturas y luego combinan sus predicciones por votación (\textit{hard-voting}, \textit{soft-voting}) o mediante promedios ponderados. En esta línea nos encontramos estudios como el realizado en el artículo que utilizaron tres arquitecturas, \textit{DenseNet201}, \textit{InceptionV3} y \textit{Xception} y un método de \textit{weighted soft-voting}  para lograr un precisión superior al de cada modelo individual ().
+Más allá de entrenar una única red convolucional sobre imágenes de hojas, los estudios recientes incorporan un enfoque adicional que consiste en crear \textit{ensembles} o las combinaciones de diferentes arquitecturas y luego combinan sus predicciones por votación (\textit{hard-voting}, \textit{soft-voting}) o mediante promedios ponderados. En esta línea nos encontramos estudios como el realizado en el artículo que utilizaron tres arquitecturas, \textit{DenseNet201}, \textit{InceptionV3} y \textit{Xception} y un método de \textit{weighted soft-voting}  para lograr un precisión superior al de cada modelo individual \parencite{}.
 
 
 \chapter{Implementación y desarrollo}\label{cap:cap4}
@@ -689,28 +689,20 @@ En esta sección se explicarán las principales características de las arquitec
 \textit{MobileNetV2} es una arquitectura de CNN muy efieciente diseñada para aplicaciones de visión integrada en móviles. Ha sido desarrollada por Google para mejorar a su antedecesor \textit{MobileNetV1} proporcionando una mejor precisión y reduciendo la capacidad de cómputo. Sus características claves son las siguientes \parencite{MobilenetV2Architecture}:
 
 \begin{enumerate}[label=\bfseries\headlinecolor\arabic*.]
-\item Bloques residuales invertidos (\textit{Inverted Residuals}): Primero se expande el número de canales mediante una convolución 1×1 (capa de expansión). Luego se aplica una convolución \textit{"depthwise"} (convolución separada por canal) para realizar el filtrado espacial. Finalmente, se reduce de nuevo el número de canales a la dimensión deseada mediante otra 1×1 (capa de proyección). Esta estructura permite conservar dimensiones de entrada/salida mientras se reduce el coste computacional.
-\item Convoluciones separables en profundidad (\textit{Depthwise Separable Convolutions}): Al igual que su antedecesor, utiliza convoluciones separables, es decir, se descompone una convolución estándar en dos operaciones; primero una convolución \textit{"depthwise"} por cada canal, luego una \textit{"pointwise”} 1×1 que mezcla los canales. Esto reduce considerablemente el número de parámetros y de cálculos, lo que mejora la eficiencia.
+\item Bloques residuales invertidos (\textit{Inverted Residuals}): Primero se expande el número de canales mediante una convolución 1x1 (capa de expansión). Luego se aplica una convolución \textit{"depthwise"} (convolución separada por canal) para realizar el filtrado espacial. Finalmente, se reduce de nuevo el número de canales a la dimensión deseada mediante otra 1x1 (capa de proyección). Esta estructura permite conservar dimensiones de entrada/salida mientras se reduce el coste computacional.
+\item Convoluciones separables en profundidad (\textit{Depthwise Separable Convolutions}): Al igual que su antedecesor, utiliza convoluciones separables, es decir, se descompone una convolución estándar en dos operaciones; primero una convolución \textit{"depthwise"} por cada canal, luego una \textit{"pointwise”} 1x1 que mezcla los canales. Esto reduce considerablemente el número de parámetros y de cálculos, lo que mejora la eficiencia.
 \item Embotellamientos lineales (\textit{Linear Bottlenecks}): Entre capas se insertan \textit{bottlenecks} lineales, que ayudan a que la "variedad" (\textit{manifold}) de los datos de entrada no se comprima excesivamente. Esta práctica contribuye a conservar mayor información, lo cual mejora la precisión del modelo.
 \item Función de activación ReLU6: emplea la función de activación ReLU6, una versión modificada de la ReLU clásica que limita los valores de activación al rango [0, 6]. Esto favorece la cuantización (es decir, el uso eficiente de formatos de menor precisión) en dispositivos móviles manteniendo un buen equilibrio entre eficiencia y precisión.
 \end{enumerate}
 
-A continuación en el Cuadro \ref{tab:arquitectura_MobileNetV2} se expone una división funcional de la red para entender qué aprenden las capas:
+A continuación se realiza una división funcional de la red para entender qué aprenden las capas \parencite{}: %%https://uk.mathworks.com/help/deeplearning/ref/mobilenetv2.html
 
-\begin{table}[ht] 
-\centering
-\caption{\headlinecolor{\underline{División funcional de MobileNetV2}}} %https://uk.mathworks.com/help/deeplearning/ref/mobilenetv2.html
-\label{tab:arquitectura_MobileNetV2}
-\begin{tabular}{|p{2.5cm}|p{4cm}|p{8cm}|}
-\rowcolor{naranja}
-\multicolumn{3}{|c|}{\textbf{División funcional de MobileNetV2}} \\ \hline
-\rowcolor{naranja!30}
-Zona & Capas & Aprendizaje \\ \hline
-Zona temprana & Primeros bloques (aproximadamente hasta la capa 20) & Características muy básicas: bordes, texturas simples, colores, orientación, gradientes, es decir, filtros universales que casi cualquier red visual aprende \\ \hline
-Zona intermedia & Bloques medios (aproximadamente de la capa 20 a la 80) & Características más complejas: combinaciones de formas, patrones locales, partes de objetos, texturas específicas de hojas/plantas, etc. Aquí ya se empiezan a adaptar a dominios más específicos. \\ \hline
-Zona tardía / cabeza del modelo & Últimos bloques (aproximadamente de la capa 80 hasta la final) & Características de muy alto nivel: semánticas del dominio, relaciones globales en la imagen y adaptación al problema concreto \\ \hline
-\end{tabular}
-\end{table}
+\begin{bulletlist}
+\item Zona temprana: Comprende los primeros bloques, aproximadamente hasta la capa 20. En esta etapa, la red aprende características muy básicas, como bordes, texturas simples, colores, orientación y gradientes. Se trata de filtros universales que casi cualquier red visual aprende.
+\item Zona intermedia: Incluye los bloques medios, aproximadamente desde la capa 20 hasta la 80. Aquí se capturan características más complejas, como combinaciones de formas, patrones locales, partes de objetos y texturas específicas (por ejemplo, de hojas o plantas). En este punto, la red comienza a adaptarse a dominios más específicos.
+\item Zona tardía o cabeza del modelo: corresponde a los últimos bloques, desde la capa 80 hasta la final. Esta zona extrae características de muy alto nivel, relacionadas con la semántica del dominio, las relaciones globales dentro de la imagen y la adaptación al problema concreto que se desea resolver.
+\end{bulletlist}
+
 
 
 \subsection{\textit{EfficientNetB0}}\label{sec:sec4.5.2}
@@ -724,54 +716,33 @@ Zona tardía / cabeza del modelo & Últimos bloques (aproximadamente de la capa 
 \item Bloques internos: Al igual que \textit{MobileNetV2} usa convoluciones separables en profundidad (\textit{Depthwise Separable Convolutions}) y bloques residuales invertidos (\textit{Inverted Residuals}). Además añade bloques \textit{Squeeze-and-Excitation} para calibrar la importancia de los canales.
 \end{enumerate}
 
-A continuación en el Cuadro \ref{tab:arquitectura_EfficientNetB0} se expone una división funcional de la red para entender qué aprenden las capas:
+A continuación se realiza una división funcional de la red para entender qué aprenden las capas \parencite{}:
 
-\begin{table}[ht] 
-\centering
-\caption{\headlinecolor{\underline{División funcional de EfficientNetB0}}} %https://uk.mathworks.com/help/deeplearning/ref/mobilenetv2.html
-\label{tab:arquitectura_EfficientNetB0}
-\begin{tabular}{|p{2.5cm}|p{4cm}|p{8cm}|}
-\rowcolor{naranja}
-\multicolumn{3}{|c|}{\textbf{División funcional de EfficientNetB0}} \\ \hline
-\rowcolor{naranja!30}
-Zona & Capas & Aprendizaje \\ \hline
-Zona temprana & Desde la entrada (\textit{stem}) hasta los primeros bloques \textit{MBConv} (aproximadamente hasta la capa 20) & Características muy básicas: bordes, texturas simples, colores, orientación, gradientes, es decir, filtros universales que casi cualquier red visual aprende \\ \hline
-Zona intermedia & Bloques medios de \textit{MBConv} con mayor expansión y mayor profundidad (aproximadamente de la capa 20 a la 80) & Características más complejas: combinaciones de formas, patrones locales, partes de objetos, texturas específicas de hojas/plantas, etc. Aquí ya se empiezan a adaptar a dominios más específicos. \\ \hline
-Zona tardía / cabeza del modelo & Últimos bloques (aproximadamente de la capa 80 hasta la final) & Características de muy alto nivel: semánticas del dominio, relaciones globales en la imagen y adaptación al problema concreto \\ \hline
-\end{tabular}
-\end{table}
-
-
+\begin{bulletlist}
+\item Zona temprana: Desde la entrada (\textit{stem}) hasta los primeros bloques \textit{MBConv}, aproximadamente hasta la capa 20. En esta etapa, la red aprende características muy básicas, como bordes, texturas simples, colores, orientación y gradientes. Se trata de filtros universales que casi cualquier red visual aprende.
+\item Zona intermedia: Bloques medios de \textit{MBConv} con mayor expansión y mayor profundidad, aproximadamente de la capa 20 a la 100. Aquí se capturan características más complejas, como combinaciones de formas, patrones locales, partes de objetos y texturas específicas (por ejemplo, de hojas o plantas). En este punto, la red comienza a adaptarse a dominios más específicos.
+\item Zona tardía: corresponde a los últimos bloques, desde la capa 100 hasta la final. Esta zona extrae características de muy alto nivel, relacionadas con la semántica del dominio, las relaciones globales dentro de la imagen y la adaptación al problema concreto que se desea resolver.
+\end{bulletlist}
 
 
 \subsection{\textit{NASNetMobile}}\label{sec:sec4.5.3}
 
-\textit{NASNetMobile} es una arquitectura de CNN . Sus características claves son las siguientes \parencite{MobilenetV2Architecture}:
+\textit{NASNetMobile} es una versión optimizada para dispositivos móviles de la arquitectura \textit{NASNet} (\textit{Neural Architecture Search Network}) desarrollada por \textit{Google Brain}. Su diseño se basa en la búsqueda automática de arquitectura NAS para encontrar estructuras de red eficientes para tareas de clasificación de imágenes de gran escala. Sus características claves son las siguientes \parencite{}:
 
-\begin{enumerate}[label=\bfseries\headlinecolor\arabic*.]
-\item 
-\item 
-\item 
-\item 
+\begin{enumerate}[label=\bfseries\headlinecolor\arabic*.] 
+\item La entrada típica es de 224x224 píxeles en el caso móvil.
+\item Su diseño emplea dos tipos de células (\textit{cells}): las llamadas células normales (\textit{normal cells}) y células de reducción (\textit{reduction cells}).
+\item Las \textit{normal cells} producen mapas de características que conservan la resolución espacial (altura x anchura).
+\item Las \textit{reduction cells} reducen la resolución espacial (por ejemplo, con factor 2 en altura y anchura) para avanzar hacia características más globales.
 \end{enumerate}
 
-A continuación en el Cuadro \ref{tab:arquitectura_NASNetMobile} se expone una división funcional de la red para entender qué aprenden las capas:
+A continuación se realiza una división funcional de la red para entender qué aprenden las capas \parencite{}:
 
-\begin{table}[ht] 
-\centering
-\caption{\headlinecolor{\underline{División funcional de NASNetMobile}}} %https://uk.mathworks.com/help/deeplearning/ref/mobilenetv2.html
-\label{tab:arquitectura_NASNetMobile}
-\begin{tabular}{|p{2.5cm}|p{4cm}|p{8cm}|}
-\rowcolor{naranja}
-\multicolumn{3}{|c|}{\textbf{División funcional de NASNetMobile}} \\ \hline
-\rowcolor{naranja!30}
-Zona & Capas & Aprendizaje \\ \hline
-Zona temprana & Primeros bloques (aproximadamente hasta la capa 20) & Características muy básicas: bordes, texturas simples, colores, orientación, gradientes, es decir, filtros universales que casi cualquier red visual aprende \\ \hline
-Zona intermedia & Bloques medios (aproximadamente de la capa 20 a la 80) & Características más complejas: combinaciones de formas, patrones locales, partes de objetos, texturas específicas de hojas/plantas, etc. Aquí ya se empiezan a adaptar a dominios más específicos. \\ \hline
-Zona tardía / cabeza del modelo & Últimos bloques (aproximadamente de la capa 80 hasta la final) & Características de muy alto nivel: semánticas del dominio, relaciones globales en la imagen y adaptación al problema concreto \\ \hline
-\end{tabular}
-\end{table}
-
+\begin{bulletlist}
+\item Zona temprana: Comprende los primeros bloques, aproximadamente hasta la capa 20. En esta etapa, la red aprende características muy básicas, como bordes, texturas simples, colores, orientación y gradientes. Se trata de filtros universales que casi cualquier red visual aprende.
+\item Zona intermedia: Incluye los bloques medios, aproximadamente desde la capa 20 hasta la 60. Aquí se capturan características más complejas, como combinaciones de formas, patrones locales, partes de objetos y texturas específicas (por ejemplo, de hojas o plantas). En este punto, la red comienza a adaptarse a dominios más específicos.
+\item Zona tardía o cabeza del modelo: corresponde a los últimos bloques, desde la capa 60 hasta la final. Esta zona extrae características de muy alto nivel, relacionadas con la semántica del dominio, las relaciones globales dentro de la imagen y la adaptación al problema concreto que se desea resolver.
+\end{bulletlist}
 
 
 \chapter{Evaluación y resultados}\label{cap:cap5}
@@ -1326,7 +1297,7 @@ Las conclusiones obtenidas tras el desarrollo completo de este proyecto son las 
 
 En consecuencia, se selecciona este modelo (\ref{sec:sec4.4.2}) como el modelo final propuesto, al ofrecer el mejor equilibrio entre métricas globales e interclase, que garantizan una mayor precisión y capacidad de generalización. Este modelo cumple el objetivo de desarrollar un sistema preciso y adaptable para la clasificación automática de enfermedades en hojas de tomate. Los resultados obtenidos permiten afirmar que dicho objetivo se ha alcanzado satisfactoriamente, logrando un modelo con un rendimiento competitivo y una adecuada robustez frente a la variabilidad del conjunto de datos.
 
-Como líneas futuras de trabajo, se plantea incorporar técnicas \textit{ensembles} que permita combinar las diferentes arquitecturas para lograr mejorar la detección de las clases más conflictivas ().
+Como líneas futuras de trabajo, se plantea incorporar técnicas \textit{ensembles} que permita combinar las diferentes arquitecturas para lograr mejorar la detección de las clases más conflictivas \parencite{}.
 
 
 \printbibliography
