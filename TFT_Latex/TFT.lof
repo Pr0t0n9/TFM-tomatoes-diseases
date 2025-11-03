@@ -42,5 +42,7 @@
 \contentsline {figure}{\numberline {5.21}{\ignorespaces \color {slcolor}{\underline {Resumen de métricas del modelo \textit {NASNetMobile} 2}}}}{58}{figure.5.21}%
 \contentsline {figure}{\numberline {5.22}{\ignorespaces \color {slcolor}{\underline {Matriz de confusión del modelo \textit {NASNetMobile} 2}}}}{59}{figure.5.22}%
 \addvspace {10\p@ }
+\def \@chapapp {\appendixname }
+\addvspace {10\p@ }
 \contentsfinish 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -1299,6 +1299,33 @@ En consecuencia, se selecciona este modelo (\ref{sec:sec4.4.2}) como el modelo f
 
 Como líneas futuras de trabajo, se plantea incorporar técnicas \textit{ensembles} que permita combinar las diferentes arquitecturas para lograr mejorar la detección de las clases más conflictivas \parencite{research16}.
 
+\appendix
+
+\chapter{Anexo: Código fuente}\label{cap:anexo1}
+
+El código fuente desarrollado para este Trabajo de Fin de Máster se encuentra disponible en el siguiente repositorio: \href{https://github.com/Pr0t0n9/TFM-tomatoes-diseases}{https://github.com/Pr0t0n9/TFM-tomatoes-diseases}. A continuación se va a explicar la estructura de directorios y ficheros del mismo:
+
+\begin{itemize}
+    \item \textbf{Modelos}
+    \begin{itemize}
+        \item \texttt{modelo1}: red convolucional base para clasificación multiclase.
+        \item \texttt{modelo2}: versión optimizada con aumento de datos.
+    \end{itemize}
+    \item \textbf{Datos}
+    \begin{itemize}
+        \item \texttt{train/}: imágenes de entrenamiento organizadas por clase.
+        \item \texttt{valid/}: imágenes de validación organizadas por clase.
+    \end{itemize}
+    \item \textbf{Scripts}
+    \begin{itemize}
+        \item \texttt{preprocesamiento.py}: normalización y segmentación de hojas.
+        \item \texttt{entrenamiento.py}: definición y entrenamiento del modelo.
+        \item \texttt{evaluacion.py}: métricas y generación de informes.
+    \end{itemize}
+\end{itemize}
+
+
+
 
 \printbibliography
 
