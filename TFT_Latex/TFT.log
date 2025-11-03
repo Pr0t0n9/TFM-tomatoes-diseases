@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.9.6)  3 NOV 2025 10:17
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.9.6)  3 NOV 2025 10:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1836,11 +1836,6 @@ File: ./Images/Modelos/summary_mobilnetv2_2.png Graphic file (type bmp)
 <./Images/Modelos/summary_mobilnetv2_2.png>
 
 
-LaTeX Warning: Reference `tab:arquitectura_MobileNetV2' on page 27 undefined on
- input line 579.
-
-
-
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [27]
@@ -2202,19 +2197,15 @@ LaTeX Info: Redefining \% on input line 13.
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package logreq Info: Writing requests to 'TFT.run.xml'.
 \openout1 = `TFT.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38207 strings out of 403249
- 790686 string characters out of 5458377
+ 38206 strings out of 403249
+ 790656 string characters out of 5458377
  1873469 words of memory out of 5000000
- 66157 multiletter control sequences out of 15000+600000
+ 66156 multiletter control sequences out of 15000+600000
  666253 words of font info for 91 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  108i,17n,107p,11285b,7337s stack positions out of 10000i,1000n,20000p,200000b,200000s

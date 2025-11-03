@@ -576,7 +576,7 @@ Se usa la función de pérdida de entropía cruzada categórica porque al crear 
 
 \subsection{Modelo \textit{MobileNetV2} 3}\label{sec:sec4.4.3}
 
-Este modelo usa de capa base \textit{MobileNetV2} preentrenada con los pesos de \textit{ImageNet}. Posteriormente se congelan las capas del modelo base para evitar que los pesos se modifiquen durante el entrenamiento, pero en esta ocasión se descongelan algunas capas, usando la técnica de \textit{fine tuning}. Concretamente, se descongela a partir de la capa 80 con el objetivo de que el modelo se adapte mejor a nuestro caso concreto como se explica en el Cuadro \ref{tab:arquitectura_MobileNetV2}. A continuación se añade una capa de \textit{GlobalAveragePooling} y una capa densa con 11 neuronas y función de activación \textit{softmax}, ya que nos enfrentamos a una clasificación de 11 clases. Esta información es la que se muestra en la Figura \ref{fig:mobilenetv2_3}.
+Este modelo usa de capa base \textit{MobileNetV2} preentrenada con los pesos de \textit{ImageNet}. Posteriormente se congelan las capas del modelo base para evitar que los pesos se modifiquen durante el entrenamiento, pero en esta ocasión se descongelan algunas capas, usando la técnica de \textit{fine tuning}. Concretamente, se descongela a partir de la capa 80 con el objetivo de que el modelo se adapte mejor a nuestro caso concreto como se explica en la Subsección \ref{sec:sec4.5.1}. A continuación se añade una capa de \textit{GlobalAveragePooling} y una capa densa con 11 neuronas y función de activación \textit{softmax}, ya que nos enfrentamos a una clasificación de 11 clases. Esta información es la que se muestra en la Figura \ref{fig:mobilenetv2_3}.
 
 \begin{figure}[ht]
 \begin{center}
