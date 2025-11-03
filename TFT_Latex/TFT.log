@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.9.6)  2 NOV 2025 22:13
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.9.6)  3 NOV 2025 09:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1600,6 +1600,11 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 4.
 Package tocbasic Info: Using my definition of `\numberline' on input line 5.
 Package tocbasic Info: Using my definition of `\numberline' on input line 6.
 Package tocbasic Info: Using my definition of `\numberline' on input line 7.
+
+Overfull \hbox (106.3679pt too wide) in paragraph at lines 7--7
+ [][] [][][]$[]$[][] [][]  
+ []
+
 Package tocbasic Info: Using my definition of `\numberline' on input line 8.
 Package tocbasic Info: Using my definition of `\numberline' on input line 12.
 Package tocbasic Info: Using my definition of `\numberline' on input line 13.
@@ -1726,6 +1731,11 @@ File: ./Images/image3.png Graphic file (type bmp)
 [11]
 File: ./Images/Intro/Two-spotted-spider-mite.jpg Graphic file (type bmp)
 <./Images/Intro/Two-spotted-spider-mite.jpg>
+
+Overfull \hbox (103.06006pt too wide) in paragraph at lines 244--244
+[][][][]$[]$| 
+ []
+
 File: ./Images/Intro/Yellow-leaf-curl-virus-tomato.jpg Graphic file (type bmp)
 <./Images/Intro/Yellow-leaf-curl-virus-tomato.jpg>
 
@@ -1760,26 +1770,9 @@ File: ./Images/image3.png Graphic file (type bmp)
 
 ]
 
-LaTeX Warning: Citation '' on page 16 undefined on input line 297.
-
-
-LaTeX Warning: Citation '' on page 16 undefined on input line 297.
-
-
-LaTeX Warning: Citation '' on page 16 undefined on input line 299.
-
-
-LaTeX Warning: Citation '' on page 16 undefined on input line 299.
-
-
-
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [16]
-
-LaTeX Warning: Citation '' on page 17 undefined on input line 301.
-
-
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
@@ -1842,11 +1835,6 @@ File: ./Images/Modelos/summary_mobilnetv2_1.png Graphic file (type bmp)
 <./Images/Modelos/summary_mobilnetv2_1.png>
 
 
-LaTeX Warning: Reference `tab:arquitectura_MobileNetV2' on page 26 undefined on
- input line 562.
-
-
-
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [26]
@@ -1868,21 +1856,11 @@ File: ./Images/Modelos/summary_efficientnetb0_1.png Graphic file (type bmp)
 <./Images/Modelos/summary_efficientnetb0_1.png>
 
 
-LaTeX Warning: Reference `tab:arquitectura_EfficientNetB0' on page 28 undefined
- on input line 615.
-
-
-
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [28]
 File: ./Images/Modelos/summary_efficientnetb0_2.png Graphic file (type bmp)
 <./Images/Modelos/summary_efficientnetb0_2.png>
-
-
-LaTeX Warning: Reference `tab:arquitectura_EfficientNetB0' on page 29 undefined
- on input line 633.
-
 
 
 File: ./Images/image3.png Graphic file (type bmp)
@@ -1897,10 +1875,6 @@ File: ./Images/Modelos/summary_nasnetmobile_1.png Graphic file (type bmp)
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [30]
-
-LaTeX Warning: Reference `tab:arquitectura_NASNetMobile' on page 31 undefined o
-n input line 667.
-
 File: ./Images/Modelos/summary_nasnetmobile_2.png Graphic file (type bmp)
 <./Images/Modelos/summary_nasnetmobile_2.png>
 
@@ -1909,9 +1883,6 @@ File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [31]
 Missing character: There is no ” in font phvro8t!
-
-LaTeX Warning: Citation '' on page 32 undefined on input line 698.
-
 
 
 File: ./Images/image3.png Graphic file (type bmp)
@@ -1923,20 +1894,10 @@ Overfull \hbox (2.5781pt too wide) in paragraph at lines 714--715
  []
 
 
-LaTeX Warning: Citation '' on page 33 undefined on input line 719.
-
-
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [33]
-
-LaTeX Warning: Citation '' on page 34 undefined on input line 730.
-
-
-LaTeX Warning: Citation '' on page 34 undefined on input line 739.
-
-
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
@@ -2277,27 +2238,24 @@ File: ./Images/image3.png Graphic file (type bmp)
 [61]
 chapter 6.
 
-LaTeX Warning: Citation '' on page 62 undefined on input line 1300.
-
-
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [62
 
 ]
-Overfull \hbox (22.47522pt too wide) in paragraph at lines 1304--1304
-\T1/phv/m/n/10.95 (2012). Com-pa-ri-son of two ae-rial ima-ging plat-forms for 
-iden-ti-fi-ca-tion of Huanglongbing-
- []
-
-
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [63
 
 ]
+Overfull \hbox (22.47522pt too wide) in paragraph at lines 1304--1304
+\T1/phv/m/n/10.95 (2013). Com-pa-ri-son of two ae-rial ima-ging plat-forms for 
+iden-ti-fi-ca-tion of Huanglongbing-
+ []
+
+
 Overfull \hbox (35.74629pt too wide) in paragraph at lines 1304--1304
 \T1/phv/m/n/10.95 Wein-ber-ger (Eds.), \T1/phv/m/sl/10.95 Ad-van-ces in Neu-ral
  In-for-ma-tion Pro-ces-sing Sys-tems \T1/phv/m/n/10.95 (pp. 1097[]1105).
@@ -2311,7 +2269,11 @@ File: ./Images/image3.png Graphic file (type bmp)
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
-[65] 
+[65]
+
+File: ./Images/image3.png Graphic file (type bmp)
+<./Images/image3.png>
+[66] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (TFT.aux
 LaTeX Info: Redefining \sptext on input line 13.
@@ -2331,12 +2293,12 @@ Package logreq Info: Writing requests to 'TFT.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38140 strings out of 403249
- 788043 string characters out of 5458377
- 1872442 words of memory out of 5000000
- 66090 multiletter control sequences out of 15000+600000
+ 38210 strings out of 403249
+ 790728 string characters out of 5458377
+ 1873469 words of memory out of 5000000
+ 66160 multiletter control sequences out of 15000+600000
  666253 words of font info for 91 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 108i,17n,107p,11285b,5585s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,17n,107p,11285b,7337s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on TFT.pdf (65 pages).
+Output written on TFT.pdf (66 pages).
