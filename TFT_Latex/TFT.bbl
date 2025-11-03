@@ -1743,7 +1743,7 @@
       \field{title}{MobileNetV2: Inverted Residuals and Linear Bottlenecks}
       \field{year}{2019}
       \verb{doi}
-      \verb arXiv:1801.04381
+      \verb 10.1109/CVPR.2018.00474
       \endverb
     \endentry
     \entry{agrotendencia}{online}{}{}
@@ -1941,7 +1941,7 @@
       \field{title}{Learning Transferable Architectures for Scalable Image Recognition}
       \field{year}{2018}
       \verb{doi}
-      \verb arXiv:1707.07012
+      \verb 10.1109/CVPR.2018.00907
       \endverb
     \endentry
   \enddatalist
@@ -3670,7 +3670,7 @@
       \field{title}{MobileNetV2: Inverted Residuals and Linear Bottlenecks}
       \field{year}{2019}
       \verb{doi}
-      \verb arXiv:1801.04381
+      \verb 10.1109/CVPR.2018.00474
       \endverb
     \endentry
     \entry{agrotendencia}{online}{}{}
@@ -3868,7 +3868,7 @@
       \field{title}{Learning Transferable Architectures for Scalable Image Recognition}
       \field{year}{2018}
       \verb{doi}
-      \verb arXiv:1707.07012
+      \verb 10.1109/CVPR.2018.00907
       \endverb
     \endentry
   \enddatalist
