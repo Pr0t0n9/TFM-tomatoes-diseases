@@ -12,11 +12,11 @@
 \contentsline {section}{\numberline {4.4}Modelado}{24}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Modelo \textit {MobileNetV2} 1}{26}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Modelo \textit {MobileNetV2} 2}{27}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Modelo \textit {MobileNetV2} 3}{27}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.3}Modelo \textit {MobileNetV2} 3}{28}{subsection.4.4.3}%
 \contentsline {subsection}{\numberline {4.4.4}Modelo \textit {EfficientNetB0} 1}{28}{subsection.4.4.4}%
 \contentsline {subsection}{\numberline {4.4.5}Modelo \textit {EfficientNetB0} 2}{29}{subsection.4.4.5}%
 \contentsline {subsection}{\numberline {4.4.6}Modelo \textit {EfficientNetB0} 3}{30}{subsection.4.4.6}%
-\contentsline {subsection}{\numberline {4.4.7}Modelo \textit {NASNetMobile} 1}{30}{subsection.4.4.7}%
+\contentsline {subsection}{\numberline {4.4.7}Modelo \textit {NASNetMobile} 1}{31}{subsection.4.4.7}%
 \contentsline {subsection}{\numberline {4.4.8}Modelo \textit {NASNetMobile} 2}{31}{subsection.4.4.8}%
 \contentsline {section}{\numberline {4.5}Arquitecturas}{32}{section.4.5}%
 \contentsline {subsection}{\numberline {4.5.1}\textit {MobileNetV2}}{32}{subsection.4.5.1}%

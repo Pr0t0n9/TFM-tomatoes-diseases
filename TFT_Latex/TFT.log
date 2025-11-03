@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.9.6)  3 NOV 2025 09:48
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.9.6)  3 NOV 2025 10:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1811,12 +1811,6 @@ File: ./Images/image3.png Graphic file (type bmp)
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [22]
-Overfull \hbox (19.20032pt too wide) in paragraph at lines 476--477
-\T1/phv/m/n/10.95 bar-go, exis-ten cla-ses cla-ra-men-te mi-no-ri-ta-rias, co-m
-o \T1/lmtt/m/n/10.95 Spidermite_Two-spotted-_spider_mite
- []
-
-
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
@@ -1868,13 +1862,13 @@ File: ./Images/image3.png Graphic file (type bmp)
 [29]
 File: ./Images/Modelos/summary_efficientnetb0_3.png Graphic file (type bmp)
 <./Images/Modelos/summary_efficientnetb0_3.png>
-File: ./Images/Modelos/summary_nasnetmobile_1.png Graphic file (type bmp)
-<./Images/Modelos/summary_nasnetmobile_1.png>
 
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [30]
+File: ./Images/Modelos/summary_nasnetmobile_1.png Graphic file (type bmp)
+<./Images/Modelos/summary_nasnetmobile_1.png>
 File: ./Images/Modelos/summary_nasnetmobile_2.png Graphic file (type bmp)
 <./Images/Modelos/summary_nasnetmobile_2.png>
 
@@ -1916,23 +1910,6 @@ File: ./Images/image3.png Graphic file (type bmp)
 ]
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <14.4> not available
 (Font)              Font shape `T1/phv/b/sl' tried instead on input line 787.
-
-
-LaTeX Warning: Reference `sec:sec5.1.1' on page 37 undefined on input line 789.
-
-
-
-LaTeX Warning: Reference `sec:sec5.1.2' on page 37 undefined on input line 789.
-
-
-
-LaTeX Warning: Reference `sec:sec5.1.3' on page 37 undefined on input line 789.
-
-
-
-LaTeX Warning: Reference `sec:sec5.1.2' on page 37 undefined on input line 794.
-
-
 File: ./Images/Resultados/Histórico Métricas/mobilenetv2_1_1.png Graphic file (
 type bmp)
 <./Images/Resultados/Histórico Métricas/mobilenetv2_1_1.png>
@@ -1946,22 +1923,12 @@ Overfull \hbox (2.85359pt too wide) in paragraph at lines 800--801
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [37]
-
-LaTeX Warning: Reference `sec:sec5.1.2' on page 38 undefined on input line 819.
-
-
 File: ./Images/Resultados/Métricas resumen/mobilenetv2_1_1.png Graphic file (ty
 pe bmp)
 <./Images/Resultados/Métricas resumen/mobilenetv2_1_1.png>
 File: ./Images/Resultados/Matriz de confusión/mobilenetv2_1_1.png Graphic file 
 (type bmp)
 <./Images/Resultados/Matriz de confusión/mobilenetv2_1_1.png>
-
-Overfull \hbox (45.38446pt too wide) in paragraph at lines 837--838
-\T1/phv/m/n/10.95 pa-ci-dad de de-tec-ción en las on-ce cla-ses eva-lua-das. La
-s cla-ses \T1/lmtt/m/n/10.95 Tomato_Yellow_Leaf_Curl_Virus\T1/phv/m/n/10.95 ,
- []
-
 
 
 File: ./Images/image3.png Graphic file (type bmp)
@@ -1984,10 +1951,6 @@ Overfull \hbox (22.22385pt too wide) in paragraph at lines 857--858
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [40]
-
-LaTeX Warning: Reference `sec:sec5.1.1' on page 41 undefined on input line 874.
-
-
 File: ./Images/Resultados/Métricas resumen/mobilenetv2_1_2.png Graphic file (ty
 pe bmp)
 <./Images/Resultados/Métricas resumen/mobilenetv2_1_2.png>
@@ -1999,19 +1962,6 @@ File: ./Images/Resultados/Matriz de confusión/mobilenetv2_1_2.png Graphic file
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [41]
-
-LaTeX Warning: Reference `sec:sec5.1.1' on page 42 undefined on input line 900.
-
-
-
-LaTeX Warning: Reference `sec:sec5.1.1' on page 42 undefined on input line 902.
-
-
-
-LaTeX Warning: Reference `sec:sec5.1.3' on page 42 undefined on input line 902.
-
-
-
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
@@ -2045,13 +1995,6 @@ File: ./Images/Resultados/Matriz de confusión/mobilenetv2_1_3.png Graphic file
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
 [44]
-Overfull \hbox (4.73624pt too wide) in paragraph at lines 950--951
-[]\T1/phv/m/n/10.95 Sin em-bar-go, al-gu-nas cla-ses co-mo \T1/lmtt/m/n/10.95 T
-arget_Spot\T1/phv/m/n/10.95 , \T1/lmtt/m/n/10.95 Early_blight \T1/phv/m/n/10.95
- y \T1/lmtt/m/n/10.95 Septoria_leaf_spot
- []
-
-
 
 File: ./Images/image3.png Graphic file (type bmp)
 <./Images/image3.png>
@@ -2168,10 +2111,10 @@ File: ./Images/Resultados/Matriz de confusión/nasnetmobile_2.png Graphic file (
 type bmp)
 <./Images/Resultados/Matriz de confusión/nasnetmobile_2.png>
 
-Overfull \hbox (4.73624pt too wide) in paragraph at lines 1226--1227
+Overfull \hbox (16.2337pt too wide) in paragraph at lines 1226--1227
 []\T1/phv/m/n/10.95 Sin em-bar-go, al-gu-nas cla-ses co-mo \T1/lmtt/m/n/10.95 S
 eptoria_leaf_spot\T1/phv/m/n/10.95 , \T1/lmtt/m/n/10.95 Early_blight \T1/phv/m/
-n/10.95 y \T1/lmtt/m/n/10.95 Late_blight
+n/10.95 y \T1/lmtt/m/n/10.95 Late- _blight
  []
 
 
@@ -2200,31 +2143,6 @@ Overfull \hbox (2.12521pt too wide) in paragraph at lines 1270--1270
 
 Overfull \hbox (2.12521pt too wide) in paragraph at lines 1270--1270
  []|\T1/phv/m/n/10.95 Sensibilidad 
- []
-
-
-Overfull \hbox (1.48288pt too wide) in paragraph at lines 1275--1276
-\T1/phv/m/n/10.95 do en la ma-yo-ría de las cla-ses, con es-pe-cial so-li-dez e
-n \T1/lmtt/m/n/10.95 Tomato_Yellow_Leaf_Curl_Virus
- []
-
-
-Overfull \hbox (6.90123pt too wide) in paragraph at lines 1277--1278
-\T1/phv/m/n/10.95 di-fe-ren-cias más no-ta-bles res-pec-to al mo-de-lo an-te-ri
-or se ob-ser-van en \T1/lmtt/m/n/10.95 Septoria_leaf_spot
- []
-
-
-Overfull \hbox (106.75098pt too wide) in paragraph at lines 1279--1280
-\T1/phv/m/n/10.95 de 92.0$ $%, con un com-por-ta-mien-to es-pe-cial-men-te buen
-o en las cla-ses \T1/lmtt/m/n/10.95 Spidermite_Two-spotted_spider_mite
- []
-
-
-Overfull \hbox (14.23218pt too wide) in paragraph at lines 1279--1280
-\T1/phv/m/n/10.95 (f1 = 0.962) y \T1/lmtt/m/n/10.95 Target_spot \T1/phv/m/n/10.
-95 (f1 = 0.931). Sin em-bar-go, en otras cla-ses co-mo \T1/lmtt/m/n/10.95 Bacte
-rial_spot
  []
 
 
@@ -2293,10 +2211,10 @@ Package logreq Info: Writing requests to 'TFT.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38210 strings out of 403249
- 790728 string characters out of 5458377
+ 38207 strings out of 403249
+ 790686 string characters out of 5458377
  1873469 words of memory out of 5000000
- 66160 multiletter control sequences out of 15000+600000
+ 66157 multiletter control sequences out of 15000+600000
  666253 words of font info for 91 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  108i,17n,107p,11285b,7337s stack positions out of 10000i,1000n,20000p,200000b,200000s

@@ -473,7 +473,7 @@ Clase & N\textsuperscript{o} imágenes \\ \hline
 \end{tabular}
 \end{table}
 
-La mayoría de clases tienen entre 2000 y 2400 imágenes, lo cual es aceptable. Sin embargo, existen clases claramente minoritarias, como \texttt{Spidermite\_Two-spotted\-\_spider\_mite} y \texttt{Target\_Spot} con menos de 1500 imágenes, o  \texttt{powdery\_mildew} con menos de 1000 imágenes. Esto puede causar que el modelo aprenda mejor las clases con más ejemplos y tienda a confundirse en las minoritarias porque tiene menos exposición a ellas.
+La mayoría de clases tienen entre 2000 y 2400 imágenes, lo cual es aceptable. Sin embargo, existen clases claramente minoritarias, como \texttt{Spidermite\_Two-spotted\_spider\allowbreak-\allowbreak\_mite} y \texttt{Target\_Spot} con menos de 1500 imágenes, o  \texttt{powdery\_mildew} con menos de 1000 imágenes. Esto puede causar que el modelo aprenda mejor las clases con más ejemplos y tienda a confundirse en las minoritarias porque tiene menos exposición a ellas.
 
 Para evitar el posible problema de sesgo en el modelo se aplicará una técnica de balanceo al conjunto de entrenamiento. Específicamente se usará ponderación de clases con un diccionario \texttt{class\_weight} que se puede añadir al modelo en forma de parámetro. Esto dará más peso a los errores en clases minoritarias, para que el modelo no las ignore.
 
@@ -786,12 +786,12 @@ Otra métrica útil para la evaluación de los modelos usada es la matriz de con
 
 \section{Modelo \textit{MobileNetV2} 1}\label{sec:sec5.2}
 
-En esta sección se van a mostrar los resultados del entrenamiento del modelo descrito en la subsección \ref{sec:sec4.4.1}. A este modelo se han aplicado varios entrenamientos distintos explicados en las subsecciones \ref{sec:sec5.1.1}, \ref{sec:sec5.1.2} y \ref{sec:sec5.1.3}.
+En esta sección se van a mostrar los resultados del entrenamiento del modelo descrito en la subsección \ref{sec:sec4.4.1}. A este modelo se han aplicado varios entrenamientos distintos explicados en las subsecciones \ref{sec:sec5.2.1}, \ref{sec:sec5.2.2} y \ref{sec:sec5.2.3}.
 
 
 \subsection{Entrenamiento 1}\label{sec:sec5.2.1}
 
-Este entrenamiento se ha realizado usando los pesos de clases descritos en el Cuadro \ref{tab:pesos_por_clase_entrenamiento}. Solo se ha sometido a 10 épocas y se han usado los callbacks de \textit{ModelCheckpoint} e \textit{HistorySaver}, ya que el objetivo de este entrenamiento es observar la tendencia inicial para poderlo comparar con el entrenamiento de la sección \ref{sec:sec5.1.2} y poder determinar qué tanto puede influir los pesos en las clases.
+Este entrenamiento se ha realizado usando los pesos de clases descritos en el Cuadro \ref{tab:pesos_por_clase_entrenamiento}. Solo se ha sometido a 10 épocas y se han usado los callbacks de \textit{ModelCheckpoint} e \textit{HistorySaver}, ya que el objetivo de este entrenamiento es observar la tendencia inicial para poderlo comparar con el entrenamiento de la sección \ref{sec:sec5.2.2} y poder determinar qué tanto puede influir los pesos en las clases.
 
 Para mostrar los resultados de este entrenamiento se va a comenzar mostrando las métricas recogidas en el fichero generado por el callback \textit{HistorySaver} en la Figura \ref{fig:metrics_historic_mobilenetv2_1_1}.
 
@@ -816,7 +816,7 @@ En resumen, ambas métricas de precisión tienden a subir acercándose a 1 y las
 
 La precisión de entrenamiento se estabiliza alrededor de 0.8, con incrementos pequeños al final. Esto puede indicar que el modelo se está acercando a su límite de capacidad con la configuración actual. Para exprimir aún más este modelo con intención de mejorarlo se podría aumentar el número de épocas con el callback \textit{EarlyStopping} para que pare el entrenamiento en caso de que no mejore y el callback de \textit{ReduceLROnPlateau} para que reduzca el \textit{learning rate} en el entrenamiento y haga que no se estanquen sus valores. 
 
-Para poder comparar este entrenamiento con el de la subsección \ref{sec:sec5.1.2} es necesario realizar un análisis de métricas por clases. Para ello se van a mostrar las métricas del método \texttt{classification\_report} de la librería \textit{Sklearn} en la Figura \ref{fig:metrics_summary_mobilenetv2_1_1} y la matriz de confusión en la Figura \ref{fig:confusion_matrix_mobilenetv2_1_1}.
+Para poder comparar este entrenamiento con el de la subsección \ref{sec:sec5.2.2} es necesario realizar un análisis de métricas por clases. Para ello se van a mostrar las métricas del método \texttt{classification\_report} de la librería \textit{Sklearn} en la Figura \ref{fig:metrics_summary_mobilenetv2_1_1} y la matriz de confusión en la Figura \ref{fig:confusion_matrix_mobilenetv2_1_1}.
 
 \begin{figure}[ht]
 \begin{center}
@@ -834,7 +834,7 @@ Para poder comparar este entrenamiento con el de la subsección \ref{sec:sec5.1.
 \end{center}
 \end{figure}
 
-Se puede decir que el modelo de clasificación multiclase alcanzó una precisión del 81.4\% y un F1-score medio de 0.81, lo que indica un buen equilibrio entre precisión y capacidad de detección en las once clases evaluadas. Las clases \texttt{Tomato\_Yellow\_Leaf\_Curl\_Virus}, \texttt{Tomato\_mosaic\_virus} y \texttt{healthy} destacan por sus altos valores de F1-score (superiores a 0,89), mostrando que el modelo identifica correctamente los patrones más distintivos de estas categorías. Asimismo, el desempeño equilibrado entre las métricas macro y ponderadas (\textit{weighted}) sugiere que no existe un sesgo notable hacia clases con mayor cantidad de muestras.
+Se puede decir que el modelo de clasificación multiclase alcanzó una precisión del 81.4\% y un F1-score medio de 0.81, lo que indica un buen equilibrio entre precisión y capacidad de detección en las once clases evaluadas. Las clases \texttt{Tomato\_Yellow\_Leaf\allowbreak-\allowbreak\ \_Curl\_Virus}, \texttt{Tomato\_mosaic\_virus} y \texttt{healthy} destacan por sus altos valores de F1-score (superiores a 0,89), mostrando que el modelo identifica correctamente los patrones más distintivos de estas categorías. Asimismo, el desempeño equilibrado entre las métricas macro y ponderadas (\textit{weighted}) sugiere que no existe un sesgo notable hacia clases con mayor cantidad de muestras.
 
 Sin embargo, algunas clases como \texttt{Target\_Spot}, \texttt{powdery\_mildew}, \texttt{Early\_blight} y \texttt{Septoria\_leaf\_spot} presentan valores más bajos, reflejando cierta confusión con otras enfermedades de síntomas visualmente similares.
 
@@ -871,7 +871,7 @@ En la Figura \ref{fig:metrics_historic_mobilenetv2_1_2} podemos observar el comp
 
 En resumen, ambas métricas de precisión tienden a subir acercándose a 1 y las métricas de pérdidas a bajar acercándose a 0. Ambas tendencias se realizan de manera progresiva sin señales de \textit{overfitting}. 
 
-El rendimiento global es prácticamente el mismo que el conseguido con el entrenmaiento de la subsección \ref{sec:sec5.1.1}, por lo que para poder compararlos más detalladamente es necesario realizar un análisis de métricas por clases. Para ello se van a mostrar las métricas del método \texttt{classification\_report} de la librería \textit{Sklearn} en la Figura \ref{fig:metrics_summary_mobilenetv2_1_2} y la matriz de confusión en la Figura \ref{fig:confusion_matrix_mobilenetv2_1_2}.
+El rendimiento global es prácticamente el mismo que el conseguido con el entrenmaiento de la subsección \ref{sec:sec5.2.1}, por lo que para poder compararlos más detalladamente es necesario realizar un análisis de métricas por clases. Para ello se van a mostrar las métricas del método \texttt{classification\_report} de la librería \textit{Sklearn} en la Figura \ref{fig:metrics_summary_mobilenetv2_1_2} y la matriz de confusión en la Figura \ref{fig:confusion_matrix_mobilenetv2_1_2}.
 
 \begin{figure}[ht]
 \begin{center}
@@ -897,9 +897,9 @@ La matriz de confusión de La Figura \ref{fig:confusion_matrix_mobilenetv2_1_2} 
 
 En contraste, se aprecian errores recurrentes entre clases con síntomas similares, como \texttt{Early\_blight}, \texttt{Late\_blight} y \texttt{Septoria\_leaf\_spot} donde las confusiones cruzadas son más frecuentes. También se observan predicciones erróneas entre \texttt{Target\_Spot} y otras enfermedades foliares, así como entre \texttt{powdery\_mildew} y \texttt{Leaf\_Mold}, lo que explica los valores más bajos de precisión en estas clases. En conjunto, la matriz de confusión visualiza de manera clara la capacidad del modelo para distinguir la mayoría de las enfermedades, evidenciando a la vez los retos en la diferenciación de patologías con síntomas visualmente parecidos.
 
-En general se obtiene un buen rendimiento, existiendo un buen balance entre precisión y sensibilidad en practicamente todas las clases. Aún así, se pueden observar diferencias en algunas clases con respecto al modelo resultante de la subsección \ref{sec:sec5.1.1}. En concreto se puede determinar una disminución en la métrica de sensibilidad en en clases menos representadas en el \textit{dataset} como las clases \texttt{powdery\_mildew} (de 0.93 a 0.80), \texttt{Septoria\_leaf\_spot} (de 0.71 a 0.61) y \texttt{Spidermite\_Two-spotted\_\-spider\_mite} (de 0.84 a 0.70). Esto demuestra la función de los pesos en las clases, es decir el balanceo de las mismas.
+En general se obtiene un buen rendimiento, existiendo un buen balance entre precisión y sensibilidad en practicamente todas las clases. Aún así, se pueden observar diferencias en algunas clases con respecto al modelo resultante de la subsección \ref{sec:sec5.2.1}. En concreto se puede determinar una disminución en la métrica de sensibilidad en en clases menos representadas en el \textit{dataset} como las clases \texttt{powdery\_mildew} (de 0.93 a 0.80), \texttt{Septoria\_leaf\_spot} (de 0.71 a 0.61) y \texttt{Spidermite\_Two-spotted\_\-spider\_mite} (de 0.84 a 0.70). Esto demuestra la función de los pesos en las clases, es decir el balanceo de las mismas.
 
-El modelo obtenido en la subsección \ref{sec:sec5.1.1} equilibra mejor los resultados sin sacrificar precisión general, por lo que es la opción más sólida para un sistema de diagnóstico de enfermedades, donde todas las clases tienen importancia clínica. Por tanto  el modelo que se seguirá mejorando en la suubsección subsección \ref{sec:sec5.1.3} 
+El modelo obtenido en la subsección \ref{sec:sec5.2.1} equilibra mejor los resultados sin sacrificar precisión general, por lo que es la opción más sólida para un sistema de diagnóstico de enfermedades, donde todas las clases tienen importancia clínica. Por tanto  el modelo que se seguirá mejorando en la suubsección subsección \ref{sec:sec5.2.3} 
 
 
 \subsection{Entrenamiento 3}\label{sec:sec5.2.3}
@@ -947,7 +947,7 @@ Para poder comparar este entrenamiento con el resto es necesario realizar un an�
 
 El modelo ha alcanzado una precisión del 83.1\% y un F1-score medio de 0.83, lo que indica un buen equilibrio entre precisión y capacidad de detección en las once clases evaluadas. Las clases \texttt{Tomato\_Yellow\_Leaf\_Curl\_Virus}, \texttt{Tomato\_mosaic\_virus} y \texttt{healthy} siguen destacando por sus altos valores de F1-score (superiores a 0,90), mostrando que el modelo identifica correctamente los patrones más distintivos de estas clases. Asimismo, el desempeño equilibrado entre las métricas macro y ponderadas (\textit{weighted}) sugiere que no existe un sesgo notable hacia clases con mayor cantidad de muestras.
 
-Sin embargo, algunas clases como \texttt{Target\_Spot}, \texttt{Early\_blight} y \texttt{Septoria\_leaf\_spot} presentan valores más bajos, reflejando cierta confusión con otras enfermedades de síntomas visualmente similares.
+Sin embargo, algunas clases como \texttt{Target\_Spot}, \texttt{Early\_blight} y \texttt{Septoria\_leaf\allowbreak-\allowbreak\ \_spot} presentan valores más bajos, reflejando cierta confusión con otras enfermedades de síntomas visualmente similares.
 
 La matriz de confusión de la Figura \ref{fig:confusion_matrix_mobilenetv2_1_3} refuerza las conclusiones obtenidas a partir de las métricas de evaluación, mostrando que el modelo clasifica correctamente la mayoría de las muestras en casi todas las clases. Se observa una fuerte concentración de valores en la diagonal principal, especialmente en las clases \texttt{Tomato\_Yellow\_Leaf\_Curl\_Virus}, \texttt{Tomato\_mosaic\_virus} y \texttt{healthy}. Estas clases presentan patrones visuales distintivos que el modelo ha aprendido de forma eficaz. 
 
@@ -1223,7 +1223,7 @@ En términos generales se tiene un buen modelo, pero para poder comparar con el 
 
 El modelo ha alcanzado una precisión del 92\% y un F1-score medio de 0.92, lo que indica un buen equilibrio entre precisión y capacidad de detección en las once clases evaluadas. Las clases \texttt{Tomato\_Yellow\_Leaf\_Curl\_Virus}, \texttt{Tomato\_mosaic\_virus} y \texttt{healthy} siguen destacando por sus altos valores de F1-score (superiores a 0,95), mostrando que el modelo identifica correctamente los patrones más distintivos de estas clases. Asimismo, el desempeño equilibrado entre las métricas macro y ponderadas (\textit{weighted}) sugiere que no existe un sesgo notable hacia clases con mayor cantidad de muestras.
 
-Sin embargo, algunas clases como \texttt{Septoria\_leaf\_spot}, \texttt{Early\_blight} y \texttt{Late\_blight} presentan valores más bajos, reflejando cierta confusión con otras enfermedades de síntomas visualmente similares.
+Sin embargo, algunas clases como \texttt{Septoria\_leaf\_spot}, \texttt{Early\_blight} y \texttt{Late\allowbreak-\allowbreak\ \_blight} presentan valores más bajos, reflejando cierta confusión con otras enfermedades de síntomas visualmente similares.
 
 La matriz de confusión de la Figura \ref{fig:confusion_matrix_nasnetmobile_2} refuerza las conclusiones obtenidas a partir de las métricas de evaluación, mostrando que el modelo clasifica correctamente la mayoría de las muestras en casi todas las clases. Se observa una fuerte concentración de valores en la diagonal principal, especialmente en las clases \texttt{Tomato\_Yellow\_Leaf\_Curl\_Virus}, \texttt{Tomato\_mosaic\_virus} y \texttt{healthy}. Estas clases presentan patrones visuales distintivos que el modelo ha aprendido de forma eficaz. 
 
@@ -1272,11 +1272,11 @@ Modelo & Precisión macro & Precisión ponderada & Sensibilidad macro & Sensibil
 
 Los tres modelos presentan rendimientos muy próximos, con ambas precisiones superiores al 92\%, lo que indica una buena capacidad de generalización en la clasificación de las once clases.También cabe destacar que los tres modelos en las tres métricas tienen un valor muy parecido en macro y weighted, lo que sugiere que el conjunto de datos está relativamente equilibrado entre clases, y que los modelos no presentan sesgos fuertes hacia ninguna clase.
 
-El modelo MobileNetV2 2 obtiene las mejores métricas globales, alcanzando una precisión del 94\% y un f1-score de 93.9\%. Este modelo destaca por su rendimiento equilibrado en la mayoría de las clases, con especial solidez en \texttt{Tomato\_Yellow\_Leaf\_Curl\_Virus} (f1 = 0.985), \texttt{Tomato\_mosaic\_virus} (f1 = 0.974) y \texttt{healthy} (f1 = 0.968).
+El modelo MobileNetV2 2 obtiene las mejores métricas globales, alcanzando una precisión del 94\% y un f1-score de 93.9\%. Este modelo destaca por su rendimiento equilibrado en la mayoría de las clases, con especial solidez en \texttt{Tomato\_Yellow\_Leaf\_Curl\_Vi\allowbreak-\allowbreak\ rus} (f1 = 0.985), \texttt{Tomato\_mosaic\_virus} (f1 = 0.974) y \texttt{healthy} (f1 = 0.968).
 
-En comparación, el modelo MobileNetV2 3 muestra un rendimiento ligeramente inferior con una precisión de 92.4\%, aunque mantiene una buena estabilidad entre clases. Las diferencias más notables respecto al modelo anterior se observan en \texttt{Septoria\_leaf\_spot} y \texttt{Spidermite\_Two-spotted\_spider\_mite}, donde presenta valores de sensibilidad algo más bajos.
+En comparación, el modelo MobileNetV2 3 muestra un rendimiento ligeramente inferior con una precisión de 92.4\%, aunque mantiene una buena estabilidad entre clases. Las diferencias más notables respecto al modelo anterior se observan en \texttt{Septoria\_leaf\allowbreak-\allowbreak\ \_spot} y \texttt{Spidermite\_Two-spotted\_spider\_mite}, donde presenta valores de sensibilidad algo más bajos.
 
-Por su parte, NASNetMobile 2 alcanza un rendimiento global similar con una precisión de 92.0\%, con un comportamiento especialmente bueno en las clases \texttt{Spidermite\_Two-spotted\_spider\_mite} (f1 = 0.962) y \texttt{Target\_spot} (f1 = 0.931). Sin embargo, en otras clases como \texttt{Bacterial\_spot} o \texttt{Septoria\_leaf\_spot} su precisión se reduce notablemente, lo que sugiere una menor estabilidad interclase.
+Por su parte, NASNetMobile 2 alcanza un rendimiento global similar con una precisión de 92.0\%, con un comportamiento especialmente bueno en las clases \texttt{Spidermite\_Two\allowbreak-\allowbreak\ spotted\_spider\_mite} (f1 = 0.962) y \texttt{Target\_spot} (f1 = 0.931). Sin embargo, en otras clases como \texttt{Bacterial\_spot} o \texttt{Septoria\_leaf\_spot} su precisión se reduce notablemente, lo que sugiere una menor estabilidad interclase.
 
 En conjunto, los resultados confirman que las arquitecturas basadas en MobileNetV2 ofrecen un mejor resultado. Las diferencias entre los modelos son moderadas, pero la configuración con fine tuning más profundo (100 capas) muestra una ligera ventaja consistente en las métricas promedio y una mayor estabilidad entre clases.
 
