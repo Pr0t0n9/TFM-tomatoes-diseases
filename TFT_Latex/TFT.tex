@@ -181,7 +181,7 @@ La producción mundial de tomate ascendió a más de 186 millones de toneladas e
 
 \begin{table}[ht] 
 \centering
-\caption{\headlinecolor{\underline{Top 10 países productores de tomates 2022.}} Fuente: \parencite{wikipedia2}}
+\caption{\headlinecolor{\underline{Top 10 países productores de tomates 2022 \parencite{wikipedia2}}}}
 \label{tab:producción_mundial_tomate}
 \begin{tabular}{|c|c|c|c|c|} \hline
 \rowcolor{naranja}
@@ -211,7 +211,7 @@ Entre las enfermedades más comunes se encuentran:
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[scale=0.5]{./Images/Intro/Late-blight-tomato.jpg}
-\caption{\headlinecolor{\underline{Tizón tardío en una planta de tomate \parencite{purdue}}}} 
+\caption{\headlinecolor{\underline{Tizón tardío en una planta de tomate} \parencite{purdue}}} 
 \label{fig:late_blight}
 \end{center}
 \end{figure}
@@ -221,7 +221,7 @@ Entre las enfermedades más comunes se encuentran:
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[scale=0.2]{./Images/Intro/Early-blight-tomato.jpg}
-\caption{\headlinecolor{\underline{Tizón precoz en una planta de tomate \parencite{renaissancefarms}}}}
+\caption{\headlinecolor{\underline{Tizón precoz en una planta de tomate} \parencite{renaissancefarms}}}
 \label{fig:early_blight}
 \end{center}
 \end{figure}
@@ -231,7 +231,7 @@ Entre las enfermedades más comunes se encuentran:
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[scale=0.2]{./Images/Intro/Bacterial-spot-tomato.jpg}
-\caption{\headlinecolor{\underline{Mancha bacteriana en una planta de tomate \parencite{growingproduce}}}}
+\caption{\headlinecolor{\underline{Mancha bacteriana en una planta de tomate} \parencite{growingproduce}}}
 \label{fig:bacterial_spot}
 \end{center}
 \end{figure}
@@ -241,7 +241,7 @@ Entre las enfermedades más comunes se encuentran:
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[scale=0.1]{./Images/Intro/Two-spotted-spider-mite.jpg}
-\caption{\headlinecolor{\underline{Picadura de la araña roja de dos manchas en una planta de tomate \parencite{inspiredpencil}}}}
+\caption{\headlinecolor{\underline{\parbox{0.9\linewidth}{Picadura de la araña roja de dos manchas en una planta de tomate}} \parencite{inspiredpencil}}}
 \label{fig:two_spotted_spider_mite}
 \end{center}
 \end{figure}
@@ -251,7 +251,7 @@ Entre las enfermedades más comunes se encuentran:
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[scale=0.13]{./Images/Intro/Yellow-leaf-curl-virus-tomato.jpg}
-\caption{\headlinecolor{\underline{Virus de la hoja amarilla en una planta de tomate \parencite{greenlife}}}}
+\caption{\headlinecolor{\underline{Virus de la hoja amarilla en una planta de tomate} \parencite{greenlife}}}
 \label{fig:yellow_leaf_curl_virus_tomato} 
 \end{center}
 \end{figure}
@@ -332,9 +332,9 @@ En cuanto a las librerías de Python usadas para la implementación, se presenta
 \item NumPy: es una librería que ofrece la posibilidad de crear matrices y vectores multidimensionales y provee además un gran número de operaciones matemáticas de alto nivel.
 \item Pandas: es una librería que ofrece la estructura de datos llamada DataFrame que facilita la manipulación y el análisis de datos. Es una extensión de la librería NumPy. Ha sido usada para tratar y transformar los datos.
 \item Plantcv: es una librería de Python de código abierto diseñada específicamente para el análisis de imágenes de plantas. Se ha usado para lectura de las imágenes.
-\item Tensorflow: es una librería de software de código abierto creada por Google para desarrollar y entrenar modelos de machine learning (ML) y deep learning (DL). Recibe este nombre porque trabaja con tensores, estructuras de datos multidimensionales, como matrices o vectores que fluyen a través de un grafo computacional de operaciones. Se ha usado para crear y entrenar los modelos descritos en este proyecto.
+\item Tensorflow: es una librería de software de código abierto creada por Google para desarrollar y entrenar modelos de \textit{machine learning} y \textit{deep learning}. Recibe este nombre porque trabaja con tensores, estructuras de datos multidimensionales, como matrices o vectores que fluyen a través de un grafo computacional de operaciones. Se ha usado para crear y entrenar los modelos descritos en este proyecto.
 \item Seaborn: esta librería permite la visualización de los datos a través de distintos tipos de gráficas. Ha sido usada para realizar los distintos gráficos como las matrices de confusión para evaluar los modelos.
-\item Sklearn: es una librería que contiene un gran número funciones relacionadas con modelos de machine learning (ML) y deep learning (DL). Se ha usado para extraer las principales métricas de los modelos tras su entrenamiento.
+\item Sklearn: es una librería que contiene un gran número funciones relacionadas con modelos de \textit{machine learning} y \textit{deep learning}. Se ha usado para extraer las principales métricas de los modelos tras su entrenamiento.
 \end{bulletlist}
 
 
@@ -1292,7 +1292,7 @@ Las conclusiones obtenidas tras el desarrollo completo de este proyecto son las 
 \item Se realizó una revisión de la literatura sobre estudios relacionados con la detección de enfermedades en plantas, lo que permitió seleccionar arquitecturas preentrenadas ligeras y eficientes, como \textit{MobileNetV2} y \textit{NASNetMobile}.
 \item Se analizaron los datos disponibles y se realizaron distintas tareas como adaptación de número de píxeles por imagen, normalización, creación de conjunto de pruebas, \textit{data augmentation} y balanceo de clases con pesos predefinidos (\textit{class weight}),  para asegurar su homogeneidad, además de una estructuración equilibrada entre clases que facilitó un entrenamiento estable.
 \item Se desarrollaron ocho modelos basados en arquitecturas (MobileNetV2, EfficientNetB0, NASNetMobile) preentrenadas con ImageNet, ajustando parámetros como el \textit{learning rate} y el número de capas finamente ajustadas (\textit{fine tuning}).
-\item Se realizaron once entrenamientos, de los cuales tres modelos destacaron por su rendimiento. La comparativa detallada mostró que MobileNetV2 con \textit{fine tuning} de 100 capas y learning rate de \texttt{1e-5} alcanzó los mejores resultados globales, con una accuracy del 93.9\% y un f1-score macro de 0.939, superando ligeramente al resto de configuraciones y mostrando una mayor estabilidad interclase.
+\item Se realizaron once entrenamientos, de los cuales tres modelos destacaron por su rendimiento. La comparativa detallada mostró que MobileNetV2 con \textit{fine tuning} de 100 capas y learning rate de \texttt{1e-5} alcanzó los mejores resultados globales, con una precisión del 93.9\% y un \textit{f1-score} macro de 0.939, superando ligeramente al resto de configuraciones y mostrando una mayor estabilidad interclase.
 \end{enumerate}
 
 En consecuencia, se selecciona este modelo (\ref{sec:sec4.4.2}) como el modelo final propuesto, al ofrecer el mejor equilibrio entre métricas globales e interclase, que garantizan una mayor precisión y capacidad de generalización. Este modelo cumple el objetivo de desarrollar un sistema preciso y adaptable para la clasificación automática de enfermedades en hojas de tomate. Los resultados obtenidos permiten afirmar que dicho objetivo se ha alcanzado satisfactoriamente, logrando un modelo con un rendimiento competitivo y una adecuada robustez frente a la variabilidad del conjunto de datos.
@@ -1306,25 +1306,22 @@ Como líneas futuras de trabajo, se plantea incorporar técnicas \textit{ensembl
 El código fuente desarrollado para este Trabajo de Fin de Máster se encuentra disponible en el siguiente repositorio: \href{https://github.com/Pr0t0n9/TFM-tomatoes-diseases}{https://github.com/Pr0t0n9/TFM-tomatoes-diseases}. A continuación se va a explicar la estructura de directorios y ficheros del mismo:
 
 \begin{itemize}
-    \item \textbf{Modelos}
+    \item Models:
     \begin{itemize}
-        \item \texttt{modelo1}: red convolucional base para clasificación multiclase.
-        \item \texttt{modelo2}: versión optimizada con aumento de datos.
+        \item \texttt{EfficientNetB0\_1}: Contiene fichero con extensión \texttt{.keras} con el modelo descrito en la subsección \ref{sec:sec4.4.4} y un fichero con extensión \texttt{.json} con las métricas recogidas en el entrenamiento.
+        \item \texttt{EfficientNetB0\_2}: Contiene fichero con extensión \texttt{.keras} con el modelo descrito en la subsección \ref{sec:sec4.4.5} y un fichero con extensión \texttt{.json} con las métricas recogidas en el entrenamiento.
+        \item \texttt{EfficientNetB0\_3}: Contiene fichero con extensión \texttt{.keras} con el modelo descrito en la subsección \ref{sec:sec4.4.6} y un fichero con extensión \texttt{.json} con las métricas recogidas en el entrenamiento.
+        \item \texttt{MobileNetV2\_1\_1}: Contiene fichero con extensión \texttt{.keras} con el modelo descrito en la subsección \ref{sec:sec4.4.1} (entrenamiento 1) y un fichero con extensión \texttt{.json} con las métricas recogidas en el entrenamiento.
+        \item \texttt{MobileNetV2\_1\_2}: Contiene fichero con extensión \texttt{.keras} con el modelo descrito en la subsección \ref{sec:sec4.4.1} (entrenamiento 2) y un fichero con extensión \texttt{.json} con las métricas recogidas en el entrenamiento.
+        \item \texttt{MobileNetV2\_1\_3}: Contiene fichero con extensión \texttt{.keras} con el modelo descrito en la subsección \ref{sec:sec4.4.1} (entrenamiento 3) y un fichero con extensión \texttt{.json} con las métricas recogidas en el entrenamiento.
+        \item \texttt{MobileNetV2\_2}: Contiene fichero con extensión \texttt{.keras} con el modelo descrito en la subsección \ref{sec:sec4.4.2} y un fichero con extensión \texttt{.json} con las métricas recogidas en el entrenamiento.
+        \item \texttt{MobileNetV2\_3}: Contiene fichero con extensión \texttt{.keras} con el modelo descrito en la subsección \ref{sec:sec4.4.3} y un fichero con extensión \texttt{.json} con las métricas recogidas en el entrenamiento.
+        \item \texttt{NASNetMobile\_1}: Contiene fichero con extensión \texttt{.keras} con el modelo descrito en la subsección \ref{sec:sec4.4.7} y un fichero con extensión \texttt{.json} con las métricas recogidas en el entrenamiento.
+        \item \texttt{NASNetMobile\_2}: Contiene fichero con extensión \texttt{.keras} con el modelo descrito en la subsección \ref{sec:sec4.4.8} y un fichero con extensión \texttt{.json} con las métricas recogidas en el entrenamiento.
     \end{itemize}
-    \item \textbf{Datos}
-    \begin{itemize}
-        \item \texttt{train/}: imágenes de entrenamiento organizadas por clase.
-        \item \texttt{valid/}: imágenes de validación organizadas por clase.
-    \end{itemize}
-    \item \textbf{Scripts}
-    \begin{itemize}
-        \item \texttt{preprocesamiento.py}: normalización y segmentación de hojas.
-        \item \texttt{entrenamiento.py}: definición y entrenamiento del modelo.
-        \item \texttt{evaluacion.py}: métricas y generación de informes.
-    \end{itemize}
+    \item \texttt{TFT\_latex}: Proyecto \textit{Látex} con el que se ha escrito la memoria
+    \item \texttt{TFM.ipynb}: \textit{Notebook} usado en \textit{Google Colab} que descarga los datos del repositorio de kaggle y realiza tareas de carga de datos, análisis de datos, preprocesamiento y creación de modelos junto con sus respectivos entrenmientos y evaluaciones.
 \end{itemize}
-
-
 
 
 \printbibliography

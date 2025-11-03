@@ -1237,8 +1237,8 @@
     \endentry
     \entry{research16}{article}{}{}
       \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=f4db7268d7998b45fe721104901e13d6}{%
-           family={Octacian},
+        {{un=0,uniquepart=base,hash=45e87f429a8a25d11ce07082139f4937}{%
+           family={Octavian},
            familyi={O\bibinitperiod},
            given={O.},
            giveni={O\bibinitperiod},
@@ -1262,14 +1262,14 @@
            giveni={B\bibinitperiod\bibinitdelim D\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{9c9eb67301fb87c3381044855c57732b}
-      \strng{fullhash}{ee453f420343fb483c75baf76c1cd3c0}
-      \strng{fullhashraw}{ee453f420343fb483c75baf76c1cd3c0}
-      \strng{bibnamehash}{ee453f420343fb483c75baf76c1cd3c0}
-      \strng{authorbibnamehash}{ee453f420343fb483c75baf76c1cd3c0}
-      \strng{authornamehash}{9c9eb67301fb87c3381044855c57732b}
-      \strng{authorfullhash}{ee453f420343fb483c75baf76c1cd3c0}
-      \strng{authorfullhashraw}{ee453f420343fb483c75baf76c1cd3c0}
+      \strng{namehash}{8ba2f2d332b22ded501734d914419864}
+      \strng{fullhash}{57ef6e445cc10dcfd226166f32f7a1bc}
+      \strng{fullhashraw}{57ef6e445cc10dcfd226166f32f7a1bc}
+      \strng{bibnamehash}{57ef6e445cc10dcfd226166f32f7a1bc}
+      \strng{authorbibnamehash}{57ef6e445cc10dcfd226166f32f7a1bc}
+      \strng{authornamehash}{8ba2f2d332b22ded501734d914419864}
+      \strng{authorfullhash}{57ef6e445cc10dcfd226166f32f7a1bc}
+      \strng{authorfullhashraw}{57ef6e445cc10dcfd226166f32f7a1bc}
       \field{sortinit}{O}
       \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
       \field{extradatescope}{labelyear}
@@ -3164,8 +3164,8 @@
     \endentry
     \entry{research16}{article}{}{}
       \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=f4db7268d7998b45fe721104901e13d6}{%
-           family={Octacian},
+        {{un=0,uniquepart=base,hash=45e87f429a8a25d11ce07082139f4937}{%
+           family={Octavian},
            familyi={O\bibinitperiod},
            given={O.},
            giveni={O\bibinitperiod},
@@ -3189,14 +3189,14 @@
            giveni={B\bibinitperiod\bibinitdelim D\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{9c9eb67301fb87c3381044855c57732b}
-      \strng{fullhash}{ee453f420343fb483c75baf76c1cd3c0}
-      \strng{fullhashraw}{ee453f420343fb483c75baf76c1cd3c0}
-      \strng{bibnamehash}{ee453f420343fb483c75baf76c1cd3c0}
-      \strng{authorbibnamehash}{ee453f420343fb483c75baf76c1cd3c0}
-      \strng{authornamehash}{9c9eb67301fb87c3381044855c57732b}
-      \strng{authorfullhash}{ee453f420343fb483c75baf76c1cd3c0}
-      \strng{authorfullhashraw}{ee453f420343fb483c75baf76c1cd3c0}
+      \strng{namehash}{8ba2f2d332b22ded501734d914419864}
+      \strng{fullhash}{57ef6e445cc10dcfd226166f32f7a1bc}
+      \strng{fullhashraw}{57ef6e445cc10dcfd226166f32f7a1bc}
+      \strng{bibnamehash}{57ef6e445cc10dcfd226166f32f7a1bc}
+      \strng{authorbibnamehash}{57ef6e445cc10dcfd226166f32f7a1bc}
+      \strng{authornamehash}{8ba2f2d332b22ded501734d914419864}
+      \strng{authorfullhash}{57ef6e445cc10dcfd226166f32f7a1bc}
+      \strng{authorfullhashraw}{57ef6e445cc10dcfd226166f32f7a1bc}
       \field{sortinit}{O}
       \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
       \field{extradatescope}{labelyear}
